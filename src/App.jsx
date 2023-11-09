@@ -20,20 +20,21 @@ function App() {
   }
 
   return (
-    <div>
+    <div className='wrapper'>
+    {/* <div className="a"></div><div id="circle"></div> */}
     <div style={{ "height": "100vh", "width": "100%", "display": "flex", "justifyContent": "space-around"}}>
       <TechIcons/>
       <section style={{"display": "flex", "alignItems": "center", "width": "45%", "justifyContent": "center"}}>
-        <div>
-          <h1>Phil Huynh</h1>
-          <section style={iconSectionStyle}>
+        <div className="glass">
+          <h1 >Phil Huynh</h1>
+          <section className="svg-shadow" style={iconSectionStyle}>
             <a href="https://github.com/phil-huynh">
               <div style={{...iconStyle, "width": '5rem'}}>
                 <img src={githubLogo}></img>
               </div>
             </a>
             <a href='http://www.gitlab.com/PhilHuynh'>
-              <div style={{...iconStyle, "width": '5rem'}}>
+              <div className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
                   <img src={gitlabLogo}></img>
               </div>
             </a>

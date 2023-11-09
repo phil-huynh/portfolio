@@ -65,41 +65,41 @@ export default function TechIcons() {
   }
 
   return (
-    <div style={iconContainerStyle}>
+    <div className="svg-shadow" style={iconContainerStyle}>
       <div>
-      <section style={iconSectionStyle}>
-        <div title="HTML" style={{...iconStyle, "width": '5rem'}}>
+      <section className="svg-shadow" style={iconSectionStyle}>
+        <div title="HTML" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
           <img src={htmlLogo}></img>
         </div>
-        <div title="CSS" style={{...iconStyle, "width": '5rem'}}>
+        <div title="CSS" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
           <img src={cssLogo}></img>
         </div>
-        <div title="Javascript" style={{...iconStyle, "width": '5rem'}}>
-          <img src={javascriptLogo} style={{"width": "4rem"}}></img>
+        <div title="Javascript" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
+          <img src={javascriptLogo} className="svg-shadow" style={{"width": "4rem"}}></img>
         </div>
-        <div title="Typescript" style={{...iconStyle, "width": '5rem'}}>
-          <img src={typescriptLogo} style={{"width": "4rem"}}></img>
+        <div title="Typescript" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
+          <img src={typescriptLogo} className="svg-shadow" style={{"width": "4rem"}}></img>
         </div>
-        <div title="Python" style={{...iconStyle, "width": '5rem'}}>
+        <div title="Python" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
           <img src={pythonLogo}></img>
         </div>
-        {/* <div style={{...iconStyle, "width": '5rem'}}>
+        {/* <div className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
           <img src={markdownLogo}></img>
         </div> */}
       </section>
-      <section style={iconSectionStyle}>
-        <div title="jquery" style={{...iconStyle, "width": '5rem'}}>
+      <section className="svg-shadow" style={iconSectionStyle}>
+        <div title="jquery" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
           <img src={jqueryLogo}></img>
         </div>
-        <div title="React" style={{...iconStyle, "width": '7rem'}}>
-          <img src={reactLogo} style={{"width": "4.5rem"}}></img>
+        <div title="React" className="svg-shadow" style={{...iconStyle, "width": '7rem'}}>
+          <img src={reactLogo} className="svg-shadow" style={{"width": "4.5rem"}}></img>
         </div>
-        <div title="Redux" style={{...iconStyle, "width": '6rem'}}>
-          <img src={reduxLogo} style={{"width": "4.5rem"}}></img>
+        <div title="Redux" className="svg-shadow" style={{...iconStyle, "width": '6rem'}}>
+          <img src={reduxLogo} className="svg-shadow" style={{"width": "4.5rem"}}></img>
         </div>
         <div
           title="Next js"
-          style={{
+          className="svg-shadow" style={{
             "display": "flex",
             "alignItems": "center",
             "height": "4rem",
@@ -107,33 +107,33 @@ export default function TechIcons() {
             // "backgroundColor": "white",
             "borderRadius": "10px"
           }}>
-          <div title="Next JS" style={{...iconStyle, "width": '10rem'}}>
-            <img src={nextLogo} style={{"width": '9rem'}}></img>
+          <div title="Next JS" className="svg-shadow" style={{...iconStyle, "width": '10rem'}}>
+            <img src={nextLogo} className="svg-shadow" style={{"width": '9rem'}}></img>
           </div>
         </div>
       </section>
-      <section style={iconSectionStyle}>
-        <div title="Sass" style={{...iconStyle, "width": '5rem'}}>
+      <section className="svg-shadow" style={iconSectionStyle}>
+        <div title="Sass" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
           <img src={sassLogo}></img>
         </div>
-        <div title="Bootstrap" style={{...iconStyle, "width": '5rem'}}>
+        <div title="Bootstrap" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
           <img src={bootstrapLogo}></img>
         </div>
-        <div title="Bulma" style={{...iconStyle, "width": '5rem'}}>
+        <div title="Bulma" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
           <img src={bulmaLogo}></img>
         </div>
-        <div title="Material UI" style={{...iconStyle, "width": '5rem'}}>
+        <div title="Material UI" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
           <img src={materialUILogo}></img>
         </div>
-        <div title="Figma" style={{...iconStyle, "width": '5rem'}}>
+        <div title="Figma" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
           <img src={figmaLogo}></img>
         </div>
       </section>
-      <section style={iconSectionStyle}>
+      <section className="svg-shadow" style={iconSectionStyle}>
 
         <div
           title="node js"
-          style={{
+          className="svg-shadow" style={{
             "display": "flex",
             "alignItems": "center",
             "height": "2.8rem",
@@ -142,12 +142,13 @@ export default function TechIcons() {
             // "borderRadius": "10px"
           }}
         >
-          <div style={{...iconStyle, "width": '8rem'}}>
-            <img src={nodeLogo} style={{"width": "8rem"}}></img>
+          <div className="svg-shadow" style={{...iconStyle, "width": '8rem'}}>
+            <img src={nodeLogo} className="svg-shadow" style={{"width": "8rem"}}></img>
           </div>
         </div>
         <div
           title="django"
+          className="svg-shadow"
           style={{
             "display": "flex",
             "alignItems": "center",
@@ -155,26 +156,26 @@ export default function TechIcons() {
             "overflowY": "hidden",
           }}
         >
-          <div style={{...iconStyle, "width": '6rem'}}>
-            <img src={djangoLogo} style={{"width": "6rem"}}></img>
+          <div className="svg-shadow" style={{...iconStyle, "width": '6rem'}}>
+            <img src={djangoLogo} className="svg-shadow" style={{"width": "6rem"}}></img>
           </div>
         </div>
 
         <div
           title="FastAPI"
-          style={{
+          className="svg-shadow" style={{
             "display": "flex",
             "alignItems": "center",
             "height": "4rem",
             "overflowY": "hidden",
           }}>
-          <div style={{...iconStyle, "width": '8rem'}}>
-            <img src={fastAPILogo} style={{"width": "8rem"}}></img>
+          <div className="svg-shadow" style={{...iconStyle, "width": '8rem'}}>
+            <img src={fastAPILogo} className="svg-shadow" style={{"width": "8rem"}}></img>
           </div>
         </div>
         <div
           title="Flask"
-          style={{
+          className="svg-shadow" style={{
             "display": "flex",
             "alignItems": "center",
             "height": "3.3rem",
@@ -182,43 +183,43 @@ export default function TechIcons() {
             // "backgroundColor": "white",
             "borderRadius": "10px"
           }}>
-          <div style={{...iconStyle, "width": '7.2rem'}}>
-            <img src={flaskLogo} style={{"width": "7rem"}}></img>
+          <div className="svg-shadow" style={{...iconStyle, "width": '7.2rem'}}>
+            <img src={flaskLogo} className="svg-shadow" style={{"width": "7rem"}}></img>
           </div>
         </div>
       </section>
-      <section style={iconSectionStyle}>
-        <div title="Postgres" style={{...iconStyle, "width": '5rem'}}>
+      <section className="svg-shadow" style={iconSectionStyle}>
+        <div title="Postgres" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
           <img src={postgresLogo}></img>
         </div>
-        <div title="MySQL" style={{...iconStyle, "width": '5rem'}}>
+        <div title="MySQL" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
           <img src={mySQLLogo}></img>
         </div>
-        <div title="SQLite" style={{...iconStyle, "width": '5rem'}}>
+        <div title="SQLite" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
           <img src={sqliteLogo}></img>
         </div>
-        <div title="MongoDB" style={{...iconStyle, "width": '5rem'}}>
+        <div title="MongoDB" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
           <img src={mongoLogo}></img>
         </div>
-        <div title="Redis" style={{...iconStyle, "width": '5rem'}}>
+        <div title="Redis" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
           <img src={redisLogo}></img>
         </div>
       </section>
-      <section style={iconSectionStyle}>
-        <div title="Jasmine" style={{...iconStyle, "width": '5rem'}}>
+      <section className="svg-shadow" style={iconSectionStyle}>
+        <div title="Jasmine" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
           <img src={jasmineLogo}></img>
         </div>
-        <div title="Mocha" style={{...iconStyle, "width": '5rem'}}>
+        <div title="Mocha" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
           <img src={mochaLogo}></img>
         </div>
-        <div title="Jest" style={{...iconStyle, "width": '5rem'}}>
+        <div title="Jest" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
           <img src={jestLogo}></img>
         </div>
-        <div title="pytest" style={{...iconStyle, "width": '5rem'}}>
+        <div title="pytest" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
           <img src={pytestLogo}></img>
         </div>
         <div
-          style={{
+          className="svg-shadow" style={{
             "display": "flex",
             "alignItems": "center",
             "height": "4.8rem",
@@ -226,15 +227,15 @@ export default function TechIcons() {
             "backgroundColor": "white",
             "borderRadius": "10px"
           }}>
-          <div title="BASH" style={{...iconStyle, "width": '5rem'}}>
+          <div title="BASH" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
             <img src={bashLogo}></img>
           </div>
         </div>
       </section>
-      <section style={iconSectionStyle}>
+      <section className="svg-shadow" style={iconSectionStyle}>
         <div
           title="Amazon Web Services"
-          style={{
+          className="svg-shadow" style={{
             "display": "flex",
             "alignItems": "center",
             "height": "4.8rem",
@@ -243,71 +244,71 @@ export default function TechIcons() {
             "borderRadius": "10px"
           }}
         >
-          <div style={{...iconStyle, "width": '10rem'}}>
-            <img src={awsLogo} style={{"width": '10rem'}}></img>
+          <div className="svg-shadow" style={{...iconStyle, "width": '10rem'}}>
+            <img src={awsLogo} className="svg-shadow" style={{"width": '10rem'}}></img>
           </div>
         </div>
-        <div title="Linux" style={{...iconStyle, "width": '5rem'}}>
+        <div title="Linux" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
           <img src={linuxLogo}></img>
         </div>
-        <div title="Docker" style={{...iconStyle, "width": '5rem'}}>
+        <div title="Docker" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
           <img src={dockerLogo}></img>
         </div>
         <div
           title="ngnix"
-          style={{
+          className="svg-shadow" style={{
             "display": "flex",
             "alignItems": "center",
             "height": "4.8rem",
             "overflowY": "hidden",
           }}
         >
-          <div style={{...iconStyle, "width": '7rem'}}>
-            <img src={nginxLogo} style={{"width": '7rem'}}></img>
+          <div className="svg-shadow" style={{...iconStyle, "width": '7rem'}}>
+            <img src={nginxLogo} className="svg-shadow" style={{"width": '7rem'}}></img>
           </div>
         </div>
 
-        {/* <div style={{...iconStyle, "width": '5rem'}}>
+        {/* <div className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
           <img src={herokuLogo}></img>
         </div> */}
       </section>
 
-      <section style={iconSectionStyle}>
+      <section className="svg-shadow" style={iconSectionStyle}>
         <div
           title="Webpack"
-          style={{
+          className="svg-shadow" style={{
             "display": "flex",
             "alignItems": "center",
             "height": "4rem",
             "overflowY": "hidden",
           }}
         >
-          <div style={{...iconStyle, "width": '10rem'}}>
-            <img src={webpackLogo} style={{"width": "10rem"}}></img>
+          <div className="svg-shadow" style={{...iconStyle, "width": '10rem'}}>
+            <img src={webpackLogo} className="svg-shadow" style={{"width": "10rem"}}></img>
           </div>
         </div>
         <div
           title="Babel"
-          style={{
+          className="svg-shadow" style={{
             "display": "flex",
             "alignItems": "center",
             "height": "4rem",
             "overflowY": "hidden",
           }}
         >
-          <div style={{...iconStyle, "width": '7rem'}}>
-            <img src={babelLogo} style={{"width": "7rem"}}></img>
+          <div className="svg-shadow" style={{...iconStyle, "width": '7rem'}}>
+            <img src={babelLogo} className="svg-shadow" style={{"width": "7rem"}}></img>
           </div>
         </div>
         <div
           title="Vite"
-          style={{...iconStyle, "width": '3.5rem'}}
+          className="svg-shadow" style={{...iconStyle, "width": '3.5rem'}}
         >
-          <img src={viteLogo} style={{"width": "3.5rem"}}></img>
+          <img src={viteLogo} className="svg-shadow" style={{"width": "3.5rem"}}></img>
         </div>
         <div
           title="Markdown"
-          style={{
+          className="svg-shadow" style={{
             "display": "flex",
             "alignItems": "center",
             "height": "3rem",
@@ -316,8 +317,8 @@ export default function TechIcons() {
             "borderRadius": "10px"
           }}
         >
-          <div title="Markdown" style={{...iconStyle, "width": '4.3rem'}}>
-            <img src={markdownLogo} style={{"width": "4rem"}}></img>
+          <div title="Markdown" className="svg-shadow" style={{...iconStyle, "width": '4.3rem'}}>
+            <img src={markdownLogo} className="svg-shadow" style={{"width": "4rem"}}></img>
           </div>
         </div>
       </section>
