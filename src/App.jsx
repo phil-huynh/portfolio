@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className='wrapper'>
-    {/* <div className="a"></div><div id="circle"></div> */}
+    <div className="overlay"></div>
     <div style={{ "height": "100vh", "width": "100%", "display": "flex", "justifyContent": "space-around"}}>
       <TechIcons/>
       <section style={{"display": "flex", "alignItems": "center", "width": "45%", "justifyContent": "center"}}>
