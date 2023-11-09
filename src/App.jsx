@@ -26,6 +26,7 @@ function App() {
       <section style={{"display": "flex", "alignItems": "center", "width": "45%", "justifyContent": "center"}}>
         <div>
           <h1>Phil Huynh</h1>
+          <h2>Test Updating</h2>
           <section style={iconSectionStyle}>
             <a href="https://github.com/phil-huynh">
               <div style={{...iconStyle, "width": '5rem'}}>
