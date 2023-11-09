@@ -22,7 +22,7 @@ function App() {
   return (
     <div className='wrapper'>
     <div className="overlay"></div>
-    <div style={{ "height": "100vh", "width": "100%", "display": "flex", "justifyContent": "space-around"}}>
+    <div style={{ "height": "100vh", "width": "100%", "display": "flex", "justifyContent": "space-around", "overflowY": "auto", "overflowX": 'hidden'}}>
       <TechIcons/>
       <section style={{"display": "flex", "alignItems": "center", "width": "45%", "justifyContent": "center"}}>
         <div className="glass">
