@@ -26,16 +26,16 @@ function App() {
       <TechIcons/>
       <section style={{"display": "flex", "alignItems": "center", "width": "45%", "justifyContent": "center"}}>
         <div className="glass">
-          <h1 >Phil Huynh</h1>
+          <h1 className='text-shadow'>Phil Huynh</h1>
           <section className="svg-shadow" style={iconSectionStyle}>
             <a href="https://github.com/phil-huynh">
               <div style={{...iconStyle, "width": '5rem'}}>
-                <img src={githubLogo}></img>
+                <img src={githubLogo}/>
               </div>
             </a>
             <a href='http://www.gitlab.com/PhilHuynh'>
               <div className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
-                  <img src={gitlabLogo}></img>
+                  <img src={gitlabLogo}/>
               </div>
             </a>
           </section>

@@ -219,14 +219,7 @@ export default function TechIcons() {
           <img src={pytestLogo}></img>
         </div>
         <div
-          className="svg-shadow" style={{
-            "display": "flex",
-            "alignItems": "center",
-            "height": "4.8rem",
-            "overflowY": "hidden",
-            "backgroundColor": "white",
-            "borderRadius": "10px"
-          }}>
+          className="svg-shadow" >
           <div title="BASH" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
             <img src={bashLogo}></img>
           </div>
@@ -235,14 +228,7 @@ export default function TechIcons() {
       <section className="svg-shadow" style={iconSectionStyle}>
         <div
           title="Amazon Web Services"
-          className="svg-shadow" style={{
-            "display": "flex",
-            "alignItems": "center",
-            "height": "4.8rem",
-            "overflowY": "hidden",
-            "backgroundColor": "white",
-            "borderRadius": "10px"
-          }}
+          className="svg-shadow"
         >
           <div className="svg-shadow" style={{...iconStyle, "width": '10rem'}}>
             <img src={awsLogo} className="svg-shadow" style={{"width": '10rem'}}></img>
@@ -308,14 +294,7 @@ export default function TechIcons() {
         </div>
         <div
           title="Markdown"
-          className="svg-shadow" style={{
-            "display": "flex",
-            "alignItems": "center",
-            "height": "3rem",
-            "overflowY": "hidden",
-            "backgroundColor": "white",
-            "borderRadius": "10px"
-          }}
+          className="svg-shadow"
         >
           <div title="Markdown" className="svg-shadow" style={{...iconStyle, "width": '4.3rem'}}>
             <img src={markdownLogo} className="svg-shadow" style={{"width": "4rem"}}></img>
