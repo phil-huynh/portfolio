@@ -249,7 +249,7 @@ export default function TechIcons() {
             "overflowY": "hidden",
           }}
         >
-          <div className="svg-shadow" style={{...iconStyle, "width": '7rem'}}>
+          <div className="svg-shadow" style={{...iconStyle, "width": '7rem', 'paddingTop': '3.3rem'}}>
             <img src={nginxLogo} className="svg-shadow" style={{"width": '7rem'}}></img>
           </div>
         </div>
