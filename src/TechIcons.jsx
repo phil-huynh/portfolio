@@ -39,6 +39,21 @@ import numpyLogo from './assets/tech_icons/numpy.svg'
 import flaskLogo from './assets/tech_icons/flask.svg'
 import jiraLogo from './assets/tech_icons/jira.svg'
 import viteLogo from '/vite.svg'
+import AWSLogo from './tech_icons/AmazonWebServices'
+import HTMLLogo from './tech_icons/HTML_Logo'
+import CSSLogo from './tech_icons/CSS_Logo'
+import JavascriptIcon from './tech_icons/JavascriptIcon'
+import TypescriptIcon from './tech_icons/TypescriptIcon'
+import PythonIcon from './tech_icons/PythonIcon'
+import JQueryIcon from './tech_icons/JQueryIcon'
+import ReactIcon from './tech_icons/ReactIcon'
+import ReduxIcon from './tech_icons/ReduxIcon'
+import NextJSIcon from './tech_icons/NextJSIcon'
+import SassIcon from './tech_icons/SassIcon'
+import BootstrapIcon from './tech_icons/BootstrapIcon'
+import BulmaIcon from './tech_icons/BulmaIcon'
+import MaterialUIIcon from './tech_icons/MaterialUIIcon'
+import FigmaIcon from './tech_icons/FigmaIcon'
 
 export default function TechIcons() {
   const iconContainerStyle = {
@@ -68,66 +83,30 @@ export default function TechIcons() {
     <div className="svg-shadow" style={iconContainerStyle}>
       <div>
       <section className="svg-shadow" style={iconSectionStyle}>
-        <div title="HTML" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
-          <img src={htmlLogo}></img>
-        </div>
-        <div title="CSS" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
-          <img src={cssLogo}></img>
-        </div>
-        <div title="Javascript" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
-          <img src={javascriptLogo} className="svg-shadow" style={{"width": "4rem"}}></img>
-        </div>
-        <div title="Typescript" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
-          <img src={typescriptLogo} className="svg-shadow" style={{"width": "4rem"}}></img>
-        </div>
-        <div title="Python" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
-          <img src={pythonLogo}></img>
-        </div>
-        {/* <div className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
-          <img src={markdownLogo}></img>
-        </div> */}
+        <HTMLLogo/>
+        <CSSLogo/>
+        <JavascriptIcon/>
+        <TypescriptIcon/>
+        <PythonIcon/>
       </section>
       <section className="svg-shadow" style={iconSectionStyle}>
-        <div title="jquery" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
-          <img src={jqueryLogo}></img>
-        </div>
-        <div title="React" className="svg-shadow" style={{...iconStyle, "width": '7rem'}}>
-          <img src={reactLogo} className="svg-shadow" style={{"width": "4.5rem"}}></img>
-        </div>
-        <div title="Redux" className="svg-shadow" style={{...iconStyle, "width": '6rem'}}>
-          <img src={reduxLogo} className="svg-shadow" style={{"width": "4.5rem"}}></img>
-        </div>
-        <div
-          title="Next js"
-          className="svg-shadow" style={{
-            "display": "flex",
-            "alignItems": "center",
-            "height": "4rem",
-            "overflowY": "hidden",
-            // "backgroundColor": "white",
-            "borderRadius": "10px"
-          }}>
-          <div title="Next JS" className="svg-shadow" style={{...iconStyle, "width": '10rem'}}>
-            <img src={nextLogo} className="svg-shadow" style={{"width": '9rem'}}></img>
-          </div>
-        </div>
+        <JQueryIcon/>
+        <ReactIcon/>
+        <ReduxIcon/>
+        <NextJSIcon/>
       </section>
       <section className="svg-shadow" style={iconSectionStyle}>
-        <div title="Sass" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
-          <img src={sassLogo}></img>
-        </div>
-        <div title="Bootstrap" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
-          <img src={bootstrapLogo}></img>
-        </div>
-        <div title="Bulma" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
-          <img src={bulmaLogo}></img>
-        </div>
-        <div title="Material UI" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
+        <SassIcon/>
+        <BootstrapIcon/>
+        <BulmaIcon/>
+        <MaterialUIIcon/>
+        <FigmaIcon/>
+        {/* <div title="Material UI" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
           <img src={materialUILogo}></img>
-        </div>
-        <div title="Figma" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
+        </div> */}
+        {/* <div title="Figma" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
           <img src={figmaLogo}></img>
-        </div>
+        </div> */}
       </section>
       <section className="svg-shadow" style={iconSectionStyle}>
 
@@ -226,14 +205,15 @@ export default function TechIcons() {
         </div>
       </section>
       <section className="svg-shadow" style={iconSectionStyle}>
-        <div
+        {/* <div
           title="Amazon Web Services"
           className="svg-shadow"
         >
           <div className="svg-shadow" style={{...iconStyle, "width": '10rem'}}>
             <img src={awsLogo} className="svg-shadow" style={{"width": '10rem'}}></img>
           </div>
-        </div>
+        </div> */}
+        <AWSLogo/>
         <div title="Linux" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
           <img src={linuxLogo}></img>
         </div>
