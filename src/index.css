@@ -1,7 +1,7 @@
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  /* line-height: 1.5; */
   font-weight: 400;
 
   color-scheme: light dark;
@@ -23,6 +23,10 @@ body {
   min-height: 100vh;
 }
 
+.name-header {
+  font-size: 3.5rem;
+}
+
 .extra-shadow {
   filter: drop-shadow(3px 3px 1px rgb(0 0 0 / 0.9));
 }
@@ -42,7 +46,7 @@ body {
 
 
 .text-shadow {
-  text-shadow: 5px 7px black;
+  text-shadow: 5px 5px 2px black;
 }
 
 .glass {

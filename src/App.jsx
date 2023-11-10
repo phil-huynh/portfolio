@@ -2,6 +2,7 @@
 import TechIcons from "./TechIcons"
 import githubLogo from "./assets/tech_icons/github.svg"
 import gitlabLogo from "./assets/tech_icons/gitlab.svg"
+import headshot from "./assets/info/headshot.png"
 import LinkedInIcon from "./tech_icons/LinkedInIcon"
 import GitHubIcon from "./tech_icons/GitHubIcon"
 import GitLabIcon from "./tech_icons/GitLabIcon"
@@ -29,7 +30,18 @@ function App() {
       <TechIcons/>
       <section className="glass" style={{"display": "flex", "alignItems": "center", "width": "45%", "justifyContent": "center"}}>
         <div>
-          <h1 className="text-shadow">Phil Huynh</h1>
+          <img
+            src={headshot}
+            style={{
+              "width": "25rem",
+              "overflow": "hidden",
+              "objectFit": "fit",
+              "borderRadius": "25px",
+              "border": "2px inset black"
+            }}>
+          </img>
+          <h1 className="text-shadow name-header">Phil Huynh</h1>
+          <h2 className="text-shadow">Full Stack Engineer</h2>
           <section className="extra-shadow" style={iconSectionStyle}>
             <a href="https://www.linkedin.com/in/phil-huynh-38472249/"><LinkedInIcon/></a>
             <a href="https://github.com/phil-huynh"><GitHubIcon/></a>
