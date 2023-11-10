@@ -58,53 +58,53 @@ export default function TechIcons() {
   return (
     <div style={iconContainerStyle}>
       <div style={{'paddingY': "5rem"}}>
-      <section className="svg-shadow" style={iconSectionStyle}>
+      <section className="extra-shadow" style={iconSectionStyle}>
         <HTMLLogo/>
         <CSSLogo/>
         <JavascriptIcon/>
         <TypescriptIcon/>
         <PythonIcon/>
       </section>
-      <section className="svg-shadow" style={iconSectionStyle}>
+      <section className="extra-shadow" style={iconSectionStyle}>
         <JQueryIcon/>
         <ReactIcon/>
         <ReduxIcon/>
         <NextJSIcon/>
       </section>
-      <section className="svg-shadow" style={iconSectionStyle}>
+      <section className="extra-shadow" style={iconSectionStyle}>
         <SassIcon/>
         <BootstrapIcon/>
         <BulmaIcon/>
         <MaterialUIIcon/>
         <FigmaIcon/>
       </section>
-      <section className="svg-shadow" style={iconSectionStyle}>
+      <section className="extra-shadow" style={iconSectionStyle}>
         <NodeIcon/>
         <DjangoIcon/>
         <FastAPIIcon/>
         <FlaskIcon/>
       </section>
-      <section className="svg-shadow" style={iconSectionStyle}>
+      <section className="extra-shadow" style={iconSectionStyle}>
         <PostgresIcon/>
         <MySQLIcon/>
         <SQLiteIcon/>
         <MongoIcon/>
         <RedisIcon/>
       </section>
-      <section className="svg-shadow" style={iconSectionStyle}>
+      <section className="extra-shadow" style={iconSectionStyle}>
         <JasmineIcon/>
         <MochaIcon/>
         <JestIcon/>
         <PytestIcon/>
         <BashIcon/>
       </section>
-      <section className="svg-shadow" style={iconSectionStyle}>
+      <section className="extra-shadow" style={iconSectionStyle}>
         <AWSLogo/>
         <LinuxIcon/>
         <DockerIcon/>
         <NGNIXIcon/>
       </section>
-      <section className="svg-shadow" style={iconSectionStyle}>
+      <section className="extra-shadow" style={iconSectionStyle}>
         <WebpackIcon/>
         <BabelIcon/>
         <ViteIcon/>

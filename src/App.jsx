@@ -27,10 +27,10 @@ function App() {
     <div className="overlay"></div>
     <div style={{ "height": "100vh", "width": "100%", "display": "flex", "justifyContent": "space-around", "overflowY": "auto", "overflowX": "hidden"}}>
       <TechIcons/>
-      <section style={{"display": "flex", "alignItems": "center", "width": "45%", "justifyContent": "center"}}>
-        <div className="glass">
+      <section className="glass" style={{"display": "flex", "alignItems": "center", "width": "45%", "justifyContent": "center"}}>
+        <div>
           <h1 className="text-shadow">Phil Huynh</h1>
-          <section className="svg-shadow" style={iconSectionStyle}>
+          <section className="extra-shadow" style={iconSectionStyle}>
             <a href="https://www.linkedin.com/in/phil-huynh-38472249/"><LinkedInIcon/></a>
             <a href="https://github.com/phil-huynh"><GitHubIcon/></a>
             <a href="http://www.gitlab.com/PhilHuynh"><GitLabIcon/></a>
