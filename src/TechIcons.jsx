@@ -44,7 +44,7 @@ export default function TechIcons() {
     "padding": "2rem",
     "paddingY": "6rem",
     // "borderRadius": "25px",
-    "width": "50%",
+    "width": "47%",
     "display": "flex",
     "justifyContent": "space-around",
     "flexDirection": "row",
@@ -64,12 +64,13 @@ export default function TechIcons() {
       animate={{ x: 0 }}
       transition={{ duration: 1.5, delay: .5 }}
     >
-        <HTMLLogo/>
-        <CSSLogo/>
         <JavascriptIcon/>
         <TypescriptIcon/>
         <PythonIcon/>
         <RubyIcon/>
+        <BashIcon/>
+        <HTMLLogo/>
+        <CSSLogo/>
         <JQueryIcon/>
         <ReactIcon/>
         <ReduxIcon/>
@@ -94,7 +95,6 @@ export default function TechIcons() {
         <MochaIcon/>
         <JestIcon/>
         <PytestIcon/>
-        <BashIcon/>
         <AWSLogo/>
         <LinuxIcon/>
         <DockerIcon/>
