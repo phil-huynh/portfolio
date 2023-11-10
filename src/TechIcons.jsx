@@ -42,17 +42,18 @@ import { motion } from "framer-motion"
 export default function TechIcons() {
   const iconContainerStyle = {
     "padding": "2rem",
-    "paddingY": "6rem",
+    // "paddingY": "4rem",
     // "borderRadius": "25px",
     "width": "47%",
     "display": "flex",
     "justifyContent": "space-around",
     "flexDirection": "row",
     "flexWrap": "wrap",
-    "gap": "3rem",
+    "gap": "1rem",
     "marginTop": "2rem",
     "overflowY": "auto",
-    "alignContent": "flex-start"
+    "alignContent": "flex-start",
+    // "rowGap": "none"
   }
 
 

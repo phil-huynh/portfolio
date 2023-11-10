@@ -1,5 +1,7 @@
 
 :root {
+  --bg-image:  url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"),
+  #111111;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   /* line-height: 1.5; */
   font-weight: 400;
@@ -15,7 +17,6 @@
   -webkit-text-size-adjust: 100%;
 }
 
-
 body {
   background: #fff;
   margin: 0;
@@ -23,52 +24,9 @@ body {
   min-height: 100vh;
 }
 
-.name-header {
-  font-size: 3.5rem;
-}
-
-.extra-shadow {
-  filter: drop-shadow(3px 3px 1px rgb(0 0 0 / 0.9));
-}
-
-.svg-shadow {
-  position: relative;
-  filter: drop-shadow(4px 4px 1px rgb(0 0 0 / 0.9));
-}
-
-
-section {
-  z-index: 100;
-}
-
-.text-shadow {
-  text-shadow: 5px 5px 2px black;
-}
-
-.glass {
-  font-weight: 700;
-  font-size: 1.7rem;
-  width: 76%;
-  margin: 2rem;
-  z-index: 100;
-  padding: 35px;
-  border: 1px solid rgba(194, 193, 193, 0.5);
-  border-radius: 20px;
-  background-color: rgba(247, 247, 247, 0.05);
-  box-shadow: 10;
-  backdrop-filter: blur(2px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-
-
 .wrapper {
   animation: scroll 180s linear infinite;
-  background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"),
-    #111111;
+  background: var(--bg-image);
   background-attachment: fixed;
   color: #eee;
   height: 100vh;
@@ -114,6 +72,49 @@ section {
 }
 
 .contents {
+  position: relative;
   overflow-y: scroll;
   z-index: 100;
 }
+
+.glass {
+  font-weight: 700;
+  font-size: 1.7rem;
+  width: 76%;
+  margin: 2rem;
+  z-index: 100;
+  padding: 35px;
+  border: 1px solid rgba(194, 193, 193, 0.5);
+  border-radius: 20px;
+  background-color: rgba(247, 247, 247, 0.05);
+  box-shadow: 10;
+  backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.name-header {
+  font-size: 3.5rem;
+}
+
+.text-shadow {
+  text-shadow: 5px 5px 2px black;
+}
+
+.extra-shadow {
+  filter: drop-shadow(3px 3px 1px rgb(0 0 0 / 0.9));
+}
+
+.svg-shadow {
+  position: relative;
+  filter: drop-shadow(4px 4px 1px rgb(0 0 0 / 0.9));
+}
+
+
+
+
+
+
+

@@ -60,6 +60,9 @@ function App() {
               </img>
               <h1 className="text-shadow name-header">Phil Huynh</h1>
               <h2 className="text-shadow">Full Stack Engineer</h2>
+              <a href="mailto:philiphuynh98@gmail.com" style={{"color": "white"}}>
+                <h4>philphuynh98@gmail.com</h4>
+              </a>
               <section className="extra-shadow" style={{...iconSectionStyle, "justifyContent": "center"}}>
                 <a href="https://www.linkedin.com/in/phil-huynh-38472249/"><LinkedInIcon/></a>
                 <a href="https://github.com/phil-huynh"><GitHubIcon/></a>
