@@ -34,83 +34,63 @@ import WebpackIcon from './tech_icons/Webpack'
 import BabelIcon from './tech_icons/BabelIcon'
 import ViteIcon from './tech_icons/ViteIcon'
 import MarkdownIcon from './tech_icons/MarkdownIcon'
+import { motion } from "framer-motion"
 
 export default function TechIcons() {
   const iconContainerStyle = {
-    // "backgroundColor": "white",
     "padding": "2rem",
-    "paddingY": "4rem",
+    "paddingY": "6rem",
     "borderRadius": "25px",
     "width": "50%",
-    // "border": "red 1px solid",
     "display": "flex",
-    "alignItems": "center"
-  }
-
-  const iconSectionStyle = {
-    "display": "flex",
+    "justifyContent": "space-around",
+    "flexDirection": "row",
     "flexWrap": "wrap",
-    "gap": "5rem",
-    "marginTop": "1rem"
+    "gap": "3rem",
+    "marginTop": "1rem",
+    "overflowY": "auto",
+    "alignContent": "flex-start"
   }
 
 
   return (
-    <div className="glass" style={iconContainerStyle}>
-      <div style={{'paddingY': "5rem"}}>
-      <section className="extra-shadow" style={iconSectionStyle}>
+    <motion.div className="glass extra-shadow" style={iconContainerStyle} >
         <HTMLLogo/>
         <CSSLogo/>
         <JavascriptIcon/>
         <TypescriptIcon/>
         <PythonIcon/>
-      </section>
-      <section className="extra-shadow" style={iconSectionStyle}>
         <JQueryIcon/>
         <ReactIcon/>
         <ReduxIcon/>
         <NextJSIcon/>
-      </section>
-      <section className="extra-shadow" style={iconSectionStyle}>
         <SassIcon/>
         <BootstrapIcon/>
         <BulmaIcon/>
         <MaterialUIIcon/>
         <FigmaIcon/>
-      </section>
-      <section className="extra-shadow" style={iconSectionStyle}>
         <NodeIcon/>
         <DjangoIcon/>
         <FastAPIIcon/>
         <FlaskIcon/>
-      </section>
-      <section className="extra-shadow" style={iconSectionStyle}>
         <PostgresIcon/>
         <MySQLIcon/>
         <SQLiteIcon/>
         <MongoIcon/>
         <RedisIcon/>
-      </section>
-      <section className="extra-shadow" style={iconSectionStyle}>
         <JasmineIcon/>
         <MochaIcon/>
         <JestIcon/>
         <PytestIcon/>
         <BashIcon/>
-      </section>
-      <section className="extra-shadow" style={iconSectionStyle}>
         <AWSLogo/>
         <LinuxIcon/>
         <DockerIcon/>
         <NGNIXIcon/>
-      </section>
-      <section className="extra-shadow" style={iconSectionStyle}>
         <WebpackIcon/>
         <BabelIcon/>
         <ViteIcon/>
         <MarkdownIcon/>
-      </section>
-      </div>
-    </div>
+    </motion.div>
   )
 }
