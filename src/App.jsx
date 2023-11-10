@@ -48,7 +48,7 @@ function App() {
           </img>
           <h1 className="text-shadow name-header">Phil Huynh</h1>
           <h2 className="text-shadow">Full Stack Engineer</h2>
-          <section className="extra-shadow" style={iconSectionStyle}>
+          <section className="extra-shadow" style={{...iconSectionStyle, "justifyContent": "center"}}>
             <a href="https://www.linkedin.com/in/phil-huynh-38472249/"><LinkedInIcon/></a>
             <a href="https://github.com/phil-huynh"><GitHubIcon/></a>
             <a href="http://www.gitlab.com/PhilHuynh"><GitLabIcon/></a>
