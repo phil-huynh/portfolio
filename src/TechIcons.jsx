@@ -34,6 +34,9 @@ import WebpackIcon from './tech_icons/Webpack'
 import BabelIcon from './tech_icons/BabelIcon'
 import ViteIcon from './tech_icons/ViteIcon'
 import MarkdownIcon from './tech_icons/MarkdownIcon'
+import RubyIcon from './tech_icons/RubyIcon'
+import NpmIcon from './tech_icons/NpmIcon'
+import ExpressIcon from './tech_icons/ExpressIcon'
 import { motion } from "framer-motion"
 
 export default function TechIcons() {
@@ -59,13 +62,14 @@ export default function TechIcons() {
       style={iconContainerStyle}
       initial={{ x: -1500 }}
       animate={{ x: 0 }}
-      transition={{ duration: 1.4 }}
+      transition={{ duration: 1.5, delay: .5 }}
     >
         <HTMLLogo/>
         <CSSLogo/>
         <JavascriptIcon/>
         <TypescriptIcon/>
         <PythonIcon/>
+        <RubyIcon/>
         <JQueryIcon/>
         <ReactIcon/>
         <ReduxIcon/>
@@ -76,6 +80,8 @@ export default function TechIcons() {
         <MaterialUIIcon/>
         <FigmaIcon/>
         <NodeIcon/>
+        <ExpressIcon/>
+        <NpmIcon/>
         <DjangoIcon/>
         <FastAPIIcon/>
         <FlaskIcon/>

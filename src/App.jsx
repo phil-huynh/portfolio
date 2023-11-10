@@ -1,11 +1,10 @@
 // import { useState } from "react"
 import TechIcons from "./TechIcons"
-import githubLogo from "./assets/tech_icons/github.svg"
-import gitlabLogo from "./assets/tech_icons/gitlab.svg"
 import headshot from "./assets/info/headshot.png"
 import LinkedInIcon from "./tech_icons/LinkedInIcon"
 import GitHubIcon from "./tech_icons/GitHubIcon"
 import GitLabIcon from "./tech_icons/GitLabIcon"
+import { motion } from "framer-motion"
 import "./App.css"
 
 function App() {
@@ -17,18 +16,25 @@ function App() {
     "marginTop": "1rem"
   }
 
-  const iconStyle = {
-    "display": "flex",
-    "placeContent": "center",
-    // "border": "solid black 1px"
-  }
-
   return (
     <div className="wrapper">
-    <div className="overlay"></div>
+    <div className="overlay">
+      <motion.h1 animate={{ fontSize: 0, opacity: 0 }} transition={{ duration: 1.5, delay: .6 }}>Greetings!</motion.h1>
+    </div>
     <div style={{ "height": "100vh", "width": "100%", "display": "flex", "justifyContent": "space-around", "overflowY": "auto", "overflowX": "hidden"}}>
       <TechIcons/>
-      <section className="glass" style={{"display": "flex", "alignItems": "center", "width": "45%", "justifyContent": "center"}}>
+      <motion.section
+        className="glass"
+        initial={{ x: 1500 }}
+        animate={{ x: 0 }}
+        transition={{ duration: 1.5, delay: .5 }}
+        style={{
+          "display": "flex",
+          "alignItems": "center",
+          "width": "45%",
+          "justifyContent": "center"
+        }}
+      >
         <div>
           <img
             src={headshot}
@@ -48,7 +54,7 @@ function App() {
             <a href="http://www.gitlab.com/PhilHuynh"><GitLabIcon/></a>
           </section>
         </div>
-      </section>
+      </motion.section>
     </div>
       <section>
         {/* <img src="https://media.giphy.com/media/H47rgIuBFw7g0iIG1V/giphy.gif"></img>
