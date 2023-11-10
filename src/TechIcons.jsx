@@ -40,21 +40,27 @@ export default function TechIcons() {
   const iconContainerStyle = {
     "padding": "2rem",
     "paddingY": "6rem",
-    "borderRadius": "25px",
+    // "borderRadius": "25px",
     "width": "50%",
     "display": "flex",
     "justifyContent": "space-around",
     "flexDirection": "row",
     "flexWrap": "wrap",
     "gap": "3rem",
-    "marginTop": "1rem",
+    "marginTop": "2rem",
     "overflowY": "auto",
     "alignContent": "flex-start"
   }
 
 
   return (
-    <motion.div className="glass extra-shadow" style={iconContainerStyle} >
+    <motion.div
+      className="glass extra-shadow"
+      style={iconContainerStyle}
+      initial={{ x: -1500 }}
+      animate={{ x: 0 }}
+      transition={{ duration: 1.4 }}
+    >
         <HTMLLogo/>
         <CSSLogo/>
         <JavascriptIcon/>
