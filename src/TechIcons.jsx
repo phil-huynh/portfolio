@@ -39,6 +39,7 @@ export default function TechIcons() {
   const iconContainerStyle = {
     // "backgroundColor": "white",
     "padding": "2rem",
+    "paddingY": "4rem",
     "borderRadius": "25px",
     "width": "50%",
     // "border": "red 1px solid",
@@ -55,8 +56,8 @@ export default function TechIcons() {
 
 
   return (
-    <div className="svg-shadow" style={iconContainerStyle}>
-      <div>
+    <div style={iconContainerStyle}>
+      <div style={{'paddingY': "5rem"}}>
       <section className="svg-shadow" style={iconSectionStyle}>
         <HTMLLogo/>
         <CSSLogo/>

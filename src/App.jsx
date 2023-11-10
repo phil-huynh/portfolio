@@ -1,8 +1,11 @@
-// import { useState } from 'react'
-import TechIcons from './TechIcons'
-import githubLogo from './assets/tech_icons/github.svg'
-import gitlabLogo from './assets/tech_icons/gitlab.svg'
-import './App.css'
+// import { useState } from "react"
+import TechIcons from "./TechIcons"
+import githubLogo from "./assets/tech_icons/github.svg"
+import gitlabLogo from "./assets/tech_icons/gitlab.svg"
+import LinkedInIcon from "./tech_icons/LinkedInIcon"
+import GitHubIcon from "./tech_icons/GitHubIcon"
+import GitLabIcon from "./tech_icons/GitLabIcon"
+import "./App.css"
 
 function App() {
 
@@ -20,24 +23,17 @@ function App() {
   }
 
   return (
-    <div className='wrapper'>
+    <div className="wrapper">
     <div className="overlay"></div>
-    <div style={{ "height": "100vh", "width": "100%", "display": "flex", "justifyContent": "space-around", "overflowY": "auto", "overflowX": 'hidden'}}>
+    <div style={{ "height": "100vh", "width": "100%", "display": "flex", "justifyContent": "space-around", "overflowY": "auto", "overflowX": "hidden"}}>
       <TechIcons/>
       <section style={{"display": "flex", "alignItems": "center", "width": "45%", "justifyContent": "center"}}>
         <div className="glass">
-          <h1 className='text-shadow'>Phil Huynh</h1>
+          <h1 className="text-shadow">Phil Huynh</h1>
           <section className="svg-shadow" style={iconSectionStyle}>
-            <a href="https://github.com/phil-huynh">
-              <div style={{...iconStyle, "width": '5rem'}}>
-                <img src={githubLogo}/>
-              </div>
-            </a>
-            <a href='http://www.gitlab.com/PhilHuynh'>
-              <div className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
-                  <img src={gitlabLogo}/>
-              </div>
-            </a>
+            <a href="https://www.linkedin.com/in/phil-huynh-38472249/"><LinkedInIcon/></a>
+            <a href="https://github.com/phil-huynh"><GitHubIcon/></a>
+            <a href="http://www.gitlab.com/PhilHuynh"><GitLabIcon/></a>
           </section>
         </div>
       </section>
