@@ -55,7 +55,11 @@ body {
   /* border: 1px solid rgba(139, 139, 139, 0.50);
   border-radius: 20px; */
   /* background-color: rgba(16, 16, 16, 0.5); */
+  border: 1px solid rgba(194, 193, 193, 0.5);
+  border-radius: 20px;
+  background-color: rgba(247, 247, 247, 0.05);
   box-shadow: 5;
+  backdrop-filter: blur(2px);
   display: flex;
   flex-direction: column;
   justify-content: center;

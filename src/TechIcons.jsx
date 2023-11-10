@@ -56,7 +56,7 @@ export default function TechIcons() {
 
 
   return (
-    <div style={iconContainerStyle}>
+    <div className="glass" style={iconContainerStyle}>
       <div style={{'paddingY': "5rem"}}>
       <section className="extra-shadow" style={iconSectionStyle}>
         <HTMLLogo/>
