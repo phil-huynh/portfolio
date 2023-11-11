@@ -78,6 +78,7 @@ a {
 .contents {
   position: relative;
   overflow-y: scroll;
+  height: 100%;
   z-index: 100;
 }
 
