@@ -7,7 +7,7 @@ export default function NpmIcon() {
   }
 
   return (
-    <div title="npm" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
+    <div title="npm" className="svg-shadow" style={{...iconStyle, "width": '4rem'}}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
         <path
           fill="#cb3837"

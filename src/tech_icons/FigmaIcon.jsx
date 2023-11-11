@@ -7,7 +7,7 @@ export default function FigmaIcon() {
   }
 
   return (
-    <div title="Figma" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
+    <div title="Figma" className="svg-shadow" style={{...iconStyle, "width": '4rem'}}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
         <path
           fill="#0acf83"

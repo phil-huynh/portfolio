@@ -7,7 +7,7 @@ export default function PythonIcon() {
   }
 
   return (
-    <div title="Python" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
+    <div title="Python" className="svg-shadow" style={{...iconStyle, "width": '4rem'}}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
         <g fillRule="evenodd" clipRule="evenodd">
           <path

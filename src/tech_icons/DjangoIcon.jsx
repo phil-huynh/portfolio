@@ -7,7 +7,7 @@ export default function DjangoIcon() {
   }
 
   return (
-    <div className="svg-shadow" style={{...iconStyle, "width": '6rem'}}>
+    <div className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
       <svg version="1.0" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" fill="#2AA474">
         <path
           d="M15.091 41.64h7v32.403c-3.59.682-6.227.955-9.09.955C4.455 74.998 0 71.134 0 63.724c0-7.136 4.728-11.772 12.046-11.772 1.136 0 2 .09 3.045.363zm0 16.31c-.818-.272-1.5-.363-2.363-.363-3.546 0-5.591 2.182-5.591 6 0 3.727 1.954 5.773 5.545 5.773.773 0 1.41-.046 2.41-.182z"

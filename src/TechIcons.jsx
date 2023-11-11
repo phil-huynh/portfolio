@@ -42,9 +42,7 @@ import { motion } from "framer-motion"
 export default function TechIcons() {
   const iconContainerStyle = {
     "padding": "2rem",
-    // "paddingY": "4rem",
-    // "borderRadius": "25px",
-    "width": "47%",
+    "width": "90%",
     "display": "flex",
     "justifyContent": "space-around",
     "flexDirection": "row",
@@ -53,7 +51,7 @@ export default function TechIcons() {
     "marginTop": "2rem",
     "overflowY": "auto",
     "alignContent": "flex-start",
-    // "rowGap": "none"
+
   }
 
 
@@ -61,7 +59,7 @@ export default function TechIcons() {
     <motion.div
       className="glass extra-shadow"
       style={iconContainerStyle}
-      initial={{ x: -1500 }}
+      initial={{ x: -2000 }}
       animate={{ x: 0 }}
       transition={{ duration: 1.5, delay: .5 }}
     >

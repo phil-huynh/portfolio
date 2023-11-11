@@ -7,7 +7,7 @@ export default function FastAPIIcon() {
   }
 
   return (
-    <div className="svg-shadow" style={{...iconStyle, "width": '8rem'}}>
+    <div className="svg-shadow" style={{...iconStyle, "width": '7rem'}}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
         <path
           fill="#049688"

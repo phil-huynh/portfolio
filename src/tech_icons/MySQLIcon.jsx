@@ -7,7 +7,7 @@ export default function MySQLIcon() {
   }
 
   return (
-    <div title="MySQL" className="svg-shadow" style={{...iconStyle, "width": '7rem'}}>
+    <div title="MySQL" className="svg-shadow" style={{...iconStyle, "width": '6rem'}}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
         <path
           fill="#1897cd"

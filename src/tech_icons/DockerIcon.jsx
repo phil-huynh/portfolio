@@ -7,7 +7,7 @@ export default function DockerIcon() {
   }
 
   return (
-    <div className="svg-shadow" style={{...iconStyle, "width": '5.8rem'}}>
+    <div className="svg-shadow" style={{...iconStyle, "width": '4.8rem'}}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
         <path
           fillRule="evenodd"

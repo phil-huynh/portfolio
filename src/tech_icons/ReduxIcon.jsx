@@ -7,7 +7,7 @@ export default function ReduxIcon() {
   }
 
   return (
-    <div title="Redux" className="svg-shadow" style={{...iconStyle, "width": '4.5rem'}}>
+    <div title="Redux" className="svg-shadow" style={{...iconStyle, "width": '3.5rem'}}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
         <path fill="none" d="M0 0h128v128H0z"/>
         <path

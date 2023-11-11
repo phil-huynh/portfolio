@@ -24,13 +24,17 @@ body {
   min-height: 100vh;
 }
 
+a {
+  text-decoration: none;
+}
+
 .wrapper {
   animation: scroll 180s linear infinite;
   background: var(--bg-image);
   background-attachment: fixed;
   color: #eee;
   height: 100vh;
-  min-width: 360px;
+  /* min-width: 360px; */
   width: 100vw;
   /* display: flex;
   justify-content: center; */
@@ -68,7 +72,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 10rem;
+  font-size: 6rem;
 }
 
 .contents {
@@ -78,26 +82,15 @@ body {
 }
 
 .glass {
-  font-weight: 700;
-  font-size: 1.7rem;
-  width: 76%;
-  margin: 2rem;
-  z-index: 100;
-  padding: 35px;
   border: 1px solid rgba(194, 193, 193, 0.5);
   border-radius: 20px;
   background-color: rgba(247, 247, 247, 0.05);
   box-shadow: 10;
   backdrop-filter: blur(2px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin: 2rem;
+  z-index: 1;
 }
 
-.name-header {
-  font-size: 3.5rem;
-}
 
 .text-shadow {
   text-shadow: 5px 5px 2px black;

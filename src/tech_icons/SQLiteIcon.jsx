@@ -7,7 +7,7 @@ export default function SQLiteIcon() {
   }
 
   return (
-    <div title="SQLite" className="svg-shadow" style={{...iconStyle, "width": '5.5rem'}}>
+    <div title="SQLite" className="svg-shadow" style={{...iconStyle, "width": '4.5rem'}}>
       <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient

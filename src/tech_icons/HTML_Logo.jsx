@@ -12,7 +12,7 @@ export default function HTMLLogo() {
     <div
       title="HTML"
       className="svg-shadow"
-      style={{...iconStyle, "width": '5rem'}}
+      style={{...iconStyle, "width": '4rem'}}
     >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
         <path
