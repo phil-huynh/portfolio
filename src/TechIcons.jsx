@@ -61,7 +61,7 @@ export default function TechIcons() {
       style={iconContainerStyle}
       initial={{ x: -2000 }}
       animate={{ x: 0 }}
-      transition={{ duration: 1.5, delay: .5 }}
+      transition={{ duration: 2, delay: .5 }}
     >
         <JavascriptIcon/>
         <TypescriptIcon/>

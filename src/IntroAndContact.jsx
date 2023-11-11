@@ -68,10 +68,10 @@ export default function IntroAndContact() {
 
   return (
     <motion.section
-      className="glass intro-container, extra-shadow"
+      className="glass intro-container extra-shadow"
       initial={{ x: 2000 }}
       animate={{ x: 0 }}
-      transition={{ duration: 1.5, delay: .5 }}
+      transition={{ duration: 2, delay: .5 }}
       style={{...containerStyle}}
     >
       <Grid container spacing={3} sx={{"width": "100vw"}}>
