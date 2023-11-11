@@ -33,7 +33,8 @@ export default function IntroAndContact() {
     "backgroundPosition": "center",
     "borderRadius": "25px",
     "border": "2px inset black",
-    "margin": "1rem"
+    "margin": "1rem",
+    "marginY": "2rem"
   }
 
   const containerStyle = {
@@ -53,11 +54,11 @@ export default function IntroAndContact() {
     // "paddingLeft": "1rem",
   }
 
-  // const headerStyle = {
-  //   "display": "flex",
-  //   "justifyContent": "flex-start",
+  const gridStyle = {
+    "display": "flex",
+    "justifyContent": "center",
 
-  // }
+  }
 
   const infoStyle={
     "margin": "2rem"
@@ -74,11 +75,11 @@ export default function IntroAndContact() {
       style={{...containerStyle}}
     >
       <Grid container spacing={3} sx={{"width": "100vw"}}>
-        <Grid item xs={6} sm={5} md={4} lg={6} xl={4}>
+        <Grid item xs={12} sm={5} md={5} lg={6} xl={4} style={gridStyle}>
             <div style={{...headshotStyle}}/>
         </Grid>
-        <Grid item xs={6} sm={7} md={8} lg={6} xl={8}>
-           <div className={infoStyle} style={{"height": "100%", "marginTop": "2.2rem"}}>
+        <Grid item xs={12} sm={7} md={7} lg={6} xl={8} style={gridStyle}>
+           <div className={infoStyle} style={{"height": "100%", "margin": "2rem"}}>
             <h1 style={{...labelsStyle, "margin": "0"}} className="text-shadow">Phil Huynh</h1>
             <h4 style={{...labelsStyle, "margin": "0"}} className="text-shadow">Full Stack Engineer</h4>
             <a href="mailto:philiphuynh98@gmail.com" style={{"color": "white"}}>
