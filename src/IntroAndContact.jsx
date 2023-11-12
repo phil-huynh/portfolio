@@ -26,8 +26,8 @@ export default function IntroAndContact() {
 
 
   const headshotStyle = {
-    "width": "25rem",
-    "height": "21rem",
+    "width": "28.2rem",
+    "height": "24rem",
     "overflow": "hidden",
     "backgroundImage": `url(${headshot})`,
     "backgroundSize": "cover",
@@ -41,8 +41,9 @@ export default function IntroAndContact() {
   const containerStyle = {
     "display": "flex",
     "width": "93%",
-    "justifyContent": "center",
+    "alignItems": "center",
     "marginTop": "2rem",
+    "flexDirection": "column"
 
   }
 
@@ -68,6 +69,13 @@ export default function IntroAndContact() {
     "margin": "2rem"
   }
 
+  const menuItemStyle = {
+    "fontSize": "1.5rem",
+    "width": "100%",
+    "marginTop": "1.5rem",
+    // "paddingTop": "1rem",
+    // "paddingBottom": "1rem"
+  }
 
 
   return (
@@ -85,8 +93,8 @@ export default function IntroAndContact() {
           </Grid>
           <Grid item xs={12} sm={6} md={6} lg={6} xl={6} style={{...gridStyle}}>
             <div className={infoStyle} style={{"height": "100%", "margin": "2rem"}}>
-              <h1 style={{...labelsStyle, "margin": "0"}} className="text-shadow">Phil Huynh</h1>
-              <h4 style={{...labelsStyle, "margin": "0"}} className="text-shadow">Full Stack Engineer</h4>
+              <h1 style={{...labelsStyle, "margin": "0", "fontSize": "2.3rem"}} className="text-shadow">Phil Huynh</h1>
+              <h2 style={{...labelsStyle, "margin": "0"}} className="text-shadow">Full Stack Engineer</h2>
               <a href="mailto:philiphuynh98@gmail.com" style={{"color": "white"}}>
                 <h4 className="text-shadow" style={{"textAlign": "left"}}>philphuynh98@gmail.com</h4>
               </a>
@@ -99,6 +107,10 @@ export default function IntroAndContact() {
           </Grid>
         </Grid>
       </div>
+      <div className="glass" style={menuItemStyle}><h1>Skills</h1></div>
+      <div className="glass" style={menuItemStyle}><h1>Resume & Bio</h1></div>
+      <div className="glass" style={menuItemStyle}><h1>Projects</h1></div>
+      <div className="glass" style={menuItemStyle}><h1>Recommendations</h1></div>
   </motion.section>
   )
 }
