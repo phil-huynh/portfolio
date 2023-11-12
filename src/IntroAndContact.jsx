@@ -103,6 +103,21 @@ export default function IntroAndContact() {
                 <a href="https://github.com/phil-huynh"><GitHubIcon/></a>
                 <a href="http://www.gitlab.com/PhilHuynh"><GitLabIcon/></a>
               </section>
+              <hr/>
+              <p>
+                It all rolls into one
+                And nothing comes for free
+                There's nothing you can hold
+                For very long
+                And when you hear that song
+                Come crying like the wind
+                It seems like all this life
+                Was just a dream. I've stayed in every blue-light cheap hotel
+                Can't win for trying
+                Dust off those rusty strings just
+                One more time
+                Gonna make em shine
+              </p>
             </div>
           </Grid>
         </Grid>

@@ -39,9 +39,13 @@ import NpmIcon from './tech_icons/NpmIcon'
 import ExpressIcon from './tech_icons/ExpressIcon'
 import { motion } from "framer-motion"
 
+import { useStore } from './Store'
+
 export default function TechIcons() {
+  const {locate, locate2, locate3} = useStore()
+
   const iconContainerStyle = {
-    "padding": "1.3rem",
+
     "width": "90%",
     "marginTop": "2rem",
     "overflowY": "auto",
@@ -57,14 +61,24 @@ export default function TechIcons() {
     "alignContent": "flex-start",
   }
 
+  const skillsStyle = {
+    "paddingInline": "1rem",
+    "width": "95%",
+    "marginBottom": "1rem",
+    "paddingTop": ".2rem",
+    "paddingBottom": ".6rem",
+  }
+
+
   return (
     <motion.div
-      className="glass"
-      style={iconContainerStyle}
+      // className="glass"
+      style={{...iconContainerStyle}}
       initial={{ x: -2000 }}
       animate={{ x: 0 }}
       transition={{ duration: 1.5, delay: .5 }}
     >
+      <div className="glass" style={skillsStyle}>
         <h3 style={{"textAlign": "left", "textDecoration": "underline"}}>Languages</h3>
         <section style={iconGroupStyle}>
           <JavascriptIcon/>
@@ -73,7 +87,8 @@ export default function TechIcons() {
           <RubyIcon/>
           <BashIcon/>
         </section>
-        <hr/>
+      </div>
+      <div className="glass" style={skillsStyle}>
         <h3 style={{"textAlign": "left", "textDecoration": "underline"}}>Front End Development</h3>
         <section style={iconGroupStyle}>
           <HTMLLogo/>
@@ -90,7 +105,8 @@ export default function TechIcons() {
           <ViteIcon/>
           <FigmaIcon/>
         </section>
-        <hr/>
+      </div>
+      <div className="glass" style={skillsStyle}>
         <h3 style={{"textAlign": "left", "textDecoration": "underline"}}>Back End Development</h3>
         <section style={iconGroupStyle}>
           <NodeIcon/>
@@ -100,7 +116,8 @@ export default function TechIcons() {
           <FastAPIIcon/>
           <FlaskIcon/>
         </section>
-        <hr/>
+      </div>
+      <div className="glass" style={skillsStyle}>
         <h3 style={{"textAlign": "left", "textDecoration": "underline"}}>Databases and Caching</h3>
         <section style={iconGroupStyle}>
           <PostgresIcon/>
@@ -109,7 +126,8 @@ export default function TechIcons() {
           <MongoIcon/>
           <RedisIcon/>
         </section>
-        <hr/>
+      </div>
+      <div className="glass" style={skillsStyle}>
         <h3 style={{"textAlign": "left", "textDecoration": "underline"}}>Testing</h3>
         <section style={iconGroupStyle}>
           <JasmineIcon/>
@@ -117,7 +135,8 @@ export default function TechIcons() {
           <JestIcon/>
           <PytestIcon/>
         </section>
-        <hr/>
+      </div>
+      <div className="glass" style={skillsStyle}>
         <h3 style={{"textAlign": "left", "textDecoration": "underline"}}>Build Tools and Deployment</h3>
         <section style={iconGroupStyle}>
           <WebpackIcon/>
@@ -127,6 +146,7 @@ export default function TechIcons() {
           <NGNIXIcon/>
           <AWSLogo/>
         </section>
+      </div>
     </motion.div>
   )
 }
