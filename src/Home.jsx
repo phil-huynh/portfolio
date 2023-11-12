@@ -8,7 +8,7 @@ import { useStore } from "./Store"
 
 function Home() {
 
-  const { locate } = useStore()
+  const { locate, locate2, locate3 } = useStore()
 
   return (
     <div className="wrapper">

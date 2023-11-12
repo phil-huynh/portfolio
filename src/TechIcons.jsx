@@ -46,10 +46,13 @@ export default function TechIcons() {
 
   const iconContainerStyle = {
 
-    "width": "90%",
+    "width": "100%",
     "marginTop": "2rem",
     "overflowY": "auto",
-    "marginInline": "1.2rem",
+    "display": "flex",
+    "flexDirection": "column",
+    "alignItems": "center"
+    // "marginInline": "1rem",
   }
 
   const iconGroupStyle ={
@@ -62,8 +65,9 @@ export default function TechIcons() {
   }
 
   const skillsStyle = {
-    "paddingInline": "1rem",
-    "width": "95%",
+    "paddingInline": ".8rem",
+    "width": "89%",
+    "marginInline": "1rem",
     "marginBottom": "1rem",
     "paddingTop": ".2rem",
     "paddingBottom": ".6rem",
