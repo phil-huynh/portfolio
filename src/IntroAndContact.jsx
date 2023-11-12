@@ -57,8 +57,12 @@ export default function IntroAndContact() {
 
   const gridStyle = {
     "display": "flex",
-    "justifyContent": "center",
+    "justifyContent": "flex-start",
+  }
 
+  const gridStyle2 = {
+    "display": "flex",
+    "justifyContent": "flex-end",
   }
 
   const infoStyle={
