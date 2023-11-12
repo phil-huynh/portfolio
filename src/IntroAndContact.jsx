@@ -6,6 +6,7 @@ import LinkedInIcon from "./tech_icons/LinkedInIcon"
 import Grid from '@mui/material/Grid';
 import { useStore }  from "./Store"
 
+
 export default function IntroAndContact() {
 
 

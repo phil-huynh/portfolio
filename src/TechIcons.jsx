@@ -43,17 +43,18 @@ export default function TechIcons() {
   const iconContainerStyle = {
     "padding": "2rem",
     "width": "90%",
+    "marginTop": "2rem",
+    "overflowY": "auto",
+  }
+
+  const iconGroupStyle ={
     "display": "flex",
-    "justifyContent": "space-around",
+    "justifyContent": "flex-start",
     "flexDirection": "row",
     "flexWrap": "wrap",
     "gap": "1rem",
-    "marginTop": "2rem",
-    "overflowY": "auto",
     "alignContent": "flex-start",
-
   }
-
 
   return (
     <motion.div
@@ -63,45 +64,64 @@ export default function TechIcons() {
       animate={{ x: 0 }}
       transition={{ duration: 2, delay: .5 }}
     >
-        <JavascriptIcon/>
-        <TypescriptIcon/>
-        <PythonIcon/>
-        <RubyIcon/>
-        <BashIcon/>
-        <HTMLLogo/>
-        <CSSLogo/>
-        <JQueryIcon/>
-        <ReactIcon/>
-        <ReduxIcon/>
-        <NextJSIcon/>
-        <SassIcon/>
-        <BootstrapIcon/>
-        <BulmaIcon/>
-        <MaterialUIIcon/>
-        <FigmaIcon/>
-        <NodeIcon/>
-        <ExpressIcon/>
-        <NpmIcon/>
-        <DjangoIcon/>
-        <FastAPIIcon/>
-        <FlaskIcon/>
-        <PostgresIcon/>
-        <MySQLIcon/>
-        <SQLiteIcon/>
-        <MongoIcon/>
-        <RedisIcon/>
-        <JasmineIcon/>
-        <MochaIcon/>
-        <JestIcon/>
-        <PytestIcon/>
-        <AWSLogo/>
-        <LinuxIcon/>
-        <DockerIcon/>
-        <NGNIXIcon/>
-        <WebpackIcon/>
-        <BabelIcon/>
-        <ViteIcon/>
-        <MarkdownIcon/>
+        <h3 style={{"textAlign": "left", "textDecoration": "underline"}}>Languages</h3>
+        <section style={iconGroupStyle}>
+          <JavascriptIcon/>
+          <TypescriptIcon/>
+          <PythonIcon/>
+          <RubyIcon/>
+          <BashIcon/>
+        </section>
+        <hr/>
+        <h3 style={{"textAlign": "left", "textDecoration": "underline"}}>Front End Development</h3>
+        <section style={iconGroupStyle}>
+          <HTMLLogo/>
+          <CSSLogo/>
+          <MarkdownIcon/>
+          <JQueryIcon/>
+          <ReactIcon/>
+          <ReduxIcon/>
+          <NextJSIcon/>
+          <SassIcon/>
+          <BootstrapIcon/>
+          <BulmaIcon/>
+          <MaterialUIIcon/>
+          <ViteIcon/>
+          <WebpackIcon/>
+          <BabelIcon/>
+          <FigmaIcon/>
+        </section>
+        <hr/>
+        <h3 style={{"textAlign": "left", "textDecoration": "underline"}}>Back End Development</h3>
+        <section style={iconGroupStyle}>
+          <NodeIcon/>
+          <ExpressIcon/>
+          <NpmIcon/>
+          <DjangoIcon/>
+          <FastAPIIcon/>
+          <FlaskIcon/>
+          <PostgresIcon/>
+          <MySQLIcon/>
+          <SQLiteIcon/>
+          <MongoIcon/>
+          <RedisIcon/>
+        </section>
+        <hr/>
+        <h3 style={{"textAlign": "left", "textDecoration": "underline"}}>Testing</h3>
+        <section style={iconGroupStyle}>
+          <JasmineIcon/>
+          <MochaIcon/>
+          <JestIcon/>
+          <PytestIcon/>
+        </section>
+        <hr/>
+        <h3 style={{"textAlign": "left", "textDecoration": "underline"}}>Build Tools and Deployment</h3>
+        <section style={iconGroupStyle}>
+          <AWSLogo/>
+          <LinuxIcon/>
+          <DockerIcon/>
+          <NGNIXIcon/>
+        </section>
     </motion.div>
   )
 }
