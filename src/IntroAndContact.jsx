@@ -26,16 +26,16 @@ export default function IntroAndContact() {
 
 
   const headshotStyle = {
-    "width": "13rem",
-    "height": "13rem",
+    "width": "23rem",
+    "height": "20rem",
     "overflow": "hidden",
     "backgroundImage": `url(${headshot})`,
     "backgroundSize": "cover",
     "backgroundPosition": "center",
     "borderRadius": "25px",
     // "border": "1px inset black",
-    "margin": "1rem",
-    "marginY": "2rem"
+    "margin": "2rem",
+    "marginY": "3rem"
   }
 
   const containerStyle = {
@@ -76,10 +76,10 @@ export default function IntroAndContact() {
       style={{...containerStyle}}
     >
       <Grid container spacing={3} sx={{"width": "100vw"}}>
-        <Grid item xs={12} sm={5} md={5} lg={6} xl={4} style={gridStyle}>
+        <Grid item xs={12} sm={6} md={6} lg={6} xl={6} style={gridStyle}>
             <div style={{...headshotStyle}}/>
         </Grid>
-        <Grid item xs={12} sm={7} md={7} lg={6} xl={8} style={gridStyle}>
+        <Grid item xs={12} sm={6} md={6} lg={6} xl={6} style={gridStyle}>
            <div className={infoStyle} style={{"height": "100%", "margin": "2rem"}}>
             <h1 style={{...labelsStyle, "margin": "0"}} className="text-shadow">Phil Huynh</h1>
             <h4 style={{...labelsStyle, "margin": "0"}} className="text-shadow">Full Stack Engineer</h4>
