@@ -7,7 +7,7 @@ export default function ReactIcon() {
   }
 
   return (
-    <div title="React" className="svg-shadow" style={{...iconStyle, "width": '3.5rem'}}>
+    <div title="React" className="svg-shadow" style={{...iconStyle, "width": '2.5rem'}}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
         <g fill="#61DAFB"><circle cx="64" cy="47.5" r="9.3"/>
           <path

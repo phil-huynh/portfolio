@@ -7,7 +7,7 @@ export default function NodeIcon() {
   }
 
   return (
-    <div className="svg-shadow" style={{...iconStyle, "width": '7rem', "paddingBottom": "1rem"}}>
+    <div className="svg-shadow" style={{...iconStyle, "width": '6rem', "paddingBottom": "1rem"}}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
         <path
           fill="#83CD29"

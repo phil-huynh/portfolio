@@ -7,7 +7,7 @@ export default function NextJSIcon(){
   }
 
   return (
-    <div title="Next JS" className="svg-shadow" style={{...iconStyle, "width": '8rem'}}>
+    <div title="Next JS" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
         <path
           fill="#FFFFFF"

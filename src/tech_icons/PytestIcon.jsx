@@ -7,7 +7,7 @@ export default function PytestIcon() {
   }
 
   return (
-    <div title="pytest" className="svg-shadow" style={{...iconStyle, "width": '4rem'}}>
+    <div title="pytest" className="svg-shadow" style={{...iconStyle, "width": '3.5rem'}}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
         <path
           fill="#696969"

@@ -7,7 +7,7 @@ export default function RedisIcon() {
   }
 
   return (
-    <div title="Redis" className="svg-shadow" style={{...iconStyle, "width": '4rem'}}>
+    <div title="Redis" className="svg-shadow" style={{...iconStyle, "width": '3rem'}}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
         <path
           fill="rgb(173, 170, 170)"

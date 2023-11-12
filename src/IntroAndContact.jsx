@@ -32,7 +32,7 @@ export default function IntroAndContact() {
     "backgroundSize": "cover",
     "backgroundPosition": "center",
     "borderRadius": "25px",
-    "border": "2px inset black",
+    // "border": "1px inset black",
     "margin": "1rem",
     "marginY": "2rem"
   }
