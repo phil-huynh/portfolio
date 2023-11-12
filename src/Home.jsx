@@ -34,7 +34,7 @@ function Home() {
             lg={6}
             sx={{
               "display": "flex",
-              "justifyContent": "center"
+              "justifyContent": "center",
             }}
           >
             <IntroAndContact/>
@@ -47,7 +47,7 @@ function Home() {
             lg={6}
             sx={{
               "display": "flex",
-              "justifyContent": "center"
+              "justifyContent": "center",
             }}
           >
             <TechIcons/>

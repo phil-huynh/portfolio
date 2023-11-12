@@ -26,8 +26,8 @@ export default function IntroAndContact() {
 
 
   const headshotStyle = {
-    "width": "23rem",
-    "height": "20rem",
+    "width": "25rem",
+    "height": "21rem",
     "overflow": "hidden",
     "backgroundImage": `url(${headshot})`,
     "backgroundSize": "cover",
@@ -40,11 +40,10 @@ export default function IntroAndContact() {
 
   const containerStyle = {
     "display": "flex",
-    // "alignItems": "center",
-    // "flexDirection": "column",
-    "width": "90%",
-    // "padding": ".75rem",
-    "justifyContent": "center"
+    "width": "93%",
+    "justifyContent": "center",
+    "marginTop": "2rem",
+
   }
 
 
@@ -73,31 +72,33 @@ export default function IntroAndContact() {
 
   return (
     <motion.section
-      className="glass intro-container extra-shadow"
+      className="intro-container"
       initial={{ x: 2000 }}
       animate={{ x: 0 }}
-      transition={{ duration: 2, delay: .5 }}
+      transition={{ duration: 1.5, delay: .5 }}
       style={{...containerStyle}}
     >
-      <Grid container spacing={3} sx={{"width": "100vw"}}>
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={6} style={gridStyle}>
-            <div style={{...headshotStyle}}/>
+      <div className="glass" style={{"width": "100%"}}>
+        <Grid container sx={{"width": "100%"}}>
+          <Grid item xs={12} sm={6} md={6} lg={6} xl={6} style={{...gridStyle}}>
+              <div style={{...headshotStyle}}/>
+          </Grid>
+          <Grid item xs={12} sm={6} md={6} lg={6} xl={6} style={{...gridStyle}}>
+            <div className={infoStyle} style={{"height": "100%", "margin": "2rem"}}>
+              <h1 style={{...labelsStyle, "margin": "0"}} className="text-shadow">Phil Huynh</h1>
+              <h4 style={{...labelsStyle, "margin": "0"}} className="text-shadow">Full Stack Engineer</h4>
+              <a href="mailto:philiphuynh98@gmail.com" style={{"color": "white"}}>
+                <h4 className="text-shadow" style={{"textAlign": "left"}}>philphuynh98@gmail.com</h4>
+              </a>
+              <section className="extra-shadow" style={iconSectionStyle}>
+                <a href="https://www.linkedin.com/in/phil-huynh-38472249/"><LinkedInIcon/></a>
+                <a href="https://github.com/phil-huynh"><GitHubIcon/></a>
+                <a href="http://www.gitlab.com/PhilHuynh"><GitLabIcon/></a>
+              </section>
+            </div>
+          </Grid>
         </Grid>
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={6} style={gridStyle}>
-           <div className={infoStyle} style={{"height": "100%", "margin": "2rem"}}>
-            <h1 style={{...labelsStyle, "margin": "0"}} className="text-shadow">Phil Huynh</h1>
-            <h4 style={{...labelsStyle, "margin": "0"}} className="text-shadow">Full Stack Engineer</h4>
-            <a href="mailto:philiphuynh98@gmail.com" style={{"color": "white"}}>
-              <h4 className="text-shadow" style={{"textAlign": "left"}}>philphuynh98@gmail.com</h4>
-            </a>
-            <section className="extra-shadow" style={iconSectionStyle}>
-              <a href="https://www.linkedin.com/in/phil-huynh-38472249/"><LinkedInIcon/></a>
-              <a href="https://github.com/phil-huynh"><GitHubIcon/></a>
-              <a href="http://www.gitlab.com/PhilHuynh"><GitLabIcon/></a>
-            </section>
-           </div>
-        </Grid>
-      </Grid>
+      </div>
   </motion.section>
   )
 }

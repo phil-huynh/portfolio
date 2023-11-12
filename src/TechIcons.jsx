@@ -41,10 +41,11 @@ import { motion } from "framer-motion"
 
 export default function TechIcons() {
   const iconContainerStyle = {
-    "padding": "2rem",
+    "padding": "1.3rem",
     "width": "90%",
     "marginTop": "2rem",
     "overflowY": "auto",
+    "marginInline": "1.2rem",
   }
 
   const iconGroupStyle ={
@@ -58,11 +59,11 @@ export default function TechIcons() {
 
   return (
     <motion.div
-      className="glass extra-shadow"
+      className="glass"
       style={iconContainerStyle}
       initial={{ x: -2000 }}
       animate={{ x: 0 }}
-      transition={{ duration: 2, delay: .5 }}
+      transition={{ duration: 1.5, delay: .5 }}
     >
         <h3 style={{"textAlign": "left", "textDecoration": "underline"}}>Languages</h3>
         <section style={iconGroupStyle}>

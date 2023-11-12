@@ -61,10 +61,10 @@ a {
   left: 0;
   right:0;
   bottom: 0;
-  border: 1px solid rgba(139, 139, 139, 0.50);
+  /* border: 1px solid rgba(139, 139, 139, 0.50); */
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
-  opacity: .7;
+  /* opacity: .7; */
 	animation: gradient 15s ease infinite;
   box-shadow: 5;
   /* backdrop-filter: blur(2px); */
@@ -98,23 +98,23 @@ a {
 }
 
 .glass {
-  border: 1px solid rgba(194, 193, 193, 0.5);
+  /* border: 1px solid rgba(194, 193, 193, 0.5); */
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.2);
   box-shadow: 10;
   /* backdrop-filter: hue-rotate(220deg); */
-  /* box-shadow: 8px 8px 2px 1px rgba(1, 1, 87, 0.2); */
-  backdrop-filter: blur(10px);
+  box-shadow: 6px 6px 4px 1px rgba(1, 1, 1, 0.3);
+  backdrop-filter: blur(15px);
   /* backdrop-filter: invert(95%);
   backdrop-filter: grayscale(95%);
   backdrop-filter: sepia(95%); */
-  margin: 2rem;
+  /* margin: 2rem; */
   z-index: 1;
 }
 
-.intro-container {
+/* .intro-container {
   z-index: 15;
-}
+} */
 
 .text-shadow {
   text-shadow: 2px 2px 2px black;
