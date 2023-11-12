@@ -70,7 +70,7 @@ export default function IntroAndContact() {
   }
 
   const menuItemStyle = {
-    "fontSize": "1.5rem",
+    "fontSize": "1rem",
     "width": "100%",
     "marginTop": "1.5rem",
     // "paddingTop": "1rem",
@@ -107,10 +107,10 @@ export default function IntroAndContact() {
           </Grid>
         </Grid>
       </div>
-      <div className="glass" style={menuItemStyle}><h1>Skills</h1></div>
-      <div className="glass" style={menuItemStyle}><h1>Resume & Bio</h1></div>
-      <div className="glass" style={menuItemStyle}><h1>Projects</h1></div>
-      <div className="glass" style={menuItemStyle}><h1>Recommendations</h1></div>
+      <div className="glass" style={menuItemStyle}><h2>Skills</h2></div>
+      <div className="glass" style={menuItemStyle}><h2>Resume & Bio</h2></div>
+      <div className="glass" style={menuItemStyle}><h2>Projects</h2></div>
+      <div className="glass" style={menuItemStyle}><h2>Recommendations</h2></div>
   </motion.section>
   )
 }
