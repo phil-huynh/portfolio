@@ -12,14 +12,18 @@ function Home() {
 
   return (
     <div className="wrapper">
-      <div className="overlay">
+      <motion.div
+        className="overlay"
+        initial={{ opacity: .6}}
+        animate={{ opacity: .2 }}
+        transition={{ duration: 1.5, delay: .6 }}>
         <motion.h1
           animate={{ fontSize: 0, opacity: 0 }}
           transition={{ duration: 1.5, delay: .6 }}
         >
           Greetings!
         </motion.h1>
-      </div>
+      </motion.div>
       <div className="contents">
         <Grid container >
           <Grid

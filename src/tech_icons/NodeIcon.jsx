@@ -1,4 +1,13 @@
+import { useStore } from "../Store"
+
 export default function NodeIcon() {
+
+  const containerStyle = {
+    "height": "3.5rem",
+    "overflow": "hidden",
+    "display": "flex",
+    "alignItems": "center"
+  }
 
   const iconStyle = {
     "display": "flex",
@@ -6,7 +15,10 @@ export default function NodeIcon() {
     // "border": "solid black 1px"
   }
 
+  const {locate} = useStore()
+
   return (
+    <div style={containerStyle}>
     <div className="svg-shadow" style={{...iconStyle, "width": '6rem', "paddingBottom": "1rem"}}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
         <path
@@ -34,6 +46,7 @@ export default function NodeIcon() {
           d="M22.93 65.064c0-.366-.192-.702-.508-.883l-8.415-4.843a.99.99 0 00-.464-.133h-.087a.993.993 0 00-.464.133l-8.416 4.843a1.02 1.02 0 00-.509.883l.018 13.04c0 .182.095.351.254.439a.487.487 0 00.505 0l5-2.864c.316-.188.509-.519.509-.882v-6.092c0-.364.192-.699.507-.881l2.13-1.226a.994.994 0 01.508-.137c.174 0 .352.044.507.137l2.128 1.226c.315.182.509.517.509.881v6.092c0 .363.195.696.509.882l5 2.864a.508.508 0 00.76-.439l.019-13.04"
         />
       </svg>
+    </div>
     </div>
   )
 }

@@ -87,8 +87,6 @@ export default function TechIcons() {
           <BulmaIcon/>
           <MaterialUIIcon/>
           <ViteIcon/>
-          <WebpackIcon/>
-          <BabelIcon/>
           <FigmaIcon/>
         </section>
         <hr/>
@@ -100,6 +98,10 @@ export default function TechIcons() {
           <DjangoIcon/>
           <FastAPIIcon/>
           <FlaskIcon/>
+        </section>
+        <hr/>
+        <h3 style={{"textAlign": "left", "textDecoration": "underline"}}>Databases and Caching</h3>
+        <section style={iconGroupStyle}>
           <PostgresIcon/>
           <MySQLIcon/>
           <SQLiteIcon/>
@@ -117,10 +119,12 @@ export default function TechIcons() {
         <hr/>
         <h3 style={{"textAlign": "left", "textDecoration": "underline"}}>Build Tools and Deployment</h3>
         <section style={iconGroupStyle}>
-          <AWSLogo/>
-          <LinuxIcon/>
+          <WebpackIcon/>
+          <BabelIcon/>
           <DockerIcon/>
+          <LinuxIcon/>
           <NGNIXIcon/>
+          <AWSLogo/>
         </section>
     </motion.div>
   )
