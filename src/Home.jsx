@@ -2,7 +2,6 @@ import TechIcons from "./TechIcons"
 import IntroAndContact from "./IntroAndContact"
 import { Grid } from "@mui/material"
 import { motion } from "framer-motion"
-import "./App.css"
 import { useStore } from "./Store"
 
 

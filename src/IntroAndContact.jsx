@@ -43,7 +43,8 @@ export default function IntroAndContact() {
     "width": "93%",
     "alignItems": "center",
     "marginTop": "2rem",
-    "flexDirection": "column"
+    "flexDirection": "column",
+    "zIndex": "2"
 
   }
 
