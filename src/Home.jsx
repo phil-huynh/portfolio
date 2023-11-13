@@ -14,9 +14,10 @@ function Home() {
     <div className="wrapper">
       <motion.div
         className="overlay"
-        initial={{ opacity: .6}}
+        initial={{ opacity: .4}}
         animate={{ opacity: .2 }}
-        transition={{ duration: 1.5, delay: .6 }}>
+        transition={{ duration: 1.5, delay: .2 }}
+        >
         <motion.h1
           animate={{ fontSize: 0, opacity: 0 }}
           transition={{ duration: 1.5, delay: .6 }}

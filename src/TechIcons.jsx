@@ -73,6 +73,9 @@ export default function TechIcons() {
     "paddingBottom": ".6rem",
   }
 
+  const spreadStyle = {
+    "justifyContent": "space-around"
+  }
 
   return (
     <motion.div
@@ -84,7 +87,7 @@ export default function TechIcons() {
     >
       <div className="glass" style={skillsStyle}>
         <h3 style={{"textAlign": "left", "textDecoration": "underline"}}>Languages</h3>
-        <section style={iconGroupStyle}>
+        <section style={{...iconGroupStyle, ...spreadStyle}}>
           <JavascriptIcon/>
           <TypescriptIcon/>
           <PythonIcon/>
@@ -94,7 +97,7 @@ export default function TechIcons() {
       </div>
       <div className="glass" style={skillsStyle}>
         <h3 style={{"textAlign": "left", "textDecoration": "underline"}}>Front End Development</h3>
-        <section style={iconGroupStyle}>
+        <section style={{...iconGroupStyle, "gap": ".7rem"}}>
           <HTMLLogo/>
           <CSSLogo/>
           <MarkdownIcon/>
@@ -112,7 +115,7 @@ export default function TechIcons() {
       </div>
       <div className="glass" style={skillsStyle}>
         <h3 style={{"textAlign": "left", "textDecoration": "underline"}}>Back End Development</h3>
-        <section style={iconGroupStyle}>
+        <section style={{...iconGroupStyle, ...spreadStyle}}>
           <NodeIcon/>
           <ExpressIcon/>
           <NpmIcon/>
@@ -123,7 +126,7 @@ export default function TechIcons() {
       </div>
       <div className="glass" style={skillsStyle}>
         <h3 style={{"textAlign": "left", "textDecoration": "underline"}}>Databases and Caching</h3>
-        <section style={iconGroupStyle}>
+        <section style={{...iconGroupStyle, ...spreadStyle}}>
           <PostgresIcon/>
           <MySQLIcon/>
           <SQLiteIcon/>
@@ -133,7 +136,7 @@ export default function TechIcons() {
       </div>
       <div className="glass" style={skillsStyle}>
         <h3 style={{"textAlign": "left", "textDecoration": "underline"}}>Testing</h3>
-        <section style={iconGroupStyle}>
+        <section style={{...iconGroupStyle, ...spreadStyle}}>
           <JasmineIcon/>
           <MochaIcon/>
           <JestIcon/>
@@ -142,12 +145,12 @@ export default function TechIcons() {
       </div>
       <div className="glass" style={skillsStyle}>
         <h3 style={{"textAlign": "left", "textDecoration": "underline"}}>Build Tools and Deployment</h3>
-        <section style={iconGroupStyle}>
-          <WebpackIcon/>
-          <BabelIcon/>
-          <DockerIcon/>
+        <section style={{...iconGroupStyle, ...spreadStyle}}>
           <LinuxIcon/>
+          <DockerIcon/>
           <NGNIXIcon/>
+          <BabelIcon/>
+          <WebpackIcon/>
           <AWSLogo/>
         </section>
       </div>
