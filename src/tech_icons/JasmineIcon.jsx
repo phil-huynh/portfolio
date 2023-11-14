@@ -1,4 +1,4 @@
-export default function JasmineIcon() {
+export default function JasmineIcon({ width }) {
 
   const iconStyle = {
     "display": "flex",
@@ -7,7 +7,7 @@ export default function JasmineIcon() {
   }
 
   return (
-    <div title="Jasmine" className="svg-shadow" style={{...iconStyle, "width": '3rem'}}>
+    <div title="Jasmine" className="svg-shadow" style={{...iconStyle, "width": width}}>
       <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
         <g fill="#a7559e">
           <path

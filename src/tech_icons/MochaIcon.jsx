@@ -1,4 +1,4 @@
-export default function MochaIcon() {
+export default function MochaIcon({ width }) {
 
   const iconStyle = {
     "display": "flex",
@@ -7,7 +7,7 @@ export default function MochaIcon() {
   }
 
   return (
-    <div title="Mocha" className="svg-shadow" style={{...iconStyle, "width": '3rem'}}>
+    <div title="Mocha" className="svg-shadow" style={{...iconStyle, "width": width}}>
       <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
         <g fill="#8d6748">
           <path

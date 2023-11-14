@@ -1,4 +1,4 @@
-export default function SassIcon() {
+export default function SassIcon({ width }) {
 
   const iconStyle = {
     "display": "flex",
@@ -7,7 +7,7 @@ export default function SassIcon() {
   }
 
   return (
-    <div title="Sass" className="svg-shadow" style={{...iconStyle, "width": '3rem'}}>
+    <div title="Sass" className="svg-shadow" style={{...iconStyle, "width": width}}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
         <path
           fillRule="evenodd"

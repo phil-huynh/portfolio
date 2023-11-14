@@ -1,4 +1,4 @@
-export default function GitHubIcon() {
+export default function GitHubIcon({ width }) {
 
   const iconStyle = {
     "display": "flex",
@@ -7,7 +7,7 @@ export default function GitHubIcon() {
   }
 
   return (
-    <div title="Github" className="svg-shadow" style={{...iconStyle, "width": '2.5rem'}}>
+    <div title="Github" className="svg-shadow" style={{...iconStyle, "width": width}}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
         <g fill="#FFFFFF">
           <path

@@ -1,9 +1,9 @@
 import { useStore } from "../Store"
 
-export default function DockerIcon() {
+export default function DockerIcon({ height, width}) {
 
   const containerStyle = {
-    "height": "3.5rem",
+    "height": height,
     "overflow": "hidden",
     "display": "flex",
     "alignItems": "center"
@@ -18,7 +18,7 @@ export default function DockerIcon() {
 
   return (
     <div style={containerStyle}>
-      <div className="svg-shadow" style={{...iconStyle, "width": '3.8rem'}}>
+      <div className="svg-shadow" style={{...iconStyle, "width": width}}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
           <path
             fillRule="evenodd"

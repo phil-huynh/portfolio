@@ -1,9 +1,9 @@
 import { useStore } from "../Store"
 
-export default function FastAPIIcon() {
+export default function FastAPIIcon({ width, height }) {
 
   const containerStyle = {
-    "height": "3.5rem",
+    "height": height,
     "overflow": "hidden",
     "display": "flex",
     "alignItems": "center"
@@ -18,7 +18,7 @@ export default function FastAPIIcon() {
 
   return (
     <div style={containerStyle} title="FastAPI">
-      <div className="svg-shadow" style={{...iconStyle, "width": '6rem'}}>
+      <div className="svg-shadow" style={{...iconStyle, "width": width}}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
           <path
             fill="#049688"

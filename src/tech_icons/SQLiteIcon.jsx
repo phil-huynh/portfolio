@@ -1,4 +1,4 @@
-export default function SQLiteIcon() {
+export default function SQLiteIcon({ width }) {
 
   const iconStyle = {
     "display": "flex",
@@ -7,7 +7,7 @@ export default function SQLiteIcon() {
   }
 
   return (
-    <div title="SQLite" className="svg-shadow" style={{...iconStyle, "width": '3.8rem'}}>
+    <div title="SQLite" className="svg-shadow" style={{...iconStyle, "width": width}}>
       <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient

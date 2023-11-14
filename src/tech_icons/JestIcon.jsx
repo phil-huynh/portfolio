@@ -1,4 +1,4 @@
-export default function JestIcon() {
+export default function JestIcon({ width }) {
 
   const iconStyle = {
     "display": "flex",
@@ -7,7 +7,7 @@ export default function JestIcon() {
   }
 
   return (
-    <div title="Jest" className="svg-shadow" style={{...iconStyle, "width": '3rem'}}>
+    <div title="Jest" className="svg-shadow" style={{...iconStyle, "width": width}}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
         <path
           fill="#99425B"

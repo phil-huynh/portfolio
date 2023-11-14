@@ -1,9 +1,9 @@
 import { useStore } from "../Store"
 
-export default function FlaskIcon() {
+export default function FlaskIcon({ width, height }) {
 
   const containerStyle = {
-    "height": "3.5rem",
+    "height": height,
     "overflow": "hidden",
     "display": "flex",
     "alignItems": "center"
@@ -19,7 +19,7 @@ export default function FlaskIcon() {
 
   return (
     <div style={containerStyle} title="Flask">
-      <div className="svg-shadow" style={{...iconStyle, "width": '5.2rem'}}>
+      <div className="svg-shadow" style={{...iconStyle, "width": width}}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
           <path
             fill="#FFFFFF"

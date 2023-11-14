@@ -1,6 +1,6 @@
 import { useStore } from "../Store"
 
-export default function LinkedInIcon() {
+export default function LinkedInIcon({ width }) {
 
   const iconStyle = {
     "display": "flex",
@@ -10,7 +10,7 @@ export default function LinkedInIcon() {
   const {locate} = useStore()
 
   return (
-    <div title="Linkedin" className="svg-shadow" style={{...iconStyle, "width": '2.5rem'}}>
+    <div title="Linkedin" className="svg-shadow" style={{...iconStyle, "width": width}}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
         <path
           fill="#0076b2"

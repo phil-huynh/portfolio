@@ -1,6 +1,6 @@
 import viteLogo from '/vite.svg'
 
-export default function ViteIcon() {
+export default function ViteIcon({ width }) {
 
   const iconStyle = {
     "display": "flex",
@@ -12,7 +12,7 @@ export default function ViteIcon() {
     <div
       title="Vite"
       className="svg-shadow"
-      style={{...iconStyle, "width": '2rem'}}
+      style={{...iconStyle, "width": width}}
     >
       <img src={viteLogo} style={{"width": "2rem"}}></img>
     </div>

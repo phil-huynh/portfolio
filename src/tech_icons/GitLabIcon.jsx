@@ -1,4 +1,4 @@
-export default function GitLabIcon() {
+export default function GitLabIcon({ width }) {
 
   const iconStyle = {
     "display": "flex",
@@ -7,7 +7,7 @@ export default function GitLabIcon() {
   }
 
   return (
-    <div title="Gitlab" className="svg-shadow" style={{...iconStyle, "width": '2.5rem'}}>
+    <div title="Gitlab" className="svg-shadow" style={{...iconStyle, "width": width}}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
         <path
           fill="#FC6D26"

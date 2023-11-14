@@ -1,9 +1,9 @@
 import { useStore } from "../Store"
 
-export default function ExpressIcon() {
+export default function ExpressIcon({ width, height }) {
 
   const containerStyle = {
-    "height": "3.5rem",
+    "height": height,
     "overflow": "hidden",
     "display": "flex",
     "alignItems": "center"
@@ -18,7 +18,7 @@ export default function ExpressIcon() {
 
   return (
     <div style={containerStyle} title="express js">
-      <div title="Express js" className="svg-shadow" style={{...iconStyle, "width": '5rem'}}>
+      <div title="Express js" className="svg-shadow" style={{...iconStyle, "width": width}}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
           <path
             fill="#FFFFFF"

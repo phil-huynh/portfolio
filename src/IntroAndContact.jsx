@@ -81,9 +81,9 @@ export default function IntroAndContact() {
                 <h4 className="text-shadow" style={{"textAlign": "left"}}>philphuynh98@gmail.com</h4>
               </a>
               <section className="extra-shadow" style={iconSectionStyle}>
-                <a href="https://www.linkedin.com/in/phil-huynh-38472249/"><LinkedInIcon/></a>
-                <a href="https://github.com/phil-huynh"><GitHubIcon/></a>
-                <a href="http://www.gitlab.com/PhilHuynh"><GitLabIcon/></a>
+                <a href="https://www.linkedin.com/in/phil-huynh-38472249/"><LinkedInIcon width={"2.5rem"}/></a>
+                <a href="https://github.com/phil-huynh"><GitHubIcon width={"2.5rem"}/></a>
+                <a href="http://www.gitlab.com/PhilHuynh"><GitLabIcon width={"2.5rem"}/></a>
               </section>
               <hr/>
               <p>

@@ -1,4 +1,4 @@
-export default function MarkdownIcon() {
+export default function MarkdownIcon({ width }) {
 
   const iconStyle = {
     "display": "flex",
@@ -7,7 +7,7 @@ export default function MarkdownIcon() {
   }
 
   return (
-    <div title="Markdown" className="svg-shadow" style={{...iconStyle, "width": '2.3rem'}}>
+    <div title="Markdown" className="svg-shadow" style={{...iconStyle, "width": width}}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
         <path
           fill="#FFFFFF"

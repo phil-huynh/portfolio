@@ -1,9 +1,9 @@
 import { useStore } from "../Store"
 
-export default function AWSLogo() {
+export default function AWSLogo({width, height}) {
 
   const containerStyle = {
-    "height": "3.5rem",
+    "height": height,
     "overflow": "hidden",
     "display": "flex",
     "alignItems": "center"
@@ -22,7 +22,7 @@ export default function AWSLogo() {
         title="Amazon Web Services"
         className="svg-shadow"
       >
-        <div className="svg-shadow" style={{...iconStyle, "width": '7rem'}}>
+        <div className="svg-shadow" style={{...iconStyle, "width": width}}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
             <path
               fill="#FFFFFF"

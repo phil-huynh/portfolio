@@ -88,70 +88,70 @@ export default function TechIcons() {
       <div className="glass" style={skillsStyle}>
         <h3 style={{"textAlign": "left", "textDecoration": "underline"}}>Languages</h3>
         <section style={{...iconGroupStyle, ...spreadStyle}}>
-          <JavascriptIcon/>
-          <TypescriptIcon/>
-          <PythonIcon/>
-          <RubyIcon/>
-          <BashIcon/>
+          <JavascriptIcon width={"2rem"}/>
+          <TypescriptIcon width={"2rem"}/>
+          <PythonIcon width={"3rem"}/>
+          <RubyIcon width={"3rem"}/>
+          <BashIcon width={"3rem"}/>
         </section>
       </div>
       <div className="glass" style={skillsStyle}>
         <h3 style={{"textAlign": "left", "textDecoration": "underline"}}>Front End Development</h3>
         <section style={{...iconGroupStyle, "gap": ".7rem"}}>
-          <HTMLLogo/>
-          <CSSLogo/>
-          <MarkdownIcon/>
-          <JQueryIcon/>
-          <ReactIcon/>
-          <ReduxIcon/>
-          <NextJSIcon/>
-          <SassIcon/>
-          <BootstrapIcon/>
-          <BulmaIcon/>
-          <MaterialUIIcon/>
-          <ViteIcon/>
-          <FigmaIcon/>
+          <HTMLLogo width={"3rem"}/>
+          <CSSLogo width={"3rem"}/>
+          <MarkdownIcon width={"2.3rem"}/>
+          <JQueryIcon width={"3rem"}/>
+          <ReactIcon width={"2.5rem"}/>
+          <ReduxIcon width={"2.5rem"}/>
+          <NextJSIcon width={"5rem"}/>
+          <SassIcon width={"3rem"}/>
+          <BootstrapIcon width={"3rem"}/>
+          <BulmaIcon width={"3rem"}/>
+          <MaterialUIIcon width={"3rem"}/>
+          <ViteIcon width={"2rem"}/>
+          <FigmaIcon width={"3rem"}/>
         </section>
       </div>
       <div className="glass" style={skillsStyle}>
         <h3 style={{"textAlign": "left", "textDecoration": "underline"}}>Back End Development</h3>
         <section style={{...iconGroupStyle, ...spreadStyle}}>
-          <NodeIcon/>
-          <ExpressIcon/>
-          <NpmIcon/>
-          <DjangoIcon/>
-          <FastAPIIcon/>
-          <FlaskIcon/>
+          <NodeIcon width={"6rem"} height={"3.5rem"}/>
+          <ExpressIcon width={"5rem"} height={"3.5rem"}/>
+          <NpmIcon width={"3rem"} height={"3.5rem"}/>
+          <DjangoIcon width={"4rem"} height={"3.5rem"}/>
+          <FastAPIIcon width={"6rem"} height={"3.5rem"}/>
+          <FlaskIcon width={"5.2rem"} height={"3.5rem"}/>
         </section>
       </div>
       <div className="glass" style={skillsStyle}>
         <h3 style={{"textAlign": "left", "textDecoration": "underline"}}>Databases and Caching</h3>
         <section style={{...iconGroupStyle, ...spreadStyle}}>
-          <PostgresIcon/>
-          <MySQLIcon/>
-          <SQLiteIcon/>
-          <MongoIcon/>
-          <RedisIcon/>
+          <PostgresIcon width={"3rem"}/>
+          <MySQLIcon width={"5rem"}/>
+          <SQLiteIcon width={"3.8rem"}/>
+          <MongoIcon width={"3.4rem"}/>
+          <RedisIcon width={"3rem"}/>
         </section>
       </div>
       <div className="glass" style={skillsStyle}>
         <h3 style={{"textAlign": "left", "textDecoration": "underline"}}>Testing</h3>
         <section style={{...iconGroupStyle, ...spreadStyle}}>
-          <JasmineIcon/>
-          <MochaIcon/>
-          <JestIcon/>
-          <PytestIcon/>
+          <JasmineIcon width={"3rem"}/>
+          <MochaIcon width={"3rem"}/>
+          <JestIcon width={"3rem"}/>
+          <PytestIcon width={"3.5rem"}/>
         </section>
       </div>
       <div className="glass" style={skillsStyle}>
         <h3 style={{"textAlign": "left", "textDecoration": "underline"}}>Build Tools and Deployment</h3>
         <section style={{...iconGroupStyle, ...spreadStyle}}>
-          <LinuxIcon/>
-          <DockerIcon/>
-          <NGNIXIcon/>
-          <BabelIcon/>
-          <WebpackIcon/>
-          <AWSLogo/>
+          <LinuxIcon width={"3rem"} height={"3.5rem"}/>
+          <DockerIcon width={"3.8rem"} height={"3.5rem"}/>
+          <NGNIXIcon width={"5rem"} height={"3.5rem"}/>
+          <BabelIcon width={"4.7rem"} height={"3.5rem"}/>
+          <WebpackIcon width={"8rem"} height={"3.5rem"}/>
+          <AWSLogo width={"7rem"} height={"3.5rem"}/>
         </section>
       </div>
     </motion.div>

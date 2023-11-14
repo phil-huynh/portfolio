@@ -1,4 +1,4 @@
-export default function JavascriptIcon() {
+export default function JavascriptIcon({ width }) {
 
   const iconStyle = {
     "display": "flex",
@@ -8,7 +8,7 @@ export default function JavascriptIcon() {
 
 
   return (
-    <div title="Javascript" className="svg-shadow" style={{...iconStyle, "width": '2rem'}}>
+    <div title="Javascript" className="svg-shadow" style={{...iconStyle, "width": width}}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
         <path
           fill="#F0DB4F"

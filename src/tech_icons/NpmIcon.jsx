@@ -1,9 +1,9 @@
 import { useStore } from "../Store"
 
-export default function NpmIcon() {
+export default function NpmIcon({ width, height}) {
 
   const containerStyle = {
-    "height": "3.5rem",
+    "height": height,
     "overflow": "hidden",
     "display": "flex",
     "alignItems": "center"
@@ -18,7 +18,7 @@ export default function NpmIcon() {
 
   return (
     <div style={containerStyle} title="npm">
-      <div title="npm" className="svg-shadow" style={{...iconStyle, "width": '3rem'}}>
+      <div title="npm" className="svg-shadow" style={{...iconStyle, "width": width}}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
           <path
             fill="#cb3837"

@@ -1,9 +1,9 @@
 import { useStore } from "../Store"
 
-export default function NodeIcon() {
+export default function NodeIcon({ width, height }) {
 
   const containerStyle = {
-    "height": "3.5rem",
+    "height": height,
     "overflow": "hidden",
     "display": "flex",
     "alignItems": "center"
@@ -19,7 +19,7 @@ export default function NodeIcon() {
 
   return (
     <div style={containerStyle} title="Node js">
-      <div className="svg-shadow" style={{...iconStyle, "width": '6rem', "paddingBottom": "1rem"}}>
+      <div className="svg-shadow" style={{...iconStyle, "width": width, "paddingBottom": "1rem"}}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
           <path
             fill="#83CD29"
