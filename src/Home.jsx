@@ -32,8 +32,8 @@ function Home() {
             item
             xs={12}
             sm={12}
-            md={12}
-            lg={6}
+            md={7}
+            lg={6.5}
             sx={{
               "display": "flex",
               "justifyContent": "center",
@@ -45,8 +45,8 @@ function Home() {
             item
             xs={12}
             sm={12}
-            md={12}
-            lg={6}
+            md={5}
+            lg={5.5}
             sx={{
               "display": "flex",
               "justifyContent": "center",

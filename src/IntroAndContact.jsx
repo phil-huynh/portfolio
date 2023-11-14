@@ -17,8 +17,8 @@ export default function IntroAndContact() {
   }
 
   const headshotStyle = {
-    "width": "28.2rem",
-    "height": "24rem",
+    "width": "95%",
+    "aspect-ratio": "5.5/4.7",
     "overflow": "hidden",
     "backgroundImage": `url(${headshot})`,
     "backgroundSize": "cover",
@@ -70,10 +70,10 @@ export default function IntroAndContact() {
     >
       <div className="glass" style={{"width": "100%"}}>
         <Grid container sx={{"width": "100%"}}>
-          <Grid item xs={12} sm={6} md={6} lg={6} xl={6} style={{...gridStyle}}>
+          <Grid item xs={12} sm={6} md={12} lg={6} xl={6} style={{...gridStyle}}>
               <div style={{...headshotStyle}}/>
           </Grid>
-          <Grid item xs={12} sm={6} md={6} lg={6} xl={6} style={{...gridStyle}}>
+          <Grid item xs={12} sm={6} md={12} lg={6} xl={6} style={{...gridStyle}}>
             <div className={infoStyle} style={{"height": "100%", "margin": "2rem"}}>
               <h1 style={{...labelsStyle, "margin": "0", "fontSize": "2.3rem"}} className="text-shadow">Phil Huynh</h1>
               <h2 style={{...labelsStyle, "margin": "0"}} className="text-shadow">Full Stack Engineer</h2>
