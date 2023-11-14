@@ -95,12 +95,7 @@ a {
 	}
 }
 
-.contents {
-  position: relative;
-  overflow-y: scroll;
-  height: 100%;
-  /* z-index: 10; */
-}
+
 
 .glass {
   border-radius: 20px;
@@ -235,7 +230,12 @@ a {
   }
 }
 
-
+.contents {
+  position: relative;
+  overflow-y: scroll;
+  height: 100%;
+  z-index: 10;
+}
 
 .sales-probs-wrapper {
   position: absolute;

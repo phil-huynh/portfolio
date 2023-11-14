@@ -30,8 +30,8 @@ export default function Quickstarter() {
 
     return (
       <div className="quickstarter-wrapper">
-        <div className="colorfilter"></div>
         <div className="quickstarter-overlay"></div>
+        <div className="colorfilter"></div>
           <div className="contents">
             <div style={{ "display": "flex", "alignItems": "center", "flexDirection": "column"}}>
               <div className="glass" style={headerStyle}>
