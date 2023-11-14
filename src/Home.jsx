@@ -3,11 +3,13 @@ import IntroAndContact from "./IntroAndContact"
 import { Grid } from "@mui/material"
 import { motion } from "framer-motion"
 import { useStore } from "./Store"
-
+import { useNavigate } from "react-router-dom";
 
 function Home() {
 
   const { locate, locate2, locate3 } = useStore()
+
+  const navigate = useNavigate()
 
   return (
     <div className="wrapper">
@@ -53,7 +55,10 @@ function Home() {
             <TechIcons/>
           </Grid>
         </Grid>
-        <div></div>
+        <div>
+          <h2 style={{"cursor": "pointer"}}onClick={()=>navigate("strings-theory")}>Strings Theory</h2>
+          <h2 style={{"cursor": "pointer"}}onClick={()=>navigate('quickstarter')}>Quickstarter</h2>
+        </div>
       </div>
     </div>
   )

@@ -8,22 +8,13 @@ import { useStore }  from "./Store"
 
 
 export default function IntroAndContact() {
-
-
   const { locate, locate2, locate3 } = useStore()
-  // const locate = { "border": "red 1px solid" }
-  // const locate2 = { "border": "blue 1px solid" }
-  // const locate3 = { "border": "yellow 1px solid" }
 
   const iconSectionStyle = {
     "display": "flex",
     "flexWrap": "wrap",
     "gap": "2rem",
-    // "marginTop": "1rem",
-    // "padding": "1rem"
-    // "justifyContent": "center"
   }
-
 
   const headshotStyle = {
     "width": "28.2rem",
@@ -33,7 +24,6 @@ export default function IntroAndContact() {
     "backgroundSize": "cover",
     "backgroundPosition": "center",
     "borderRadius": "25px",
-    // "border": "1px inset black",
     "margin": "2rem",
     "marginY": "3rem"
   }
@@ -45,9 +35,7 @@ export default function IntroAndContact() {
     "marginTop": "2rem",
     "flexDirection": "column",
     "zIndex": "2"
-
   }
-
 
   const labelsStyle = {
     "display": "flex",
@@ -61,11 +49,6 @@ export default function IntroAndContact() {
     "justifyContent": "flex-start",
   }
 
-  const gridStyle2 = {
-    "display": "flex",
-    "justifyContent": "flex-end",
-  }
-
   const infoStyle={
     "margin": "2rem"
   }
@@ -74,8 +57,6 @@ export default function IntroAndContact() {
     "fontSize": "1rem",
     "width": "100%",
     "marginTop": "1.5rem",
-    // "paddingTop": "1rem",
-    // "paddingBottom": "1rem"
   }
 
 
