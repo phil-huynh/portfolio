@@ -111,7 +111,7 @@ a {
   background-color: rgba(0, 0, 0, 0.2);
   box-shadow: 10;
   box-shadow: 6px 6px 4px 1px rgba(1, 1, 1, 0.3);
-  animation: stringsglass 10s ease infinite;
+  animation: stringsglass 5s ease infinite;
   z-index: 1;
 }
 

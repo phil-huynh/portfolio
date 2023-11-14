@@ -59,6 +59,8 @@ function Home() {
           <h2 style={{"cursor": "pointer"}}onClick={()=>navigate("strings-theory")}>Strings Theory</h2>
           <h2 style={{"cursor": "pointer"}}onClick={()=>navigate('quickstarter')}>Quickstarter</h2>
           <h2 style={{"cursor": "pointer"}}onClick={()=>navigate('sales-probabilities')}>Sales Probabilites</h2>
+          <h2 style={{"cursor": "pointer"}}onClick={()=>navigate('osiris')}>Osiris</h2>
+          <h2 style={{"cursor": "pointer"}}onClick={()=>navigate('ecommerce')}>E-Commerce</h2>
         </div>
       </div>
     </div>

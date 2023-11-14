@@ -19,6 +19,7 @@ import selectedNoteWithChord from "../assets/strings_theory/selectedNoteWithChor
 import solfege from "../assets/strings_theory/solfege.png"
 import twoNamesMapChords from "../assets/strings_theory/twoNamesMapChords.png"
 import { useNavigate } from "react-router-dom"
+import { Grid } from "@mui/material"
 
 export default function StringsTheory() {
 
@@ -27,11 +28,32 @@ export default function StringsTheory() {
   //   "backgroundImage": background
   // }
 
+  const images = [
+    mapScalesPage,
+    selectedNoteNoChord,
+    selectedNoteWithChord,
+    oneChordInMapScales,
+    twoChordsMapScales,
+    focusChord1MapScales,
+    focusChord2MapScales,
+    chord1DegsMapScales,
+    chord2DegsMapScales,
+    capo,
+    sectionNeck,
+    leftHanded,
+    alterations,
+    scaleChoices,
+    instrumentsAndTunings,
+    twoNamesMapChords,
+    focus1MapChords,
+    focus2DegsMapChords,
+  ]
+
   const navigate = useNavigate()
 
   const headerStyle = {
     "height": "5rem",
-    "width": "50%",
+    "width": "45%",
     "display": "flex",
     "alignItems": "center",
     "justifyContent": "center"
@@ -39,9 +61,9 @@ export default function StringsTheory() {
 
   const imageStyle = {
     "backgroundSize": "cover",
-    "width": "29.8rem",
-    "height": "18.2rem",
-    "margin": "1rem"
+    "width": "95%",
+    "margin": "1rem",
+    "aspect-ratio": "6.75/4"
   }
 
   const imageStyle2 = {
@@ -71,25 +93,21 @@ export default function StringsTheory() {
         <div style={{"display": "flex", "justifyContent": "space-around",  "flexWrap": "wrap"}}>
           <div style={{...imageStyle2, "backgroundImage": `url(${scaleDegrees})`}}></div>
           <div style={{...imageStyle2, "backgroundImage": `url(${solfege})`}}></div>
-          <div style={{...imageStyle, "backgroundImage": `url(${mapScalesPage})`}}></div>
-          <div style={{...imageStyle, "backgroundImage": `url(${selectedNoteNoChord})`}}></div>
-          <div style={{...imageStyle, "backgroundImage": `url(${selectedNoteWithChord})`}}></div>
-          <div style={{...imageStyle, "backgroundImage": `url(${oneChordInMapScales})`}}></div>
-          <div style={{...imageStyle, "backgroundImage": `url(${twoChordsMapScales})`}}></div>
-          <div style={{...imageStyle, "backgroundImage": `url(${focusChord1MapScales})`}}></div>
-          <div style={{...imageStyle, "backgroundImage": `url(${focusChord2MapScales})`}}></div>
-          <div style={{...imageStyle, "backgroundImage": `url(${chord1DegsMapScales})`}}></div>
-          <div style={{...imageStyle, "backgroundImage": `url(${chord2DegsMapScales})`}}></div>
-          <div style={{...imageStyle, "backgroundImage": `url(${capo})`}}></div>
-          <div style={{...imageStyle, "backgroundImage": `url(${sectionNeck})`}}></div>
-          <div style={{...imageStyle, "backgroundImage": `url(${leftHanded})`}}></div>
-          <div style={{...imageStyle, "backgroundImage": `url(${alterations})`}}></div>
-          <div style={{...imageStyle, "backgroundImage": `url(${scaleChoices})`}}></div>
-          <div style={{...imageStyle, "backgroundImage": `url(${instrumentsAndTunings})`}}></div>
-          <div style={{...imageStyle, "backgroundImage": `url(${twoNamesMapChords})`}}></div>
-          <div style={{...imageStyle, "backgroundImage": `url(${focus1MapChords})`}}></div>
-          <div style={{...imageStyle, "backgroundImage": `url(${focus2DegsMapChords})`}}></div>
-
+          <Grid container>
+          {images.map((image, i) => (
+              <Grid
+                item
+                xs={12}
+                sm={12}
+                md={6}
+                lg={6}
+                xl={6}
+                key={`stringsImage${i}`}
+              >
+                <div style={{...imageStyle, "backgroundImage": `url(${image})`}} />
+              </Grid>
+          ))}
+          </Grid>
         </div>
       </div>
     </div>
