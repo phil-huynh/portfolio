@@ -63,6 +63,10 @@ export default function StringsTheory() {
           <div className="glass" style={headerStyle}>
             <h2 style={{"cursor": 'pointer'}} onClick={()=>navigate('/')}>Home</h2>
           </div>
+          <div className="glass2" style={{...headerStyle, "height": "50rem"}}>
+            <h2>Test</h2>
+            <h2>Test</h2>
+          </div>
         </div>
         <div style={{"display": "flex", "justifyContent": "space-around",  "flexWrap": "wrap"}}>
           <div style={{...imageStyle2, "backgroundImage": `url(${scaleDegrees})`}}></div>

@@ -6,7 +6,7 @@
   /* font-weight: 200; */
 
   color-scheme: light dark;
-  color: rgba(207, 154, 154, 0.87);
+  color: rgba(255, 255, 255, 0.87);
   background-color: #716d6d;
 
   font-synthesis: none;
@@ -111,6 +111,51 @@ a {
   z-index: 1;
 }
 
+.glass2 {
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 10;
+  box-shadow: 6px 6px 4px 1px rgba(1, 1, 1, 0.3);
+  animation: stringsglass 10s ease infinite;
+  z-index: 1;
+}
+
+@keyframes stringsglass {
+	0% {
+		backdrop-filter: blur(4px) hue-rotate(0deg);
+	}
+	25% {
+		backdrop-filter: blur(4px) hue-rotate(90deg);
+	}
+	50% {
+		backdrop-filter: blur(4px) hue-rotate(180deg);
+	}
+  75%{
+    backdrop-filter: blur(4px) hue-rotate(270deg);
+  }
+  100%{
+    backdrop-filter: blur(4px) hue-rotate(360deg);
+  }
+}
+
+/* @keyframes colorshift2 {
+	0% {
+		backdrop-filter: hue-rotate(90deg);
+	}
+	25% {
+		backdrop-filter: hue-rotate(180deg);
+	}
+	50% {3
+		backdrop-filter: hue-rotate(270deg);
+	}
+  75%{
+    backdrop-filter: hue-rotate(360deg);
+  }
+  100%{
+    backdrop-filter: hue-rotate(90deg);
+  }
+} */
+
 /* .intro-container {
   z-index: 15;
 } */
@@ -143,9 +188,6 @@ a {
   /* opacity: .9; */
 }
 
-
-
-
 .quickstarter-wrapper {
   position: absolute;
   top:0;
@@ -160,6 +202,55 @@ a {
   height: 100vh;
   width: 100vw;
   background-image: url("https://64.media.tumblr.com/9d6d76c6f82b63ed23cb5972b18119c4/tumblr_poqvbmnJWq1rpooub_400.gifv");
+  background-size: cover;
+  background-position: center;
+  opacity: .9;
+}
+
+.colorfilter {
+  position: absolute;
+  top:0;
+  left:0;
+  height: 100vh;
+  width: 100vw;
+  animation: colorshift 20s ease infinite;
+  z-index: 1;
+}
+
+@keyframes colorshift {
+	0% {
+		backdrop-filter: hue-rotate(0deg);
+	}
+	25% {
+		backdrop-filter: hue-rotate(90deg);
+	}
+	50% {
+		backdrop-filter: hue-rotate(180deg);
+	}
+  75%{
+    backdrop-filter: hue-rotate(270deg);
+  }
+  100%{
+    backdrop-filter: hue-rotate(360deg);
+  }
+}
+
+
+
+.sales-probs-wrapper {
+  position: absolute;
+  top:0;
+  left:0;
+  height: 100vh;
+  width: 100vw;
+}
+.sales-probs-overlay {
+  position: absolute;
+  top:0;
+  left:0;
+  height: 100vh;
+  width: 100vw;
+  /* background-image: url("https://media1.giphy.com/media/l5JbspfwZ0yjHjlJ0K/giphy.gif"); */
   background-size: cover;
   background-position: center;
   opacity: .9;

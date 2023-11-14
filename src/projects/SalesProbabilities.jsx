@@ -1,6 +1,47 @@
+import { useNavigate } from "react-router-dom"
+
+
 export default function SalesProbabilities() {
 
+  const navigate = useNavigate()
+
+  const headerStyle = {
+    "height": "5rem",
+    "width": "50%",
+    "display": "flex",
+    "alignItems": "center",
+    "justifyContent": "center"
+  }
+
+
+  const imageStyle ={
+    "backgroundSize": "contain",
+    "backgroundPosition": "center",
+    "width": "29.8rem",
+    "height": "18.2rem",
+    "margin": "1rem"
+  }
+
+
   return (
-    <h1 style={{"color": "black"}}>Hello World: Sales Probabilities</h1>
+    <div className="sales-probs-wrapper">
+    <div className="sales-probs-overlay"></div>
+      <div className="contents">
+        <div style={{ "display": "flex", "alignItems": "center", "flexDirection": "column"}}>
+          <div className="glass" style={headerStyle}>
+          <h1 style={{"color": "white"}}>Hello World: Sales Probabilities</h1>
+          </div>
+          <div className="glass" style={headerStyle}>
+            <h2 style={{"cursor": 'pointer'}} onClick={()=>navigate('/')}>Home</h2>
+          </div>
+        </div>
+        <div style={{"display": "flex", "justifyContent": "space-around",  "flexWrap": "wrap"}}></div>
+     </div>
+    </div>
   )
 }
+
+
+
+
+
