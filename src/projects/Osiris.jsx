@@ -42,7 +42,7 @@ export default function Osiris() {
     "backgroundPosition": "center",
     "width": "95%",
     "margin": "1rem",
-    "aspect-ratio": "2.5/4.75"
+    "aspectRatio": "2.5/4.75"
   }
 
   const tabletImageStyle ={

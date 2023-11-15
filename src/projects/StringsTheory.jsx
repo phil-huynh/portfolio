@@ -65,7 +65,7 @@ export default function StringsTheory() {
     "backgroundSize": "cover",
     "width": "95%",
     "margin": "1rem",
-    "aspect-ratio": "6.75/4"
+    "aspectRatio": "6.75/4"
   }
 
   const imageStyle2 = {

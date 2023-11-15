@@ -8,7 +8,9 @@ import { useStore }  from "./Store"
 
 
 export default function IntroAndContact() {
-  const { locate, locate2, locate3 } = useStore()
+  const { locate, locate2, locate3, firstTime } = useStore()
+
+
 
   const iconSectionStyle = {
     "display": "flex",
@@ -18,7 +20,7 @@ export default function IntroAndContact() {
 
   const headshotStyle = {
     "width": "95%",
-    "aspect-ratio": "5.5/4.7",
+    "aspectRatio": "5.5/4.7",
     "overflow": "hidden",
     "backgroundImage": `url(${headshot})`,
     "backgroundSize": "cover",
@@ -59,12 +61,14 @@ export default function IntroAndContact() {
   }
 
 
+  const transition = firstTime ? { duration: 1.5, delay: .8 } : { duration: 1 }
+
   return (
     <motion.section
       className="intro-container"
       initial={{ x: 2000 }}
       animate={{ x: 0 }}
-      transition={{ duration: 1.5, delay: .5 }}
+      transition={transition}
       style={{...containerStyle}}
     >
       <div className="glass" style={{"width": "100%"}}>

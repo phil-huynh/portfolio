@@ -95,7 +95,20 @@ a {
 	}
 }
 
-
+.greeting {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 80vh;
+  width: 100vw;
+  opacity: .8;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* font-size: 9rem; */
+  z-index: 2;
+}
 
 .glass {
   border-radius: 20px;

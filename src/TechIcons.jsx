@@ -42,7 +42,7 @@ import { motion } from "framer-motion"
 import { useStore } from './Store'
 
 export default function TechIcons() {
-  const {locate, locate2, locate3} = useStore()
+  const {locate, locate2, locate3, firstTime} = useStore()
 
   const iconContainerStyle = {
 
@@ -77,13 +77,15 @@ export default function TechIcons() {
     "justifyContent": "space-around"
   }
 
+  const transition = firstTime ? { duration: 1.5, delay: .8 } : { duration: 1}
+
   return (
     <motion.div
       // className="glass"
       style={{...iconContainerStyle}}
       initial={{ x: -2000 }}
       animate={{ x: 0 }}
-      transition={{ duration: 1.5, delay: .5 }}
+      transition={transition}
     >
       <div className="glass" style={skillsStyle}>
         <h3 style={{"textAlign": "left", "textDecoration": "underline"}}>Languages</h3>
