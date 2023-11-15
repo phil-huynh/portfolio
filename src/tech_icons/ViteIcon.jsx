@@ -14,7 +14,7 @@ export default function ViteIcon({ width }) {
       className="svg-shadow"
       style={{...iconStyle, "width": width}}
     >
-      <img src={viteLogo} style={{"width": "2rem"}}></img>
+      <img src={viteLogo} ></img>
     </div>
   )
 }

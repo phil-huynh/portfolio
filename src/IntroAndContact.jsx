@@ -5,7 +5,15 @@ import GitLabIcon from "./tech_icons/GitLabIcon"
 import LinkedInIcon from "./tech_icons/LinkedInIcon"
 import Grid from '@mui/material/Grid';
 import { useStore }  from "./Store"
-
+import ViteIcon from "./tech_icons/ViteIcon"
+import JavascriptIcon from "./tech_icons/JavascriptIcon"
+import ReactIcon from "./tech_icons/ReactIcon"
+import AWSLogo from "./tech_icons/AmazonWebServices"
+import MaterialUIIcon from "./tech_icons/MaterialUIIcon"
+import CSSLogo from "./tech_icons/CSS_Logo"
+import FramerMotionIcon from "./tech_icons/FramerMotionIcon"
+import AmplifyIcon from "./tech_icons/Amplify"
+import Route53Icon from "./tech_icons/Route53Icon"
 
 export default function IntroAndContact() {
   const { locate, locate2, locate3, firstTime } = useStore()
@@ -60,6 +68,12 @@ export default function IntroAndContact() {
     "marginTop": "1.5rem",
   }
 
+  const madeWithStyle = {
+    "display": "flex",
+    "justifyContent": "space-around",
+    // "gap": "1.3rem",
+    "paddingBottom": "1rem"
+  }
 
   const transition = firstTime ? { duration: 1.5, delay: .8 } : { duration: 1 }
 
@@ -106,6 +120,20 @@ export default function IntroAndContact() {
             </div>
           </Grid>
         </Grid>
+      </div>
+      <div className="glass" style={menuItemStyle}>
+        <h3>This site was built with</h3>
+        <div style={madeWithStyle}>
+          <JavascriptIcon width={"2rem"}/>
+          <ReactIcon width={"2.5rem"}/>
+          <CSSLogo width={"2.5rem"}/>
+          <FramerMotionIcon width={"2rem"}/>
+          <MaterialUIIcon width={"2.5rem"}/>
+          <ViteIcon/>
+          <AmplifyIcon width={"2rem"} height={"2.5rem"} />
+          <Route53Icon width={"2.2rem"} height={"2.5rem"} />
+          {/* <AWSLogo width={"5rem"} height={"2.1rem"}/> */}
+        </div>
       </div>
       <div className="glass" style={menuItemStyle}><h2>Skills</h2></div>
       <div className="glass" style={menuItemStyle}><h2>Resume & Bio</h2></div>

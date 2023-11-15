@@ -37,6 +37,12 @@ import MarkdownIcon from './tech_icons/MarkdownIcon'
 import RubyIcon from './tech_icons/RubyIcon'
 import NpmIcon from './tech_icons/NpmIcon'
 import ExpressIcon from './tech_icons/ExpressIcon'
+import FramerMotionIcon from './tech_icons/FramerMotionIcon'
+import AmplifyIcon from './tech_icons/Amplify'
+import EC2Icon from './tech_icons/EC2Icon'
+import Route53Icon from './tech_icons/Route53Icon'
+import CloudFormationIcon from './tech_icons/CloudFormationIcon'
+import LambdaIcon from './tech_icons/LambdaIcon'
 import { motion } from "framer-motion"
 
 import { useStore } from './Store'
@@ -111,8 +117,9 @@ export default function TechIcons() {
           <BootstrapIcon width={"3rem"}/>
           <BulmaIcon width={"3rem"}/>
           <MaterialUIIcon width={"3rem"}/>
+          <FramerMotionIcon width={"2.2rem"} margin={'.9rem'}/>
           <ViteIcon width={"2rem"}/>
-          <FigmaIcon width={"3rem"}/>
+          <FigmaIcon width={"2.5rem"}/>
         </section>
       </div>
       <div className="glass" style={skillsStyle}>
@@ -153,7 +160,17 @@ export default function TechIcons() {
           <NGNIXIcon width={"5rem"} height={"3.5rem"}/>
           <BabelIcon width={"4.7rem"} height={"3.5rem"}/>
           <WebpackIcon width={"8rem"} height={"3.5rem"}/>
+        </section>
+      </div>
+      <div className="glass" style={skillsStyle}>
+        <h3 style={{"textAlign": "left", "textDecoration": "underline"}}>Cloud Services</h3>
+        <section style={{...iconGroupStyle, ...spreadStyle}}>
           <AWSLogo width={"7rem"} height={"3.5rem"}/>
+          <AmplifyIcon width={"2.2rem"} height={"3.5rem"}/>
+          <EC2Icon width={"2.2rem"} height={"3.5rem"}/>
+          <Route53Icon width={"2.3rem"} height={"3.5rem"}/>
+          <CloudFormationIcon width={"2.3rem"} height={"3.5rem"}/>
+          <LambdaIcon width={"2.3rem"} height={"3.5rem"}/>
         </section>
       </div>
     </motion.div>

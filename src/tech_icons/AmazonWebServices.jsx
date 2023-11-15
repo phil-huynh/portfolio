@@ -6,7 +6,7 @@ export default function AWSLogo({width, height}) {
     "height": height,
     "overflow": "hidden",
     "display": "flex",
-    "alignItems": "center"
+    "alignItems": "center",
   }
 
   const iconStyle = {
