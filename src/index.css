@@ -128,6 +128,24 @@ a {
   z-index: 1;
 }
 
+.glass3 {
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 10;
+  box-shadow: 6px 6px 4px 1px rgba(1, 1, 1, 0.3);
+  backdrop-filter: blur(4px) hue-rotate(110deg);
+  z-index: 1;
+}
+
+.glass4 {
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 10;
+  box-shadow: 6px 6px 4px 1px rgba(1, 1, 1, 0.3);
+  backdrop-filter: blur(4px) hue-rotate(195deg);
+  z-index: 1;
+}
+
 @keyframes stringsglass {
 	0% {
 		backdrop-filter: blur(4px) hue-rotate(0deg);
