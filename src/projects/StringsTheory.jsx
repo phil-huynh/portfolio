@@ -20,6 +20,8 @@ import solfege from "../assets/strings_theory/solfege.png"
 import twoNamesMapChords from "../assets/strings_theory/twoNamesMapChords.png"
 import { useNavigate } from "react-router-dom"
 import { Grid } from "@mui/material"
+import { AnimatePresence, motion } from "framer-motion"
+
 
 export default function StringsTheory() {
 
@@ -75,7 +77,13 @@ export default function StringsTheory() {
   }
 
   return (
-    <div className="strings-wrapper">
+    <motion.div
+      className="strings-wrapper"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1 }}
+    >
       <div className="strings-overlay"></div>
       <div className="contents">
         <div style={{ "display": "flex", "alignItems": "center", "flexDirection": "column"}}>
@@ -110,7 +118,7 @@ export default function StringsTheory() {
           </Grid>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

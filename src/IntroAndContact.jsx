@@ -41,7 +41,6 @@ export default function IntroAndContact() {
     "display": "flex",
     "alignItems": "flex-start",
     "alignContent": "flex-end",
-    // "paddingLeft": "1rem",
   }
 
   const gridStyle = {

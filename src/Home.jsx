@@ -4,6 +4,8 @@ import { Grid } from "@mui/material"
 import { motion } from "framer-motion"
 import { useStore } from "./Store"
 import { useNavigate } from "react-router-dom";
+import { AnimatePresence } from "framer-motion"
+
 
 function Home() {
 
@@ -12,7 +14,14 @@ function Home() {
   const navigate = useNavigate()
 
   return (
-    <div className="wrapper">
+    <motion.div
+      className="wrapper"
+      key={'home'}
+      initial={{ opacity: 0 }}
+      animate={{opacity: 1}}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1 }}
+    >
       <motion.div
         className="overlay"
         initial={{ opacity: .4}}
@@ -33,7 +42,8 @@ function Home() {
             xs={12}
             sm={12}
             md={7}
-            lg={6.5}
+            lg={6.25}
+            xl={5}
             sx={{
               "display": "flex",
               "justifyContent": "center",
@@ -46,7 +56,8 @@ function Home() {
             xs={12}
             sm={12}
             md={5}
-            lg={5.5}
+            lg={5.75}
+            xl={7}
             sx={{
               "display": "flex",
               "justifyContent": "center",
@@ -63,7 +74,7 @@ function Home() {
           <h2 style={{"cursor": "pointer"}}onClick={()=>navigate('ecommerce')}>E-Commerce</h2>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

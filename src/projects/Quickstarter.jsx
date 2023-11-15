@@ -4,6 +4,7 @@ import image3 from "../assets/quickstarter/microsCommandLine.png"
 import image4 from "../assets/quickstarter/duplicatePortError.png"
 import image5 from "../assets/quickstarter/addQueues.png"
 import { useNavigate } from "react-router-dom"
+import { motion } from "framer-motion"
 
 
 export default function Quickstarter() {
@@ -29,7 +30,13 @@ export default function Quickstarter() {
     }
 
     return (
-      <div className="quickstarter-wrapper">
+      <motion.div
+        className="quickstarter-wrapper"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 1 }}
+      >
         <div className="quickstarter-overlay"></div>
         <div className="colorfilter"></div>
           <div className="contents">
@@ -73,6 +80,6 @@ export default function Quickstarter() {
             }}/>
           </div>
         </div>
-      </div>
+      </motion.div>
     )
 }
