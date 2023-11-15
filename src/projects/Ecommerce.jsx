@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom"
 import { Grid } from "@mui/material"
+import { motion } from "framer-motion"
 
 export default function Ecommerce() {
 
@@ -42,7 +43,13 @@ export default function Ecommerce() {
 
 
   return (
-    <div className="ecommerce-wrapper">
+    <motion.div
+      className="ecommerce-wrapper"
+      initial={{ height: 0, width:0 }}
+      animate={{height: '100%', width: '100%'}}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1.3, delay: .5 }}
+    >
     <div className="ecommerce-overlay"></div>
       <div className="contents">
         <div style={{ "display": "flex", "alignItems": "center", "flexDirection": "column"}}>
@@ -71,7 +78,7 @@ export default function Ecommerce() {
           </Grid>
         </div>
      </div>
-    </div>
+    </motion.div>
   )
 }
 
