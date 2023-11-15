@@ -29,7 +29,7 @@ function Home() {
     if (isLG) return "12rem"
     if (isMD) return "9rem"
     if (isSM) return "7rem"
-    if (isXS) return "6rem"
+    if (isXS) return "5rem"
   }
 
   return (
