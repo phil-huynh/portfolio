@@ -6,7 +6,7 @@ export default function NodeIcon({ width, height }) {
     "height": height,
     "overflow": "hidden",
     "display": "flex",
-    "alignItems": "center"
+    "alignItems": "center",
   }
 
   const iconStyle = {
