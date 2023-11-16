@@ -12,6 +12,13 @@ import mapScalesPage from "../assets/strings_theory/mapScalesPage.png"
 import oneChordInMapScales from "../assets/strings_theory/oneChordInMapScales.png"
 import sectionNeck from "../assets/strings_theory/sectionNeck.png"
 
+
+import standardNeck from "../assets/strings_theory/standardNeck.png"
+import ukeNeck from "../assets/strings_theory/ukeNeck.png"
+import fiveStringNeck from "../assets/strings_theory/fiveStringNeck.png"
+import violinNeck from "../assets/strings_theory/violinNeck.png"
+import leftyNeck from "../assets/strings_theory/leftyNeck.png"
+
 import selectedNoteNoChord from "../assets/strings_theory/selectedNoteNoChord.png"
 import selectedNoteWithChord from "../assets/strings_theory/selectedNoteWithChord.png"
 import selectedNoteTwoChords from "../assets/strings_theory/selectedNoteTwoChords.png"
@@ -125,28 +132,39 @@ export default function StringsTheory() {
 
   const viewMenuStyle = {
     ...photoStyle,
-    "width": "25%",
+    "width": "50%",
     "aspectRatio": "2.79"
   }
 
   const tonicMenuStyle = {
     ...photoStyle,
-    "width": "10%",
+    "width": "30%",
     "aspectRatio": ".29"
   }
 
   const scalesMenuStyle = {
     ...photoStyle,
-    "width": "25%",
+    "width": "50%",
     "aspectRatio": ".56"
   }
 
   const tuningMenuStyle = {
     ...photoStyle,
-    "width": "25%",
+    "width": "50%",
     "aspectRatio": ".68"
   }
 
+  const neckOptionsStyle1 = {
+    ...photoStyle,
+    "width": "90%",
+    "aspectRatio": "5.45"
+  }
+
+  const neckOptionsStyle2 = {
+    ...neckOptionsStyle1,
+    "aspectRatio": "5.52"
+
+  }
 
 
   const introStyle = {
@@ -191,13 +209,13 @@ export default function StringsTheory() {
         </div> */}
         <div style={introStyle}>
           <div className="glass" style={headerStyle}>
-            <h1 style={{"color": "white"}}>Strings Theory</h1>
-          </div>
-          <div className="glass" style={headerStyle}>
             <h2 style={{"cursor": 'pointer'}} onClick={()=>navigate('/')}>Home</h2>
           </div>
+          <div className="strings-title-glass" style={headerStyle}>
+            <h1 style={{"color": "white", "fontSize": "4rem"}}>Strings Theory</h1>
+          </div>
           <div className="glass" style={infoBoxStyle} >
-            <h2>View the deployed application here</h2>
+            <h2 style={{"marginBottom": "0"}}>View the deployed application here</h2>
             <a style={headerStyle} href="http://stringstheory.net">
               <h2 style={{"cursor": 'pointer', "color": "white"}} onClick={()=>navigate('/')}>stringstheory.net</h2>
             </a>
@@ -215,6 +233,11 @@ export default function StringsTheory() {
             <div style={{...neckStyle, "backgroundImage": `url(${noteNames})`}}></div>
             <div style={{...neckStyle, "backgroundImage": `url(${scaleDegrees})`}}></div>
             <div style={{...neckStyle, "backgroundImage": `url(${solfege})`}}></div>
+            <div style={{...neckOptionsStyle1, "backgroundImage": `url(${standardNeck})`}}></div>
+            <div style={{...neckOptionsStyle1, "backgroundImage": `url(${fiveStringNeck})`}}></div>
+            <div style={{...neckOptionsStyle1, "backgroundImage": `url(${ukeNeck})`}}></div>
+            <div style={{...neckOptionsStyle2, "backgroundImage": `url(${violinNeck})`}}></div>
+            <div style={{...neckOptionsStyle2, "backgroundImage": `url(${leftyNeck})`}}></div>
           </div>
           <div className="glass3" style={infoBoxStyle}>
             <div style={{...viewMenuStyle, "backgroundImage": `url(${viewMenu})`}} />
