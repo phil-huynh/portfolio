@@ -1,8 +1,11 @@
-import image1 from "../assets/quickstarter/addVolume.png"
-import image2 from "../assets/quickstarter/portIntError.png"
-import image3 from "../assets/quickstarter/microsCommandLine.png"
-import image4 from "../assets/quickstarter/duplicatePortError.png"
-import image5 from "../assets/quickstarter/addQueues.png"
+import dupPortError from "../assets/quickstarter/dupPortError.png"
+import enterMicros from "../assets/quickstarter/enterMicros.png"
+import enterQueues from "../assets/quickstarter/enterQueues.png"
+import portAndPollerPrompt from "../assets/quickstarter/portAndPollerPrompt.png"
+import portNumberError from "../assets/quickstarter/portNumberError.png"
+import startProject from "../assets/quickstarter/startProject.png"
+import viteSetup from "../assets/quickstarter/viteSetup.png"
+import volumeAndPort from "../assets/quickstarter/volumeAndPort.png"
 import { useNavigate } from "react-router-dom"
 import { motion } from "framer-motion"
 
@@ -21,17 +24,58 @@ export default function Quickstarter() {
 
 
     const imageStyle ={
-      "backgroundImage": `url(${image1})`,
-      "backgroundSize": "contain",
+      "backgroundSize": "cover",
       "backgroundPosition": "center",
-      "width": "29.8rem",
-      "height": "18.2rem",
-      "margin": "1rem"
+      "margin": "1rem",
+      "border": "6px solid #0E0E0E",
+      "borderRadius": "10px"
     }
 
     const titleStyle = {
-      "marginTop": "6rem"
+      "marginTop": "8rem",
+      "zIndex": "10"
     }
+
+    const dupPortErrorStyle = {
+      ...imageStyle,
+      "aspectRatio": "2.35"
+    }
+
+    const enterMicrosStyle = {
+      ...imageStyle,
+      "aspectRatio": ".51"
+    }
+
+    const enterQueuesStyle = {
+      ...imageStyle,
+      "aspectRatio": "1.56"
+    }
+
+    const portAndPollerPromptStyle = {
+      ...imageStyle,
+      "aspectRatio": "1.33"
+    }
+
+    const portNumberErrorStyle = {
+      ...imageStyle,
+      "aspectRatio": "2.13"
+    }
+
+    const startProjectStyle = {
+      ...imageStyle,
+      "aspectRatio": "10"
+    }
+
+    const viteSetupStyle = {
+      ...imageStyle,
+      "aspectRatio": "2.64"
+    }
+
+    const volumeAndPortStyle = {
+      ...imageStyle,
+      "aspectRatio": "4.78"
+    }
+
 
     return (
       <motion.div
@@ -48,36 +92,59 @@ export default function Quickstarter() {
           </div>
           <div className="contents">
             <div className="glass" style={{...headerStyle, ...titleStyle}}>
-              <h1 style={{"color": "white"}}>Hello World: Quickestarter</h1>
+              <h1 style={{"color": "white"}}>Quickstarter</h1>
             </div>
 
-            <div style={{"display": "flex", "justifyContent": "space-around",  "flexWrap": "wrap"}}>
+            {/* <div style={{"display": "flex", "justifyContent": "space-around",  "flexWrap": "wrap"}}> */}
             <div style={{
-              ...imageStyle,
-              "backgroundImage": `url(${image1})`,
+              ...startProjectStyle,
+              "backgroundImage": `url(${startProject})`,
+              "width": "20%",
+
             }}/>
             <div style={{
-              ...imageStyle,
-              "backgroundImage": `url(${image2})`,
-              "height": "18.7rem",
+              ...volumeAndPortStyle,
+              "backgroundImage": `url(${volumeAndPort})`,
+              "width": "40%"
+
             }}/>
             <div style={{
-              ...imageStyle,
-              "backgroundImage": `url(${image4})`,
-              "width": "35rem",
+              ...portNumberErrorStyle,
+              "backgroundImage": `url(${portNumberError})`,
+              "width": "40%"
+
             }}/>
             <div style={{
-              ...imageStyle,
-              "backgroundImage": `url(${image5})`,
-              "width": "30.5rem",
+              ...enterMicrosStyle,
+              "backgroundImage": `url(${enterMicros})`,
+              "width": "40%"
+
             }}/>
             <div style={{
-              ...imageStyle,
-              "backgroundImage": `url(${image3})`,
-              "width": "29rem",
-              "height": "55rem",
+              ...dupPortErrorStyle,
+              "backgroundImage": `url(${dupPortError})`,
+              "width": "40%"
+
             }}/>
-          </div>
+            <div style={{
+              ...enterQueuesStyle,
+              "backgroundImage": `url(${enterQueues})`,
+              "width": "40%"
+
+            }}/>
+            <div style={{
+              ...portAndPollerPromptStyle,
+              "backgroundImage": `url(${portAndPollerPrompt})`,
+              "width": "40%"
+
+            }}/>
+            <div style={{
+              ...viteSetupStyle,
+              "backgroundImage": `url(${viteSetup})`,
+              "width": "40%"
+
+            }}/>
+          {/* </div> */}
         </div>
       </motion.div>
     )
