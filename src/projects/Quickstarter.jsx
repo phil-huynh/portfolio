@@ -29,6 +29,10 @@ export default function Quickstarter() {
       "margin": "1rem"
     }
 
+    const titleStyle = {
+      "marginTop": "6rem"
+    }
+
     return (
       <motion.div
         className="quickstarter-wrapper"
@@ -39,19 +43,14 @@ export default function Quickstarter() {
       >
         <div className="quickstarter-overlay"></div>
         <div className="colorfilter"></div>
+          <div className="glass" style={{...headerStyle, "position": "fixed", "zIndex": "11"}}>
+            <h2 style={{"cursor": 'pointer'}} onClick={()=>navigate('/')}>Home</h2>
+          </div>
           <div className="contents">
-            <div style={{ "display": "flex", "alignItems": "center", "flexDirection": "column"}}>
-              <div className="glass" style={headerStyle}>
+            <div className="glass" style={{...headerStyle, ...titleStyle}}>
               <h1 style={{"color": "white"}}>Hello World: Quickestarter</h1>
-              </div>
-              <div className="glass" style={headerStyle}>
-                <h2 style={{"cursor": 'pointer'}} onClick={()=>navigate('/')}>Home</h2>
-              </div>
-              <div style={{...headerStyle, "height": "50rem"}}>
-                <h2>Test</h2>
-                <h2>Test</h2>
-              </div>
             </div>
+
             <div style={{"display": "flex", "justifyContent": "space-around",  "flexWrap": "wrap"}}>
             <div style={{
               ...imageStyle,

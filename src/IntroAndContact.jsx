@@ -122,7 +122,7 @@ export default function IntroAndContact() {
         </Grid>
       </div>
       <div className="glass" style={menuItemStyle}>
-        <h3>This site was built with</h3>
+        <h3>This site was created with</h3>
         <div style={madeWithStyle}>
           <JavascriptIcon width={"2rem"}/>
           <ReactIcon width={"2.5rem"}/>

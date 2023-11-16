@@ -51,10 +51,12 @@ import BabelIcon from '../tech_icons/BabelIcon'
 import { useNavigate } from "react-router-dom"
 import { Grid } from "@mui/material"
 import { AnimatePresence, motion } from "framer-motion"
+import { useStore } from "../Store"
 
 
 export default function StringsTheory() {
 
+  const {locate, locate2, locate3} = useStore()
   // const wrapperStyle = {
   //   "height": "100vh",
   //   "backgroundImage": background
@@ -90,11 +92,14 @@ export default function StringsTheory() {
 
   const titleStyle = {
     ...headerStyle,
-    "width": "80%"
+    "width": "80%",
+    "marginBottom": "2rem",
+    "marginTop": "6rem"
   }
 
   const toolBoxStyle ={
-    "width": "72%"
+    "width": "80%",
+    "marginBottom": "1rem"
 
   }
 
@@ -105,16 +110,17 @@ export default function StringsTheory() {
     "flexWrap": "wrap",
     "gap": ".5rem",
     "paddingBottom": "1rem",
-    "paddingInline": "1rem"
+    "paddingInline": ".5rem",
   }
 
   const infoBoxStyle = {
-    "width": "75%",
+    "width": "78%",
     "display": "flex",
     "flexDirection": "column",
     "alignItems": "center",
     "justifyContent": "center",
-    "padding": "2rem"
+    "padding": "1rem",
+
   }
 
   const photoStyle = {
@@ -195,15 +201,18 @@ export default function StringsTheory() {
 
   }
 
+  const centerCol = {
+    "display": "flex",
+    "justifyContent": "center"
+  }
 
   const introStyle = {
-    "height": "90vh",
-    "width": "100vw",
+    "width": "100%",
     "display": "flex",
     "flexDirection": "column",
     "alignItems": "center",
     "justifyContent": "center",
-    "gap": "2rem"
+    "marginBottom": "2rem",
   }
 
   const groupStyle = {
@@ -223,27 +232,16 @@ export default function StringsTheory() {
       transition={{ duration: 1 }}
     >
       <div className="strings-overlay"></div>
-      <div className="contents">
-        {/* <div style={{ "display": "flex", "alignItems": "center", "flexDirection": "column"}}>
-          <div className="glass" style={headerStyle}>
-            <h1 style={{"color": "white"}}>Hello World: Strings Theory</h1>
-          </div>
-          <div className="glass" style={headerStyle}>
-            <h2 style={{"cursor": 'pointer'}} onClick={()=>navigate('/')}>Home</h2>
-          </div>
-          <div className="glass2" style={{...headerStyle, "height": "50rem"}}>
-            <h2>Test</h2>
-            <h2>Test</h2>
-          </div>
-        </div> */}
-        <div style={introStyle}>
-          <div className="glass" style={headerStyle}>
-            <h2 style={{"cursor": 'pointer'}} onClick={()=>navigate('/')}>Home</h2>
-          </div>
+      <div className="glass" style={{...headerStyle, "position": "fixed", "zIndex": "11"}}>
+        <h2 style={{"cursor": 'pointer'}} onClick={()=>navigate('/')}>Home</h2>
+      </div>
+      <div className="contents" >
+
+        <div style={{...introStyle}}>
           <div className="strings-title-glass" style={titleStyle}>
             <h1 className="strings-title" style={{"color": "white", "fontSize": "6.5rem"}}>Strings Theory</h1>
           </div>
-          <div className="glass" style={toolBoxStyle}>
+          <div className="glass" style={{...toolBoxStyle}}>
             <h2>Strings Theory was created using</h2>
             <div style={toolsStyle}>
               <JavascriptIcon width={"2rem"}/>
@@ -258,12 +256,34 @@ export default function StringsTheory() {
               <Route53Icon width={"2.2rem"} height={"2.5rem"}/>
             </div>
           </div>
-          <div className="glass" style={infoBoxStyle} >
+          <div className="glass" style={{...infoBoxStyle}} >
             <h2 style={{"marginBottom": "0"}}>View the deployed application here</h2>
-            <a style={headerStyle} href="http://stringstheory.net">
-              <h2 style={{"cursor": 'pointer', "color": "white"}} onClick={()=>navigate('/')}>stringstheory.net</h2>
+            <a href="http://stringstheory.net">
+              <h2 style={{"cursor": 'pointer', "color": "white"}}>stringstheory.net</h2>
             </a>
           </div>
+
+          {/* <Grid container>
+            <Grid
+              item
+              xs={12}
+              sm={12}
+              md={6}
+              sx={{"display": "flex", "justifyContent": "space-around"}}
+            >
+            </Grid>
+
+            <Grid
+              item
+              xs={12}
+              sm={12}
+              md={6}
+              sx={{"display": "flex", "justifyContent": "space-around"}}
+            >
+            </Grid>
+          </Grid> */}
+
+
         </div>
         <div style={{"display": "flex", "justifyContent": "space-around",  "flexWrap": "wrap"}}>
           <div className="glass" style={infoBoxStyle}>
