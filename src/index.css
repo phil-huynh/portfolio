@@ -214,6 +214,11 @@ a {
   /* opacity: .9; */
 }
 
+.strings-title {
+  font-family: 'Comic Neue', cursive;
+  font-weight: 400;
+}
+
 .quickstarter-wrapper {
   position: absolute;
   top:0;

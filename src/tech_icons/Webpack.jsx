@@ -17,7 +17,7 @@ export default function WebpackIcon({ width, height }) {
   const {locate} = useStore()
 
   return (
-    <div style={containerStyle}>
+    <div style={containerStyle} title="Webpack">
       <div className="svg-shadow" style={{...iconStyle, "width": width}}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
           <path

@@ -36,8 +36,16 @@ import topDash from "../assets/strings_theory/topDash.png"
 import scalesDash from "../assets/strings_theory/scalesDash.png"
 import chordDash from "../assets/strings_theory/chordDash.png"
 
-
-
+import JavascriptIcon from '../tech_icons/JavascriptIcon'
+import CSSLogo from '../tech_icons/CSS_Logo'
+import NodeIcon from '../tech_icons/NodeIcon'
+import ExpressIcon from '../tech_icons/ExpressIcon'
+import WebpackIcon from '../tech_icons/Webpack'
+import EC2Icon from '../tech_icons/EC2Icon'
+import Route53Icon from '../tech_icons/Route53Icon'
+import JestIcon from '../tech_icons/JestIcon'
+import ReactIcon from '../tech_icons/ReactIcon'
+import BabelIcon from '../tech_icons/BabelIcon'
 
 
 import { useNavigate } from "react-router-dom"
@@ -79,6 +87,27 @@ export default function StringsTheory() {
     "alignItems": "center",
     "justifyContent": "center"
   }
+
+  const titleStyle = {
+    ...headerStyle,
+    "width": "80%"
+  }
+
+  const toolBoxStyle ={
+    "width": "72%"
+
+  }
+
+  const toolsStyle = {
+    "display": "flex",
+    "flexDirection": "row",
+    "justifyContent": "space-around",
+    "flexWrap": "wrap",
+    "gap": ".5rem",
+    "paddingBottom": "1rem",
+    "paddingInline": "1rem"
+  }
+
   const infoBoxStyle = {
     "width": "75%",
     "display": "flex",
@@ -211,8 +240,23 @@ export default function StringsTheory() {
           <div className="glass" style={headerStyle}>
             <h2 style={{"cursor": 'pointer'}} onClick={()=>navigate('/')}>Home</h2>
           </div>
-          <div className="strings-title-glass" style={headerStyle}>
-            <h1 style={{"color": "white", "fontSize": "4rem"}}>Strings Theory</h1>
+          <div className="strings-title-glass" style={titleStyle}>
+            <h1 className="strings-title" style={{"color": "white", "fontSize": "6.5rem"}}>Strings Theory</h1>
+          </div>
+          <div className="glass" style={toolBoxStyle}>
+            <h2>Strings Theory was created using</h2>
+            <div style={toolsStyle}>
+              <JavascriptIcon width={"2rem"}/>
+              <ReactIcon width={"2.5rem"}/>
+              <CSSLogo width={"2.5rem"}/>
+              <NodeIcon width={"5rem"} height={"2.5rem"}/>
+              <ExpressIcon width={"4rem"} height={"2.5rem"}/>
+              <BabelIcon width={"3.7rem"} height={"2.5rem"}/>
+              <WebpackIcon width={"7rem"} height={"2.5rem"}/>
+              <JestIcon width={"2rem"}/>
+              <EC2Icon width={"2rem"} height={"2.5rem"}/>
+              <Route53Icon width={"2.2rem"} height={"2.5rem"}/>
+            </div>
           </div>
           <div className="glass" style={infoBoxStyle} >
             <h2 style={{"marginBottom": "0"}}>View the deployed application here</h2>
