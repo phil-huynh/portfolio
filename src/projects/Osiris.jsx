@@ -1,71 +1,50 @@
 import { useNavigate } from "react-router-dom"
 import { Grid } from "@mui/material"
+import { useStore } from "../Store"
 
 export default function Osiris() {
 
   const navigate = useNavigate()
 
-  const mobileImages = [
-    "https://media.giphy.com/media/HPt5OekCz5XZR5GLpN/giphy.gif",
-    "https://media.giphy.com/media/35TeChHRBB1Zc7e3ew/giphy.gif",
-    "https://media.giphy.com/media/fIuud07btnCNoKRVmb/giphy.gif",
-    "https://media.giphy.com/media/H47rgIuBFw7g0iIG1V/giphy.gif",
-    "https://media.giphy.com/media/9BtupnUJlFLHMYUqKP/giphy.gif",
-    "https://media.giphy.com/media/c8qLLR7SJTNCf4J16u/giphy.gif",
-    "https://media.giphy.com/media/mFelNZeuET2CKmok0A/giphy.gif",
-    "https://media.giphy.com/media/zhBSjaqLXsviVvOkCQ/giphy.gif",
-    "https://media.giphy.com/media/80BvP34vS4esPPCqWI/giphy.gif",
-    "https://media.giphy.com/media/2yPiSAunimoAPlP7Ta/giphy.gif",
-    "https://media.giphy.com/media/zsPCksYyhZXivc1oMt/giphy.gif",
-    "https://media.giphy.com/media/lNp0gwsXUP6gdUqqsm/giphy.gif",
-    "https://media.giphy.com/media/zsPCksYyhZXivc1oMt/giphy.gif",
-  ]
+  const { osirisImages: photos } = useStore()
 
-  const tabletImage = "https://media.giphy.com/media/5Diu7UQyjYdrgMCN6X/giphy.gif"
-
-  const desktopImages= [
-    "https://media.giphy.com/media/0Mm6noiioGANaMbS8n/giphy.gif",
-    "https://media.giphy.com/media/Tu0zkb61zEYkJN4VE6/giphy.gif"
-  ]
-
-  const headerStyle = {
-    "height": "5rem",
-    "width": "50%",
-    "display": "flex",
-    "alignItems": "center",
-    "justifyContent": "center"
-  }
-
-
-  const mobileImageStyle ={
-    "backgroundSize": "cover",
-    "backgroundPosition": "center",
-    "width": "95%",
-    "margin": "1rem",
-    "aspectRatio": "2.5/4.75"
-  }
-
-  const tabletImageStyle ={
-    "backgroundSize": "cover",
-    "backgroundPosition": "center",
-    "width": "50%",
-    "margin": "1rem",
-    "aspect-ratio": "3.5/4.5"
-  }
-
-  const desktopImageStyle ={
-    "backgroundSize": "cover",
-    "backgroundPosition": "center",
-    "width": "95%",
-    "margin": "1rem",
-    "aspect-ratio": "6.3/3.75"
-  }
-
-  const gridStyle = {
+  const centerContent = {
     "display": "flex",
     "justifyContent": "center",
     "alignItems": "center"
   }
+
+  const headerStyle = {
+    "height": "5rem",
+    "width": "50%",
+    ...centerContent
+  }
+
+  const imageStyle = {
+    "backgroundSize": "cover",
+    "backgroundPosition": "center",
+    "margin": "1rem",
+  }
+
+  const mobileImageStyle ={
+    ...imageStyle,
+    "width": "95%",
+    "aspectRatio": "2.5/4.75"
+  }
+
+  const tabletImageStyle ={
+    ...imageStyle,
+    "width": "50%",
+    "aspect-ratio": "3.5/4.5"
+  }
+
+  const desktopImageStyle ={
+    ...imageStyle,
+    "width": "95%",
+    "aspect-ratio": "6.3/3.75"
+  }
+
+  const gridStyle = centerContent
 
   return (
     <div className="osiris-wrapper">
@@ -81,7 +60,7 @@ export default function Osiris() {
         </div>
         <div style={{"display": "flex", "justifyContent": "space-around",  "flexWrap": "wrap"}}>
         <Grid container>
-          {mobileImages.map((image, i) => (
+          {photos.mobile.map((image, i) => (
               <Grid
                 item
                 xs={6}
@@ -96,9 +75,9 @@ export default function Osiris() {
               </Grid>
           ))}
         </Grid>
-        <div style={{...tabletImageStyle, "backgroundImage": `url(${tabletImage})`}} />
+        <div style={{...tabletImageStyle, "backgroundImage": `url(${photos.tablet})`}} />
         <Grid container>
-          {desktopImages.map((image, i) => (
+          {photos.desktop.map((image, i) => (
               <Grid
                 item
                 xs={12}

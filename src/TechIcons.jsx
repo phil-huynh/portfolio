@@ -43,6 +43,8 @@ import EC2Icon from './tech_icons/EC2Icon'
 import Route53Icon from './tech_icons/Route53Icon'
 import CloudFormationIcon from './tech_icons/CloudFormationIcon'
 import LambdaIcon from './tech_icons/LambdaIcon'
+import RabbitMQIcon from './tech_icons/RabbitMQIcon'
+
 import { motion } from "framer-motion"
 
 import { useStore } from './Store'
@@ -131,6 +133,7 @@ export default function TechIcons() {
           <DjangoIcon width={"4rem"} height={"3.5rem"}/>
           <FastAPIIcon width={"6rem"} height={"3.5rem"}/>
           <FlaskIcon width={"5.2rem"} height={"3.5rem"}/>
+          <RabbitMQIcon width={"6rem"} height={"3.5rem"}/>
         </section>
       </div>
       <div className="glass" style={skillsStyle}>
