@@ -98,20 +98,23 @@ export default function StringsTheory() {
     "padding": "2rem"
   }
 
-  const linkButtonsContainer = {
-    "width": "90%",
+  const introMessageContainer = {
+    "width": "100%",
     "display": "flex",
-    "flexDirection": "row",
-    "flexWrap": "wrap",
-    "justifyContent": "space-around"
+    "alignItems": "center",
+    "justifyContent": "center",
   }
 
-  const buttonStyle = {
-    "width": "40%",
-    "color": "white",
-    "cursor": "pointer"
-
+  const introMessageCard = {
+    "width": "80%",
+    "padding": "1.5rem",
+    "fontSize": "1.5rem",
+    "marginTop": "1.5rem"
   }
+
+  // const introMessageStyle = {
+  //   "fontSize": "1.5rem"
+  // }
 
   const navigation = [
     {label: "Home", path: "/"},
@@ -135,73 +138,62 @@ export default function StringsTheory() {
           <div className="strings-title-glass " style={titleStyle}>
             <h1 className="strings-title" style={{"color": "white", "fontSize": "7rem",}}>Strings Theory</h1>
           </div>
-
-              <div className="glass" style={{...toolBoxStyle}}>
-                <h2>Strings Theory was created using</h2>
-                <div style={toolsStyle}>
-                  <JavascriptIcon width={"2rem"}/>
-                  <ReactIcon width={"2.5rem"}/>
-                  <CSSLogo width={"2.5rem"}/>
-                  <NodeIcon width={"5rem"} height={"2.5rem"}/>
-                  <ExpressIcon width={"4rem"} height={"2.5rem"}/>
-                  <BabelIcon width={"3.7rem"} height={"2.5rem"}/>
-                  <WebpackIcon width={"7rem"} height={"2.5rem"}/>
-                  <JestIcon width={"2rem"}/>
-                  <EC2Icon width={"2rem"} height={"2.5rem"}/>
-                  <Route53Icon width={"2.2rem"} height={"2.5rem"}/>
-                </div>
-              </div>
-
-              {/* <div style={{...linkButtonsContainer}} > */}
-
-              <Grid container>
-                <Grid item xs={12} sm={12} md={6}>
-                  <button className='glass strings-link-button' onClick={()=>window.location.assign("http://stringstheory.net")}>
-                    <p style={{"fontSize": "2rem","marginBottom": "0"}}>Click here to view the live app</p>
-                    <a href="http://stringstheory.net">
-                      <h2 style={{"color": "white"}}>http://stringstheory.net</h2>
-                    </a>
-                  </button>
-                </Grid>
-                <Grid item xs={12} sm={12} md={6}>
-                  <button className='glass strings-link-button' onClick={()=>window.location.assign("https://github.com/phil-huynh/mvp")}>
-                    <span style={{"display": "flex", "justifyContent": "center", "alignItems": "center"}}>
-                      <span style={{"fontSize": "2rem", "marginRight": "1rem"}}>
-                        View the code on
-                      </span>
-                      <GitHubIcon width={"3.5rem"} path="mvp"/>
-                    </span>
-                  </button>
-                </Grid>
-              </Grid>
-
-
-
-              {/* </div> */}
-
+          <div className="glass" style={{...toolBoxStyle}}>
+            <h2>Strings Theory was created using</h2>
+            <div style={toolsStyle}>
+              <JavascriptIcon width={"2rem"}/>
+              <ReactIcon width={"2.5rem"}/>
+              <CSSLogo width={"2.5rem"}/>
+              <NodeIcon width={"5rem"} height={"2.5rem"}/>
+              <ExpressIcon width={"4rem"} height={"2.5rem"}/>
+              <BabelIcon width={"3.7rem"} height={"2.5rem"}/>
+              <WebpackIcon width={"7rem"} height={"2.5rem"}/>
+              <JestIcon width={"2rem"}/>
+              <EC2Icon width={"2rem"} height={"2.5rem"}/>
+              <Route53Icon width={"2.2rem"} height={"2.5rem"}/>
+            </div>
+          </div>
+          <Grid container>
+            <Grid item xs={12} sm={12} md={6}>
+              <button className='glass strings-link-button' onClick={()=>window.location.assign("http://stringstheory.net")}>
+                <p style={{"fontSize": "2rem","marginBottom": "0"}}>Click here to view the live app</p>
+                <a href="http://stringstheory.net">
+                  <h2 style={{"color": "white"}}>http://stringstheory.net</h2>
+                </a>
+              </button>
+            </Grid>
+            <Grid item xs={12} sm={12} md={6}>
+              <button className='glass strings-link-button' onClick={()=>window.location.assign("https://github.com/phil-huynh/mvp")}>
+                <span style={{"display": "flex", "justifyContent": "center", "alignItems": "center"}}>
+                  <span style={{"fontSize": "2rem", "marginRight": "1rem"}}>
+                    View the code on
+                  </span>
+                  <GitHubIcon width={"3.5rem"} path="mvp"/>
+                </span>
+              </button>
+            </Grid>
+          </Grid>
         </div>
 
         <div style={{"position": "sticky", "top": "1rem", "display": "flex", "flexDirection": "row", "zIndex": "11"}}>
-
           <Grid container>
             {navigation.map(nav => (
               <Grid item xs={6} sm={4} md={4} lg={3} key={nav.path} style={{"display": "flex", "placeContent": "center"}}>
-                <div className="glass strings-nav-item" >
-                  <h2 style={{"cursor": 'pointer', "marginTop": ".4rem", "marginBottom": ".4rem"}} onClick={()=>navigate(nav.path)}>{nav.label}</h2>
+                <div className="glass strings-nav-item" onClick={()=>navigate(nav.path)}>
+                  <h2 style={{"cursor": 'pointer', "marginTop": ".4rem", "marginBottom": ".4rem"}}>{nav.label}</h2>
                 </div>
               </Grid>
-
             ))}
-            {/* <Grid item xs={12} sm={12} md={3} style={{"display": "flex", "placeContent": "center"}}>
-              <div className="glass strings-nav-item" >
-                <h2 style={{"cursor": 'pointer'}} onClick={()=>navigate('/')}>Quickstarter</h2>
-              </div>
-            </Grid> */}
           </Grid>
-
-
-
         </div>
+        <div style={introMessageContainer}>
+          <div className='glass' style={introMessageCard}>
+            <p>
+            The intent of this app is to be a tool that strings players of all skill levels can use to continue to grow and find new sounds. Players can explore new scales or tunings that they have not used before or they can study structures that they already use in greater depth.
+            </p>
+          </div>
+        </div>
+
         <div style={{"display": "flex", "justifyContent": "space-around",  "flexWrap": "wrap"}}>
           <div className="glass" style={infoBoxStyle}>
             <div style={groupStyle}>
