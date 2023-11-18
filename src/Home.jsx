@@ -32,13 +32,13 @@ function Home() {
       key={'home'}
       initial={!firstTime ? { opacity: .3 } : false}
       animate={{opacity: 1}}
-      exit={{ opacity: 0 }}
+      exit={{ opacity: .1 }}
       transition={{ duration: 1 }}
     >
       <motion.div
         className="overlay"
         initial={{ opacity: .4}}
-        animate={{ opacity: .2 }}
+        animate={{ opacity: .4 }}
         transition={{ duration: 1.5, delay: .2 }}
       />
       {firstTime ?

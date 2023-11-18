@@ -61,9 +61,9 @@ export default function Quickstarter() {
   return (
     <motion.div
       className="quickstarter-wrapper"
-      initial={{ opacity: 0 }}
+      initial={{ opacity: .2 }}
       animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      exit={{ opacity: .2 }}
       transition={{ duration: 1 }}
     >
       <div className="quickstarter-overlay"></div>

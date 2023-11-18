@@ -37,21 +37,26 @@ export default function StringsTheory() {
   const navigate = useNavigate()
 
   const headerStyle = {
-    "width": "45%",
+    "width": "20%",
     "display": "flex",
     "alignItems": "center",
     "justifyContent": "center",
+    "position": "fixed",
+    "zIndex": "11"
   }
 
   const titleStyle = {
-    ...headerStyle,
-    "width": "80%",
+    "display": "flex",
+    "alignItems": "center",
+    "justifyContent": "center",
+    "width": "90%",
+
     "marginBottom": "2rem",
     "marginTop": "6rem",
   }
 
   const toolBoxStyle ={
-    "width": "80%",
+    "width": "90%",
     "marginBottom": "1rem",
   }
 
@@ -66,12 +71,14 @@ export default function StringsTheory() {
   }
 
   const infoBoxStyle = {
-    "width": "78%",
+    "width": "85%",
     "display": "flex",
     "flexDirection": "column",
     "alignItems": "center",
     "justifyContent": "center",
     "padding": "1rem",
+    "marginTop": "1rem",
+    "marginBottom": "1rem",
   }
 
   const introStyle = {
@@ -91,51 +98,112 @@ export default function StringsTheory() {
     "padding": "2rem"
   }
 
+  const linkButtonsContainer = {
+    "width": "90%",
+    "display": "flex",
+    "flexDirection": "row",
+    "flexWrap": "wrap",
+    "justifyContent": "space-around"
+  }
+
+  const buttonStyle = {
+    "width": "40%",
+    "color": "white",
+    "cursor": "pointer"
+
+  }
+
+  const navigation = [
+    {label: "Home", path: "/"},
+    {label: "Quickstarter", path: "/quickstarter"},
+    {label: "Osiris", path: "/osiris"},
+    {label: "e Commerce", path: "/ecommerce"},
+  ]
+
   return (
     <motion.div
       className="strings-wrapper"
-      initial={{ opacity: 0 }}
+      initial={{ opacity: .2 }}
       animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      exit={{ opacity: .2 }}
       transition={{ duration: 1 }}
     >
       <div className="strings-overlay"></div>
-      <div className="glass" style={{...headerStyle, "position": "fixed", "zIndex": "11"}}>
-        <h2 style={{"cursor": 'pointer'}} onClick={()=>navigate('/')}>Home</h2>
-      </div>
       <div className="contents" >
 
         <div style={{...introStyle}}>
-          <div className="strings-title-glass" style={titleStyle}>
-            <h1 className="strings-title" style={{"color": "white", "fontSize": "6.5rem"}}>Strings Theory</h1>
+          <div className="strings-title-glass " style={titleStyle}>
+            <h1 className="strings-title" style={{"color": "white", "fontSize": "7rem",}}>Strings Theory</h1>
           </div>
-          <div className="glass" style={{...toolBoxStyle}}>
-            <h2>Strings Theory was created using</h2>
-            <div style={toolsStyle}>
-              <JavascriptIcon width={"2rem"}/>
-              <ReactIcon width={"2.5rem"}/>
-              <CSSLogo width={"2.5rem"}/>
-              <NodeIcon width={"5rem"} height={"2.5rem"}/>
-              <ExpressIcon width={"4rem"} height={"2.5rem"}/>
-              <BabelIcon width={"3.7rem"} height={"2.5rem"}/>
-              <WebpackIcon width={"7rem"} height={"2.5rem"}/>
-              <JestIcon width={"2rem"}/>
-              <EC2Icon width={"2rem"} height={"2.5rem"}/>
-              <Route53Icon width={"2.2rem"} height={"2.5rem"}/>
-            </div>
-          </div>
-          <div className="glass" style={{...infoBoxStyle}} >
-            <h2 style={{"marginBottom": "0"}}>View the deployed application here</h2>
-            <a href="http://stringstheory.net">
-              <h2 style={{"color": "white"}}>stringstheory.net</h2>
-            </a>
-            <h2 style={{"marginBottom": "0"}}>View the code here</h2>
-              <GitHubIcon width={"3.5rem"} path="mvp"/>
-          </div>
+
+              <div className="glass" style={{...toolBoxStyle}}>
+                <h2>Strings Theory was created using</h2>
+                <div style={toolsStyle}>
+                  <JavascriptIcon width={"2rem"}/>
+                  <ReactIcon width={"2.5rem"}/>
+                  <CSSLogo width={"2.5rem"}/>
+                  <NodeIcon width={"5rem"} height={"2.5rem"}/>
+                  <ExpressIcon width={"4rem"} height={"2.5rem"}/>
+                  <BabelIcon width={"3.7rem"} height={"2.5rem"}/>
+                  <WebpackIcon width={"7rem"} height={"2.5rem"}/>
+                  <JestIcon width={"2rem"}/>
+                  <EC2Icon width={"2rem"} height={"2.5rem"}/>
+                  <Route53Icon width={"2.2rem"} height={"2.5rem"}/>
+                </div>
+              </div>
+
+              {/* <div style={{...linkButtonsContainer}} > */}
+
+              <Grid container>
+                <Grid item xs={12} sm={12} md={6}>
+                  <button className='glass strings-link-button' onClick={()=>window.location.assign("http://stringstheory.net")}>
+                    <p style={{"fontSize": "2rem","marginBottom": "0"}}>Click here to view the live app</p>
+                    <a href="http://stringstheory.net">
+                      <h2 style={{"color": "white"}}>http://stringstheory.net</h2>
+                    </a>
+                  </button>
+                </Grid>
+                <Grid item xs={12} sm={12} md={6}>
+                  <button className='glass strings-link-button' onClick={()=>window.location.assign("https://github.com/phil-huynh/mvp")}>
+                    <span style={{"display": "flex", "justifyContent": "center", "alignItems": "center"}}>
+                      <span style={{"fontSize": "2rem", "marginRight": "1rem"}}>
+                        View the code on
+                      </span>
+                      <GitHubIcon width={"3.5rem"} path="mvp"/>
+                    </span>
+                  </button>
+                </Grid>
+              </Grid>
+
+
+
+              {/* </div> */}
+
+        </div>
+
+        <div style={{"position": "sticky", "top": "1rem", "display": "flex", "flexDirection": "row", "zIndex": "11"}}>
+
+          <Grid container>
+            {navigation.map(nav => (
+              <Grid item xs={6} sm={4} md={4} lg={3} key={nav.path} style={{"display": "flex", "placeContent": "center"}}>
+                <div className="glass strings-nav-item" >
+                  <h2 style={{"cursor": 'pointer', "marginTop": ".4rem", "marginBottom": ".4rem"}} onClick={()=>navigate(nav.path)}>{nav.label}</h2>
+                </div>
+              </Grid>
+
+            ))}
+            {/* <Grid item xs={12} sm={12} md={3} style={{"display": "flex", "placeContent": "center"}}>
+              <div className="glass strings-nav-item" >
+                <h2 style={{"cursor": 'pointer'}} onClick={()=>navigate('/')}>Quickstarter</h2>
+              </div>
+            </Grid> */}
+          </Grid>
+
+
+
         </div>
         <div style={{"display": "flex", "justifyContent": "space-around",  "flexWrap": "wrap"}}>
           <div className="glass" style={infoBoxStyle}>
-
             <div style={groupStyle}>
               <Photo image={photos.mapScalesPage.image} aspect={photos.mapScalesPage.aspect} width="90%"/>
             </div>
