@@ -1,41 +1,3 @@
-import twoChordsMapScales from "../assets/strings_theory/twoChordsMapScales.png"
-import capo from "../assets/strings_theory/capo.png"
-import alterations from "../assets/strings_theory/alterations.png"
-import chord1DegsMapScales from "../assets/strings_theory/chord1DegsMapScales.png"
-import chord2DegsMapScales from "../assets/strings_theory/chord2DegsMapScales.png"
-import focus1MapChords from "../assets/strings_theory/focus1MapChords.png"
-import focus2DegsMapChords from "../assets/strings_theory/focus2DegsMapChords.png"
-import focusChord1MapScales from "../assets/strings_theory/focusChord1MapScales.png"
-import focusChord2MapScales from "../assets/strings_theory/focusChord2MapScales.png"
-import leftHanded from "../assets/strings_theory/leftHanded.png"
-import mapScalesPage from "../assets/strings_theory/mapScalesPage.png"
-import oneChordInMapScales from "../assets/strings_theory/oneChordInMapScales.png"
-import sectionNeck from "../assets/strings_theory/sectionNeck.png"
-
-
-import standardNeck from "../assets/strings_theory/standardNeck.png"
-import ukeNeck from "../assets/strings_theory/ukeNeck.png"
-import fiveStringNeck from "../assets/strings_theory/fiveStringNeck.png"
-import violinNeck from "../assets/strings_theory/violinNeck.png"
-import leftyNeck from "../assets/strings_theory/leftyNeck.png"
-
-import selectedNoteNoChord from "../assets/strings_theory/selectedNoteNoChord.png"
-import selectedNoteWithChord from "../assets/strings_theory/selectedNoteWithChord.png"
-import selectedNoteTwoChords from "../assets/strings_theory/selectedNoteTwoChords.png"
-
-
-import scalesMenu from "../assets/strings_theory/scalesMenu.png"
-import tuningMenu from "../assets/strings_theory/tuningMenu.png"
-import tonicMenu from "../assets/strings_theory/tonicMenu.png"
-import viewMenu from "../assets/strings_theory/viewMenu.png"
-import scaleDegrees from "../assets/strings_theory/scaleDegrees.png"
-import solfege from "../assets/strings_theory/solfege.png"
-import twoNamesMapChords from "../assets/strings_theory/twoNamesMapChords.png"
-import noteNames from "../assets/strings_theory/noteNames.png"
-import topDash from "../assets/strings_theory/topDash.png"
-import scalesDash from "../assets/strings_theory/scalesDash.png"
-import chordDash from "../assets/strings_theory/chordDash.png"
-
 import JavascriptIcon from '../tech_icons/JavascriptIcon'
 import CSSLogo from '../tech_icons/CSS_Logo'
 import NodeIcon from '../tech_icons/NodeIcon'
@@ -46,39 +8,30 @@ import Route53Icon from '../tech_icons/Route53Icon'
 import JestIcon from '../tech_icons/JestIcon'
 import ReactIcon from '../tech_icons/ReactIcon'
 import BabelIcon from '../tech_icons/BabelIcon'
+import GitHubIcon from '../tech_icons/GitHubIcon'
 
+import Photo from "../Photo"
 
 import { useNavigate } from "react-router-dom"
 import { Grid } from "@mui/material"
-import { AnimatePresence, motion } from "framer-motion"
+import { motion } from "framer-motion"
 import { useStore } from "../Store"
 
 
 export default function StringsTheory() {
 
-  const {locate, locate2, locate3} = useStore()
-  // const wrapperStyle = {
-  //   "height": "100vh",
-  //   "backgroundImage": background
-  // }
+  const {stringsPhotos: photos, locate, locate2, locate3} = useStore()
 
   const images = [
-    // mapScalesPage,
-    // selectedNoteNoChord,
-    // selectedNoteWithChord,
-    // oneChordInMapScales,
-    twoChordsMapScales,
-    focusChord1MapScales,
-    focusChord2MapScales,
-    chord1DegsMapScales,
-    chord2DegsMapScales,
-    // capo,
-    // sectionNeck,
-    // leftHanded,
-    alterations,
-    twoNamesMapChords,
-    focus1MapChords,
-    focus2DegsMapChords,
+    photos.twoChordsMapScales,
+    photos.focusChord1MapScales,
+    photos.focusChord2MapScales,
+    photos.chord1DegsMapScales,
+    photos.chord2DegsMapScales,
+    photos.alterations,
+    photos.twoNamesMapChords,
+    photos.focus1MapChords,
+    photos.focus2DegsMapChords,
   ]
 
   const navigate = useNavigate()
@@ -87,20 +40,19 @@ export default function StringsTheory() {
     "width": "45%",
     "display": "flex",
     "alignItems": "center",
-    "justifyContent": "center"
+    "justifyContent": "center",
   }
 
   const titleStyle = {
     ...headerStyle,
     "width": "80%",
     "marginBottom": "2rem",
-    "marginTop": "6rem"
+    "marginTop": "6rem",
   }
 
   const toolBoxStyle ={
     "width": "80%",
-    "marginBottom": "1rem"
-
+    "marginBottom": "1rem",
   }
 
   const toolsStyle = {
@@ -120,90 +72,6 @@ export default function StringsTheory() {
     "alignItems": "center",
     "justifyContent": "center",
     "padding": "1rem",
-
-  }
-
-  const photoStyle = {
-    "backgroundSize": "cover",
-    "backgroundPosition": "center",
-    "margin": "1rem",
-  }
-
-  const imageStyle = {
-    ...photoStyle,
-    "width": "90%",
-    "aspectRatio": "6.75/4"
-  }
-
-  const selectedNoteStyle = {
-    ...photoStyle,
-    "width": "100%",
-    "aspectRatio": "2.43"
-  }
-
-  const neckStyle = {
-    ...photoStyle,
-    "width": "90%",
-    "aspectRatio": "5.74"
-  }
-
-  const topDashStyle = {
-    ...photoStyle,
-    "width": "90%",
-    "aspectRatio": "12.62"
-  }
-
-  const scalesDashStyle = {
-    ...photoStyle,
-    "width": "90%",
-    "aspectRatio": "5.6"
-  }
-
-  const chordDashStyle = {
-    ...photoStyle,
-    "width": "90%",
-    "aspectRatio": "1.89"
-  }
-
-  const viewMenuStyle = {
-    ...photoStyle,
-    "width": "50%",
-    "aspectRatio": "2.79"
-  }
-
-  const tonicMenuStyle = {
-    ...photoStyle,
-    "width": "30%",
-    "aspectRatio": ".29"
-  }
-
-  const scalesMenuStyle = {
-    ...photoStyle,
-    "width": "50%",
-    "aspectRatio": ".56"
-  }
-
-  const tuningMenuStyle = {
-    ...photoStyle,
-    "width": "50%",
-    "aspectRatio": ".68"
-  }
-
-  const neckOptionsStyle1 = {
-    ...photoStyle,
-    "width": "90%",
-    "aspectRatio": "5.45"
-  }
-
-  const neckOptionsStyle2 = {
-    ...neckOptionsStyle1,
-    "aspectRatio": "5.52"
-
-  }
-
-  const centerCol = {
-    "display": "flex",
-    "justifyContent": "center"
   }
 
   const introStyle = {
@@ -259,77 +127,55 @@ export default function StringsTheory() {
           <div className="glass" style={{...infoBoxStyle}} >
             <h2 style={{"marginBottom": "0"}}>View the deployed application here</h2>
             <a href="http://stringstheory.net">
-              <h2 style={{"cursor": 'pointer', "color": "white"}}>stringstheory.net</h2>
+              <h2 style={{"color": "white"}}>stringstheory.net</h2>
             </a>
+            <h2 style={{"marginBottom": "0"}}>View the code here</h2>
+              <GitHubIcon width={"3.5rem"} path="mvp"/>
           </div>
-
-          {/* <Grid container>
-            <Grid
-              item
-              xs={12}
-              sm={12}
-              md={6}
-              sx={{"display": "flex", "justifyContent": "space-around"}}
-            >
-            </Grid>
-
-            <Grid
-              item
-              xs={12}
-              sm={12}
-              md={6}
-              sx={{"display": "flex", "justifyContent": "space-around"}}
-            >
-            </Grid>
-          </Grid> */}
-
-
         </div>
         <div style={{"display": "flex", "justifyContent": "space-around",  "flexWrap": "wrap"}}>
           <div className="glass" style={infoBoxStyle}>
+
             <div style={groupStyle}>
-              <div style={{...imageStyle, "backgroundImage": `url(${mapScalesPage})`}} />
-              <div style={{...imageStyle, "backgroundImage": `url(${leftHanded})`}} />
+              <Photo image={photos.mapScalesPage.image} aspect={photos.mapScalesPage.aspect} width="90%"/>
             </div>
-            <div style={{...topDashStyle, "backgroundImage": `url(${topDash})`}}></div>
-            <div style={{...scalesDashStyle, "backgroundImage": `url(${scalesDash})`}}></div>
-            <div style={{...chordDashStyle, "backgroundImage": `url(${chordDash})`}}></div>
-            <div style={{...neckStyle, "backgroundImage": `url(${noteNames})`}}></div>
-            <div style={{...neckStyle, "backgroundImage": `url(${scaleDegrees})`}}></div>
-            <div style={{...neckStyle, "backgroundImage": `url(${solfege})`}}></div>
-            <div style={{...neckOptionsStyle1, "backgroundImage": `url(${standardNeck})`}}></div>
-            <div style={{...neckOptionsStyle1, "backgroundImage": `url(${fiveStringNeck})`}}></div>
-            <div style={{...neckOptionsStyle1, "backgroundImage": `url(${ukeNeck})`}}></div>
-            <div style={{...neckOptionsStyle2, "backgroundImage": `url(${violinNeck})`}}></div>
-            <div style={{...neckOptionsStyle2, "backgroundImage": `url(${leftyNeck})`}}></div>
+            <div style={groupStyle}>
+              <Photo image={photos.viewMenu.image} aspect={photos.viewMenu.aspect} width="30%"/>
+              <Photo image={photos.tuningMenu.image} aspect={photos.tuningMenu.aspect} width="30%"/>
+              <Photo image={photos.tonicMenu.image} aspect={photos.tonicMenu.aspect} width="10%"/>
+              <Photo image={photos.scalesMenu.image} aspect={photos.scalesMenu.aspect} width="30%"/>
+            </div>
+            <Photo image={photos.topDash.image} aspect={photos.topDash.aspect} width="90%"/>
+            <Photo image={photos.scalesDash.image} aspect={photos.scaleDegrees.aspect} width="90%"/>
+            <Photo image={photos.chordDash.image} aspect={photos.chordDash.aspect} width="60%"/>
+            <Photo image={photos.noteNames.image} aspect={photos.noteNames.aspect} width="90%"/>
+            <Photo image={photos.scaleDegrees.image} aspect={photos.scaleDegrees.aspect} width="90%"/>
+            <Photo image={photos.solfege.image} aspect={photos.solfege.aspect} width="90%"/>
+            <Photo image={photos.standardNeck.image} aspect={photos.standardNeck.aspect} width="90%"/>
+            <Photo image={photos.fiveStringNeck.image} aspect={photos.fiveStringNeck.aspect} width="90%"/>
+            <Photo image={photos.ukeNeck.image} aspect={photos.ukeNeck.aspect} width="90%"/>
+            <Photo image={photos.violinNeck.image} aspect={photos.violinNeck.aspect} width="90%"/>
+            <Photo image={photos.leftyNeck.image} aspect={photos.leftyNeck.aspect} width="90%"/>
           </div>
           <div className="glass3" style={infoBoxStyle}>
-            <div style={{...viewMenuStyle, "backgroundImage": `url(${viewMenu})`}} />
-            <div style={{...tuningMenuStyle, "backgroundImage": `url(${tuningMenu})`}} />
-            <div style={{...tonicMenuStyle, "backgroundImage": `url(${tonicMenu})`}} />
-            <div style={{...scalesMenuStyle, "backgroundImage": `url(${scalesMenu})`}} />
-            <div style={{...selectedNoteStyle, "backgroundImage": `url(${selectedNoteNoChord})`}} />
-            <div style={{...selectedNoteStyle, "backgroundImage": `url(${selectedNoteWithChord})`}}></div>
-            <div style={{...selectedNoteStyle, "backgroundImage": `url(${selectedNoteTwoChords})`}}></div>
+            <Photo image={photos.selectedNoteNoChord.image} aspect={photos.selectedNoteNoChord.aspect} width="90%"/>
+            <Photo image={photos.selectedNoteWithChord.image} aspect={photos.selectedNoteWithChord.aspect} width="90%"/>
+            <Photo image={photos.selectedNoteTwoChords.image} aspect={photos.selectedNoteTwoChords.aspect} width="90%"/>
           </div>
           <div className="glass4" style={infoBoxStyle}>
-            <div style={{...imageStyle, "backgroundImage": `url(${oneChordInMapScales})`}} />
-            <div style={{...imageStyle, "backgroundImage": `url(${sectionNeck})`}}></div>
-            <div style={{...imageStyle, "backgroundImage": `url(${capo})`}}></div>
+            <Photo image={photos.oneChordInMapScales.image} aspect={photos.oneChordInMapScales.aspect} width="90%"/>
+            <Photo image={photos.sectionNeck.image} aspect={photos.sectionNeck.aspect} width="90%"/>
+            <Photo image={photos.capo.image} aspect={photos.capo.aspect} width="90%"/>
           </div>
           <Grid container>
           {images.map((image, i) => (
-              <Grid
-                item
-                xs={12}
-                sm={12}
-                md={6}
-                lg={6}
-                xl={6}
-                key={`stringsImage${i}`}
-              >
-                <div style={{...imageStyle, "backgroundImage": `url(${image})`}} />
-              </Grid>
+            <Grid
+              item
+              xs={12} sm={12} md={6} lg={6} xl={6}
+              key={`stringsImage${i}`}
+            >
+              <Photo image={image.image} aspect={image.aspect} width="90%"/>
+            </Grid>
           ))}
           </Grid>
         </div>

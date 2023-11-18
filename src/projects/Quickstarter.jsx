@@ -7,7 +7,7 @@ import DjangoIcon from "../tech_icons/DjangoIcon"
 import { useNavigate } from "react-router-dom"
 import { motion } from "framer-motion"
 import { useStore } from "../Store"
-
+import Photo from "../Photo"
 
 export default function Quickstarter() {
 
@@ -27,6 +27,11 @@ export default function Quickstarter() {
     "backgroundSize": "cover",
     "backgroundPosition": "center",
     "margin": "1rem",
+    "border": "6px solid #0E0E0E",
+    "borderRadius": "10px"
+  }
+
+  const imgBorder = {
     "border": "6px solid #0E0E0E",
     "borderRadius": "10px"
   }
@@ -52,47 +57,6 @@ export default function Quickstarter() {
     "marginTop": "8rem",
     "zIndex": "10"
   }
-
-  const dupPortErrorStyle = {
-    ...imageStyle,
-    "aspectRatio": "2.35"
-  }
-
-  const enterMicrosStyle = {
-    ...imageStyle,
-    "aspectRatio": ".51"
-  }
-
-  const enterQueuesStyle = {
-    ...imageStyle,
-    "aspectRatio": "1.56"
-  }
-
-  const portAndPollerPromptStyle = {
-    ...imageStyle,
-    "aspectRatio": "1.33"
-  }
-
-  const portNumberErrorStyle = {
-    ...imageStyle,
-    "aspectRatio": "2.13"
-  }
-
-  const startProjectStyle = {
-    ...imageStyle,
-    "aspectRatio": "10"
-  }
-
-  const viteSetupStyle = {
-    ...imageStyle,
-    "aspectRatio": "2.64"
-  }
-
-  const volumeAndPortStyle = {
-    ...imageStyle,
-    "aspectRatio": "4.78"
-  }
-
 
   return (
     <motion.div
@@ -123,57 +87,54 @@ export default function Quickstarter() {
 
             </div>
           </div>
-
-          {/* <div style={{"display": "flex", "justifyContent": "space-around",  "flexWrap": "wrap"}}> */}
-          <div style={{
-            ...startProjectStyle,
-            "backgroundImage": `url(${photos.startProject})`,
-            "width": "20%",
-
-          }}/>
-          <div style={{
-            ...volumeAndPortStyle,
-            "backgroundImage": `url(${photos.volumeAndPort})`,
-            "width": "40%"
-
-          }}/>
-          <div style={{
-            ...portNumberErrorStyle,
-            "backgroundImage": `url(${photos.portNumberError})`,
-            "width": "40%"
-
-          }}/>
-          <div style={{
-            ...enterMicrosStyle,
-            "backgroundImage": `url(${photos.enterMicros})`,
-            "width": "40%"
-
-          }}/>
-          <div style={{
-            ...dupPortErrorStyle,
-            "backgroundImage": `url(${photos.dupPortError})`,
-            "width": "40%"
-
-          }}/>
-          <div style={{
-            ...enterQueuesStyle,
-            "backgroundImage": `url(${photos.enterQueues})`,
-            "width": "40%"
-
-          }}/>
-          <div style={{
-            ...portAndPollerPromptStyle,
-            "backgroundImage": `url(${photos.portAndPollerPrompt})`,
-            "width": "40%"
-
-          }}/>
-          <div style={{
-            ...viteSetupStyle,
-            "backgroundImage": `url(${photos.viteSetup})`,
-            "width": "40%"
-
-          }}/>
-        {/* </div> */}
+          <Photo
+            image={photos.startProject.image}
+            aspect={photos.startProject.aspect}
+            width="20%"
+            extras={imgBorder}
+          />
+          <Photo
+            image={photos.volumeAndPort.image}
+            aspect={photos.volumeAndPort.aspect}
+            width="40%"
+            extras={imgBorder}
+          />
+          <Photo
+            image={photos.portNumberError.image}
+            aspect={photos.portNumberError.aspect}
+            width="40%"
+            extras={imgBorder}
+          />
+          <Photo
+            image={photos.enterMicros.image}
+            aspect={photos.enterMicros.aspect}
+            width="40%"
+            extras={imgBorder}
+          />
+          <Photo
+            image={photos.dupPortError.image}
+            aspect={photos.dupPortError.aspect}
+            width="40%"
+            extras={imgBorder}
+          />
+          <Photo
+            image={photos.enterQueues.image}
+            aspect={photos.enterQueues.aspect}
+            width="40%"
+            extras={imgBorder}
+          />
+          <Photo
+            image={photos.portAndPollerPrompt.image}
+            aspect={photos.portAndPollerPrompt.aspect}
+            width="40%"
+            extras={imgBorder}
+          />
+          <Photo
+            image={photos.viteSetup.image}
+            aspect={photos.viteSetup.aspect}
+            width="40%"
+            extras={imgBorder}
+          />
       </div>
     </motion.div>
   )

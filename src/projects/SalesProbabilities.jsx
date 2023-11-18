@@ -13,16 +13,6 @@ export default function SalesProbabilities() {
     "justifyContent": "center"
   }
 
-
-  const imageStyle ={
-    "backgroundSize": "contain",
-    "backgroundPosition": "center",
-    "width": "29.8rem",
-    "height": "18.2rem",
-    "margin": "1rem"
-  }
-
-
   return (
     <div className="sales-probs-wrapper">
     <div className="sales-probs-overlay"></div>

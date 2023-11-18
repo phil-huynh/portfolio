@@ -17,19 +17,13 @@ function Home() {
     firstTime && setFirstTime(false)
     navigate(path)
   }
-  console.log("\n")
-  console.log("isXL", isXL)
-  console.log("isLG", isLG)
-  console.log("isMD", isMD)
-  console.log("isSM", isSM)
-  console.log("isXS", isXS)
 
   const getGreetingSize = () => {
-    if (isXL) return "14rem"
-    if (isLG) return "12rem"
-    if (isMD) return "9rem"
-    if (isSM) return "7rem"
-    if (isXS) return "5rem"
+    if (isXL) { return "14rem" }
+    if (isLG) { return "12rem" }
+    if (isMD) { return "9rem" }
+    if (isSM) { return "7rem" }
+    if (isXS) { return "5rem" }
   }
 
   return (
@@ -62,11 +56,7 @@ function Home() {
         <Grid container >
           <Grid
             item
-            xs={12}
-            sm={12}
-            md={7}
-            lg={6.25}
-            xl={5}
+            xs={12} sm={12} md={7} lg={6.25} xl={5}
             sx={{
               "display": "flex",
               "justifyContent": "center",
@@ -76,11 +66,7 @@ function Home() {
           </Grid>
           <Grid
             item
-            xs={12}
-            sm={12}
-            md={5}
-            lg={5.75}
-            xl={7}
+            xs={12} sm={12} md={5} lg={5.75} xl={7}
             sx={{
               "display": "flex",
               "justifyContent": "center",

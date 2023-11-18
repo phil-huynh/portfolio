@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom"
 import { Grid } from "@mui/material"
 import { motion } from "framer-motion"
 import { useStore } from "../Store"
+import Photo from "../Photo"
 
 export default function Ecommerce() {
 
@@ -16,15 +17,10 @@ export default function Ecommerce() {
     "justifyContent": "center"
   }
 
-  const imageStyle = {
-    "backgroundSize": "cover",
-    "width": "80%",
-    "margin": "1rem",
-    "aspectRatio": "6.75/4",
+  const borderStyle = {
     "border": "1px gray solid",
     "boxShadow": "15px 15px 12px gray"
   }
-
 
   return (
     <motion.div
@@ -34,7 +30,7 @@ export default function Ecommerce() {
       exit={{ opacity: 0 }}
       transition={{ duration: 1.3, delay: .5 }}
     >
-    <div className="ecommerce-overlay"></div>
+      <div className="ecommerce-overlay"></div>
       <div className="contents">
         <div style={{ "display": "flex", "alignItems": "center", "flexDirection": "column"}}>
           <div className="glass" style={headerStyle}>
@@ -51,15 +47,11 @@ export default function Ecommerce() {
               {eCommImages[section].map((image, i) => (
                 <Grid
                   item
-                  xs={12}
-                  sm={12}
-                  md={6}
-                  lg={6}
-                  xl={6}
+                  xs={12} sm={12} md={6} lg={3} xl={3}
                   key={`ecomImage${i}`}
                   style={{"display": "flex", "placeContent": "center", }}
                 >
-                  <div style={{...imageStyle, "backgroundImage": `url(${image})`}} />
+                  <Photo image={image} width="90%" aspect="6.75/4" extras={borderStyle}/>
                 </Grid>
               ))}
             </Grid>

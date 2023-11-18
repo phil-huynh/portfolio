@@ -1,24 +1,21 @@
-import { motion } from "framer-motion"
 import headshot from "./assets/info/headshot.png"
 import GitHubIcon from "./tech_icons/GitHubIcon"
 import GitLabIcon from "./tech_icons/GitLabIcon"
 import LinkedInIcon from "./tech_icons/LinkedInIcon"
 import Grid from '@mui/material/Grid';
-import { useStore }  from "./Store"
 import ViteIcon from "./tech_icons/ViteIcon"
 import JavascriptIcon from "./tech_icons/JavascriptIcon"
 import ReactIcon from "./tech_icons/ReactIcon"
-import AWSLogo from "./tech_icons/AmazonWebServices"
 import MaterialUIIcon from "./tech_icons/MaterialUIIcon"
 import CSSLogo from "./tech_icons/CSS_Logo"
 import FramerMotionIcon from "./tech_icons/FramerMotionIcon"
 import AmplifyIcon from "./tech_icons/Amplify"
 import Route53Icon from "./tech_icons/Route53Icon"
+import { motion } from "framer-motion"
+import { useStore }  from "./Store"
 
 export default function IntroAndContact() {
   const { locate, locate2, locate3, firstTime } = useStore()
-
-
 
   const iconSectionStyle = {
     "display": "flex",
@@ -98,9 +95,9 @@ export default function IntroAndContact() {
                 <h4 className="text-shadow" style={{"textAlign": "left"}}>philphuynh98@gmail.com</h4>
               </a>
               <section className="extra-shadow" style={iconSectionStyle}>
-                <a href="https://www.linkedin.com/in/phil-huynh-38472249/"><LinkedInIcon width={"2.5rem"}/></a>
-                <a href="https://github.com/phil-huynh"><GitHubIcon width={"2.5rem"}/></a>
-                <a href="http://www.gitlab.com/PhilHuynh"><GitLabIcon width={"2.5rem"}/></a>
+                <LinkedInIcon width={"2.5rem"}/>
+                <GitHubIcon width={"2.5rem"}/>
+                <GitLabIcon width={"2.5rem"}/>
               </section>
               <hr/>
               <p>
