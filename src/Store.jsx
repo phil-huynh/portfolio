@@ -51,7 +51,7 @@ const ContextStore = createContext(null);
 export default function ContextProvider ({ children }) {
 
   const [firstTime, setFirstTime] = useState(true)
-
+  const [selection, setSelection] = useState('skills')
 
   const theme = useTheme()
   const isXL = useMediaQuery(theme.breakpoints.up('xl'))
@@ -294,6 +294,8 @@ const osirisImages = {
     eCommImages: eCommImages,
     osirisImages: osirisImages,
     quickstarterPhotos: quickstarterPhotos,
+    selection: selection,
+    setSelection: setSelection,
     setFirstTime: setFirstTime,
   }
   return (

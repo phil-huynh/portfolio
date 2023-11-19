@@ -15,7 +15,7 @@ import { motion } from "framer-motion"
 import { useStore }  from "./Store"
 
 export default function IntroAndContact() {
-  const { locate, locate2, locate3, firstTime } = useStore()
+  const { locate, locate2, locate3, firstTime, setSelection, setFirstTime, selection } = useStore()
 
   const iconSectionStyle = {
     "display": "flex",
@@ -63,6 +63,17 @@ export default function IntroAndContact() {
     "fontSize": "1rem",
     "width": "100%",
     "marginTop": "1.5rem",
+    cursor: "pointer"
+  }
+  const selectedStyle = {
+    ...menuItemStyle,
+    boxShadow: "0 0 .2rem #fff, \
+              0 0 .2rem #fff,\
+              0 0 0.5rem white,\
+              0 0 0.2rem white,\
+              0 0 1rem white,\
+              inset 0 0 1rem white"
+
   }
 
   const madeWithStyle = {
@@ -73,6 +84,12 @@ export default function IntroAndContact() {
   }
 
   const transition = firstTime ? { duration: 1.5, delay: .8 } : { duration: 1 }
+
+
+  const select = (selected) => {
+    setFirstTime(false)
+    setSelection(selected)
+  }
 
   return (
     <motion.section
@@ -104,15 +121,7 @@ export default function IntroAndContact() {
                 It all rolls into one
                 And nothing comes for free
                 There's nothing you can hold
-                For very long
-                And when you hear that song
-                Come crying like the wind
-                It seems like all this life
-                Was just a dream. I've stayed in every blue-light cheap hotel
-                Can't win for trying
-                Dust off those rusty strings just
-                One more time
-                Gonna make em shine
+
               </p>
             </div>
           </Grid>
@@ -132,9 +141,27 @@ export default function IntroAndContact() {
           {/* <AWSLogo width={"5rem"} height={"2.1rem"}/> */}
         </div>
       </div>
-      <div className="glass" style={menuItemStyle}><h2>Skills</h2></div>
-      <div className="glass" style={menuItemStyle}><h2>Resume & Bio</h2></div>
-      <div className="glass" style={menuItemStyle}><h2>Projects</h2></div>
+      <div
+        className="glass"
+        onClick={()=>select('skills')}
+        style={selection === 'skills' ? selectedStyle : menuItemStyle}
+      >
+        <h2>Skills</h2>
+      </div>
+      <div
+        className="glass"
+        onClick={()=>select('bio')}
+        style={selection === 'bio' ? selectedStyle : menuItemStyle}
+      >
+        <h2>Resume & Bio</h2>
+      </div>
+      <div
+        className="glass"
+        onClick={()=>select('projects')}
+        style={selection === 'projects' ? selectedStyle : menuItemStyle}
+      >
+        <h2>Projects</h2>
+      </div>
       <div className="glass" style={menuItemStyle}><h2>Recommendations</h2></div>
   </motion.section>
   )

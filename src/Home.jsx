@@ -5,12 +5,13 @@ import { motion } from "framer-motion"
 import { useStore } from "./Store"
 import { useNavigate } from "react-router-dom";
 import { AnimatePresence } from "framer-motion"
+import Options from "./Options"
 
 
 
 function Home() {
 
-  const { firstTime, setFirstTime, isXL, isLG, isMD, isSM, isXS } = useStore()
+  const { firstTime, setFirstTime, isXL, isLG, isMD, isSM, isXS, selection } = useStore()
   const navigate = useNavigate()
 
   const changePage = (path) => {
@@ -56,7 +57,7 @@ function Home() {
         <Grid container >
           <Grid
             item
-            xs={12} sm={12} md={7} lg={6.25} xl={5}
+            xs={12} sm={12} md={5.5} lg={6.25} xl={5}
             sx={{
               "display": "flex",
               "justifyContent": "center",
@@ -66,22 +67,20 @@ function Home() {
           </Grid>
           <Grid
             item
-            xs={12} sm={12} md={5} lg={5.75} xl={7}
+            xs={12} sm={12} md={6.5} lg={5.75} xl={7}
             sx={{
               "display": "flex",
               "justifyContent": "center",
             }}
           >
-            <TechIcons/>
+            <Options/>
           </Grid>
         </Grid>
-        <div>
-          <h2 style={{"cursor": "pointer"}}onClick={()=>changePage("strings-theory")}>Strings Theory</h2>
+          {/* <h2 style={{"cursor": "pointer"}}onClick={()=>changePage("strings-theory")}>Strings Theory</h2>
           <h2 style={{"cursor": "pointer"}}onClick={()=>changePage('quickstarter')}>Quickstarter</h2>
           <h2 style={{"cursor": "pointer"}}onClick={()=>changePage('sales-probabilities')}>Sales Probabilites</h2>
           <h2 style={{"cursor": "pointer"}}onClick={()=>changePage('osiris')}>Osiris</h2>
-          <h2 style={{"cursor": "pointer"}}onClick={()=>changePage('ecommerce')}>E-Commerce</h2>
-        </div>
+          <h2 style={{"cursor": "pointer"}}onClick={()=>changePage('ecommerce')}>E-Commerce</h2> */}
       </div>
     </motion.div>
   )

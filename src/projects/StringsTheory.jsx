@@ -128,7 +128,7 @@ export default function StringsTheory() {
       className="strings-wrapper"
       initial={{ opacity: .2 }}
       animate={{ opacity: 1 }}
-      exit={{ opacity: .2 }}
+      exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
     >
       <div className="strings-overlay"></div>
