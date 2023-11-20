@@ -161,8 +161,8 @@ export default function IntroAndContact() {
           <FramerMotionIcon width={"2rem"}/>
           <MaterialUIIcon width={"2.5rem"}/>
           <ViteIcon/>
-          <AmplifyIcon width={"2rem"} height={"2.5rem"} />
-          <Route53Icon width={"2.2rem"} height={"2.5rem"} />
+          <AmplifyIcon width={"2rem"} />
+          <Route53Icon width={"2.2rem"} />
           {/* <AWSLogo width={"5rem"} height={"2.1rem"}/> */}
         </div>
       </div>

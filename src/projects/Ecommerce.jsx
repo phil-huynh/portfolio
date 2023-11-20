@@ -10,16 +10,16 @@ export default function Ecommerce() {
   const {locate, locate2, locate3, eCommImages} = useStore()
 
   const headerStyle = {
-    "height": "5rem",
-    "width": "50%",
-    "display": "flex",
-    "alignItems": "center",
-    "justifyContent": "center"
+    height: "5rem",
+    width: "50%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center"
   }
 
   const borderStyle = {
-    "border": "1px gray solid",
-    "boxShadow": "15px 15px 12px gray"
+    border: "1px gray solid",
+    boxShadow: "15px 15px 12px gray"
   }
 
   return (
@@ -28,7 +28,7 @@ export default function Ecommerce() {
       initial={{ height: 0, width:0 }}
       animate={{height: '100%', width: '100%'}}
       exit={{ opacity: 0 }}
-      transition={{ duration: 1.3, delay: .5 }}
+      transition={{ duration: 1.5, delay: 1.2 }}
     >
       <div className="ecommerce-overlay"></div>
       <div className="contents">

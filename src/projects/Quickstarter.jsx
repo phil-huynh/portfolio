@@ -16,46 +16,47 @@ export default function Quickstarter() {
   const { quickstarterPhotos: photos} = useStore()
 
   const headerStyle = {
-    "height": "5rem",
-    "width": "50%",
-    "display": "flex",
-    "alignItems": "center",
-    "justifyContent": "center"
+    height: "5rem",
+    width: "50%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center"
   }
 
   const imageStyle ={
-    "backgroundSize": "cover",
-    "backgroundPosition": "center",
-    "margin": "1rem",
-    "border": "6px solid #0E0E0E",
-    "borderRadius": "10px"
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    margin: "1rem",
+    border: "6px solid #0E0E0E",
+    borderRadius: "10px"
   }
 
   const imgBorder = {
-    "border": "6px solid #0E0E0E",
-    "borderRadius": "10px"
+    border: "6px solid #0E0E0E",
+    borderRadius: "10px"
   }
 
   const toolBoxStyle ={
-    "width": "80%",
-    "marginBottom": "1rem",
-    "marginTop": "1rem",
-    "paddingTop": ".3rem",
+    width: "80%",
+    marginBottom: "1rem",
+    marginTop: "1rem",
+    paddingTop: ".3rem",
   }
 
   const toolsStyle = {
-    "display": "flex",
-    "flexDirection": "row",
-    "justifyContent": "space-around",
-    "flexWrap": "wrap",
-    "gap": ".5rem",
-    "paddingBottom": "1rem",
-    "paddingInline": ".5rem",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-around",
+    alignItems: "center",
+    flexWrap: "wrap",
+    gap: ".5rem",
+    paddingBottom: "1rem",
+    paddingInline: ".5rem",
   }
 
   const titleStyle = {
-    "marginTop": "8rem",
-    "zIndex": "10"
+    marginTop: "8rem",
+    zIndex: "10"
   }
 
   return (
@@ -78,13 +79,12 @@ export default function Quickstarter() {
           <div className="glass" style={{...toolBoxStyle}}>
             <h2>Quickstarter uses</h2>
             <div style={toolsStyle}>
-            <BashIcon width={"3rem"}/>
-            <PythonIcon width={"3rem"}/>
-            <DockerIcon width={"2.8rem"} height={"3.5rem"}/>
-            <RabbitMQIcon width={"4rem"} height={"3.5rem"}/>
-            <ViteIcon />
-            <DjangoIcon width={"4rem"} height={"3.5rem"}/>
-
+              <BashIcon width={"3rem"}/>
+              <PythonIcon width={"3rem"}/>
+              <DockerIcon width={"2.8rem"} height={"3.5rem"}/>
+              <RabbitMQIcon width={"4rem"} height={"3.5rem"}/>
+              <ViteIcon />
+              <DjangoIcon width={"4rem"} height={"3.5rem"}/>
             </div>
           </div>
           <Photo

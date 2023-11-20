@@ -10,14 +10,14 @@ export default function Osiris() {
   const { osirisImages: photos } = useStore()
 
   const centerContent = {
-    "display": "flex",
-    "justifyContent": "center",
-    "alignItems": "center"
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center"
   }
 
   const headerStyle = {
-    "height": "5rem",
-    "width": "50%",
+    height: "5rem",
+    width: "50%",
     ...centerContent
   }
 

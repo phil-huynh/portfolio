@@ -7,10 +7,6 @@ import { AnimatePresence } from "framer-motion";
 export default function Options() {
   const { selection } = useStore()
 
-  if (selection === 'skills') return <TechIcons/>
-  if (selection === 'projects') return <ProjectsMenu/>
-  if (selection === 'bio') return <Bio/>
-
   return (
     <AnimatePresence>
       {selection === 'skills' ? <TechIcons/>

@@ -6,11 +6,11 @@ export default function SalesProbabilities() {
   const navigate = useNavigate()
 
   const headerStyle = {
-    "height": "5rem",
-    "width": "50%",
-    "display": "flex",
-    "alignItems": "center",
-    "justifyContent": "center"
+    height: "5rem",
+    width: "50%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center"
   }
 
   return (

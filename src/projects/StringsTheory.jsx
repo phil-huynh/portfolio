@@ -63,6 +63,7 @@ export default function StringsTheory() {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-around",
+    alignItems: "center",
     flexWrap: "wrap",
     gap: ".5rem",
     paddingBottom: "1rem",
@@ -143,13 +144,13 @@ export default function StringsTheory() {
               <JavascriptIcon width={"2rem"}/>
               <ReactIcon width={"2.5rem"}/>
               <CSSLogo width={"2.5rem"}/>
-              <NodeIcon width={"5rem"} height={"2.5rem"}/>
-              <ExpressIcon width={"4rem"} height={"2.5rem"}/>
-              <BabelIcon width={"3.7rem"} height={"2.5rem"}/>
-              <WebpackIcon width={"7rem"} height={"2.5rem"}/>
+              <NodeIcon width={"6rem"}/>
+              <ExpressIcon width={"6rem"}/>
+              <BabelIcon width={"3.7rem"}/>
+              <WebpackIcon width={"7rem"}/>
               <JestIcon width={"2rem"}/>
-              <EC2Icon width={"2rem"} height={"2.5rem"}/>
-              <Route53Icon width={"2.2rem"} height={"2.5rem"}/>
+              <EC2Icon width={"2rem"}/>
+              <Route53Icon width={"2.2rem"}/>
             </div>
           </div>
           <Grid container>
