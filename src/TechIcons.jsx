@@ -76,7 +76,7 @@ export default function TechIcons() {
   }
 
   const skillsStyle = {
-    "paddingInline": ".8rem",
+    "paddingInline": "1.2rem",
     "width": "89%",
     "marginInline": "1rem",
     "marginBottom": "1rem",
@@ -89,7 +89,7 @@ export default function TechIcons() {
     "textAlign": "left",
     "textDecoration": "underline",
     "margingTop": "0",
-    "marginBottom": "0"
+    "marginBottom": ".5rem"
   }
 
   const spreadStyle = {

@@ -126,7 +126,7 @@ export default function StringsTheory() {
   return (
     <motion.div
       className="strings-wrapper"
-      initial={{ opacity: .2 }}
+      initial={{ opacity: .1 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
