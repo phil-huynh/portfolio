@@ -1,14 +1,8 @@
 export default function JasmineIcon({ width }) {
 
-  const iconStyle = {
-    "display": "flex",
-    "placeContent": "center",
-    // "border": "solid black 1px"
-  }
-
   return (
-    <div title="Jasmine" className="svg-shadow" style={{...iconStyle, "width": width}}>
-      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+    <div title="Jasmine" className="svg-shadow" style={{ "width": width }}>
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 119">
         <g fill="#a7559e">
           <path
             d="M67.17 42.93H60.5l-1.79-2.31V22.46h10.15v18.16l-1.69 2.31zM58.16 44.62l-2.06 6.34-2.76.99-17.26-5.6 3.13-9.65 17.27 5.61 1.68 2.31zM56.97 53.54l5.4 3.92.09 2.93-10.67 14.68-8.21-5.96 10.67-14.69 2.72-.88zM65.24 57.49l5.4-3.91 2.81.81 10.67 14.69-8.21 5.96-10.67-14.69v-2.86zM71.65 51.07l-2.06-6.34 1.64-2.42L88.5 36.7l3.13 9.65-17.26 5.6-2.72-.88z"

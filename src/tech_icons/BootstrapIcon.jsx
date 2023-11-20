@@ -1,14 +1,8 @@
 export default function BootstrapIcon({ width }) {
 
-  const iconStyle = {
-    "display": "flex",
-    "placeContent": "center",
-    // "border": "solid black 1px"
-  }
-
   return (
-    <div title="Bootstrap" className="svg-shadow" style={{...iconStyle, "width": width}}>
-      <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+    <div title="Bootstrap" className="svg-shadow" style={{ "width": width }}>
+      <svg viewBox="0 0 128 127" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient
             id="bootstrap-original-wordmark-a"

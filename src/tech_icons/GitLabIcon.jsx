@@ -1,14 +1,8 @@
 export default function GitLabIcon({ width, path="" }) {
 
-  const iconStyle = {
-    "display": "flex",
-    "placeContent": "center",
-    // "border": "solid black 1px"
-  }
-
   return (
     <a href={`http://www.gitlab.com/PhilHuynh/${path}`}>
-      <div title="Gitlab" className="svg-shadow" style={{...iconStyle, "width": width}}>
+      <div title="Gitlab" className="svg-shadow" style={{ "width": width }}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
           <path
             fill="#FC6D26"

@@ -31,7 +31,7 @@ function Home() {
     <motion.div
       className="wrapper"
       key={'home'}
-      initial={!firstTime ? { opacity: .3 } : false}
+      initial={!firstTime ? { opacity: .3 } : 0}
       animate={{opacity: 1}}
       exit={{ opacity: .1 }}
       transition={{ duration: 1 }}
@@ -72,7 +72,8 @@ function Home() {
             sx={{
               "display": "flex",
               "justifyContent": "center",
-              padding: "1.5rem"
+              paddingTop: "2rem",
+              paddingBottom: "1.5rem",
             }}
           >
             <Options/>

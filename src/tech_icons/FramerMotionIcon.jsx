@@ -1,17 +1,10 @@
-
-export default function FramerMotionIcon({ width}) {
-
-  const iconStyle = {
-    "display": "flex",
-    "placeContent": "center",
-    // "border": "solid black 1px"
-  }
+export default function FramerMotionIcon({ width }) {
 
   return (
     <div
       title="Framer Motion"
       className="svg-shadow"
-      style={{...iconStyle, "width": width, "aspectRatio": "1/1", }}
+      style={{ "width": width }}
     >
       <svg
         viewBox="3.7 3.7 43.6 43.6"

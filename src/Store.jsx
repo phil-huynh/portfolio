@@ -281,9 +281,9 @@ const osirisImages = {
 
 
   const store = {
-    locate: { "border": "blue 5px solid" },
-    locate2: { "border": "red 10px solid" },
-    locate3: { "border": "yellow 5px solid" },
+    locate: { "border": "blue 1px solid" },
+    locate2: { "border": "red 1px solid" },
+    locate3: { "border": "yellow 1px solid" },
     firstTime: firstTime,
     isXL: isXL,
     isLG: isLG,

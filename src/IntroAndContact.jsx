@@ -18,61 +18,61 @@ export default function IntroAndContact() {
   const { locate, locate2, locate3, firstTime, setSelection, setFirstTime, selection } = useStore()
 
   const iconSectionStyle = {
-    "display": "flex",
-    "flexWrap": "wrap",
-    "gap": "2rem",
+    display: "flex",
+    flexWrap: "wrap",
+    gap: "2rem",
   }
 
   const headshotStyle = {
-    "width": "95%",
-    "aspectRatio": "5.5/4.7",
-    "overflow": "hidden",
-    "backgroundImage": `url(${headshot})`,
-    "backgroundSize": "cover",
-    "backgroundPosition": "center",
-    "borderRadius": "25px",
-    "margin": "2rem",
-    "marginY": "3rem"
+    width: "95%",
+    aspectRatio: "5.5/4.7",
+    overflow: "hidden",
+    backgroundImage: `url(${headshot})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    borderRadius: "25px",
+    margin: "2rem",
+    marginY: "3rem"
   }
 
   const containerStyle = {
-    "display": "flex",
-    "width": "100%",
-    "alignItems": "center",
-    "flexDirection": "column",
-    "zIndex": "2"
+    display: "flex",
+    width: "90%",
+    alignItems: "center",
+    flexDirection: "column",
+    zIndex: "2"
   }
 
   const labelsStyle = {
-    "display": "flex",
-    "alignItems": "flex-start",
-    "alignContent": "flex-end",
+    display: "flex",
+    alignItems: "flex-start",
+    alignContent: "flex-end",
   }
 
   const gridStyle = {
-    "display": "flex",
-    "justifyContent": "flex-start",
+    display: "flex",
+    justifyContent: "flex-start",
   }
 
   const infoStyle={
-    "margin": "2rem"
+    margin: "2rem"
   }
 
   const menuItemStyle = {
-    "fontSize": "1rem",
-    "width": "100%",
+    fontSize: "1rem",
+    width: "100%",
     height: "25%",
-    "marginTop": ".5rem",
+    marginTop: ".5rem",
     cursor: "pointer",
-    "display": "flex",
-    "justifyContent": "center",
+    display: "flex",
+    justifyContent: "center",
     alignItems: "center"
   }
 
   const skillsBoxStyle = {
-    "fontSize": "1rem",
-    "width": "100%",
-    "marginTop": "1.5rem",
+    fontSize: "1rem",
+    width: "100%",
+    marginTop: "1.5rem",
     cursor: "pointer",
     paddingInline: ".2rem"
   }
@@ -89,11 +89,11 @@ export default function IntroAndContact() {
   }
 
   const madeWithStyle = {
-    "display": "flex",
-    "justifyContent": "space-around",
+    display: "flex",
+    justifyContent: "space-around",
     flexWrap: "wrap",
-    "gap": "1.3rem",
-    "paddingBottom": "1rem"
+    gap: "1.3rem",
+    paddingBottom: "1rem"
   }
 
 
@@ -101,14 +101,14 @@ export default function IntroAndContact() {
     // ...locate,
     height: "100%",
     width: "100%",
-    "display": "flex",
-    "alignItems": "center",
+    display: "flex",
+    alignItems: "center",
     justifyContent: "space-around",
-    "marginTop": "2rem",
-    "flexDirection": "column",
+    marginTop: "2rem",
+    flexDirection: "column",
   }
 
-  const transition = firstTime ? { duration: 1.5, delay: .8 } : { duration: 1 }
+  const transition = firstTime ? { duration: 1.3, delay: .8, type: "spring", bounce: ".22" } : { duration: 1, type: "spring", bounce: ".22" }
 
 
   const select = (selected) => {

@@ -1,14 +1,8 @@
 export default function PytestIcon({ width }) {
 
-  const iconStyle = {
-    "display": "flex",
-    "placeContent": "center",
-    // "border": "solid black 1px"
-  }
-
   return (
-    <div title="pytest" className="svg-shadow" style={{...iconStyle, "width": width}}>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+    <div title="pytest" className="svg-shadow" style={{ "width": width }}>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 4 128 106">
         <path
           fill="#696969"
           d="M44.508 18.238h36.781a1.802 1.802 0 110 3.605H44.508a1.802 1.802 0 010-3.605zm0 0"

@@ -1,14 +1,8 @@
 export default function PythonIcon({ width }) {
 
-  const iconStyle = {
-    "display": "flex",
-    "placeContent": "center",
-    // "border": "solid black 1px"
-  }
-
   return (
-    <div title="Python" className="svg-shadow" style={{...iconStyle, "width": width}}>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+    <div title="Python" className="svg-shadow" style={{ "width": width }}>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 126">
         <g fillRule="evenodd" clipRule="evenodd">
           <path
             fill="#386f9f"

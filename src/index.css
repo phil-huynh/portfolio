@@ -137,6 +137,7 @@ a {
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.2);
   box-shadow: 10;
+  padding-inline: 1rem;
   animation: stringsglass 5s ease infinite;
   z-index: 1;
 }
@@ -423,6 +424,7 @@ a {
 .svg-shadow {
   position: relative;
   filter: drop-shadow(3px 3px 1px rgb(0 0 0 / 0.9));
+  /* border: 1px solid red */
 }
 
 .strings-wrapper {

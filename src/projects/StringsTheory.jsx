@@ -37,79 +37,78 @@ export default function StringsTheory() {
   const navigate = useNavigate()
 
   const headerStyle = {
-    "width": "20%",
-    "display": "flex",
-    "alignItems": "center",
-    "justifyContent": "center",
-    "position": "fixed",
-    "zIndex": "11"
+    width: "20%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    position: "fixed",
+    zIndex: "11"
   }
 
   const titleStyle = {
-    "display": "flex",
-    "alignItems": "center",
-    "justifyContent": "center",
-    "width": "90%",
-
-    "marginBottom": "2rem",
-    "marginTop": "6rem",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "90%",
+    marginBottom: "2rem",
+    marginTop: "6rem",
   }
 
   const toolBoxStyle ={
-    "width": "90%",
-    "marginBottom": "1rem",
+    width: "90%",
+    marginBottom: "1rem",
   }
 
   const toolsStyle = {
-    "display": "flex",
-    "flexDirection": "row",
-    "justifyContent": "space-around",
-    "flexWrap": "wrap",
-    "gap": ".5rem",
-    "paddingBottom": "1rem",
-    "paddingInline": ".5rem",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-around",
+    flexWrap: "wrap",
+    gap: ".5rem",
+    paddingBottom: "1rem",
+    paddingInline: ".5rem",
   }
 
   const infoBoxStyle = {
-    "width": "85%",
-    "display": "flex",
-    "flexDirection": "column",
-    "alignItems": "center",
-    "justifyContent": "center",
-    "padding": "1rem",
-    "marginTop": "1rem",
-    "marginBottom": "1rem",
+    width: "85%",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: "1rem",
+    marginTop: "1rem",
+    marginBottom: "1rem",
   }
 
   const introStyle = {
-    "width": "100%",
-    "display": "flex",
-    "flexDirection": "column",
-    "alignItems": "center",
-    "justifyContent": "center",
-    "marginBottom": "2rem",
+    width: "100%",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: "2rem",
   }
 
   const groupStyle = {
-    "width": "75%",
-    "display": "flex",
-    "alignItems": "center",
-    "justifyContent": "center",
-    "padding": "2rem"
+    width: "75%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: "2rem"
   }
 
   const introMessageContainer = {
-    "width": "100%",
-    "display": "flex",
-    "alignItems": "center",
-    "justifyContent": "center",
+    width: "100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   }
 
   const introMessageCard = {
-    "width": "80%",
-    "padding": "1.5rem",
-    "fontSize": "1.5rem",
-    "marginTop": "1.5rem"
+    width: "80%",
+    padding: "1.5rem",
+    fontSize: "1.5rem",
+    marginTop: "1.5rem"
   }
 
   // const introMessageStyle = {
@@ -126,10 +125,10 @@ export default function StringsTheory() {
   return (
     <motion.div
       className="strings-wrapper"
-      initial={{ opacity: .1 }}
+      initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 1.5 }}
     >
       <div className="strings-overlay"></div>
       <div className="contents" >
