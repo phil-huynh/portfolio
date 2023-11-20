@@ -37,9 +37,8 @@ export default function IntroAndContact() {
 
   const containerStyle = {
     "display": "flex",
-    "width": "93%",
+    "width": "100%",
     "alignItems": "center",
-    "marginTop": "2rem",
     "flexDirection": "column",
     "zIndex": "2"
   }
@@ -62,9 +61,22 @@ export default function IntroAndContact() {
   const menuItemStyle = {
     "fontSize": "1rem",
     "width": "100%",
-    "marginTop": "1.5rem",
-    cursor: "pointer"
+    height: "25%",
+    "marginTop": ".5rem",
+    cursor: "pointer",
+    "display": "flex",
+    "justifyContent": "center",
+    alignItems: "center"
   }
+
+  const skillsBoxStyle = {
+    "fontSize": "1rem",
+    "width": "100%",
+    "marginTop": "1.5rem",
+    cursor: "pointer",
+    paddingInline: ".2rem"
+  }
+
   const selectedStyle = {
     ...menuItemStyle,
     boxShadow: "0 0 .2rem #fff, \
@@ -79,8 +91,21 @@ export default function IntroAndContact() {
   const madeWithStyle = {
     "display": "flex",
     "justifyContent": "space-around",
-    // "gap": "1.3rem",
+    flexWrap: "wrap",
+    "gap": "1.3rem",
     "paddingBottom": "1rem"
+  }
+
+
+  const buttonContainer = {
+    // ...locate,
+    height: "100%",
+    width: "100%",
+    "display": "flex",
+    "alignItems": "center",
+    justifyContent: "space-around",
+    "marginTop": "2rem",
+    "flexDirection": "column",
   }
 
   const transition = firstTime ? { duration: 1.5, delay: .8 } : { duration: 1 }
@@ -118,16 +143,16 @@ export default function IntroAndContact() {
               </section>
               <hr/>
               <p>
-                It all rolls into one
-                And nothing comes for free
-                There's nothing you can hold
-
+              It all rolls into one
+              And nothing comes for free
+              There's nothing you can hold
+              For very long
               </p>
             </div>
           </Grid>
         </Grid>
       </div>
-      <div className="glass" style={menuItemStyle}>
+      <div className="glass" style={skillsBoxStyle}>
         <h3>This site was created with</h3>
         <div style={madeWithStyle}>
           <JavascriptIcon width={"2rem"}/>
@@ -141,28 +166,30 @@ export default function IntroAndContact() {
           {/* <AWSLogo width={"5rem"} height={"2.1rem"}/> */}
         </div>
       </div>
-      <div
-        className="glass"
-        onClick={()=>select('skills')}
-        style={selection === 'skills' ? selectedStyle : menuItemStyle}
-      >
-        <h2>Skills</h2>
+      <div style={buttonContainer}>
+        <div
+          className="glass"
+          onClick={()=>select('skills')}
+          style={selection === 'skills' ? selectedStyle : menuItemStyle}
+        >
+          <h2>Skills</h2>
+        </div>
+        <div
+          className="glass"
+          onClick={()=>select('bio')}
+          style={selection === 'bio' ? selectedStyle : menuItemStyle}
+        >
+          <h2>Resume & Bio</h2>
+        </div>
+        <div
+          className="glass"
+          onClick={()=>select('projects')}
+          style={selection === 'projects' ? selectedStyle : menuItemStyle}
+        >
+          <h2>Projects</h2>
+        </div>
       </div>
-      <div
-        className="glass"
-        onClick={()=>select('bio')}
-        style={selection === 'bio' ? selectedStyle : menuItemStyle}
-      >
-        <h2>Resume & Bio</h2>
-      </div>
-      <div
-        className="glass"
-        onClick={()=>select('projects')}
-        style={selection === 'projects' ? selectedStyle : menuItemStyle}
-      >
-        <h2>Projects</h2>
-      </div>
-      <div className="glass" style={menuItemStyle}><h2>Recommendations</h2></div>
+      {/* <div className="glass" style={menuItemStyle}><h2>Recommendations</h2></div> */}
   </motion.section>
   )
 }

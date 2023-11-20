@@ -11,7 +11,7 @@ import Options from "./Options"
 
 function Home() {
 
-  const { firstTime, setFirstTime, isXL, isLG, isMD, isSM, isXS, selection } = useStore()
+  const { firstTime, setFirstTime, isXL, isLG, isMD, isSM, isXS, selection, locate, locate2, locate3 } = useStore()
   const navigate = useNavigate()
 
   const changePage = (path) => {
@@ -54,23 +54,25 @@ function Home() {
         :null
       }
       <div className="contents">
-        <Grid container >
+        <Grid container style={{height:"100%"}}>
           <Grid
             item
-            xs={12} sm={12} md={5.5} lg={6.25} xl={5}
+            xs={12} sm={12} md={6} lg={5.5} xl={5}
             sx={{
               "display": "flex",
               "justifyContent": "center",
+              padding: "1.5rem"
             }}
           >
             <IntroAndContact/>
           </Grid>
           <Grid
             item
-            xs={12} sm={12} md={6.5} lg={5.75} xl={7}
+            xs={12} sm={12} md={6} lg={6.5} xl={7}
             sx={{
               "display": "flex",
               "justifyContent": "center",
+              padding: "1.5rem"
             }}
           >
             <Options/>

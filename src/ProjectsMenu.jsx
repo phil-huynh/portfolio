@@ -27,10 +27,9 @@ export default function ProjectsMenu() {
 
   const containerStyle ={
     width: "100%",
-    marginTop: "2rem",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center",
+    justifyContent: "space-between",
     alignItems: "center"
   }
 

@@ -5,7 +5,6 @@ export default function Bio() {
   const style = {
     width: "95%",
     height: "100%",
-    marginTop: "2rem",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",

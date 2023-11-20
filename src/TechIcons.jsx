@@ -55,11 +55,13 @@ export default function TechIcons() {
   const iconContainerStyle = {
 
     "width": "100%",
-    "marginTop": "2rem",
+    "height": "100%",
     "overflowY": "auto",
     "display": "flex",
     "flexDirection": "column",
-    "alignItems": "center"
+    "alignItems": "center",
+    justifyContent: "space-between"
+
     // "marginInline": "1rem",
   }
 
@@ -79,7 +81,7 @@ export default function TechIcons() {
     "marginInline": "1rem",
     "marginBottom": "1rem",
     // "paddingTop": ".2rem",
-    "paddingBottom": ".4rem",
+    "paddingBottom": ".8rem",
     "backdropFilter": "blur(10px)"
   }
 
@@ -91,7 +93,7 @@ export default function TechIcons() {
   }
 
   const spreadStyle = {
-    "justifyContent": "flex-start"
+    "justifyContent": "space-between"
   }
 
   const transition = firstTime ? { duration: 1.5, delay: .8 } : { duration: 1}
@@ -114,7 +116,6 @@ export default function TechIcons() {
     hidden: { rotateX: 90 },
     visible: {
       rotateX: 0 ,
-      backdropFilter: "blur(10px)",
       transition: skillsTransition
     },
     exit: {
@@ -242,9 +243,15 @@ export default function TechIcons() {
             <NGNIXIcon width={"5rem"} height={"3.5rem"}/>
             <BabelIcon width={"4.7rem"} height={"3.5rem"}/>
             <WebpackIcon width={"8rem"} height={"3.5rem"}/>
+            <AWSLogo width={"7rem"} height={"3.5rem"}/>
+            <AmplifyIcon width={"2.2rem"} height={"3.5rem"}/>
+            <EC2Icon width={"2.2rem"} height={"3.5rem"}/>
+            <Route53Icon width={"2.3rem"} height={"3.5rem"}/>
+            <CloudFormationIcon width={"2.3rem"} height={"3.5rem"}/>
+            <LambdaIcon width={"2.3rem"} height={"3.5rem"}/>
           </section>
         </motion.div>
-        <motion.div
+        {/* <motion.div
           className="glass"
           style={skillsStyle}
           variants={iconGlassVariants}
@@ -261,7 +268,7 @@ export default function TechIcons() {
             <CloudFormationIcon width={"2.3rem"} height={"3.5rem"}/>
             <LambdaIcon width={"2.3rem"} height={"3.5rem"}/>
           </section>
-        </motion.div>
+        </motion.div> */}
       </AnimatePresence>
     </motion.div>
   )
