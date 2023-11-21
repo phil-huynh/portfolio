@@ -128,141 +128,139 @@ export default function TechIcons() {
       style={{...iconContainerStyle}}
       // variants={containerVariants}
     >
-      <AnimatePresence>
-        <motion.div
-          className="glass"
-          style={{...skillsStyle}}
-          variants={iconGlassVariants}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
-        >
-          <h3 style={{...headingStyle}}>Languages</h3>
-          <section style={{...iconGroupStyle, ...spreadStyle}}>
-            <JavascriptIcon width={"2rem"}/>
-            <TypescriptIcon width={"2rem"}/>
-            <PythonIcon width={"3rem"}/>
-            <RubyIcon width={"3rem"}/>
-            <BashIcon width={"3rem"}/>
-          </section>
-        </motion.div>
-        <AnimatePresence>
-          <motion.div
-            className="glass"
-            style={skillsStyle}
-            variants={iconGlassVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-          >
-            <h3 style={{...headingStyle}}>Front End Development</h3>
-            <section style={{...iconGroupStyle}}>
-              <HTMLLogo width={"3rem"}/>
-              <CSSLogo width={"3rem"}/>
-              <MarkdownIcon width={"2.3rem"}/>
-              <JQueryIcon width={"3rem"}/>
-              <ReactIcon width={"2.5rem"}/>
-              <ReduxIcon width={"2.5rem"}/>
-              <NextJSIcon width={"5rem"}/>
-              <SassIcon width={"3rem"}/>
-              <BootstrapIcon width={"3rem"}/>
-              <BulmaIcon width={"3rem"}/>
-              <MaterialUIIcon width={"3rem"}/>
-              <FramerMotionIcon width={"2.2rem"}/>
-              <ViteIcon width={"2rem"}/>
-              <FigmaIcon width={"2.5rem"}/>
-            </section>
-          </motion.div>
-        </AnimatePresence>
-        <motion.div
-          className="glass"
-          style={skillsStyle}
-          variants={iconGlassVariants}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
-        >
-          <h3 style={{...headingStyle}}>Back End Development</h3>
-          <section style={{...spreadStyle}}>
-            <NodeIcon width={"6rem"}/>
-            <ExpressIcon width={"5rem"}/>
-            <NpmIcon width={"3rem"}/>
-            <DjangoIcon width={"4rem"}/>
-            <FastAPIIcon width={"6rem"}/>
-            <FlaskIcon width={"5.2rem"}/>
-            <RabbitMQIcon width={"6rem"}/>
-          </section>
-        </motion.div>
-        <motion.div
-          className="glass"
-          style={skillsStyle}
-          variants={iconGlassVariants}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
-        >
-          <h3 style={{...headingStyle}}>Databases and Caching</h3>
-          <section style={{...spreadStyle}}>
-            <PostgresIcon width={"3rem"}/>
-            <MySQLIcon width={"5rem"}/>
-            <SQLiteIcon width={"3.8rem"}/>
-            <MongoIcon width={"3.4rem"}/>
-            <RedisIcon width={"3rem"}/>
-          </section>
-        </motion.div>
-        <motion.div
-          className="glass"
-          style={{...skillsStyle}}
-          variants={iconGlassVariants}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
-        >
-          <h3 style={{...headingStyle}}>Build Tools and Deployment</h3>
-          <section style={{...spreadStyle}}>
-            <LinuxIcon width={"3rem"}/>
-            <DockerIcon width={"3.8rem"}/>
-            <NGNIXIcon width={"5rem"}/>
-            <BabelIcon width={"4.7rem"}/>
-            <WebpackIcon width={"7rem"}/>
+      <motion.div
+        className="glass"
+        style={{...skillsStyle}}
+        variants={iconGlassVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      >
+        <h3 style={{...headingStyle}}>Languages</h3>
+        <section style={{...iconGroupStyle, ...spreadStyle}}>
+          <JavascriptIcon width={"2rem"}/>
+          <TypescriptIcon width={"2rem"}/>
+          <PythonIcon width={"3rem"}/>
+          <RubyIcon width={"3rem"}/>
+          <BashIcon width={"3rem"}/>
+        </section>
+      </motion.div>
 
-          </section>
-        </motion.div>
-        <motion.div
-          className="glass"
-          style={skillsStyle}
-          variants={iconGlassVariants}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
-        >
-          <h3 style={{...headingStyle}}>Cloud Services</h3>
-          <section style={{...spreadStyle}}>
-            <AWSLogo width={"7rem"}/>
-            <AmplifyIcon width={"2.2rem"}/>
-            <EC2Icon width={"2.2rem"}/>
-            <Route53Icon width={"2.3rem"}/>
-            <CloudFormationIcon width={"2.3rem"}/>
-            <LambdaIcon width={"2.3rem"}/>
-          </section>
-        </motion.div>
-        <motion.div
-          className="glass"
-          style={skillsStyle}
-          variants={iconGlassVariants}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
-        >
-          <h3 style={{...headingStyle}}>Testing</h3>
-          <section style={{...spreadStyle}}>
-            <JasmineIcon width={"3rem"}/>
-            <MochaIcon width={"3rem"}/>
-            <JestIcon width={"3rem"}/>
-            <PytestIcon width={"3.5rem"}/>
-          </section>
-        </motion.div>
-      </AnimatePresence>
+      <motion.div
+        className="glass"
+        style={skillsStyle}
+        variants={iconGlassVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      >
+        <h3 style={{...headingStyle}}>Front End Development</h3>
+        <section style={{...iconGroupStyle}}>
+          <HTMLLogo width={"3rem"}/>
+          <CSSLogo width={"3rem"}/>
+          <MarkdownIcon width={"2.3rem"}/>
+          <JQueryIcon width={"3rem"}/>
+          <ReactIcon width={"2.5rem"}/>
+          <ReduxIcon width={"2.5rem"}/>
+          <NextJSIcon width={"5rem"}/>
+          <SassIcon width={"3rem"}/>
+          <BootstrapIcon width={"3rem"}/>
+          <BulmaIcon width={"3rem"}/>
+          <MaterialUIIcon width={"3rem"}/>
+          <FramerMotionIcon width={"2.2rem"}/>
+          <ViteIcon width={"2rem"}/>
+          <FigmaIcon width={"2.5rem"}/>
+        </section>
+      </motion.div>
+
+      <motion.div
+        className="glass"
+        style={skillsStyle}
+        variants={iconGlassVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      >
+        <h3 style={{...headingStyle}}>Back End Development</h3>
+        <section style={{...spreadStyle}}>
+          <NodeIcon width={"6rem"}/>
+          <ExpressIcon width={"5rem"}/>
+          <NpmIcon width={"3rem"}/>
+          <DjangoIcon width={"4rem"}/>
+          <FastAPIIcon width={"6rem"}/>
+          <FlaskIcon width={"5.2rem"}/>
+          <RabbitMQIcon width={"6rem"}/>
+        </section>
+      </motion.div>
+      <motion.div
+        className="glass"
+        style={skillsStyle}
+        variants={iconGlassVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      >
+        <h3 style={{...headingStyle}}>Databases and Caching</h3>
+        <section style={{...spreadStyle}}>
+          <PostgresIcon width={"3rem"}/>
+          <MySQLIcon width={"5rem"}/>
+          <SQLiteIcon width={"3.8rem"}/>
+          <MongoIcon width={"3.4rem"}/>
+          <RedisIcon width={"3rem"}/>
+        </section>
+      </motion.div>
+      <motion.div
+        className="glass"
+        style={{...skillsStyle}}
+        variants={iconGlassVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      >
+        <h3 style={{...headingStyle}}>Build Tools and Deployment</h3>
+        <section style={{...spreadStyle}}>
+          <LinuxIcon width={"3rem"}/>
+          <DockerIcon width={"3.8rem"}/>
+          <NGNIXIcon width={"5rem"}/>
+          <BabelIcon width={"4.7rem"}/>
+          <WebpackIcon width={"7rem"}/>
+
+        </section>
+      </motion.div>
+      <motion.div
+        className="glass"
+        style={skillsStyle}
+        variants={iconGlassVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      >
+        <h3 style={{...headingStyle}}>Cloud Services</h3>
+        <section style={{...spreadStyle}}>
+          <AWSLogo width={"7rem"}/>
+          <AmplifyIcon width={"2.2rem"}/>
+          <EC2Icon width={"2.2rem"}/>
+          <Route53Icon width={"2.3rem"}/>
+          <CloudFormationIcon width={"2.3rem"}/>
+          <LambdaIcon width={"2.3rem"}/>
+        </section>
+      </motion.div>
+      <motion.div
+        className="glass"
+        style={skillsStyle}
+        variants={iconGlassVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      >
+        <h3 style={{...headingStyle}}>Testing</h3>
+        <section style={{...spreadStyle}}>
+          <JasmineIcon width={"3rem"}/>
+          <MochaIcon width={"3rem"}/>
+          <JestIcon width={"3rem"}/>
+          <PytestIcon width={"3.5rem"}/>
+        </section>
+      </motion.div>
     </motion.div>
   )
 }
