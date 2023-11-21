@@ -45,12 +45,16 @@ import CloudFormationIcon from './tech_icons/CloudFormationIcon'
 import LambdaIcon from './tech_icons/LambdaIcon'
 import RabbitMQIcon from './tech_icons/RabbitMQIcon'
 
-import { motion, AnimatePresence, stagger } from "framer-motion"
+import { useAnimate, usePresence} from "framer-motion"
 
 import { useStore } from './Store'
+import { useEffect } from 'react'
 
 export default function TechIcons() {
   const {locate, locate2, locate3, firstTime} = useStore()
+
+  const [ scope, animate ] = useAnimate()
+  const [ isPresent, safeToRemove ] = usePresence()
 
   const iconContainerStyle = {
 
@@ -96,66 +100,47 @@ export default function TechIcons() {
   }
 
   const transition = firstTime ? { duration: 1.5, delay: .8 } : { duration: 1}
-  const skillsTransition = firstTime ? { duration: 1.7, delay: 2.3 } : { duration: 1.7}
+  const skillsTransition = firstTime ? { duration: 1.7, delay: 2.3, type: "spring", bounce: .5 } : { duration: 1.7, type: "spring", bounce: .5}
 
 
 
-  const containerVariants = {
-    hidden: { opacity: 0},
-    visible: {
-      opacity: 1 ,
-      transition: skillsTransition,
-    },
-    exit: {
-      opacity: 0
-    },
+  const rotateIn = async () => {
+    await animate('section', {rotateX: [270, 0]}, skillsTransition)
   }
 
-  const iconGlassVariants = {
-    hidden: { rotateX: 90 },
-    visible: {
-      rotateX: 0 ,
-      transition: skillsTransition
-    },
-    exit: {
-      rotateX: 90,
-      transition: {duration: 1}
-    },
+  const rotateOut = async () => {
+    await animate('section', {rotateX: [0, 270]})
   }
+
+  useEffect(() => {
+    isPresent ? rotateIn() : rotateOut()
+  }, [isPresent])
 
   return (
-    <motion.div
+    <div
       style={{...iconContainerStyle}}
-      // variants={containerVariants}
+      ref={scope}
     >
-      <motion.div
+      <section
         className="glass"
         style={{...skillsStyle}}
-        variants={iconGlassVariants}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
       >
         <h3 style={{...headingStyle}}>Languages</h3>
-        <section style={{...iconGroupStyle, ...spreadStyle}}>
+        <div style={{...iconGroupStyle, ...spreadStyle}}>
           <JavascriptIcon width={"2rem"}/>
           <TypescriptIcon width={"2rem"}/>
           <PythonIcon width={"3rem"}/>
           <RubyIcon width={"3rem"}/>
           <BashIcon width={"3rem"}/>
-        </section>
-      </motion.div>
+        </div>
+      </section>
 
-      <motion.div
+      <section
         className="glass"
         style={skillsStyle}
-        variants={iconGlassVariants}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
       >
         <h3 style={{...headingStyle}}>Front End Development</h3>
-        <section style={{...iconGroupStyle}}>
+        <div style={{...iconGroupStyle}}>
           <HTMLLogo width={"3rem"}/>
           <CSSLogo width={"3rem"}/>
           <MarkdownIcon width={"2.3rem"}/>
@@ -170,19 +155,15 @@ export default function TechIcons() {
           <FramerMotionIcon width={"2.2rem"}/>
           <ViteIcon width={"2rem"}/>
           <FigmaIcon width={"2.5rem"}/>
-        </section>
-      </motion.div>
+        </div>
+      </section>
 
-      <motion.div
+      <section
         className="glass"
         style={skillsStyle}
-        variants={iconGlassVariants}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
       >
         <h3 style={{...headingStyle}}>Back End Development</h3>
-        <section style={{...spreadStyle}}>
+        <div style={{...spreadStyle}}>
           <NodeIcon width={"6rem"}/>
           <ExpressIcon width={"5rem"}/>
           <NpmIcon width={"3rem"}/>
@@ -190,77 +171,61 @@ export default function TechIcons() {
           <FastAPIIcon width={"6rem"}/>
           <FlaskIcon width={"5.2rem"}/>
           <RabbitMQIcon width={"6rem"}/>
-        </section>
-      </motion.div>
-      <motion.div
+        </div>
+      </section>
+      <section
         className="glass"
         style={skillsStyle}
-        variants={iconGlassVariants}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
       >
         <h3 style={{...headingStyle}}>Databases and Caching</h3>
-        <section style={{...spreadStyle}}>
+        <div style={{...spreadStyle}}>
           <PostgresIcon width={"3rem"}/>
           <MySQLIcon width={"5rem"}/>
           <SQLiteIcon width={"3.8rem"}/>
           <MongoIcon width={"3.4rem"}/>
           <RedisIcon width={"3rem"}/>
-        </section>
-      </motion.div>
-      <motion.div
+        </div>
+      </section>
+      <section
         className="glass"
         style={{...skillsStyle}}
-        variants={iconGlassVariants}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
       >
         <h3 style={{...headingStyle}}>Build Tools and Deployment</h3>
-        <section style={{...spreadStyle}}>
+        <div style={{...spreadStyle}}>
           <LinuxIcon width={"3rem"}/>
           <DockerIcon width={"3.8rem"}/>
           <NGNIXIcon width={"5rem"}/>
           <BabelIcon width={"4.7rem"}/>
           <WebpackIcon width={"7rem"}/>
 
-        </section>
-      </motion.div>
-      <motion.div
+        </div>
+      </section>
+      <section
         className="glass"
         style={skillsStyle}
-        variants={iconGlassVariants}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
       >
         <h3 style={{...headingStyle}}>Cloud Services</h3>
-        <section style={{...spreadStyle}}>
+        <div style={{...spreadStyle}}>
           <AWSLogo width={"7rem"}/>
           <AmplifyIcon width={"2.2rem"}/>
           <EC2Icon width={"2.2rem"}/>
           <Route53Icon width={"2.3rem"}/>
           <CloudFormationIcon width={"2.3rem"}/>
           <LambdaIcon width={"2.3rem"}/>
-        </section>
-      </motion.div>
-      <motion.div
+        </div>
+      </section>
+      <section
         className="glass"
         style={skillsStyle}
-        variants={iconGlassVariants}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
       >
         <h3 style={{...headingStyle}}>Testing</h3>
-        <section style={{...spreadStyle}}>
+        <div style={{...spreadStyle}}>
           <JasmineIcon width={"3rem"}/>
           <MochaIcon width={"3rem"}/>
           <JestIcon width={"3rem"}/>
           <PytestIcon width={"3.5rem"}/>
-        </section>
-      </motion.div>
-    </motion.div>
+        </div>
+      </section>
+    </div>
   )
 }

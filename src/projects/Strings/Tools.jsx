@@ -11,22 +11,22 @@ import BabelIcon from '../../tech_icons/BabelIcon'
 import styles from "./Strings.module.css"
 
 
-export default function Tools () {
-  return (
-    <div className={`glass ${styles.toolBox}`}>
-      <h2>Strings Theory was created using</h2>
-      <div className={styles.tools}>
-        <JavascriptIcon width={"2rem"}/>
-        <ReactIcon width={"2.5rem"}/>
-        <CSSLogo width={"2.5rem"}/>
-        <NodeIcon width={"6rem"}/>
-        <ExpressIcon width={"6rem"}/>
-        <BabelIcon width={"3.7rem"}/>
-        <WebpackIcon width={"7rem"}/>
-        <JestIcon width={"2rem"}/>
-        <EC2Icon width={"2rem"}/>
-        <Route53Icon width={"2.2rem"}/>
-      </div>
+const StingsTheoryTools = () => (
+  <div className={`glass ${styles.toolBox}`}>
+    <h2>Strings Theory was created using</h2>
+    <div className={styles.tools}>
+      <JavascriptIcon width={"2rem"}/>
+      <ReactIcon width={"2.5rem"}/>
+      <CSSLogo width={"2.5rem"}/>
+      <NodeIcon width={"6rem"}/>
+      <ExpressIcon width={"6rem"}/>
+      <BabelIcon width={"3.7rem"}/>
+      <WebpackIcon width={"7rem"}/>
+      <JestIcon width={"2rem"}/>
+      <EC2Icon width={"2rem"}/>
+      <Route53Icon width={"2.2rem"}/>
     </div>
-  )
-}
+  </div>
+)
+
+export default StingsTheoryTools

@@ -1,10 +1,14 @@
 import { useStore } from "./Store"
 import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
+import { useAnimate, usePresence } from "framer-motion";
+import { useEffect } from "react";
 
 export default function ProjectsMenu() {
   const { firstTime, setFirstTime, locate, locate2, locate3 } = useStore()
   const navigate = useNavigate()
+
+  const [scope, animate] = useAnimate()
+  const [isPresent, safeToRemove] = usePresence()
 
   const changePage = (path) => {
     firstTime && setFirstTime(false)
@@ -12,18 +16,6 @@ export default function ProjectsMenu() {
   }
 
   // const skillsTransition = firstTime ? { duration: 1, delay: 2.3 } : { duration: 1 }
-
-  const glassVariants = {
-    hidden: { rotateX: 90},
-    visible: {
-      rotateX: 0 ,
-      transition: { duration: 1.5}
-    },
-    exit: {
-      rotateX: 90 ,
-      transition: { duration: 1.5 }
-    }
-  }
 
   const containerStyle ={
     width: "100%",
@@ -44,64 +36,57 @@ export default function ProjectsMenu() {
     // marginBottom: "1rem",
   }
 
+  const rotateIn = async () => {
+    await animate('section', {rotateX: [270, 0]}, {duration: 1.7,  type: "spring", bounce: .5})
+  }
+
+  const rotateOut = async () => {
+    await animate('section', {rotateX: [0, 270]}, {duration: 1.2,  type: "spring", bounce: .5})
+    safeToRemove()
+  }
+
+  useEffect(() => {
+    isPresent ? rotateIn() : rotateOut()
+  }, [isPresent])
+
   return (
-    <motion.div style={{...containerStyle}}>
-      <motion.div
+    <div style={{...containerStyle}} ref={scope}>
+      <section
         className="glass"
-        variants={glassVariants}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
         style={style}
         onClick={()=>changePage("strings-theory")}
       >
         <h2 >Strings Theory</h2>
-      </motion.div>
-      <motion.div
+      </section>
+      <section
         className="glass"
-        variants={glassVariants}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
         style={style}
         onClick={()=>changePage("quickstarter")}
       >
         <h2>Quickstarter</h2>
-      </motion.div>
-      <motion.div
+      </section>
+      <section
         className="glass"
-        variants={glassVariants}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
         style={style}
         onClick={()=>changePage("sales-probabilities")}
       >
         <h2>Sales Probabilites</h2>
-      </motion.div>
-      <motion.div
+      </section>
+      <section
         className="glass"
-        variants={glassVariants}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
         style={style}
         onClick={()=>changePage("osiris")}
       >
         <h2>Osiris</h2>
-      </motion.div>
-      <motion.div
+      </section>
+      <section
         className="glass"
-        variants={glassVariants}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
         style={style}
         onClick={()=>changePage("ecommerce")}
       >
         <h2>E-Commerce</h2>
-      </motion.div>
-    </motion.div>
+      </section>
+    </div>
   )
 }
 

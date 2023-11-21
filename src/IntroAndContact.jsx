@@ -11,11 +11,16 @@ import CSSLogo from "./tech_icons/CSS_Logo"
 import FramerMotionIcon from "./tech_icons/FramerMotionIcon"
 import AmplifyIcon from "./tech_icons/Amplify"
 import Route53Icon from "./tech_icons/Route53Icon"
-import { motion } from "framer-motion"
+import { useAnimate, usePresence } from "framer-motion"
 import { useStore }  from "./Store"
+import { useEffect } from "react";
 
 export default function IntroAndContact() {
   const { locate, locate2, locate3, firstTime, setSelection, setFirstTime, selection } = useStore()
+
+  const [scope, animate] = useAnimate()
+  const [isPresent, safeToRemove] = usePresence()
+
 
   const iconSectionStyle = {
     display: "flex",
@@ -40,7 +45,8 @@ export default function IntroAndContact() {
     width: "90%",
     alignItems: "center",
     flexDirection: "column",
-    zIndex: "2"
+    zIndex: "2",
+    opacity: "0"
   }
 
   const labelsStyle = {
@@ -108,7 +114,8 @@ export default function IntroAndContact() {
     flexDirection: "column",
   }
 
-  const transition = firstTime ? { duration: 1.3, delay: .8, type: "spring", bounce: ".22" } : { duration: 1, type: "spring", bounce: ".22" }
+
+  const transition = firstTime ? { duration: 1.2, delay: 1.5, type: "spring", bounce: ".22" } : { duration: 1, type: "spring", bounce: ".22" }
 
 
   const select = (selected) => {
@@ -116,12 +123,25 @@ export default function IntroAndContact() {
     setSelection(selected)
   }
 
+  const slideInAnimation = async () => {
+    await animate(scope.current, {x: 2000 }, {duration: .1})
+    await animate(scope.current, {opacity: 1}, {duration: .1})
+    await animate(scope.current, {x: [2000, 0]}, transition)
+  }
+
+  const slideOutAnimation = async () => {
+    await animate(scope.current, {x: [0, 2000]}, {duration: 1.3})
+    safeToRemove()
+  }
+
+  useEffect(() => {
+    isPresent ? slideInAnimation() : slideOutAnimation()
+  }, [isPresent])
+
   return (
-    <motion.section
+    <section
       className="intro-container"
-      initial={{ x: 2000 }}
-      animate={{ x: 0 }}
-      transition={transition}
+      ref={scope}
       style={{...containerStyle}}
     >
       <div className="glass" style={{"width": "100%"}}>
@@ -138,7 +158,9 @@ export default function IntroAndContact() {
               </a>
               <section className="extra-shadow" style={iconSectionStyle}>
                 <LinkedInIcon width={"2.5rem"}/>
-                <GitHubIcon width={"2.5rem"}/>
+                <a href="https://github.com/phil-huynh">
+                  <GitHubIcon width={"2.5rem"}/>
+                </a>
                 <GitLabIcon width={"2.5rem"}/>
               </section>
               <hr/>
@@ -163,7 +185,6 @@ export default function IntroAndContact() {
           <ViteIcon/>
           <AmplifyIcon width={"2rem"} />
           <Route53Icon width={"2.2rem"} />
-          {/* <AWSLogo width={"5rem"} height={"2.1rem"}/> */}
         </div>
       </div>
       <div style={buttonContainer}>
@@ -189,7 +210,6 @@ export default function IntroAndContact() {
           <h2>Projects</h2>
         </div>
       </div>
-      {/* <div className="glass" style={menuItemStyle}><h2>Recommendations</h2></div> */}
-  </motion.section>
+    </section>
   )
 }

@@ -1,10 +1,10 @@
 import TechIcons from "./TechIcons"
 import IntroAndContact from "./IntroAndContact"
 import { Grid } from "@mui/material"
-import { motion } from "framer-motion"
 import { useStore } from "./Store"
 import { useNavigate } from "react-router-dom";
-import { AnimatePresence } from "framer-motion"
+import { AnimatePresence, motion, usePresence, useAnimate } from "framer-motion"
+import { useEffect } from "react";
 import Options from "./Options"
 
 
@@ -13,6 +13,10 @@ function Home() {
 
   const { firstTime, setFirstTime, isXL, isLG, isMD, isSM, isXS, selection, locate, locate2, locate3 } = useStore()
   const navigate = useNavigate()
+
+  const [isPresent, safeToRemove] = usePresence()
+  const [page, animatePage] = useAnimate()
+  const [greeting, animateGreeting] = useAnimate()
 
   const changePage = (path) => {
     firstTime && setFirstTime(false)
@@ -27,32 +31,42 @@ function Home() {
     if (isXS) { return "5rem" }
   }
 
+  const pageEnterAnimation = async () => {
+    if (firstTime) {
+      await animateGreeting(
+        greeting.current,
+        { fontSize: [getGreetingSize(), 0], opacity: [1,0]},
+        { duration: 1.5, delay: 1}
+      )
+    } else {
+      await animatePage(page.current, {opacity: [0, 1]}, {duration: 1.5})
+    }
+  }
+
+  const pageExitAnimation = async () => {
+    await animatePage(page.current, {opacity: [1, 0]}, {duration: 1.5})
+    safeToRemove()
+  }
+
+
+  useEffect(() => {
+    isPresent ? pageEnterAnimation() : pageExitAnimation()
+  }, [isPresent])
+
   return (
-    <motion.div
+    <div
       className="wrapper"
       key={'home'}
-      initial={!firstTime ? { opacity: .3 } : 0}
-      animate={{opacity: 1}}
-      exit={{ opacity: .1 }}
-      transition={{ duration: 1 }}
+      ref={page}
+      // initial={!firstTime ? { opacity: .3 } : 0}
+      // animate={{opacity: 1}}
+      // exit={{ opacity: .1 }}
+      // transition={{ duration: 1 }}
     >
-      <motion.div
+      <div
         className="overlay"
-        initial={{ opacity: .4}}
-        animate={{ opacity: .4 }}
-        transition={{ duration: 1.5, delay: .2 }}
       />
-      {firstTime ?
-        <motion.h1
-          className="greeting"
-          initial={{fontSize: getGreetingSize()}}
-          animate={{ fontSize: 0, opacity: 0 }}
-          transition={{ duration: 1, delay: .8 }}
-        >
-          Greetings!
-        </motion.h1>
-        :null
-      }
+      { firstTime ? <h1 className="greeting" ref={greeting}> Greetings! </h1> :null }
       <div className="contents">
         <Grid container style={{height:"100%"}}>
           <Grid
@@ -78,13 +92,8 @@ function Home() {
             <Options/>
           </Grid>
         </Grid>
-          {/* <h2 style={{"cursor": "pointer"}}onClick={()=>changePage("strings-theory")}>Strings Theory</h2>
-          <h2 style={{"cursor": "pointer"}}onClick={()=>changePage('quickstarter')}>Quickstarter</h2>
-          <h2 style={{"cursor": "pointer"}}onClick={()=>changePage('sales-probabilities')}>Sales Probabilites</h2>
-          <h2 style={{"cursor": "pointer"}}onClick={()=>changePage('osiris')}>Osiris</h2>
-          <h2 style={{"cursor": "pointer"}}onClick={()=>changePage('ecommerce')}>E-Commerce</h2> */}
       </div>
-    </motion.div>
+    </div>
   )
 }
 

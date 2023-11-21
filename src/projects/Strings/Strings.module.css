@@ -99,6 +99,9 @@
 
 
 .gitLink,
+.group,
+.info,
+.messageContainer,
 .navGrid {
   display: flex;
   justify-content: center;
@@ -131,14 +134,6 @@
   animation: neonNav 60s ease infinite;
   margin-top: 1rem;
 }
-.navItem:hover {
-  box-shadow: 0 0 .2rem #fff,
-              0 0 .2rem #fff,
-              0 0 0.5rem white,
-              0 0 0.2rem white,
-              0 0 1.7rem white,
-              inset 0 0 2rem white;
-}
 
 
 .navLabel {
@@ -147,8 +142,39 @@
 }
 
 
+.messageContainer {
+  width: 100%;
+}
 
 
+.messageCard {
+  width: 90%;
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+
+.group {
+  width: 75%;
+  padding: 2rem;
+}
+
+
+.info {
+  width: 85%;
+  flex-direction: column;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+.photoSection {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 
 /* Title Glass Animation */
 @keyframes stringsglass {
@@ -311,3 +337,15 @@
                 0 0 30px #0095ec;;
   }
 }
+
+
+
+
+/* .navItem:hover {
+  box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 0.5rem white,
+              0 0 0.2rem white,
+              0 0 1.7rem white,
+              inset 0 0 2rem white;
+} */

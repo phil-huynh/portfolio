@@ -22,7 +22,7 @@
 }
 
 body {
-  background: #fff;
+  background: white;
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
@@ -103,6 +103,12 @@ a {
   /* font-size: 9rem; */
   z-index: 2;
 }
+
+
+.intro-container {
+  opacity: 0;
+}
+
 
 .glass {
   border-radius: 20px;

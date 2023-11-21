@@ -7,6 +7,8 @@
   background-position: center;
   height: 100vh;
   width: 100vw;
+  color: white;
+  opacity: 0;
 }
 
 .colorfilter {
@@ -18,6 +20,62 @@
   animation: colorshift 20s ease infinite;
   z-index: 1;
 }
+
+.header,
+.title,
+.tools {
+  display: flex;
+  align-items: center;
+}
+
+.header,
+.title {
+  height: 5rem;
+  width: 50%;
+  justify-content: center;
+}
+
+
+.title {
+  margin-top: 8rem;
+  z-index: 10;
+}
+
+.homeLink {
+  position: fixed;
+  z-index: 21;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 5rem;
+  cursor: pointer;
+}
+
+.toolBox {
+  width: 80%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: .3rem;
+}
+
+.tools {
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: .5rem;
+  padding-bottom: 1rem;
+  padding-inline: .5rem;
+}
+
+.glass {
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 10;
+  box-shadow: 6px 6px 4px 1px rgba(1, 1, 1, 0.3);
+  backdrop-filter: blur(10px);
+}
+
 
 @keyframes colorshift {
 	0% { backdrop-filter: hue-rotate(0deg); }

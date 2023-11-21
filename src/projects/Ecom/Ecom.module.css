@@ -1,0 +1,41 @@
+.wrapper {
+  position: absolute;
+  top:0;
+  left:0;
+  width: 0;
+  height: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+
+.header,
+.navItem,
+.photoGridBox {
+  display: "flex";
+  align-items: "center";
+  justify-content: "center";
+}
+
+.header,
+.navItem {
+  height: 5rem;
+  width: "100%";
+  color: white;
+}
+
+.navItem {
+  cursor: pointer;
+}
+
+.sectionHeader {
+  color: black;
+}
+
