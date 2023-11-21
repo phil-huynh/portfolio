@@ -1,21 +1,14 @@
-import JavascriptIcon from '../tech_icons/JavascriptIcon'
-import CSSLogo from '../tech_icons/CSS_Logo'
-import NodeIcon from '../tech_icons/NodeIcon'
-import ExpressIcon from '../tech_icons/ExpressIcon'
-import WebpackIcon from '../tech_icons/Webpack'
-import EC2Icon from '../tech_icons/EC2Icon'
-import Route53Icon from '../tech_icons/Route53Icon'
-import JestIcon from '../tech_icons/JestIcon'
-import ReactIcon from '../tech_icons/ReactIcon'
-import BabelIcon from '../tech_icons/BabelIcon'
-import GitHubIcon from '../tech_icons/GitHubIcon'
+import Tools from "./Tools.jsx"
+import AppLink from "./AppLink.jsx"
+import GitLink from './GitLink'
 
-import Photo from "../Photo"
+import Photo from "../../Photo"
+import styles from "./Strings.module.css"
 
 import { useNavigate } from "react-router-dom"
 import { Grid } from "@mui/material"
 import { motion } from "framer-motion"
-import { useStore } from "../Store"
+import { useStore } from "../../Store"
 
 
 export default function StringsTheory() {
@@ -36,39 +29,6 @@ export default function StringsTheory() {
 
   const navigate = useNavigate()
 
-  const headerStyle = {
-    width: "20%",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    position: "fixed",
-    zIndex: "11"
-  }
-
-  const titleStyle = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    width: "90%",
-    marginBottom: "2rem",
-    marginTop: "6rem",
-  }
-
-  const toolBoxStyle ={
-    width: "90%",
-    marginBottom: "1rem",
-  }
-
-  const toolsStyle = {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-around",
-    alignItems: "center",
-    flexWrap: "wrap",
-    gap: ".5rem",
-    paddingBottom: "1rem",
-    paddingInline: ".5rem",
-  }
 
   const infoBoxStyle = {
     width: "85%",
@@ -81,14 +41,6 @@ export default function StringsTheory() {
     marginBottom: "1rem",
   }
 
-  const introStyle = {
-    width: "100%",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    marginBottom: "2rem",
-  }
 
   const groupStyle = {
     width: "75%",
@@ -112,9 +64,6 @@ export default function StringsTheory() {
     marginTop: "1.5rem"
   }
 
-  // const introMessageStyle = {
-  //   "fontSize": "1.5rem"
-  // }
 
   const navigation = [
     {label: "Home", path: "/"},
@@ -125,62 +74,33 @@ export default function StringsTheory() {
 
   return (
     <motion.div
-      className="strings-wrapper"
+      className={styles.wrapper}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1.5 }}
     >
-      <div className="strings-overlay"></div>
       <div className="contents" >
-
-        <div style={{...introStyle}}>
-          <div className="strings-title-glass " style={titleStyle}>
-            <h1 className="strings-title" style={{"color": "white", "fontSize": "7rem",}}>Strings Theory</h1>
+        <div className={styles.introStyle}>
+          <div className={`${styles.titleGlass} ${styles.titleLayout}`}>
+            <h1 className={styles.title}>Strings Theory</h1>
           </div>
-          <div className="glass" style={{...toolBoxStyle}}>
-            <h2>Strings Theory was created using</h2>
-            <div style={toolsStyle}>
-              <JavascriptIcon width={"2rem"}/>
-              <ReactIcon width={"2.5rem"}/>
-              <CSSLogo width={"2.5rem"}/>
-              <NodeIcon width={"6rem"}/>
-              <ExpressIcon width={"6rem"}/>
-              <BabelIcon width={"3.7rem"}/>
-              <WebpackIcon width={"7rem"}/>
-              <JestIcon width={"2rem"}/>
-              <EC2Icon width={"2rem"}/>
-              <Route53Icon width={"2.2rem"}/>
-            </div>
-          </div>
+          <Tools/>
           <Grid container>
             <Grid item xs={12} sm={12} md={6}>
-              <button className='glass strings-link-button' onClick={()=>window.location.assign("http://stringstheory.net")}>
-                <p style={{"fontSize": "2rem","marginBottom": "0"}}>Click here to view the live app</p>
-                <a href="http://stringstheory.net">
-                  <h2 style={{"color": "white"}}>http://stringstheory.net</h2>
-                </a>
-              </button>
+              <AppLink/>
             </Grid>
             <Grid item xs={12} sm={12} md={6}>
-              <button className='glass strings-link-button' onClick={()=>window.location.assign("https://github.com/phil-huynh/mvp")}>
-                <span style={{"display": "flex", "justifyContent": "center", "alignItems": "center"}}>
-                  <span style={{"fontSize": "2rem", "marginRight": "1rem"}}>
-                    View the code on
-                  </span>
-                  <GitHubIcon width={"3.5rem"} path="mvp"/>
-                </span>
-              </button>
+              <GitLink/>
             </Grid>
           </Grid>
         </div>
-
-        <div style={{"position": "sticky", "top": "1rem", "display": "flex", "flexDirection": "row", "zIndex": "11"}}>
+        <div className={styles.navBar}>
           <Grid container>
             {navigation.map(nav => (
-              <Grid item xs={6} sm={4} md={4} lg={3} key={nav.path} style={{"display": "flex", "placeContent": "center"}}>
-                <div className="glass strings-nav-item" onClick={()=>navigate(nav.path)}>
-                  <h2 style={{"cursor": 'pointer', "marginTop": ".4rem", "marginBottom": ".4rem"}}>{nav.label}</h2>
+              <Grid item xs={6} sm={4} md={4} lg={3} key={nav.path} className={styles.navGrid}>
+                <div className={`glass ${styles.navItem}`} onClick={()=>navigate(nav.path)}>
+                  <h2 className={styles.navLabel}>{nav.label}</h2>
                 </div>
               </Grid>
             ))}

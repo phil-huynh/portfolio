@@ -1,0 +1,313 @@
+.wrapper {
+  position: absolute;
+  top:0;
+  left:0;
+  background-image:  url("https://i.redd.it/hhix886tzsez.gif");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+.introStyle {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+
+.titleGlass {
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 10;
+  padding-inline: 1rem;
+  animation: stringsglass 5s ease infinite;
+  z-index: 1;
+}
+
+
+.titleLayout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin-bottom: 2rem;
+  margin-top: 6rem;
+}
+
+
+.title {
+  font-family: 'Comic Neue', cursive;
+  font-size: 7rem;
+}
+
+
+.toolBox {
+  width: 90%;
+  margin-bottom: 1rem;
+}
+
+
+.tools {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: .5rem;
+  padding-bottom: 1rem;
+  padding-inline: .5rem;
+}
+
+
+.linkButton {
+  width: 80%;
+  height: 10rem;
+  color: white;
+  cursor: pointer;
+  padding-inline: 1rem;
+  margin-inline: 1.5;
+  margin-top: 1rem
+}
+.linkButton:hover {
+  box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 0.5rem white,
+              0 0 0.2rem white,
+              0 0 1.7rem white,
+              inset 0 0 2rem white;
+}
+.linkButton:active {
+  box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 0.5rem #49ff18,
+              0 0 0.2rem #49ff18,
+              0 0 1.7rem #49ff18,
+              inset 0 0 2rem #49ff18;
+}
+
+
+.appLink {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+
+.gitLink,
+.navGrid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.gitLinkText {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+
+.navBar {
+  position: sticky;
+  top: 1rem;
+  display: flex;
+  flex-direction: row;
+  z-index: 11;
+}
+
+
+.navItem {
+  width: 70%;
+  z-index: 11;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: neonNav 60s ease infinite;
+  margin-top: 1rem;
+}
+.navItem:hover {
+  box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 0.5rem white,
+              0 0 0.2rem white,
+              0 0 1.7rem white,
+              inset 0 0 2rem white;
+}
+
+
+.navLabel {
+  margin-top: .4rem;
+  margin-bottom: .4rem;
+}
+
+
+
+
+
+/* Title Glass Animation */
+@keyframes stringsglass {
+	0% {
+		backdrop-filter: blur(7px) hue-rotate(0deg);
+    box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 0.5rem #0095ec,
+              0 0 0.2rem #0095ec,
+              0 0 0.7rem #0095ec,
+              inset 0 0 2rem #0095ec;
+    text-shadow: 0 0 2px #0095ec,
+              0 0 5px #0095ec,
+              0 0 10px #0095ec,
+              0 0 15px #0095ec,
+              0 0 20px #0095ec,
+              0 0 25px #0095ec,
+              0 0 30px #0095ec;;
+	}
+	25% { backdrop-filter: blur(7px) hue-rotate(90deg); }
+  30% {
+    box-shadow: 0 0 .2rem #fff,
+                0 0 .2rem #fff,
+                0 0 0.5rem red,
+                0 0 0.2rem red,
+                0 0 0.7rem red,
+    inset 0 0 2rem red;
+    text-shadow: 0 0 2px red,
+                0 0 5px red,
+                0 0 10px red,
+                0 0 15px red,
+                0 0 20px red,
+                0 0 25px red,
+                0 0 30px red;;
+  }
+	50% { backdrop-filter: blur(7px) hue-rotate(180deg); }
+  55% {
+    box-shadow: 0 0 .2rem #fff,
+                0 0 .2rem #fff,
+                0 0 0.5rem yellow,
+                0 0 0.2rem yellow,
+                0 0 0.7rem yellow,
+    inset 0 0 2rem yellow;
+    text-shadow: 0 0 2px yellow,
+                0 0 5px yellow,
+                0 0 10px yellow,
+                0 0 15px yellow;
+  }
+  75%{
+    backdrop-filter: blur(7px) hue-rotate(270deg);
+    box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 0.5rem #49ff18,
+              0 0 0.2rem #49ff18,
+              0 0 1.7rem #49ff18,
+              inset 0 0 2rem #49ff18;
+    text-shadow: 0 0 2px #49ff18,
+              0 0 5px #49ff18,
+              0 0 10px #49ff18,
+              0 0 15px #49ff18;
+              /* 0 0 20px #49ff18,
+              0 0 25px #49ff18,
+              0 0 30px #49ff18; */
+  }
+  100%{
+    backdrop-filter: blur(5px) hue-rotate(360deg);
+    box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 0.5rem #0095ec,
+              0 0 0.2rem #0095ec,
+              0 0 0.7rem #0095ec,
+              inset 0 0 2rem #0095ec;
+    text-shadow: 0 0 2px #0095ec,
+              0 0 5px #0095ec,
+              0 0 10px #0095ec,
+              0 0 15px #0095ec,
+              0 0 20px #0095ec,
+              0 0 25px #0095ec,
+              0 0 30px #0095ec;;
+  }
+}
+
+
+
+/* Nav Item Animation */
+@keyframes neonNav {
+	0% {
+		box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 0.5rem #0095ec,
+              0 0 0.2rem #0095ec,
+              0 0 0.7rem #0095ec,
+              inset 0 0 1.7rem #0095ec;
+    text-shadow: 0 0 2px #0095ec,
+                0 0 5px #0095ec,
+                0 0 10px #0095ec,
+                0 0 15px #0095ec,
+                0 0 20px #0095ec,
+                0 0 25px #0095ec,
+                0 0 30px #0095ec;
+	}
+	25% {
+		box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 0.5rem #49ff18,
+              0 0 0.2rem #49ff18,
+              0 0 0.7rem #49ff18,
+              inset 0 0 1.5rem #49ff18;
+    text-shadow: 0 0 2px #49ff18,
+                0 0 5px #49ff18,
+                0 0 10px #49ff18,
+                0 0 15px #49ff18,
+                0 0 20px #49ff18,
+                0 0 25px #49ff18,
+                0 0 30px #49ff18;
+	}
+	50% {
+		box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 0.5rem yellow,
+              0 0 0.2rem yellow,
+              0 0 0.7rem yellow,
+              inset 0 0 1.5rem yellow;
+    text-shadow: 0 0 2px yellow,
+                0 0 5px yellow,
+                0 0 10px yellow,
+                0 0 15px yellow,
+                0 0 20px yellow,
+                0 0 25px yellow,
+                0 0 30px yellow;;
+	}
+  75%{
+    box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 0.5rem red,
+              0 0 0.2rem red,
+              0 0 0.7rem red,
+              inset 0 0 1.5rem red;
+    text-shadow: 0 0 2px red,
+                0 0 5px red,
+                0 0 10px red,
+                0 0 15px red,
+                0 0 20px red,
+                0 0 25px red,
+                0 0 30px red;;
+  }
+  100%{
+    box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 0.5rem #0095ec,
+              0 0 0.2rem #0095ec,
+              0 0 0.7rem #0095ec,
+              inset 0 0 1.7rem #0095ec;
+    text-shadow: 0 0 2px #0095ec,
+                0 0 5px #0095ec,
+                0 0 10px #0095ec,
+                0 0 15px #0095ec,
+                0 0 20px #0095ec,
+                0 0 25px #0095ec,
+                0 0 30px #0095ec;;
+  }
+}

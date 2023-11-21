@@ -1,9 +1,9 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
-import StringsTheory  from './projects/StringsTheory.jsx';
-import Quickstarter from './projects/Quickstarter.jsx';
-import Osiris from './projects/Osiris.jsx';
-import Ecommerce from './projects/Ecommerce.jsx';
-import SalesProbabilities from './projects/SalesProbabilities.jsx';
+import StringsTheory  from './projects/Strings/StringsTheory.jsx';
+import Quickstarter from './projects/Quickstarter/Quickstarter.jsx';
+import Osiris from './projects/Osiris/Osiris.jsx';
+import Ecommerce from './projects/Ecom/Ecommerce.jsx';
+import SalesProbabilities from './projects/Probabilities/SalesProbabilities.jsx';
 import Home from './Home.jsx'
 import { AnimatePresence } from "framer-motion"
 

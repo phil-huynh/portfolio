@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom"
 import { Grid } from "@mui/material"
 import { motion } from "framer-motion"
-import { useStore } from "../Store"
-import Photo from "../Photo"
+import { useStore } from "../../Store"
+import Photo from "../../Photo"
 
 export default function Ecommerce() {
 

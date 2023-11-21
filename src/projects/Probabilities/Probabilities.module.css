@@ -1,0 +1,10 @@
+.wrapper {
+  position: absolute;
+  top:0;
+  left:0;
+  height: 100vh;
+  width: 100vw;
+  /* background-image: url("https://media1.giphy.com/media/l5JbspfwZ0yjHjlJ0K/giphy.gif"); */
+  background-size: cover;
+  background-position: center;
+}

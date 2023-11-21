@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-
+import styles from "./Probabilities.module.css"
 
 export default function SalesProbabilities() {
 
@@ -14,8 +14,7 @@ export default function SalesProbabilities() {
   }
 
   return (
-    <div className="sales-probs-wrapper">
-    <div className="sales-probs-overlay"></div>
+    <div className={styles.wrapper}>
       <div className="contents">
         <div style={{ "display": "flex", "alignItems": "center", "flexDirection": "column"}}>
           <div className="glass" style={headerStyle}>

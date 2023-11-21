@@ -1,13 +1,14 @@
-import BashIcon from "../tech_icons/BashIcon"
-import PythonIcon from "../tech_icons/PythonIcon"
-import DockerIcon from "../tech_icons/DockerIcon"
-import RabbitMQIcon from "../tech_icons/RabbitMQIcon"
-import ViteIcon from "../tech_icons/ViteIcon"
-import DjangoIcon from "../tech_icons/DjangoIcon"
+import BashIcon from "../../tech_icons/BashIcon"
+import PythonIcon from "../../tech_icons/PythonIcon"
+import DockerIcon from "../../tech_icons/DockerIcon"
+import RabbitMQIcon from "../../tech_icons/RabbitMQIcon"
+import ViteIcon from "../../tech_icons/ViteIcon"
+import DjangoIcon from "../../tech_icons/DjangoIcon"
 import { useNavigate } from "react-router-dom"
 import { motion } from "framer-motion"
-import { useStore } from "../Store"
-import Photo from "../Photo"
+import { useStore } from "../../Store"
+import Photo from "../../Photo"
+import styles from "./Quickstarter.module.css"
 
 export default function Quickstarter() {
 
@@ -61,14 +62,13 @@ export default function Quickstarter() {
 
   return (
     <motion.div
-      className="quickstarter-wrapper"
+      className={styles.wrapper}
       initial={{ opacity: .2 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: .2 }}
       transition={{ duration: 1 }}
     >
-      <div className="quickstarter-overlay"></div>
-      <div className="colorfilter"></div>
+      <div className={styles.colorfilter}></div>
         <div className="glass" style={{...headerStyle, "position": "fixed", "zIndex": "11"}}>
           <h2 style={{"cursor": 'pointer'}} onClick={()=>navigate('/')}>Home</h2>
         </div>
