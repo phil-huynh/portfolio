@@ -4,7 +4,7 @@ import Quickstarter from './projects/Quickstarter/Quickstarter.jsx';
 import Osiris from './projects/Osiris/Osiris.jsx';
 import Ecommerce from './projects/Ecom/Ecommerce.jsx';
 import SalesProbabilities from './projects/Probabilities/SalesProbabilities.jsx';
-import Home from './home/Home.jsx'
+import Home from './Home/Home.jsx'
 import { AnimatePresence } from "framer-motion"
 
 

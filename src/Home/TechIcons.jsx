@@ -147,7 +147,7 @@ export default function TechIcons() {
           <AWSLogo width={"7rem"}/>
           <AmplifyIcon width={"2.2rem"}/>
           <EC2Icon width={"2.2rem"}/>
-          <Route53Icon width={"2.3rem"}/>
+          <Route53Icon width={"2.4rem"}/>
           <CloudFormationIcon width={"2.3rem"}/>
           <LambdaIcon width={"2.3rem"}/>
         </div>
