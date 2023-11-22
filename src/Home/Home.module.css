@@ -1,5 +1,5 @@
 .wrapper {
-  animation: scroll 180s linear infinite;
+  animation: scroll 500s linear infinite;
   background: var(--bg-home);
   background-attachment: fixed;
   color: #eee;
@@ -63,7 +63,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
+  width: 95%;
   z-index: 2;
   opacity: 0;
 }
@@ -120,7 +120,7 @@
 .toolBox {
   width: 100%;
   margin-top: 1.5rem;
-  padding-inline: .2rem;
+  padding-inline: .6rem;
   font-size: 1rem;
 }
 
@@ -139,7 +139,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
   margin-top: 2rem;
 }
 
@@ -148,6 +148,7 @@
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
+  box-shadow: 15px 15px 15px #1E1E1E;
   z-index: 1;
 }
 
@@ -157,9 +158,9 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 25%;
-  font-size: 1rem;
-  margin-top: .5rem;
+  height: 20%;
+  font-size: 1.3rem;
+  margin-top: 1rem;
   cursor: pointer;
 }
 
@@ -169,6 +170,7 @@
   0 0 0.5rem white,
   0 0 0.2rem white,
   0 0 1.7rem white,
+  15px 15px 15px #1E1E1E,
   inset 0 0 2rem white;
 }
 
@@ -188,7 +190,7 @@
 .skillGroupCard {
   width: 88%;
   margin-inline: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.6rem;
   padding-top: .2rem;
   padding-bottom: .8rem;
   padding-inline: 1.2rem;
@@ -233,11 +235,13 @@
   align-items: center;
   margin-top: 1rem;
   cursor: pointer;
+  border-radius: 7px;
+  box-shadow: 15px 15px 15px #1E1E1E;
 }
 
 .projectMenuCard::after {
   content: '';
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100vw;

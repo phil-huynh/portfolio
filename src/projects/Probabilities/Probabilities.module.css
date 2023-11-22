@@ -7,4 +7,32 @@
   /* background-image: url("https://media1.giphy.com/media/l5JbspfwZ0yjHjlJ0K/giphy.gif"); */
   background-size: cover;
   background-position: center;
+  color: black
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.homeLink {
+  cursor: pointer;
+}
+
+.homeLink,
+.title {
+  height: 5rem;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+
+.salesGridSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

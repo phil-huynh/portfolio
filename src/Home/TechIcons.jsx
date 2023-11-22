@@ -45,7 +45,7 @@ import CloudFormationIcon from '../tech_icons/CloudFormationIcon'
 import LambdaIcon from '../tech_icons/LambdaIcon'
 import RabbitMQIcon from '../tech_icons/RabbitMQIcon'
 
-import { useAnimate, usePresence} from "framer-motion"
+import { useAnimate, usePresence, stagger} from "framer-motion"
 
 import { useStore } from '../Store'
 import { useEffect } from 'react'
@@ -57,7 +57,7 @@ export default function TechIcons() {
   const [ scope, animate ] = useAnimate()
   const [ isPresent, safeToRemove ] = usePresence()
 
-  const skillsTransition = firstTime ? { duration: 1.7, delay: 2.3, type: "spring", bounce: .5 } : { duration: 1.7, type: "spring", bounce: .5}
+  const skillsTransition = firstTime ? { duration: 1.6, delay: stagger(.25, {startDelay: 2.3}), type: "spring", bounce: .5 } : { duration: 1.6, delay: stagger(.25), type: "spring", bounce: .5}
 
   const rotateIn = async () => {
     await animate('section', {rotateX: [270, 0]}, skillsTransition)
@@ -91,20 +91,20 @@ export default function TechIcons() {
       <section className={`glass ${styles.skillGroupCard}`} >
         <h3 className={styles.skillGroupHeader}>Front End Development</h3>
         <div className={styles.skillsIconGroup}>
-          <HTMLLogo width={"3rem"}/>
-          <CSSLogo width={"3rem"}/>
+          <HTMLLogo width={"2.5rem"}/>
+          <CSSLogo width={"2.5rem"}/>
           <MarkdownIcon width={"2.3rem"}/>
           <JQueryIcon width={"3rem"}/>
-          <ReactIcon width={"2.5rem"}/>
-          <ReduxIcon width={"2.5rem"}/>
-          <NextJSIcon width={"5rem"}/>
-          <SassIcon width={"3rem"}/>
-          <BootstrapIcon width={"3rem"}/>
-          <BulmaIcon width={"3rem"}/>
-          <MaterialUIIcon width={"3rem"}/>
-          <FramerMotionIcon width={"2.2rem"}/>
+          <ReactIcon width={"2.2rem"}/>
+          <ReduxIcon width={"2.2rem"}/>
+          <NextJSIcon width={"4rem"}/>
+          <SassIcon width={"2.5rem"}/>
+          <BootstrapIcon width={"2.5rem"}/>
+          <BulmaIcon width={"2.5rem"}/>
+          <MaterialUIIcon width={"2.5rem"}/>
+          <FramerMotionIcon width={"2rem"}/>
           <ViteIcon width={"2rem"}/>
-          <FigmaIcon width={"2.5rem"}/>
+          <FigmaIcon width={"2.2rem"}/>
         </div>
       </section>
 
