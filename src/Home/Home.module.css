@@ -1,0 +1,267 @@
+.wrapper {
+  animation: scroll 180s linear infinite;
+  background: var(--bg-home);
+  background-attachment: fixed;
+  color: #eee;
+  height: 100vh;
+  width: 100vw;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  overflow: hidden;
+  color: white;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--bg-home-gradient);
+	background-size: 400% 400%;
+  opacity: .2;
+	animation: gradient 15s ease infinite;
+  box-shadow: 5;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6rem;
+}
+
+
+.greeting {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90vh;
+  width: 100vw;
+  opacity: .8;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+
+.homeGridContainer {
+  height: 100%;
+}
+
+
+.homeGridSection {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+
+.introContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  z-index: 2;
+  opacity: 0;
+}
+
+.topCard
+.infoGridContainer {
+  width: 100%;
+}
+
+.infoGridSection {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.infoBox {
+  height: 100%;
+  margin: 2rem;
+}
+
+.headShot {
+  width: 95%;
+  aspect-ratio: 1.17;
+  overflow: hidden;
+  background-image: url(../assets/info/headshot.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 25px;
+  margin: 3rem 2rem;
+}
+
+.label,
+.name {
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-end;
+  margin: 0;
+}
+
+.name {
+  font-size: 2.3rem;
+}
+
+.email {
+  color: white;
+  text-align: left;
+}
+
+.linksContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.toolBox {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding-inline: .2rem;
+  font-size: 1rem;
+}
+
+.tools {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1.3rem;
+  padding-bottom: 1rem;
+}
+
+
+.buttonContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+
+.optionGlass {
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  z-index: 1;
+}
+
+.menuItem,
+.selected {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 25%;
+  font-size: 1rem;
+  margin-top: .5rem;
+  cursor: pointer;
+}
+
+.selected {
+  box-shadow: 0 0 .2rem #fff,
+  0 0 .2rem #fff,
+  0 0 0.5rem white,
+  0 0 0.2rem white,
+  0 0 1.7rem white,
+  inset 0 0 2rem white;
+}
+
+
+.skillsContainer {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skillGroupCard {
+  width: 88%;
+  margin-inline: 1rem;
+  margin-bottom: 1rem;
+  padding-top: .2rem;
+  padding-bottom: .8rem;
+  padding-inline: 1.2rem;
+}
+
+.skillGroupHeader {
+  text-align: left;
+  text-decoration: underline;
+  margin-bottom: .3rem;
+}
+
+.skillsIconGroup,
+.skillsGroupSpread {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.skillsGroupSpread {
+  justify-content: space-between;
+}
+
+
+.projectMenuContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.projectMenuCard {
+  width: 70%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+
+.bioContainer {
+  width: 95%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@keyframes scroll {
+  100% {
+    background-position: 0px -400%;
+  }
+}
+
+/* Fallback if the operatring system prefers reduced motion*/
+@media (prefers-reduced-motion) {
+  .wrapper {
+    animation: scroll 800s linear infinite;
+  }
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

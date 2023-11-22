@@ -1,10 +1,11 @@
-import { useStore } from "./Store"
+import { useStore } from "../Store"
 import { useNavigate } from "react-router-dom";
 import { useAnimate, usePresence } from "framer-motion";
 import { useEffect } from "react";
+import styles from "./Home.module.css"
 
 export default function ProjectsMenu() {
-  const { firstTime, setFirstTime, locate, locate2, locate3 } = useStore()
+  const { firstTime, setFirstTime } = useStore()
   const navigate = useNavigate()
 
   const [scope, animate] = useAnimate()
@@ -13,27 +14,6 @@ export default function ProjectsMenu() {
   const changePage = (path) => {
     firstTime && setFirstTime(false)
     navigate(path)
-  }
-
-  // const skillsTransition = firstTime ? { duration: 1, delay: 2.3 } : { duration: 1 }
-
-  const containerStyle ={
-    width: "100%",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-between",
-    alignItems: "center"
-  }
-
-  const style = {
-    "cursor": "pointer",
-    width: "70%",
-    height: "20%",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: "1rem",
-    // marginBottom: "1rem",
   }
 
   const rotateIn = async () => {
@@ -50,38 +30,33 @@ export default function ProjectsMenu() {
   }, [isPresent])
 
   return (
-    <div style={{...containerStyle}} ref={scope}>
+    <div className={styles.projectMenuContainer} ref={scope}>
       <section
-        className="glass"
-        style={style}
+        className={`glass ${styles.projectMenuCard}`}
         onClick={()=>changePage("strings-theory")}
       >
         <h2 >Strings Theory</h2>
       </section>
       <section
-        className="glass"
-        style={style}
+        className={`glass ${styles.projectMenuCard}`}
         onClick={()=>changePage("quickstarter")}
       >
         <h2>Quickstarter</h2>
       </section>
       <section
-        className="glass"
-        style={style}
+        className={`glass ${styles.projectMenuCard}`}
         onClick={()=>changePage("sales-probabilities")}
       >
         <h2>Sales Probabilites</h2>
       </section>
       <section
-        className="glass"
-        style={style}
+        className={`glass ${styles.projectMenuCard}`}
         onClick={()=>changePage("osiris")}
       >
         <h2>Osiris</h2>
       </section>
       <section
-        className="glass"
-        style={style}
+        className={`glass ${styles.projectMenuCard}`}
         onClick={()=>changePage("ecommerce")}
       >
         <h2>E-Commerce</h2>

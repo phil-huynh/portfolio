@@ -1,8 +1,12 @@
 :root {
   --bg-home:  url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"),
   #111111;
+  --bg-home-gradient: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 
-  --bg-gradient: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  --bg-strings: url("https://i.redd.it/hhix886tzsez.gif");
+  --bg-quickstarter: url("https://64.media.tumblr.com/9d6d76c6f82b63ed23cb5972b18119c4/tumblr_poqvbmnJWq1rpooub_400.gifv");
+
+
   font-family: 'Roboto';
 
   color-scheme: light dark;
@@ -16,10 +20,12 @@
   -webkit-text-size-adjust: 100%;
 }
 
+
 #root {
   margin: 0 auto;
   text-align: center;
 }
+
 
 body {
   background: white;
@@ -28,85 +34,28 @@ body {
   min-height: 100vh;
 }
 
+
 a {
   text-decoration: none;
 }
 
-.wrapper {
-  animation: scroll 180s linear infinite;
-  background: var(--bg-home);
-  background-attachment: fixed;
-  color: #eee;
+
+.contents {
+  position: relative;
+  overflow-y: scroll;
   height: 100vh;
-  width: 100vw;
-  perspective: 1000px;
-  perspective-origin: 50% 50%;
-  overflow: hidden;
-}
-
-@keyframes scroll {
-  100% {
-    background-position: 0px -400%;
-  }
-}
-
-/* Fallback if the operatring system prefers reduced motion*/
-@media (prefers-reduced-motion) {
-  .wrapper {
-    animation: scroll 800s linear infinite;
-  }
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right:0;
-  bottom: 0;
-  background: var(--bg-gradient);
-	background-size: 400% 400%;
-  opacity: .2;
-	animation: gradient 15s ease infinite;
-  box-shadow: 5;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 6rem;
-}
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
-.greeting {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 80vh;
-  width: 100vw;
-  opacity: .8;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* font-size: 9rem; */
-  z-index: 2;
+  z-index: 10;
 }
 
 
-.intro-container {
-  opacity: 0;
+.text-shadow {
+  text-shadow: 2px 2px 2px black;
+}
+
+
+.svg-shadow {
+  position: relative;
+  filter: drop-shadow(3px 3px 1px rgb(0 0 0 / 0.9));
 }
 
 
@@ -118,6 +67,7 @@ a {
   backdrop-filter: blur(10px);
   z-index: 1;
 }
+
 
 .glass2 {
   border-radius: 20px;
@@ -142,6 +92,7 @@ a {
   z-index: 1;
 }
 
+
 .glass4 {
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.2);
@@ -150,28 +101,3 @@ a {
   backdrop-filter: blur(4px) hue-rotate(195deg);
   z-index: 1;
 }
-
-
-
-.text-shadow {
-  text-shadow: 2px 2px 2px black;
-}
-
-.svg-shadow {
-  position: relative;
-  filter: drop-shadow(3px 3px 1px rgb(0 0 0 / 0.9));
-  /* border: 1px solid red */
-}
-
-
-.contents {
-  position: relative;
-  overflow-y: scroll;
-  height: 100vh;
-  z-index: 10;
-}
-
-
-
-
-

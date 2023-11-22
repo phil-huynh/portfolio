@@ -1,27 +1,21 @@
-import TechIcons from "./TechIcons"
 import IntroAndContact from "./IntroAndContact"
 import { Grid } from "@mui/material"
-import { useStore } from "./Store"
-import { useNavigate } from "react-router-dom";
-import { AnimatePresence, motion, usePresence, useAnimate } from "framer-motion"
+import { useStore } from "../Store"
+import { usePresence, useAnimate } from "framer-motion"
 import { useEffect } from "react";
 import Options from "./Options"
-
+import styles from "./Home.module.css"
 
 
 function Home() {
 
-  const { firstTime, setFirstTime, isXL, isLG, isMD, isSM, isXS, selection, locate, locate2, locate3 } = useStore()
-  const navigate = useNavigate()
+  const { firstTime, setFirstTime, isXL, isLG, isMD, isSM, isXS, selection } = useStore()
+
 
   const [isPresent, safeToRemove] = usePresence()
   const [page, animatePage] = useAnimate()
   const [greeting, animateGreeting] = useAnimate()
 
-  const changePage = (path) => {
-    firstTime && setFirstTime(false)
-    navigate(path)
-  }
 
   const getGreetingSize = () => {
     if (isXL) { return "14rem" }
@@ -55,39 +49,27 @@ function Home() {
 
   return (
     <div
-      className="wrapper"
+      className={styles.wrapper}
       key={'home'}
       ref={page}
-      // initial={!firstTime ? { opacity: .3 } : 0}
-      // animate={{opacity: 1}}
-      // exit={{ opacity: .1 }}
-      // transition={{ duration: 1 }}
     >
       <div
-        className="overlay"
+        className={styles.overlay}
       />
-      { firstTime ? <h1 className="greeting" ref={greeting}> Greetings! </h1> :null }
+      { firstTime ? <h1 className={styles.greeting} ref={greeting}> Greetings! </h1> :null }
       <div className="contents">
-        <Grid container style={{height:"100%"}}>
+        <Grid container className={styles.homeGridContainer}>
           <Grid
             item
             xs={12} sm={12} md={6} lg={5.5} xl={5}
-            sx={{
-              "display": "flex",
-              "justifyContent": "center",
-              padding: "1.5rem"
-            }}
+            className={styles.homeGridSection}
           >
             <IntroAndContact/>
           </Grid>
           <Grid
             item
             xs={12} sm={12} md={6} lg={6.5} xl={7}
-            sx={{
-              "display": "flex",
-              "justifyContent": "center",
-              padding: "1.5rem"
-            }}
+            className={styles.homeGridSection}
           >
             <Options/>
           </Grid>

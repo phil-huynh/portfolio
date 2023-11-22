@@ -2,7 +2,7 @@
   position: absolute;
   top:0;
   left:0;
-  background-image: url("https://64.media.tumblr.com/9d6d76c6f82b63ed23cb5972b18119c4/tumblr_poqvbmnJWq1rpooub_400.gifv");
+  background-image: var(--bg-quickstarter);
   background-size: cover;
   background-position: center;
   height: 100vh;

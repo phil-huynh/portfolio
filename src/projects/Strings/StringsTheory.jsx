@@ -14,7 +14,7 @@ import { useEffect } from "react"
 
 export default function StringsTheory() {
 
-  const {stringsPhotos: photos, locate, locate2, locate3} = useStore()
+  const { stringsPhotos: photos } = useStore()
   const [isPresent, safeToRemove] = usePresence()
   const [page, animate] = useAnimate()
 

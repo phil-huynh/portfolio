@@ -1,4 +1,4 @@
-import { useStore } from "./Store";
+import { useStore } from "../Store";
 import TechIcons from "./TechIcons";
 import ProjectsMenu from "./ProjectsMenu";
 import Bio from "./Bio";

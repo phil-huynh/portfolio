@@ -2,7 +2,7 @@
   position: absolute;
   top:0;
   left:0;
-  background-image:  url("https://i.redd.it/hhix886tzsez.gif");
+  background-image: var(--bg-strings);
   background-size: cover;
   background-position: center;
   height: 100vh;
