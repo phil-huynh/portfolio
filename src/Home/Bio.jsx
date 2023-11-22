@@ -24,11 +24,12 @@ export default function Bio() {
 
   return (
     <div ref={scope} className={`glass ${styles.bioContainer}`}>
+      <h3>Download my resume</h3>
       <a href={resumePDF} download="Phil_Huynh_Resume5">
-        <button> Download my Resume as pdf </button>
+        <button className={styles.resumeDownloadButton}>  .pdf </button>
       </a>
       <a href={resumeDOCX} download="Phil_Huynh_Resume5">
-        <button> Download my Resume as docx </button>
+        <button className={styles.resumeDownloadButton}> .docx </button>
       </a>
       <ul style={{textAlign: "left"}}>
         <li className={styles.bulletPoint}>

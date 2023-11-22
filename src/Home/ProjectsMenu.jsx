@@ -43,8 +43,13 @@ export default function ProjectsMenu() {
               className={`glass ${styles.projectMenuCard}`}
               onClick={()=>changePage(project.path)}
             >
-              <h2 >{project.name}</h2>
             </section>
+            <h2
+              className={styles.projectName}
+              onClick={()=>changePage(project.path)}
+            >
+              {project.name}
+            </h2>
           </Grid>
         ))}
       </Grid>

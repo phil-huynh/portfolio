@@ -42,6 +42,18 @@ import startProject from "./assets/quickstarter/startProject.png"
 import viteSetup from "./assets/quickstarter/viteSetup.png"
 import volumeAndPort from "./assets/quickstarter/volumeAndPort.png"
 
+
+import salesCard from "./assets/sales/salesCard.png"
+import tableDarkFull from "./assets/sales/tableDarkFull.png"
+import tableLightFull from "./assets/sales/tableLightFull.png"
+import chartsDarkFull from "./assets/sales/chartsDarkFull.png"
+import chartsLightFull from "./assets/sales/chartsLightFull.png"
+import fullMobileLight from "./assets/sales/fullMobileLight.png"
+import fullMobileDark from "./assets/sales/fullMobileDark.png"
+import noHistory from "./assets/sales/noHistory.png"
+import noDecreasingFactors from "./assets/sales/noDecreasingFactors.png"
+
+
 import osirisCardImage from "./assets/osiris/osirisCardImage.png"
 import ecomCardImage from "./assets/e_commerce/ecomCardImage.png"
 
@@ -68,7 +80,7 @@ export default function ContextProvider ({ children }) {
 const projectsList = [
   { name: "Strings Theory", image: twoChordsMapScales, aspect: "1.69", path: "strings-theory" },
   { name: "Quickstarter", image: enterQueues, aspect: "1.56", path: "quickstarter" },
-  { name: "Sales Probabilities", image: "", aspect: "", path: "sales-probabilities" },
+  { name: "Sales Probabilities", image: salesCard, aspect: "1.57", path: "sales-probabilities" },
   { name: "Osiris", image: osirisCardImage, aspect: "1.63", path: "osiris" },
   { name: "ecomm", image: ecomCardImage, aspect: "1.68", path: "ecommerce" },
 ]
@@ -245,6 +257,41 @@ const quickstarterPhotos = {
 }
 
 
+const salesPhotos = {
+  tableDarkFull: {
+    image: tableDarkFull,
+    aspect: "1.9"
+  },
+  tableLightFull: {
+    image: tableLightFull,
+    aspect: "1.9"
+  },
+  chartsDarkFull: {
+    image: chartsDarkFull,
+    aspect: "1.9"
+  },
+  chartsLightFull: {
+    image: chartsLightFull,
+    aspect: "1.9"
+  },
+  fullMobileLight: {
+    image: fullMobileLight,
+    aspect: ".28"
+  },
+  fullMobileDark: {
+    image: fullMobileDark,
+    aspect: ".28"
+  },
+  noHistory: {
+    image: noHistory,
+    aspect: ".7"
+  },
+  noDecreasingFactors: {
+    image: noDecreasingFactors,
+    aspect: ".7"
+  },
+}
+
 const eCommImages = {
   overview: [
     "https://media.giphy.com/media/ovB7jDDERqLsZMzp7k/giphy.gif",
@@ -310,6 +357,7 @@ const osirisImages = {
     eCommImages: eCommImages,
     osirisImages: osirisImages,
     quickstarterPhotos: quickstarterPhotos,
+    salesPhotos: salesPhotos,
     selection: selection,
     projectsList: projectsList,
     setSelection: setSelection,
