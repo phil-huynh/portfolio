@@ -55,6 +55,7 @@
   display: flex;
   justify-content: center;
   padding: 1.5rem;
+  position: relative;
 }
 
 
@@ -180,6 +181,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  z-index: 10;
 }
 
 .skillGroupCard {
@@ -217,6 +220,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 11;
 }
 
 .projectMenuCard {
@@ -237,8 +242,34 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  padding: 1.5rem;
+  z-index: 12;
 }
 
+
+.recommendationsContainer {
+  width: 95%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 1.5rem;
+  font-size: 1.1rem;
+  z-index: 12;
+}
+
+hr {
+  color: white;
+  width: 100%;
+}
+
+.quoteSection {
+  margin-top: .75rem;
+  margin-bottom: .75rem;
+}
 
 @keyframes scroll {
   100% {

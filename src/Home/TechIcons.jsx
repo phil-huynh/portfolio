@@ -65,6 +65,7 @@ export default function TechIcons() {
 
   const rotateOut = async () => {
     await animate('section', {rotateX: [0, 270]})
+    safeToRemove()
   }
 
   useEffect(() => {

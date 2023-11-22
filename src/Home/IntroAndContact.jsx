@@ -92,6 +92,12 @@ export default function IntroAndContact() {
         >
           <h2>Projects</h2>
         </div>
+        <div
+          className={`${styles.optionGlass} ${selection === "recommendations" ? styles.selected : styles.menuItem}`}
+          onClick={()=>select('recommendations')}
+        >
+          <h2>Recommendations</h2>
+        </div>
       </div>
     </section>
   )

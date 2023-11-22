@@ -23,6 +23,9 @@ export default function Bio() {
   return (
     <div ref={scope} className={`glass ${styles.bioContainer}`}>
       <h1>hello world</h1>
+
+
+
     </div>
   )
 }
