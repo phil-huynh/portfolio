@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useAnimate, usePresence } from "framer-motion";
 import { useEffect } from "react";
 import styles from "./Home.module.css"
+import { Grid } from "@mui/material";
 
 export default function ProjectsMenu() {
   const { firstTime, setFirstTime } = useStore()
@@ -10,6 +11,8 @@ export default function ProjectsMenu() {
 
   const [scope, animate] = useAnimate()
   const [isPresent, safeToRemove] = usePresence()
+
+  const { projectsList:projects } = useStore()
 
   const changePage = (path) => {
     firstTime && setFirstTime(false)
@@ -30,37 +33,22 @@ export default function ProjectsMenu() {
   }, [isPresent])
 
   return (
+
     <div className={styles.projectMenuContainer} ref={scope}>
-      <section
-        className={`glass ${styles.projectMenuCard}`}
-        onClick={()=>changePage("strings-theory")}
-      >
-        <h2 >Strings Theory</h2>
-      </section>
-      <section
-        className={`glass ${styles.projectMenuCard}`}
-        onClick={()=>changePage("quickstarter")}
-      >
-        <h2>Quickstarter</h2>
-      </section>
-      <section
-        className={`glass ${styles.projectMenuCard}`}
-        onClick={()=>changePage("sales-probabilities")}
-      >
-        <h2>Sales Probabilites</h2>
-      </section>
-      <section
-        className={`glass ${styles.projectMenuCard}`}
-        onClick={()=>changePage("osiris")}
-      >
-        <h2>Osiris</h2>
-      </section>
-      <section
-        className={`glass ${styles.projectMenuCard}`}
-        onClick={()=>changePage("ecommerce")}
-      >
-        <h2>E-Commerce</h2>
-      </section>
+      <Grid container>
+        {projects.map(project => (
+          <Grid item className={styles.projectGridSection} key={project.name} xs={12} sm={12} md={12} lg={6} xl={6}>
+            <section
+              style={{backgroundImage: `url(${project.image})`, backgroundPosition: "center", backgroundSize: "cover", overflow: "hidden"}}
+              className={`glass ${styles.projectMenuCard}`}
+              onClick={()=>changePage(project.path)}
+            >
+              <h2 >{project.name}</h2>
+            </section>
+          </Grid>
+        ))}
+      </Grid>
+
     </div>
   )
 }

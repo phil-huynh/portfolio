@@ -42,6 +42,9 @@ import startProject from "./assets/quickstarter/startProject.png"
 import viteSetup from "./assets/quickstarter/viteSetup.png"
 import volumeAndPort from "./assets/quickstarter/volumeAndPort.png"
 
+import osirisCardImage from "./assets/osiris/osirisCardImage.png"
+import ecomCardImage from "./assets/e_commerce/ecomCardImage.png"
+
 import { useState, useContext, createContext } from 'react'
 import { useTheme } from '@mui/material/styles';
 import { useMediaQuery } from '@mui/material';
@@ -59,6 +62,19 @@ export default function ContextProvider ({ children }) {
   const isMD = useMediaQuery(theme.breakpoints.up('md'))
   const isSM = useMediaQuery(theme.breakpoints.up('sm'))
   const isXS = useMediaQuery(theme.breakpoints.up('xs'))
+
+
+
+const projectsList = [
+  { name: "Strings Theory", image: twoChordsMapScales, aspect: "1.69", path: "strings-theory" },
+  { name: "Quickstarter", image: enterQueues, aspect: "1.56", path: "quickstarter" },
+  { name: "Sales Probabilities", image: "", aspect: "", path: "sales-probabilities" },
+  { name: "Osiris", image: osirisCardImage, aspect: "1.63", path: "osiris" },
+  { name: "ecomm", image: ecomCardImage, aspect: "1.68", path: "ecommerce" },
+]
+
+
+
 
 
 const stringsPhotos = {
@@ -295,6 +311,7 @@ const osirisImages = {
     osirisImages: osirisImages,
     quickstarterPhotos: quickstarterPhotos,
     selection: selection,
+    projectsList: projectsList,
     setSelection: setSelection,
     setFirstTime: setFirstTime,
   }
