@@ -51,7 +51,7 @@ function Home() {
     await animatePage(
       page.current,
       { opacity: [1, 0] },
-      { duration: 1.5 }
+      { duration: .8 }
     )
     safeToRemove()
   }

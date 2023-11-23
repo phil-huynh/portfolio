@@ -26,7 +26,7 @@ export default function Ecommerce() {
   }
 
   const exitAnimation = async () => {
-    await animatePage(page.current, {height: 0, width: 0}, {duration: 1})
+    await animatePage(page.current, {height: 0, width: 0}, {duration: .8})
     safeToRemove()
   }
 
