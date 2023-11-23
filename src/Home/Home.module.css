@@ -35,12 +35,12 @@
   left: 0;
   height: 90vh;
   width: 100vw;
-  opacity: 0;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 2;
+  opacity: 0;
 }
 
 
@@ -63,12 +63,15 @@
   align-items: center;
   width: 95%;
   z-index: 2;
-  opacity: 0;
 }
 
 .topCard
 .infoGridContainer {
   width: 100%;
+}
+
+.topCard {
+  opacity: 0;
 }
 
 .infoGridSection {
@@ -120,6 +123,7 @@
   margin-top: 1.5rem;
   padding-inline: .6rem;
   font-size: 1rem;
+  opacity: 0;
 }
 
 .tools {
@@ -138,15 +142,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  margin-top: 2rem;
 }
 
 
 .optionGlass {
   border-radius: 20px;
+  border: none;
   background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
   box-shadow: 15px 15px 15px #1E1E1E;
+  color: white;
   z-index: 1;
 }
 
@@ -156,10 +161,11 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 20%;
+  height: 5rem;
   font-size: 1.3rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
   cursor: pointer;
+  opacity: 0;
 }
 
 .selected {
@@ -228,11 +234,11 @@
 }
 
 .projectMenuCard {
-  width: 95%;
+  width: 85%;
   position: relative;
   margin-top: 1rem;
   cursor: pointer;
-  border-radius: 7px;
+  border-radius: 15px;
   box-shadow: 15px 15px 15px #1E1E1E;
 }
 
@@ -243,11 +249,13 @@
   background-position: center;
   background-size: cover;
   overflow: hidden;
+  border-radius: 15px;
 }
 
 .menuCardOverlay {
   background-color: black;
   position: absolute;
+  border-radius: 15px;
   top: 0;
   left: 0;
   width: 100%;
@@ -270,24 +278,9 @@
 
 }
 
-/* .projectMenuCard::after {
-  content: '';
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 11;
-} */
-/*
-.projectName {
-  font-size: 2.2rem;
-} */
-
 .bioContainer {
   width: 85%;
-  height: 95%;
+  height: 93%;
   position: relative;
   padding: 1.5rem;
   z-index: 12;
@@ -311,8 +304,8 @@
 }
 
 .recommendationsContainer {
-  width: 95%;
-  height: 95%;
+  width: 85%;
+  height: 93%;
   display: flex;
   flex-direction: column;
   justify-content: center;

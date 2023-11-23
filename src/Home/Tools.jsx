@@ -9,7 +9,7 @@ import Route53Icon from "../tech_icons/Route53Icon"
 import styles from "./Home.module.css"
 
 const HomeTools = () => (
-  <div className={`glass ${styles.toolBox}`}>
+  <section className={`glass ${styles.toolBox}`}>
     <h3>This site was created with</h3>
     <div className={styles.tools}>
       <JavascriptIcon width={"2rem"}/>
@@ -21,7 +21,7 @@ const HomeTools = () => (
       <AmplifyIcon width={"2rem"} />
       <Route53Icon width={"2.2rem"} />
     </div>
-  </div>
+  </section>
 )
 
 export default HomeTools

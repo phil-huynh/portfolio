@@ -59,15 +59,15 @@ export default function TechIcons() {
 
   const skillsTransition = firstTime ?
     {
-      duration: 1.6,
-      delay: stagger(.25, {startDelay: 2.3}),
+      duration: 1,
+      delay: stagger(.2, {startDelay: 2}),
       type: "spring",
       bounce: .5
     }
     :
     {
-      duration: 1.6,
-      delay: stagger(.25),
+      duration: 1,
+      delay: stagger(.2),
       type: "spring",
       bounce: .5
     }

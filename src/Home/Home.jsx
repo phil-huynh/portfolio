@@ -29,19 +29,19 @@ function Home() {
 
   const pageEnterAnimation = async () => {
     if (firstTime) {
-      await animateOverlay(overlayRef.current, {opacity: [.1]}, {duration: 2})
-
+      animateOverlay(overlayRef.current, {opacity: [.2]}, {duration: 2})
+      await animateGreeting(greetingRef.current, {opacity: 1}, {duration: .05})
       await animateGreeting(
         greetingRef.current,
         {
           fontSize: [getGreetingSize(), 0],
           opacity: [1,0]
         },
-        { duration: 1.5, delay: 1}
+        { duration: 1, delay: 1}
       )
     } else {
-      await animateOverlay(overlayRef.current, {opacity: [.1]}, {duration: 2})
       await animatePage(page.current, {opacity: [0, 1]}, {duration: 1})
+      animateOverlay(overlayRef.current, {opacity: [.2]}, {duration: 2})
     }
   }
 
@@ -69,7 +69,12 @@ function Home() {
         className={styles.overlay}
         ref={overlayRef}
       />
-      { firstTime ? <h1 className={styles.greeting} ref={greetingRef}> Greetings! </h1> :null }
+      { firstTime ?
+        <div className={styles.greeting} ref={greetingRef}>
+          <p> Greetings! </p>
+        </div>
+        :null
+      }
       <div className="contents">
         <Grid container className={styles.homeGridContainer}>
           <Grid

@@ -2,11 +2,12 @@ import GitHubIcon from "../tech_icons/GitHubIcon"
 import GitLabIcon from "../tech_icons/GitLabIcon"
 import LinkedInIcon from "../tech_icons/LinkedInIcon"
 import Grid from '@mui/material/Grid';
-import { useAnimate, usePresence } from "framer-motion"
+import { useAnimate, usePresence, stagger } from "framer-motion"
 import { useStore }  from "../Store"
 import { useEffect } from "react";
 import styles from "./Home.module.css"
 import HomeTools from "./Tools.jsx"
+import Menu from "./Menu";
 
 export default function IntroAndContact() {
   const { firstTime, setSelection, setFirstTime, selection } = useStore()
@@ -16,16 +17,17 @@ export default function IntroAndContact() {
 
   const transition = firstTime ?
     {
-      duration: 1.2,
-      delay: 2.5,
+      duration: 1.1,
+      delay: stagger(.2, {startDelay: 2}),
       type: "spring",
-      bounce: ".22"
+      bounce: ".1"
     }
     :
     {
-      duration: 1,
+      duration: 1.1,
+      delay: stagger(.2),
       type: "spring",
-      bounce: ".22"
+      bounce: ".1"
     }
 
 
@@ -35,13 +37,25 @@ export default function IntroAndContact() {
   }
 
   const slideInAnimation = async () => {
-    await animate(scope.current, {x: 2000 }, {duration: .05})
-    await animate(scope.current, {opacity: 1}, {duration: .05})
-    await animate(scope.current, {x: [2000, 0]}, transition)
+    // await animate(scope.current, {x: 2000 }, {duration: .05})
+    // await animate(scope.current, {opacity: 1}, {duration: .05})
+    // await animate('button', {x: 2000}, {duration: .05})
+    // await animate('button', {opacity: 1}, {duration: .05})
+    await animate('section', {x: [2000, 0], opacity: [0, 1]}, transition)
+    // await animate(
+    //   'button',
+    //   {x: 0},
+    //   {
+    //     duration: 1,
+    //     delay: stagger(.2),
+    //     type: "spring",
+    //     bounce: ".22"
+    //   }
+    // )
   }
 
   const slideOutAnimation = async () => {
-    await animate(scope.current, {x: [0, 2000]}, {duration: 1.3})
+    await animate("section", {x: [0, 2000]}, {duration: .5, delay: stagger(.2),})
     safeToRemove()
   }
 
@@ -50,11 +64,11 @@ export default function IntroAndContact() {
   }, [isPresent])
 
   return (
-    <section
+    <div
       className={styles.introContainer}
       ref={scope}
     >
-      <div className={`glass ${styles.topCard}`}>
+      <section className={`glass ${styles.topCard}`}>
         <Grid container className={styles.infoGridContainer}>
           <Grid item xs={12} sm={6} md={12} lg={6} xl={6} className={styles.infoGridSection}>
               <div className={styles.headShot}/>
@@ -66,13 +80,13 @@ export default function IntroAndContact() {
               <a href="mailto:philiphuynh98@gmail.com">
                 <h4 className={`text-shadow ${styles.email}`} >philphuynh98@gmail.com</h4>
               </a>
-              <section className={styles.linksContainer}>
+              <div className={styles.linksContainer}>
                 <LinkedInIcon width={"2.5rem"}/>
                 <a href="https://github.com/phil-huynh">
                   <GitHubIcon width={"2.5rem"}/>
                 </a>
                 <GitLabIcon width={"2.5rem"}/>
-              </section>
+              </div>
               <hr/>
               <p>
               It all rolls into one
@@ -83,34 +97,11 @@ export default function IntroAndContact() {
             </div>
           </Grid>
         </Grid>
-      </div>
+      </section>
+
       <HomeTools/>
-      <div className={styles.buttonContainer}>
-        <div
-          className={`${styles.optionGlass} ${selection === "skills" ? styles.selected : styles.menuItem}`}
-          onClick={()=>select('skills')}
-        >
-          <h2>Skills</h2>
-        </div>
-        <div
-          className={`${styles.optionGlass} ${selection === "bio" ? styles.selected : styles.menuItem}`}
-          onClick={()=>select('bio')}
-        >
-          <h2>Resume & Bio</h2>
-        </div>
-        <div
-          className={`${styles.optionGlass} ${selection === "projects" ? styles.selected : styles.menuItem}`}
-          onClick={()=>select('projects')}
-        >
-          <h2>Projects</h2>
-        </div>
-        <div
-          className={`${styles.optionGlass} ${selection === "recommendations" ? styles.selected : styles.menuItem}`}
-          onClick={()=>select('recommendations')}
-        >
-          <h2>Recommendations</h2>
-        </div>
-      </div>
-    </section>
+
+      <Menu/>
+    </div>
   )
 }

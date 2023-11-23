@@ -71,6 +71,10 @@ a {
   background-color: rgba(0, 0, 0, 0.4);
   box-shadow: 15px 15px 15px #1E1E1E;
   backdrop-filter: blur(10px);
+  /* border-top: 2px rgb(123, 123, 123) solid;
+  border-left: 2px rgb(123, 123, 123) solid; */
+  /* border-bottom: 1px rgb(123, 123, 123) solid;
+  border-right: 1px rgb(123, 123, 123) solid; */
   z-index: 1;
 }
 

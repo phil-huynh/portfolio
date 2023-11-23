@@ -8,11 +8,11 @@ export default function Recommendations() {
   const [isPresent, safeToRemove] = usePresence()
 
   const rotateIn = async () => {
-    await animate(scope.current, {rotateX: [270, 0]}, {duration: 1.7,  type: "spring", bounce: .5})
+    await animate(scope.current, {rotateX: [90, 0]}, {duration: .7})
   }
 
   const rotateOut = async () => {
-    await animate(scope.current, {rotateX: [0, 270]}, {duration: 1.2,  type: "spring", bounce: .5})
+    await animate(scope.current, {rotateX: [0, 90]}, {duration: .7})
     safeToRemove()
   }
 
