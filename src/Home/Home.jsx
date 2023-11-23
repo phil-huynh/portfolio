@@ -20,17 +20,18 @@ function Home() {
 
 
   const getGreetingSize = () => {
-    if (isXL) { return "14rem" }
-    if (isLG) { return "12rem" }
-    if (isMD) { return "9rem" }
-    if (isSM) { return "7rem" }
-    if (isXS) { return "5rem" }
+    if (isXL) { return "10rem" }
+    if (isLG) { return "8rem" }
+    if (isMD) { return "6rem" }
+    if (isSM) { return "4rem" }
+    if (isXS) { return "3rem" }
   }
 
   const pageEnterAnimation = async () => {
     if (firstTime) {
       animateOverlay(overlayRef.current, {opacity: [.2]}, {duration: 2})
-      await animateGreeting(greetingRef.current, {opacity: 1}, {duration: .05})
+      await animateGreeting(greetingRef.current, {fontSize: getGreetingSize()}, {duration: .05})
+      await animateGreeting(greetingRef.current, {opacity: 1}, {duration: .05, delay: .5})
       await animateGreeting(
         greetingRef.current,
         {
@@ -39,6 +40,7 @@ function Home() {
         },
         { duration: 1, delay: 1}
       )
+      setFirstTime(false)
     } else {
       await animatePage(page.current, {opacity: [0, 1]}, {duration: 1})
       animateOverlay(overlayRef.current, {opacity: [.2]}, {duration: 2})
@@ -70,8 +72,8 @@ function Home() {
         ref={overlayRef}
       />
       { firstTime ?
-        <div className={styles.greeting} ref={greetingRef}>
-          <p> Greetings! </p>
+        <div className="greeting" ref={greetingRef}>
+          <p>Greetings!</p>
         </div>
         :null
       }

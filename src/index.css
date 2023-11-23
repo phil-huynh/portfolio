@@ -46,6 +46,19 @@ a {
   text-decoration: none;
 }
 
+.greeting {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  opacity: 0;
+}
 
 .contents {
   position: relative;
