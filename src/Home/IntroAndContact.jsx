@@ -14,7 +14,19 @@ export default function IntroAndContact() {
   const [scope, animate] = useAnimate()
   const [isPresent, safeToRemove] = usePresence()
 
-  const transition = firstTime ? { duration: 1.2, delay: 1.5, type: "spring", bounce: ".22" } : { duration: 1, type: "spring", bounce: ".22" }
+  const transition = firstTime ?
+    {
+      duration: 1.2,
+      delay: 2.5,
+      type: "spring",
+      bounce: ".22"
+    }
+    :
+    {
+      duration: 1,
+      type: "spring",
+      bounce: ".22"
+    }
 
 
   const select = (selected) => {
@@ -23,8 +35,8 @@ export default function IntroAndContact() {
   }
 
   const slideInAnimation = async () => {
-    await animate(scope.current, {x: 2000 }, {duration: .1})
-    await animate(scope.current, {opacity: 1}, {duration: .1})
+    await animate(scope.current, {x: 2000 }, {duration: .05})
+    await animate(scope.current, {opacity: 1}, {duration: .05})
     await animate(scope.current, {x: [2000, 0]}, transition)
   }
 

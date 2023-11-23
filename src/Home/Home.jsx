@@ -14,7 +14,9 @@ function Home() {
 
   const [isPresent, safeToRemove] = usePresence()
   const [page, animatePage] = useAnimate()
-  const [greeting, animateGreeting] = useAnimate()
+  const [greetingRef, animateGreeting] = useAnimate()
+  const [overlayRef, animateOverlay] = useAnimate()
+
 
 
   const getGreetingSize = () => {
@@ -27,18 +29,28 @@ function Home() {
 
   const pageEnterAnimation = async () => {
     if (firstTime) {
+      await animateOverlay(overlayRef.current, {opacity: [.1]}, {duration: 2})
+
       await animateGreeting(
-        greeting.current,
-        { fontSize: [getGreetingSize(), 0], opacity: [1,0]},
+        greetingRef.current,
+        {
+          fontSize: [getGreetingSize(), 0],
+          opacity: [1,0]
+        },
         { duration: 1.5, delay: 1}
       )
     } else {
-      await animatePage(page.current, {opacity: [0, 1]}, {duration: 1.5})
+      await animateOverlay(overlayRef.current, {opacity: [.1]}, {duration: 2})
+      await animatePage(page.current, {opacity: [0, 1]}, {duration: 1})
     }
   }
 
   const pageExitAnimation = async () => {
-    await animatePage(page.current, {opacity: [1, 0]}, {duration: 1.5})
+    await animatePage(
+      page.current,
+      { opacity: [1, 0] },
+      { duration: 1.5 }
+    )
     safeToRemove()
   }
 
@@ -55,8 +67,9 @@ function Home() {
     >
       <div
         className={styles.overlay}
+        ref={overlayRef}
       />
-      { firstTime ? <h1 className={styles.greeting} ref={greeting}> Greetings! </h1> :null }
+      { firstTime ? <h1 className={styles.greeting} ref={greetingRef}> Greetings! </h1> :null }
       <div className="contents">
         <Grid container className={styles.homeGridContainer}>
           <Grid

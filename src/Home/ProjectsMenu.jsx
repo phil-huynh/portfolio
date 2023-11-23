@@ -20,11 +20,28 @@ export default function ProjectsMenu() {
   }
 
   const rotateIn = async () => {
-    await animate('section', {rotateX: [270, 0]}, {duration: 1.7, delay: stagger(.25), type: "spring", bounce: .5})
+    await animate(
+      'section',
+      {rotateX: [270, 0]},
+      {
+        duration: 1.7,
+        delay: stagger(.25),
+        type: "spring",
+        bounce: .5
+      }
+    )
   }
 
   const rotateOut = async () => {
-    await animate('section', {rotateX: [0, 270]}, {duration: 1.2,  type: "spring", bounce: .5})
+    await animate(
+      'section',
+      {rotateX: [0, 270]},
+      {
+        duration: 1.2,
+        type: "spring",
+        bounce: .5
+      }
+    )
     safeToRemove()
   }
 
@@ -38,18 +55,26 @@ export default function ProjectsMenu() {
       <Grid container>
         {projects.map(project => (
           <Grid item className={styles.projectGridSection} key={project.name} xs={12} sm={12} md={12} lg={6} xl={6}>
-            <section
-              style={{backgroundImage: `url(${project.image})`, backgroundPosition: "center", backgroundSize: "cover", overflow: "hidden"}}
-              className={`${styles.projectMenuCard}`}
-              onClick={()=>changePage(project.path)}
-            >
+            <section className={`${styles.projectMenuCard}`}
+                onClick={()=>changePage(project.path)}>
+              <div
+                className={styles.menuCardBackGround}
+                style={{
+                  backgroundImage: `url(${project.image})`,
+                  backgroundPosition: "center",
+                  backgroundSize: "cover"
+                }}
+              />
+              <div className={styles.menuCardOverlay}></div>
+              <div className={styles.projectNameContainer}>
+                <p
+                  className={`text-shadow ${styles.projectName}`}
+                  onClick={()=>changePage(project.path)}
+                >
+                  {project.name}
+                </p>
+              </div>
             </section>
-            <h2
-              className={styles.projectName}
-              onClick={()=>changePage(project.path)}
-            >
-              {project.name}
-            </h2>
           </Grid>
         ))}
       </Grid>

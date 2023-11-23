@@ -77,219 +77,73 @@ export default function ContextProvider ({ children }) {
 
 
 
-const projectsList = [
-  { name: "Strings Theory", image: twoChordsMapScales, aspect: "1.69", path: "strings-theory" },
-  { name: "Quickstarter", image: enterQueues, aspect: "1.56", path: "quickstarter" },
-  { name: "Sales Probabilities", image: salesCard, aspect: "1.57", path: "sales-probabilities" },
-  { name: "Osiris", image: osirisCardImage, aspect: "1.63", path: "osiris" },
-  { name: "ecomm", image: ecomCardImage, aspect: "1.68", path: "ecommerce" },
-]
 
-
-
+  const projectsList = [
+    { name: "Strings Theory", image: twoChordsMapScales, aspect: "1.69", path: "strings-theory" },
+    { name: "Quickstarter", image: enterQueues, aspect: "1.56", path: "quickstarter" },
+    { name: "Sales Probabilities", image: salesCard, aspect: "1.57", path: "sales-probabilities" },
+    { name: "Osiris", image: osirisCardImage, aspect: "1.63", path: "osiris" },
+    { name: "ecomm", image: ecomCardImage, aspect: "1.68", path: "ecommerce" },
+  ]
 
 
 const stringsPhotos = {
-  alterations: {
-    image: alterations,
-    aspect: "1.69"
-  },
-  capo: {
-    image: capo,
-    aspect: "1.69"
-  },
-  chordDash: {
-    image: chordDash,
-    aspect: "1.89"
-  },
-  chord1DegsMapScales: {
-    image: chord1DegsMapScales,
-    aspect: "1.69"
-  },
-  chord2DegsMapScales: {
-    image: chord2DegsMapScales,
-    aspect: "1.69"
-  },
-  fiveStringNeck: {
-    image: fiveStringNeck,
-    aspect: "5.45"
-  },
-  focusChord1MapScales: {
-    image: focusChord1MapScales,
-    aspect: "1.69"
-  },
-  focusChord2MapScales: {
-    image: focusChord2MapScales,
-    aspect: "1.69"
-  },
-  focus1MapChords: {
-    image: focus1MapChords,
-    aspect: "1.69"
-  },
-  focus2DegsMapChords: {
-    image: focus2DegsMapChords,
-    aspect: "1.69"
-  },
-  leftyNeck: {
-    image: leftyNeck,
-    aspect: "5.45"
-  },
-  leftHanded: {
-    image: leftHanded,
-    aspect: "1.69"
-  },
-  mapScalesPage: {
-    image: mapScalesPage,
-    aspect: "1.69"
-  },
-  noteNames: {
-    image: noteNames,
-    aspect: "5.74"
-  },
-  oneChordInMapScales: {
-    image: oneChordInMapScales,
-    aspect: "1.69"
-  },
-  scalesDash: {
-    image: scalesDash,
-    aspect: "5.6"
-  },
-  scaleDegrees: {
-    image: scaleDegrees,
-    aspect: "5.74"
-  },
-  scalesMenu: {
-    image: scalesMenu,
-    aspect: ".56"
-  },
-  sectionNeck: {
-    image: sectionNeck,
-    aspect: "1.69"
-  },
-  selectedNoteNoChord: {
-    image: selectedNoteNoChord,
-    aspect: "2.43"
-  },
-  selectedNoteWithChord: {
-    image: selectedNoteWithChord,
-    aspect: "2.43"
-  },
-  selectedNoteTwoChords: {
-    image: selectedNoteTwoChords,
-    aspect: "2.43"
-  },
-  solfege: {
-    image: solfege,
-    aspect: "5.74"
-  },
-  standardNeck: {
-    image: standardNeck,
-    aspect: "5.45"
-  },
-  tonicMenu: {
-    image: tonicMenu,
-    aspect: ".29"
-  },
-  topDash: {
-    image: topDash,
-    aspect: "12.62"
-  },
-  tuningMenu: {
-    image: tuningMenu,
-    aspect: ".68"
-  },
-  twoNamesMapChords: {
-    image: twoNamesMapChords,
-    aspect: "1.69"
-  },
-  twoChordsMapScales: {
-    image: twoChordsMapScales,
-    aspect: "1.69"
-  },
-  ukeNeck: {
-    image: ukeNeck,
-    aspect: "5.45"
-  },
-  viewMenu: {
-    image: viewMenu,
-    aspect: "2.79"
-  },
-  violinNeck: {
-    image: violinNeck,
-    aspect: "5.45"
-  },
+  alterations: { image: alterations, aspect: "1.69" },
+  capo: { image: capo, aspect: "1.69" },
+  chordDash: { image: chordDash, aspect: "1.89" },
+  chord1DegsMapScales: { image: chord1DegsMapScales, aspect: "1.69" },
+  chord2DegsMapScales: { image: chord2DegsMapScales, aspect: "1.69" },
+  fiveStringNeck: { image: fiveStringNeck, aspect: "5.45" },
+  focusChord1MapScales: { image: focusChord1MapScales, aspect: "1.69" },
+  focusChord2MapScales: { image: focusChord2MapScales, aspect: "1.69" },
+  focus1MapChords: { image: focus1MapChords, aspect: "1.69" },
+  focus2DegsMapChords: { image: focus2DegsMapChords, aspect: "1.69" },
+  leftyNeck: { image: leftyNeck, aspect: "5.45" },
+  leftHanded: { image: leftHanded, aspect: "1.69" },
+  mapScalesPage: { image: mapScalesPage, aspect: "1.69" },
+  noteNames: { image: noteNames, aspect: "5.74" },
+  oneChordInMapScales: { image: oneChordInMapScales, aspect: "1.69" },
+  scalesDash: { image: scalesDash, aspect: "5.6" },
+  scaleDegrees: { image: scaleDegrees, aspect: "5.74" },
+  scalesMenu: { image: scalesMenu, aspect: ".56" },
+  sectionNeck: { image: sectionNeck, aspect: "1.69" },
+  selectedNoteNoChord: { image: selectedNoteNoChord, aspect: "2.43" },
+  selectedNoteWithChord: { image: selectedNoteWithChord, aspect: "2.43" },
+  selectedNoteTwoChords: { image: selectedNoteTwoChords, aspect: "2.43" },
+  solfege: { image: solfege, aspect: "5.74" },
+  standardNeck: { image: standardNeck, aspect: "5.45" },
+  tonicMenu: { image: tonicMenu, aspect: ".29" },
+  topDash: { image: topDash, aspect: "12.62" },
+  tuningMenu: { image: tuningMenu, aspect: ".68" },
+  twoNamesMapChords: { image: twoNamesMapChords, aspect: "1.69" },
+  twoChordsMapScales: { image: twoChordsMapScales, aspect: "1.69" },
+  ukeNeck: { image: ukeNeck, aspect: "5.45" },
+  viewMenu: { image: viewMenu, aspect: "2.79" },
+  violinNeck: { image: violinNeck, aspect: "5.45" },
 }
 
 
 const quickstarterPhotos = {
-  dupPortError: {
-    image: dupPortError,
-    aspect: "2.35"
-  },
-  enterMicros: {
-    image: enterMicros,
-    aspect: ".51"
-  },
-  enterQueues: {
-    image: enterQueues,
-    aspect: "1.56"
-  },
-  portAndPollerPrompt: {
-    image: portAndPollerPrompt,
-    aspect: "1.33"
-  },
-  portNumberError: {
-    image: portNumberError,
-    aspect: "2.13"
-  },
-  startProject: {
-    image: startProject,
-    aspect: "10"
-  },
-  viteSetup: {
-    image: viteSetup,
-    aspect: "2.64"
-  },
-  volumeAndPort: {
-    image: volumeAndPort,
-    aspect: "4.78"
-  },
+  dupPortError: { image: dupPortError, aspect: "2.35" },
+  enterMicros: { image: enterMicros, aspect: ".51" },
+  enterQueues: { image: enterQueues, aspect: "1.56" },
+  portAndPollerPrompt: { image: portAndPollerPrompt, aspect: "1.33" },
+  portNumberError: { image: portNumberError, aspect: "2.13" },
+  startProject: { image: startProject, aspect: "10" },
+  viteSetup: { image: viteSetup, aspect: "2.64" },
+  volumeAndPort: { image: volumeAndPort, aspect: "4.78" },
 }
 
 
 const salesPhotos = {
-  tableDarkFull: {
-    image: tableDarkFull,
-    aspect: "1.9"
-  },
-  tableLightFull: {
-    image: tableLightFull,
-    aspect: "1.9"
-  },
-  chartsDarkFull: {
-    image: chartsDarkFull,
-    aspect: "1.9"
-  },
-  chartsLightFull: {
-    image: chartsLightFull,
-    aspect: "1.9"
-  },
-  fullMobileLight: {
-    image: fullMobileLight,
-    aspect: ".28"
-  },
-  fullMobileDark: {
-    image: fullMobileDark,
-    aspect: ".28"
-  },
-  noHistory: {
-    image: noHistory,
-    aspect: ".7"
-  },
-  noDecreasingFactors: {
-    image: noDecreasingFactors,
-    aspect: ".7"
-  },
+  tableDarkFull: { image: tableDarkFull, aspect: "1.9" },
+  tableLightFull: { image: tableLightFull, aspect: "1.9" },
+  chartsDarkFull: { image: chartsDarkFull, aspect: "1.9" },
+  chartsLightFull: { image: chartsLightFull, aspect: "1.9" },
+  fullMobileLight: { image: fullMobileLight, aspect: ".28" },
+  fullMobileDark: { image: fullMobileDark, aspect: ".28" },
+  noHistory: { image: noHistory, aspect: ".7" },
+  noDecreasingFactors: { image: noDecreasingFactors, aspect: ".7" },
 }
 
 const eCommImages = {

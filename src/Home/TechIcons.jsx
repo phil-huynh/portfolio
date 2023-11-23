@@ -57,9 +57,26 @@ export default function TechIcons() {
   const [ scope, animate ] = useAnimate()
   const [ isPresent, safeToRemove ] = usePresence()
 
-  const skillsTransition = firstTime ? { duration: 1.6, delay: stagger(.25, {startDelay: 2.3}), type: "spring", bounce: .5 } : { duration: 1.6, delay: stagger(.25), type: "spring", bounce: .5}
+  const skillsTransition = firstTime ?
+    {
+      duration: 1.6,
+      delay: stagger(.25, {startDelay: 2.3}),
+      type: "spring",
+      bounce: .5
+    }
+    :
+    {
+      duration: 1.6,
+      delay: stagger(.25),
+      type: "spring",
+      bounce: .5
+    }
+
+
 
   const rotateIn = async () => {
+    await animate('section', {rotateX: 270}, {duration: .05})
+    await animate(scope.current, {opacity: 1}, {duration: .05})
     await animate('section', {rotateX: [270, 0]}, skillsTransition)
   }
 
@@ -111,12 +128,12 @@ export default function TechIcons() {
       <section className={`glass ${styles.skillGroupCard}`} >
         <h3 className={styles.skillGroupHeader}>Back End Development</h3>
         <div className={styles.skillsGroupSpread}>
-          <NodeIcon width={"6rem"}/>
-          <ExpressIcon width={"5rem"}/>
+          <NodeIcon width={"5.5rem"}/>
+          <ExpressIcon width={"5.5rem"}/>
           <NpmIcon width={"3rem"}/>
           <DjangoIcon width={"4rem"}/>
-          <FastAPIIcon width={"6rem"}/>
-          <FlaskIcon width={"5.2rem"}/>
+          <FastAPIIcon width={"5rem"}/>
+          <FlaskIcon width={"4.5rem"}/>
           <RabbitMQIcon width={"6rem"}/>
         </div>
       </section>

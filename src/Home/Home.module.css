@@ -18,16 +18,14 @@
   left: 0;
   background: var(--bg-home-gradient);
 	background-size: 400% 400%;
-  opacity: .2;
+  opacity: 0;
 	animation: gradient 15s ease infinite;
-  box-shadow: 5;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 6rem;
 }
 
 
@@ -37,7 +35,7 @@
   left: 0;
   height: 90vh;
   width: 100vw;
-  opacity: .8;
+  opacity: 0;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -166,12 +164,12 @@
 
 .selected {
   box-shadow: 0 0 .2rem #fff,
-  0 0 .2rem #fff,
-  0 0 0.5rem white,
-  0 0 0.2rem white,
-  0 0 1.7rem white,
-  15px 15px 15px #1E1E1E,
-  inset 0 0 2rem white;
+            0 0 .2rem #fff,
+            0 0 0.5rem white,
+            0 0 0.2rem white,
+            0 0 1.7rem white,
+            15px 15px 15px #1E1E1E,
+            inset 0 0 2rem white;
 }
 
 
@@ -185,6 +183,7 @@
   justify-content: space-between;
   position: relative;
   z-index: 10;
+  opacity: 0;
 }
 
 .skillGroupCard {
@@ -194,6 +193,7 @@
   padding-top: .2rem;
   padding-bottom: .8rem;
   padding-inline: 1.2rem;
+  transform: rotateX(90deg);
 }
 
 .skillGroupHeader {
@@ -229,17 +229,48 @@
 
 .projectMenuCard {
   width: 95%;
-  aspect-ratio: 1.6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
   margin-top: 1rem;
   cursor: pointer;
   border-radius: 7px;
   box-shadow: 15px 15px 15px #1E1E1E;
 }
 
-.projectMenuCard::after {
+.menuCardBackGround {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.6;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.menuCardOverlay {
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .4;
+}
+
+.projectNameContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+  z-index: 14;
+  font-size: 3rem;
+
+}
+
+/* .projectMenuCard::after {
   content: '';
   position: relative;
   top: 0;
@@ -248,14 +279,11 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 11;
-}
-
+} */
+/*
 .projectName {
-  position: absolute;
-  z-index: 13;
   font-size: 2.2rem;
-  cursor: pointer;
-}
+} */
 
 .bioContainer {
   width: 85%;
@@ -330,3 +358,8 @@ hr {
 		background-position: 0% 50%;
 	}
 }
+
+
+
+
+
