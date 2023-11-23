@@ -6,7 +6,7 @@ export default function EC2Icon ({ width }) {
       className="svg-shadow"
       style={{ "width": width }}
     >
-      <svg width="35px" height="35px" viewBox="0 0 80 80" version="1.1">
+      <svg width={width} height={width} viewBox="0 0 80 80" version="1.1">
         <defs>
           <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
             <stop stopColor="#C8511B" offset="0%"></stop>

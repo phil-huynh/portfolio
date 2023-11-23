@@ -84,13 +84,20 @@ export default function StringsTheory() {
             ))}
           </Grid>
         </div>
-        <div className={styles.messageContainer}>
-          <div className={`glass ${styles.messageCard}`}>
-            <p>
-            The intent of this app is to be a tool that strings players of all skill levels can use to continue to grow and find new sounds. Players can explore new scales or tunings that they have not used before or they can study structures that they already use in greater depth.
-            </p>
+          <div className={styles.messageContainer}>
+            <div className={`glass ${styles.messageCard}`}>
+              <p>
+              Strings Theory is a resource application for music students and professionals.
+              Players can explore new scales or tunings that they have not used before or they can study structures that they already use in greater depth.
+              </p>
+            </div>
           </div>
-        </div>
+          {/* <Photo
+            image={"https://media.giphy.com/media/2mxIRT4tYqfjCd9pI9/giphy.gif"}
+            aspect="2.59"
+            width="70%"
+          /> */}
+          <div className={styles.introStyle}></div>
 
         <div className={styles.photoSection}>
           <div className={`glass ${styles.info}`}>

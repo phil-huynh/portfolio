@@ -50,6 +50,8 @@
 .toolBox {
   width: 90%;
   margin-bottom: 1rem;
+  border-top: 2px rgb(123, 123, 123) solid;
+  border-left: 2px rgb(123, 123, 123) solid;
 }
 
 

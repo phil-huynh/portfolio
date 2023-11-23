@@ -6,7 +6,7 @@ export default function Route53Icon ({ width }) {
       className="svg-shadow"
       style={{ "width": width }}
     >
-      <svg width="35px" height="35px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" >
+      <svg width={width} height={width} viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" >
         <defs>
           <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
             <stop stopColor="#4D27A8" offset="0%"></stop>

@@ -55,7 +55,7 @@ export default function IntroAndContact() {
   }
 
   const slideOutAnimation = async () => {
-    await animate("section", {x: [0, 2000]}, {duration: .5, delay: stagger(.2),})
+    // await animate("section", {x: [0, 2000]}, {duration: .5, delay: stagger(.2),})
     safeToRemove()
   }
 

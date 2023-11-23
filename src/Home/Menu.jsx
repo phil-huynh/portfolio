@@ -12,25 +12,25 @@ export default function Menu() {
       className={`${styles.optionGlass} ${selection === "skills" ? styles.selected : styles.menuItem}`}
       onClick={()=>setSelection('skills')}
     >
-      <h2>Skills</h2>
+      <p>Skills</p>
     </section>
     <section
       className={`${styles.optionGlass} ${selection === "bio" ? styles.selected : styles.menuItem}`}
       onClick={()=>setSelection('bio')}
     >
-      <h2>Resume & Bio</h2>
+      <p>Resume & Bio</p>
     </section>
     <section
       className={`${styles.optionGlass} ${selection === "projects" ? styles.selected : styles.menuItem}`}
       onClick={()=>setSelection('projects')}
     >
-      <h2>Projects</h2>
+      <p>Projects</p>
     </section>
     <section
       className={`${styles.optionGlass} ${selection === "recommendations" ? styles.selected : styles.menuItem}`}
       onClick={()=>setSelection('recommendations')}
     >
-      <h2>Recommendations</h2>
+      <p>Recommendations</p>
     </section>
   </div>
   )

@@ -7,8 +7,8 @@ export default function AmplifyIcon ({ width }) {
       style={{"width": width}}
     >
       <svg
-        width="35px"
-        height="35px"
+        width={width}
+        height={width}
         viewBox="0 0 80 80"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"

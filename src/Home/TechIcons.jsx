@@ -111,7 +111,7 @@ export default function TechIcons() {
           <HTMLLogo width={"2.5rem"}/>
           <CSSLogo width={"2.5rem"}/>
           <MarkdownIcon width={"2.3rem"}/>
-          <JQueryIcon width={"3rem"}/>
+          <JQueryIcon width={"2.5rem"}/>
           <ReactIcon width={"2.2rem"}/>
           <ReduxIcon width={"2.2rem"}/>
           <NextJSIcon width={"4rem"}/>
@@ -141,10 +141,10 @@ export default function TechIcons() {
         <h3 className={styles.skillGroupHeader}>Databases and Caching</h3>
         <div className={styles.skillsGroupSpread}>
           <PostgresIcon width={"3rem"}/>
-          <MySQLIcon width={"5rem"}/>
+          <MySQLIcon width={"4rem"}/>
           <SQLiteIcon width={"3.8rem"}/>
-          <MongoIcon width={"3.4rem"}/>
-          <RedisIcon width={"3rem"}/>
+          <MongoIcon width={"3rem"}/>
+          <RedisIcon width={"2.5rem"}/>
         </div>
       </section>
       <section className={`glass ${styles.skillGroupCard}`} >
@@ -152,29 +152,29 @@ export default function TechIcons() {
         <div className={styles.skillsGroupSpread}>
           <LinuxIcon width={"3rem"}/>
           <DockerIcon width={"3.8rem"}/>
-          <NGNIXIcon width={"5rem"}/>
-          <BabelIcon width={"4.7rem"}/>
-          <WebpackIcon width={"7rem"}/>
+          <NGNIXIcon width={"4rem"}/>
+          <BabelIcon width={"4rem"}/>
+          <WebpackIcon width={"6rem"}/>
 
         </div>
       </section>
       <section className={`glass ${styles.skillGroupCard}`} >
         <h3 className={styles.skillGroupHeader}>Cloud Services</h3>
         <div className={styles.skillsGroupSpread}>
-          <AWSLogo width={"7rem"}/>
-          <AmplifyIcon width={"2.2rem"}/>
-          <EC2Icon width={"2.2rem"}/>
-          <Route53Icon width={"2.4rem"}/>
-          <CloudFormationIcon width={"2.3rem"}/>
-          <LambdaIcon width={"2.3rem"}/>
+          <AWSLogo width={"6rem"}/>
+          <AmplifyIcon width={"2rem"}/>
+          <EC2Icon width={"2rem"}/>
+          <CloudFormationIcon width={"2rem"}/>
+          <LambdaIcon width={"2rem"}/>
+          <Route53Icon width={"2.2rem"}/>
         </div>
       </section>
       <section className={`glass ${styles.skillGroupCard}`} >
         <h3 className={styles.skillGroupHeader}>Testing</h3>
         <div className={styles.skillsGroupSpread}>
           <JasmineIcon width={"3rem"}/>
-          <MochaIcon width={"3rem"}/>
-          <JestIcon width={"3rem"}/>
+          <MochaIcon width={"2.5rem"}/>
+          <JestIcon width={"2.5rem"}/>
           <PytestIcon width={"3.5rem"}/>
         </div>
       </section>
