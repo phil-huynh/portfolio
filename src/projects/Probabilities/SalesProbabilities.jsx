@@ -21,8 +21,8 @@ export default function SalesProbabilities() {
           <div className={`glass ${styles.title}`}>
           <h1 style={{"color": "white"}}>Sales Probabilities</h1>
           </div>
-          <div className={`glass ${styles.homeLink}`}>
-            <h2 onClick={()=>navigate('/')}>Home</h2>
+          <div className={`glass ${styles.homeLink}`} onClick={()=>navigate('/')}>
+            <h2>Home</h2>
           </div>
         </div>
         <div className={styles.infoContainer}>
