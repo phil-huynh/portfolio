@@ -29,7 +29,7 @@ function Home() {
 
   const pageEnterAnimation = async () => {
     if (firstTime) {
-      animateOverlay(overlayRef.current, {opacity: [.2]}, {duration: 2})
+      animateOverlay(overlayRef.current, {opacity: [.15]}, {duration: 2})
       await animateGreeting(greetingRef.current, {fontSize: getGreetingSize()}, {duration: .05})
       await animateGreeting(greetingRef.current, {opacity: 1}, {duration: .05, delay: .5})
       await animateGreeting(
@@ -43,7 +43,7 @@ function Home() {
       setFirstTime(false)
     } else {
       await animatePage(page.current, {opacity: [0, 1]}, {duration: 1})
-      animateOverlay(overlayRef.current, {opacity: [.2]}, {duration: 2})
+      animateOverlay(overlayRef.current, {opacity: [.15]}, {duration: 2})
     }
   }
 

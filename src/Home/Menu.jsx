@@ -1,5 +1,5 @@
-import styles from "./Home.module.css"
 import { useStore } from "../Store"
+import styles from "./Home.module.css"
 
 
 export default function Menu() {

@@ -2,43 +2,45 @@
   position: absolute;
   top:0;
   left:0;
-  width: 0;
-  height: 0;
   background-size: cover;
   background-position: center;
   background-color: white;
+  height: 100vh;
+  width: 100vw;
 }
 
-.top {
+
+.header {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 100%;
 }
 
-
-.header,
-.navItem,
-.photoGridBox {
+.headerItem,
+.homelink {
   display: flex;
-  align-items: center;
   justify-content: center;
-}
-
-.header,
-.navItem {
+  align-items: center;
   height: 5rem;
   width: 50%;
   color: white;
   margin-top: 1rem;
 }
 
-.photoGridBox,
-.navItem {
+.homelink {
   cursor: pointer;
 }
 
-.sectionHeader {
-  color: black;
+.infoContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
 }
 
+.gridSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

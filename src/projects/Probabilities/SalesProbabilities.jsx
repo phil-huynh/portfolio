@@ -25,7 +25,7 @@ export default function SalesProbabilities() {
             <h2 onClick={()=>navigate('/')}>Home</h2>
           </div>
         </div>
-        <div style={{display: "flex", flexDirection: "column", alignItems: "center", gap: "3rem"}}>
+        <div className={styles.infoContainer}>
           <Photo
             image={photos.tableDarkFull.image}
             aspect={photos.tableDarkFull.aspect}

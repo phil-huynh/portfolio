@@ -1,15 +1,16 @@
 import { useNavigate } from "react-router-dom"
-import { Grid, duration } from "@mui/material"
-import { motion, useAnimate, usePresence } from "framer-motion"
+import { Grid } from "@mui/material"
+import { useAnimate, usePresence } from "framer-motion"
 import { useStore } from "../../Store"
 import { useEffect } from "react"
 import Photo from "../../Photo"
 import styles from "./Ecom.module.css"
+import PhotoModal from "../../PhotoModal"
 
 export default function Ecommerce() {
 
   const navigate = useNavigate()
-  const {locate, locate2, locate3, eCommImages} = useStore()
+  const {locate, locate2, locate3, eCommImages, selectPhoto, photoModal, currentPhoto} = useStore()
 
   const [page, animatePage] = useAnimate()
   const [isPresent, safeToRemove] = usePresence()
@@ -39,13 +40,20 @@ export default function Ecommerce() {
       className={styles.wrapper}
       ref={page}
     >
-      <div className="ecommerce-overlay"></div>
       <section className="contents">
+        {photoModal ?
+          <PhotoModal
+            image={currentPhoto.image}
+            aspect={currentPhoto.aspect}
+            width={currentPhoto.width}
+          />
+          :null
+        }
         <div className={styles.top}>
           <div className={`glass ${styles.header}`}>
             <h1>Hello World: Ecommerce</h1>
           </div>
-          <div className={`glass ${styles.header} ${styles.navItem}`} >
+          <div className={`glass ${styles.navItem}`} >
             <h2 onClick={()=>navigate('/')}>Home</h2>
           </div>
         </div>
@@ -53,14 +61,15 @@ export default function Ecommerce() {
           <div key={section}>
             <h2 className={styles.sectionHeader}>{section.toUpperCase()}</h2>
             <Grid container>
-              {eCommImages[section].map((image, i) => (
+              {eCommImages[section].map((photo, i) => (
                 <Grid
                   item
                   xs={12} sm={12} md={6} lg={3} xl={3}
                   key={`ecomImage${i}`}
                   className={styles.photoGridBox}
+                  onClick={()=>selectPhoto({image: photo.image, aspect: photo.aspect, width: "70%" })}
                 >
-                  <Photo image={image} width="90%" aspect="6.75/4" extras={borderStyle}/>
+                  <Photo image={photo.image} width="90%" aspect={photo.aspect} extras={borderStyle}/>
                 </Grid>
               ))}
             </Grid>

@@ -2,20 +2,17 @@ import { useStore } from "../Store"
 import { useNavigate } from "react-router-dom";
 import { useAnimate, usePresence, stagger } from "framer-motion";
 import { useEffect } from "react";
-import styles from "./Home.module.css"
 import { Grid } from "@mui/material";
+import styles from "./Home.module.css"
 
 export default function ProjectsMenu() {
-  const { firstTime, setFirstTime } = useStore()
-  const navigate = useNavigate()
 
+  const navigate = useNavigate()
   const [scope, animate] = useAnimate()
   const [isPresent, safeToRemove] = usePresence()
-
-  const { projectsList:projects } = useStore()
+  const { projectsList: projects } = useStore()
 
   const changePage = (path) => {
-    firstTime && setFirstTime(false)
     navigate(path)
   }
 
@@ -54,7 +51,12 @@ export default function ProjectsMenu() {
     <div className={styles.projectMenuContainer} ref={scope}>
       <Grid container>
         {projects.map(project => (
-          <Grid item className={styles.projectGridSection} key={project.name} xs={12} sm={12} md={12} lg={6} xl={6}>
+          <Grid
+            item
+            key={project.name}
+            className={styles.projectGridSection}
+            xs={12} sm={12} md={12} lg={6} xl={6}
+          >
             <section className={`${styles.projectMenuCard}`}
                 onClick={()=>changePage(project.path)}>
               <div

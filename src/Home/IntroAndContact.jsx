@@ -31,31 +31,12 @@ export default function IntroAndContact() {
     }
 
 
-  const select = (selected) => {
-    setFirstTime(false)
-    setSelection(selected)
-  }
-
   const slideInAnimation = async () => {
-    // await animate(scope.current, {x: 2000 }, {duration: .05})
-    // await animate(scope.current, {opacity: 1}, {duration: .05})
-    // await animate('button', {x: 2000}, {duration: .05})
-    // await animate('button', {opacity: 1}, {duration: .05})
     await animate('section', {x: [2000, 0], opacity: [0, 1]}, transition)
-    // await animate(
-    //   'button',
-    //   {x: 0},
-    //   {
-    //     duration: 1,
-    //     delay: stagger(.2),
-    //     type: "spring",
-    //     bounce: ".22"
-    //   }
-    // )
+
   }
 
   const slideOutAnimation = async () => {
-    // await animate("section", {x: [0, 2000]}, {duration: .5, delay: stagger(.2),})
     safeToRemove()
   }
 
