@@ -16,8 +16,10 @@ export default function Ecommerce() {
   const [isPresent, safeToRemove] = usePresence()
 
 
-  const borderStyle = {
-    boxShadow: "15px 15px 12px #1E1E1E"
+  const extras = {
+    boxShadow: "15px 15px 12px #1E1E1E",
+    marginTop: "1rem",
+    marginBottom: "1rem",
   }
 
   const enterAnimation = async () => {
@@ -68,7 +70,7 @@ export default function Ecommerce() {
                   className={styles.photoGridBox}
                   onClick={()=>selectPhoto({image: photo.image, aspect: photo.aspect, width: "70%" })}
                 >
-                  <Photo image={photo.image} width="90%" aspect={photo.aspect} extras={borderStyle}/>
+                  <Photo image={photo.image} width="90%" aspect={photo.aspect} extras={extras}/>
                 </Grid>
               ))}
             </Grid>

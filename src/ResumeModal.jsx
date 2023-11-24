@@ -56,8 +56,8 @@ export default function ResumeModal() {
 
   return (
     <Modal
-        aria-labelledby="photo-enlarged"
-        aria-describedby="photo-enlarged"
+        aria-labelledby="resume"
+        aria-describedby="resume"
         open={resumeModal}
         onClose={() => setResumeModal(false)}
         closeAfterTransition

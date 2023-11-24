@@ -12,8 +12,10 @@ export default function Osiris() {
   const { osirisImages: photos, currentPhoto, photoModal, selectPhoto} = useStore()
 
 
-  const borderStyle = {
-    boxShadow: "15px 15px 12px #1E1E1E"
+  const extras = {
+    boxShadow: "15px 15px 12px #1E1E1E",
+    marginTop: "1rem",
+    marginBottom: "1rem",
   }
 
   return (
@@ -45,11 +47,11 @@ export default function Osiris() {
                 key={`mobileImage${i}`}
                 onClick={()=>selectPhoto({image: photo.image, aspect: photo.aspect, width: "25%" })}
               >
-                <Photo image={photo.image} width="80%" aspect={photo.aspect} extras={borderStyle}/>
+                <Photo image={photo.image} width="80%" aspect={photo.aspect} extras={extras}/>
               </Grid>
             ))}
           </Grid>
-          <Photo image={photos.tablet.image} width="35%" aspect={photos.tablet.aspect} extras={borderStyle}/>
+          <Photo image={photos.tablet.image} width="35%" aspect={photos.tablet.aspect} extras={extras}/>
           <Grid container>
             {photos.desktop.map((photo, i) => (
               <Grid
@@ -58,7 +60,7 @@ export default function Osiris() {
                 className={styles.gridSection}
                 key={`desktopImage${i}`}
               >
-                <Photo image={photo.image} width="90%" aspect={photo.aspect} extras={borderStyle}/>
+                <Photo image={photo.image} width="90%" aspect={photo.aspect} extras={extras}/>
               </Grid>
             ))}
           </Grid>

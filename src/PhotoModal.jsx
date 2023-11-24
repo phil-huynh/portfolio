@@ -1,9 +1,7 @@
 import { Modal } from "@mui/material";
 import Backdrop from "@mui/material/Backdrop";
-import Fade from "@mui/material/Fade";
 import Photo from "./Photo";
 import { useStore } from "./Store";
-import Paper from "@mui/material/Paper";
 import CloseIcon from '@mui/icons-material/Close';
 
 export default function PhotoModal({ image, aspect, width }) {
@@ -27,8 +25,6 @@ export default function PhotoModal({ image, aspect, width }) {
 
   const overlayStyle ={
     position: "absolute",
-    top: "0",
-    left: "0",
     width: "100%",
     height: "100%",
     textAlign: "right"
@@ -39,9 +35,6 @@ export default function PhotoModal({ image, aspect, width }) {
     border: "2px white solid",
     marginTop: "1rem",
     marginRight: "1rem",
-    // marginRight: "1rem",
-    // position: "sticky",
-    // top: "1rem",
     cursor: "pointer",
     boxShadow: "0 0 .2rem #fff,\
                 0 0 .2rem #fff,\
