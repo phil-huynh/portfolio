@@ -17,7 +17,6 @@ export default function Ecommerce() {
 
 
   const borderStyle = {
-    border: "1px gray solid",
     boxShadow: "15px 15px 12px #1E1E1E"
   }
 

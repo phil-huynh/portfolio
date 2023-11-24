@@ -4,7 +4,6 @@ export default function Photo({image, width, aspect, extras={}}) {
     backgroundImage: `url(${image})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
-    margin: "1rem",
     width: width,
     aspectRatio: aspect
   }

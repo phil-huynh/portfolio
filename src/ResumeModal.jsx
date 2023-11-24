@@ -3,7 +3,7 @@ import Backdrop from "@mui/material/Backdrop";
 import Photo from "./Photo";
 import { useStore } from "./Store";
 import CloseIcon from '@mui/icons-material/Close';
-import { transform } from "framer-motion";
+
 
 
 export default function ResumeModal() {
@@ -12,22 +12,12 @@ export default function ResumeModal() {
 
 
   const size = (() => {
-    if (isXL) { return { width: "75%", height: "90vh", iconSize: "3rem"} }
-    if (isLG) { return { width: "75%", height: "90vh", iconSize: "2.5rem"} }
-    if (isMD) { return { width: "90%", height: "90hv", iconSize: "2.2rem"} }
-    if (isSM) { return { width: "95%", height: "80vh", iconSize: "1.7rem"} }
+    if (isXL) { return { width: "75%", height: "90vh", iconSize: "2.4rem"} }
+    if (isLG) { return { width: "75%", height: "90vh", iconSize: "2.1rem"} }
+    if (isMD) { return { width: "90%", height: "90hv", iconSize: "1.8rem"} }
+    if (isSM) { return { width: "95%", height: "80vh", iconSize: "1.5rem"} }
     if (isXS) { return { width: "98%", height: "70vh", iconSize: "1.2rem"} }
   })()
-
-
-  console.log("xl", isXL)
-  console.log("lg", isLG)
-  console.log("md", isMD)
-  console.log("sm", isSM)
-  console.log("xs", isXS)
-  // const size = get
-  // const { width, height } = getSize()
-
 
   const modalStyle = {
     position: "absolute",
@@ -40,29 +30,28 @@ export default function ResumeModal() {
     overflowX: "hidden",
     width: size.width,
     maxHeight: size.height,
-    paddingRight: "2rem"
   };
 
   const overlayStyle ={
     position: "absolute",
     width: "100%",
-    height: "120%",
+    height: isXL || isLG || isMD ? "120%" : "100%",
     textAlign: "right"
   }
 
   const iconStyle = {
     fontSize: size.iconSize,
     border: "2px white solid",
+    marginRight: "1rem",
+    position: "sticky",
+    top: "1rem",
+    cursor: "pointer",
     boxShadow: "0 0 .2rem #fff,\
                 0 0 .2rem #fff,\
                 0 0 0.5rem red,\
                 0 0 0.2rem red,\
                 0 0 0.7rem red,\
                inset 0 0 2rem red;",
-    marginRight: "2rem",
-    position: "sticky",
-    top: "2rem",
-    cursor: "pointer"
   }
 
   return (

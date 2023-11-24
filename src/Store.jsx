@@ -100,6 +100,7 @@ export default function ContextProvider ({ children }) {
     currentPhoto: currentPhoto,
     resumeImage: resumeImage,
     resumeModal: resumeModal,
+    setCurrentPhoto: setCurrentPhoto,
     setPhotoModal: setPhotoModal,
     setSelection: setSelection,
     setFirstTime: setFirstTime,
