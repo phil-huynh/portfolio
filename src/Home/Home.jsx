@@ -81,7 +81,7 @@ function Home() {
       }
       <div className="contents">
         {resumeModal ?
-          <ResumeModal width="75%" />
+          <ResumeModal />
           : null
         }
         <Grid container className={styles.homeGridContainer}>

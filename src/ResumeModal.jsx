@@ -6,13 +6,28 @@ import CloseIcon from '@mui/icons-material/Close';
 import { transform } from "framer-motion";
 
 
-export default function ResumeModal({ width }) {
+export default function ResumeModal() {
 
-  const { resumeModal, setResumeModal, resumeImage } = useStore()
-  // const close = () => {
-  //   setPhotoModal(false)
-  //   setCurrentPhoto({image: "", aspect: "", width: ""})
-  // }
+  const { resumeModal, setResumeModal, resumeImage, isXL, isLG, isMD, isSM, isXS, } = useStore()
+
+
+  const size = (() => {
+    if (isXL) { return { width: "75%", height: "90vh", iconSize: "3rem"} }
+    if (isLG) { return { width: "75%", height: "90vh", iconSize: "2.5rem"} }
+    if (isMD) { return { width: "90%", height: "90hv", iconSize: "2.2rem"} }
+    if (isSM) { return { width: "95%", height: "80vh", iconSize: "1.7rem"} }
+    if (isXS) { return { width: "98%", height: "70vh", iconSize: "1.2rem"} }
+  })()
+
+
+  console.log("xl", isXL)
+  console.log("lg", isLG)
+  console.log("md", isMD)
+  console.log("sm", isSM)
+  console.log("xs", isXS)
+  // const size = get
+  // const { width, height } = getSize()
+
 
   const modalStyle = {
     position: "absolute",
@@ -20,22 +35,23 @@ export default function ResumeModal({ width }) {
     left: "50%",
     transform: "translate(-50%, -50%)",
     p: 4.5,
-    border: "1px gray solid",
     boxShadow: "20px 20px 15px #1E1E1E",
     overflowY: "scroll",
-    width: width,
-    height: "90%"
+    overflowX: "hidden",
+    width: size.width,
+    maxHeight: size.height,
+    paddingRight: "2rem"
   };
 
   const overlayStyle ={
     position: "absolute",
     width: "100%",
-    height: "100%",
+    height: "120%",
     textAlign: "right"
   }
 
   const iconStyle = {
-    fontSize: "3rem",
+    fontSize: size.iconSize,
     border: "2px white solid",
     boxShadow: "0 0 .2rem #fff,\
                 0 0 .2rem #fff,\
@@ -43,9 +59,9 @@ export default function ResumeModal({ width }) {
                 0 0 0.2rem red,\
                 0 0 0.7rem red,\
                inset 0 0 2rem red;",
-    marginRight: "1.5rem",
+    marginRight: "2rem",
     position: "sticky",
-    top: "1.5rem",
+    top: "2rem",
     cursor: "pointer"
   }
 
