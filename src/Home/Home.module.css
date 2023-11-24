@@ -7,7 +7,10 @@
   width: 100vw;
   perspective: 1000px;
   perspective-origin: 50% 50%;
+  -webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
   overflow: hidden;
+  position: relative;
   color: white;
 }
 
@@ -29,20 +32,13 @@
 }
 
 
-.greeting {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 90vh;
-  width: 100vw;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;
-  opacity: 0;
+.contents {
+	transform-style: preserve-3d;
+  position: relative;
+  overflow-y: scroll;
+  height: 100vh;
+  z-index: 10;
 }
-
 
 .homeGridContainer {
   height: 100%;
@@ -191,7 +187,9 @@
   position: relative;
   z-index: 10;
   opacity: 0;
+  transform-style: preserve-3d;
 }
+
 
 .skillGroupCard {
   width: 88%;
@@ -200,8 +198,8 @@
   padding-top: .2rem;
   padding-bottom: .8rem;
   padding-inline: 1.2rem;
-  transform: rotateX(90deg);
 }
+
 
 .skillGroupHeader {
   text-align: left;
@@ -224,14 +222,24 @@
 
 
 .projectMenuContainer {
+	transform-style: preserve-3d;
   width: 100%;
   z-index: 11;
 }
 
+
+.projectGridContainer {
+	transform-style: preserve-3d;
+}
+
 .projectGridSection {
+  height: 20rem;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
+	transform-style: preserve-3d;
+  -webkit-transition: 1s ease-in-out;
+	transition: 1s ease-in-out;
 }
 
 .projectMenuCard {
@@ -242,7 +250,14 @@
   cursor: pointer;
   border-radius: 15px;
   box-shadow: 15px 15px 15px #1E1E1E;
+	transform-style: preserve-3d;
 }
+
+
+/* .projectGridSection:hover {
+  -webkit-transform: rotateX(-180deg);
+	transform: rotateX(-180deg);
+} */
 
 .menuCardBackGround {
   position: relative;
@@ -277,8 +292,22 @@
   align-items: center;
   z-index: 14;
   font-size: 3rem;
-
+	transform-style: preserve-3d;
+  transform: translatez(50px) scale(1);
 }
+
+.projectName {
+  text-shadow: 0 0 1px white
+              0 0 1px white,
+              0 0 1px white,
+              0 0 1px white,
+              0 0 1px white,
+              0 0 1px white,
+              0 0 1px white,
+              0 0 1px white,
+              0 0 1px white;
+}
+
 
 .bioContainer {
   width: 90%;

@@ -104,7 +104,6 @@ export default function TechIcons() {
           <BashIcon width={"3rem"}/>
         </div>
       </section>
-
       <section className={`glass ${styles.skillGroupCard}`} >
         <h3 className={styles.skillGroupHeader}>Front End Development</h3>
         <div className={styles.skillsIconGroup}>

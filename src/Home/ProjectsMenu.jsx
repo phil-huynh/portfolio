@@ -49,7 +49,7 @@ export default function ProjectsMenu() {
   return (
 
     <div className={styles.projectMenuContainer} ref={scope}>
-      <Grid container>
+      <Grid container className={styles.projectGridContainer}>
         {projects.map(project => (
           <Grid
             item
