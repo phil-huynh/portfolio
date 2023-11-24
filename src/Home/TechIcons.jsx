@@ -73,7 +73,6 @@ export default function TechIcons() {
     }
 
 
-
   const rotateIn = async () => {
     await animate('section', {rotateX: 270}, {duration: .05})
     await animate(scope.current, {opacity: 1}, {duration: .05})

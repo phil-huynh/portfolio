@@ -2,7 +2,7 @@ import { useAnimate, usePresence } from "framer-motion"
 import { useEffect } from "react"
 import styles from "./Home.module.css"
 
-export default function Recommendations() {
+export default function Testimonials() {
 
   const [scope, animate] = useAnimate()
   const [isPresent, safeToRemove] = usePresence()

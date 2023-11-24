@@ -233,7 +233,7 @@
 }
 
 .projectGridSection {
-  height: 20rem;
+  min-height: 20rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -277,7 +277,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: .4;
+  opacity: .3;
 }
 
 .projectNameContainer {
@@ -289,24 +289,13 @@
   display: flex;
   background-position: center;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   z-index: 14;
   font-size: 3rem;
 	transform-style: preserve-3d;
   transform: translatez(50px) scale(1);
 }
 
-.projectName {
-  text-shadow: 0 0 1px white
-              0 0 1px white,
-              0 0 1px white,
-              0 0 1px white,
-              0 0 1px white,
-              0 0 1px white,
-              0 0 1px white,
-              0 0 1px white,
-              0 0 1px white;
-}
 
 
 .bioContainer {
@@ -318,15 +307,34 @@
   font-size: 1.1rem;
 }
 
+
+.viewResumeButton,
 .resumeDownloadButton {
-  width: 5rem;
   height: 2.3rem;
   font-size: 1.3rem;
   font-weight: 540;
   margin-inline: 1rem;
   border-radius: 5px;
   cursor: pointer;
+  box-shadow: 5px 5px 5px #000000;
+  position: relative;
 }
+
+.resumeDownloadButton {
+  width: 5rem;
+}
+
+.viewResumeButton {
+  padding-inline: 1rem;
+}
+
+.viewResumeButton:active,
+.resumeDownloadButton:active {
+  left: 1px;
+  top: 1px;
+  box-shadow: 1px 1px 1px #000000;
+}
+
 
 .bulletPoint {
   text-align: left;

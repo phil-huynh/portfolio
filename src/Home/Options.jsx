@@ -2,7 +2,7 @@ import { useStore } from "../Store";
 import TechIcons from "./TechIcons";
 import ProjectsMenu from "./ProjectsMenu";
 import Bio from "./Bio";
-import Recommendations from "./Recommendations";
+import Testimonials from "./Testimonials";
 import { AnimatePresence } from "framer-motion";
 
 export default function Options() {
@@ -13,7 +13,7 @@ export default function Options() {
       {selection === 'skills' ? <TechIcons />
         : selection === 'projects' ? <ProjectsMenu />
           : selection === 'bio' ? <Bio />
-            : selection === 'recommendations' ? <Recommendations />
+            : selection === 'testimonials' ? <Testimonials />
               :null
       }
     </AnimatePresence>

@@ -27,10 +27,10 @@ export default function Menu() {
       <p>Projects</p>
     </section>
     <section
-      className={`${styles.optionGlass} ${selection === "recommendations" ? styles.selected : styles.menuItem}`}
-      onClick={()=>setSelection('recommendations')}
+      className={`${styles.optionGlass} ${selection === "testimonials" ? styles.selected : styles.menuItem}`}
+      onClick={()=>setSelection('testimonials')}
     >
-      <p>Recommendations</p>
+      <p>Testimonials</p>
     </section>
   </div>
   )
