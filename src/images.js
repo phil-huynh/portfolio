@@ -53,6 +53,14 @@ import fullMobileDark from "./assets/sales/fullMobileDark.png"
 import noHistory from "./assets/sales/noHistory.png"
 import noDecreasingFactors from "./assets/sales/noDecreasingFactors.png"
 
+import resumePhoto from "./assets/info/resume_image.png"
+
+
+const resumeImage = {
+  image: resumePhoto,
+  aspect: ".78"
+}
+
 
 const stringsPhotos = {
   alterations: {
@@ -415,6 +423,7 @@ const images = {
   salesPhotos: salesPhotos,
   eCommImages: eCommImages,
   osirisImages: osirisImages,
+  resumeImage: resumeImage,
 }
 
 export default images

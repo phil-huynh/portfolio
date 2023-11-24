@@ -25,7 +25,7 @@ export default function PhotoModal({ image, aspect, width }) {
     transform: "translate(-50%, -50%)",
     p: 4.5,
     border: "1px gray solid",
-    boxShadow: "20px 20px 15px rgba(16, 16, 16, 0.5)"
+    boxShadow: "20px 20px 15px #1E1E1E"
   };
 
   return (

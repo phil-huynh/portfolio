@@ -18,7 +18,7 @@ export default function Ecommerce() {
 
   const borderStyle = {
     border: "1px gray solid",
-    boxShadow: "15px 15px 12px gray"
+    boxShadow: "15px 15px 12px #1E1E1E"
   }
 
   const enterAnimation = async () => {
@@ -53,8 +53,8 @@ export default function Ecommerce() {
           <div className={`glass ${styles.header}`}>
             <h1>Hello World: Ecommerce</h1>
           </div>
-          <div className={`glass ${styles.navItem}`} >
-            <h2 onClick={()=>navigate('/')}>Home</h2>
+          <div className={`glass ${styles.navItem}`} onClick={()=>navigate('/')}>
+            <h2>Home</h2>
           </div>
         </div>
         {Object.keys(eCommImages).map(section =>(

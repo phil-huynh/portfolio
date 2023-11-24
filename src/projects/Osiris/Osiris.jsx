@@ -14,7 +14,7 @@ export default function Osiris() {
 
   const borderStyle = {
     border: "1px gray solid",
-    boxShadow: "15px 15px 12px black"
+    boxShadow: "15px 15px 12px rgba(16, 16, 16, 0.5)"
   }
 
   return (

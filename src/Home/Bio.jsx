@@ -3,11 +3,14 @@ import { useEffect } from "react"
 import styles from "./Home.module.css"
 import resumePDF from "../assets/resume.pdf"
 import resumeDOCX from "../assets/resume.docx"
+import { useStore } from "../Store"
 
 export default function Bio() {
 
   const [scope, animate] = useAnimate()
   const [isPresent, safeToRemove] = usePresence()
+
+  const { setResumeModal } = useStore()
 
   const rotateIn = async () => {
     await animate(scope.current, {rotateX: [90, 0]}, {duration: .7})
@@ -24,13 +27,19 @@ export default function Bio() {
 
   return (
     <div ref={scope} className={`glass ${styles.bioContainer}`}>
+      <h3>
+        You can
+        <button className={styles.resumeDownloadButton} onClick={()=>setResumeModal(true)}>view</button>
+        my resume or download it as
+        <a href={resumePDF} download="Phil_Huynh_Resume5">
+          <button className={styles.resumeDownloadButton}>  .pdf </button>
+        </a>
+        or
+        <a href={resumeDOCX} download="Phil_Huynh_Resume5">
+          <button className={styles.resumeDownloadButton}> .docx </button>
+        </a>
+      </h3>
       <h3>Download my resume</h3>
-      <a href={resumePDF} download="Phil_Huynh_Resume5">
-        <button className={styles.resumeDownloadButton}>  .pdf </button>
-      </a>
-      <a href={resumeDOCX} download="Phil_Huynh_Resume5">
-        <button className={styles.resumeDownloadButton}> .docx </button>
-      </a>
       <ul style={{textAlign: "left"}}>
         <li className={styles.bulletPoint}>
           Worked with an Agile team developing, maintaining, and updating the core Galvanize systems including the Student Information Systems and Interactive Course Software used daily by 1500+ students and staff.

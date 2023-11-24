@@ -5,11 +5,13 @@ import { usePresence, useAnimate } from "framer-motion"
 import { useEffect } from "react";
 import Options from "./Options"
 import styles from "./Home.module.css"
+import ResumeModal from "../ResumeModal";
+
 
 
 function Home() {
 
-  const { firstTime, setFirstTime, isXL, isLG, isMD, isSM, isXS, selection } = useStore()
+  const { firstTime, setFirstTime, isXL, isLG, isMD, isSM, isXS, selection, resumeModal } = useStore()
 
 
   const [isPresent, safeToRemove] = usePresence()
@@ -78,6 +80,10 @@ function Home() {
         :null
       }
       <div className="contents">
+        {resumeModal ?
+          <ResumeModal width="75%" />
+          : null
+        }
         <Grid container className={styles.homeGridContainer}>
           <Grid
             item

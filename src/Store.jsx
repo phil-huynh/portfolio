@@ -15,10 +15,10 @@ export default function ContextProvider ({ children }) {
   const [selection, setSelection] = useState('skills')
   const [photoModal, setPhotoModal] = useState(false)
   const [currentPhoto, setCurrentPhoto] = useState({image: "", aspect: "", width: ""})
+  const [resumeModal, setResumeModal] = useState(false)
 
 
   const selectPhoto = (photo) => {
-    console.log(photo)
     setCurrentPhoto({
       image: photo.image,
       aspect: photo.aspect,
@@ -35,7 +35,14 @@ export default function ContextProvider ({ children }) {
   const isXS = useMediaQuery(theme.breakpoints.up('xs'))
 
 
-  const { stringsPhotos, quickstarterPhotos, salesPhotos, eCommImages, osirisImages } = images
+  const {
+    stringsPhotos,
+    quickstarterPhotos,
+    salesPhotos,
+    eCommImages,
+    osirisImages,
+    resumeImage
+  } = images
 
 
   const projectsList = [
@@ -91,10 +98,13 @@ export default function ContextProvider ({ children }) {
     projectsList: projectsList,
     photoModal: photoModal,
     currentPhoto: currentPhoto,
+    resumeImage: resumeImage,
+    resumeModal: resumeModal,
     setPhotoModal: setPhotoModal,
     setSelection: setSelection,
     setFirstTime: setFirstTime,
     selectPhoto: selectPhoto,
+    setResumeModal: setResumeModal,
   }
   return (
     <ContextStore.Provider value={store}>
