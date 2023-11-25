@@ -31,7 +31,7 @@ export default function Questions({ carousels, numberShowing, cycleLeft, cycleRi
       <Grid container>
           <Grid
             item
-            sx={{display: "flex", alignItems: "center"}}
+            className={styles.arrowGrid}
             xs={.5} sm={.5} md={.5} lg={.5} xl={.5}
           >
           <NavigateBeforeIcon
@@ -54,7 +54,7 @@ export default function Questions({ carousels, numberShowing, cycleLeft, cycleRi
         ))}
         <Grid
           item
-          sx={{display: "flex", alignItems: "center", justifyContent: "center"}}
+          className={styles.arrowGrid}
           xs={.5} sm={.5} md={.5} lg={.5} xl={.5}
         >
           <NavigateNextIcon

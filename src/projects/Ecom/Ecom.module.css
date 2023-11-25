@@ -64,8 +64,10 @@
 }
 
 
-.arrow {
-  cursor: pointer;
+.arrowGrid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .arrow:hover {
