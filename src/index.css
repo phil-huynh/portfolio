@@ -135,3 +135,22 @@ a {
   z-index: 1;
 }
 
+
+.glass6 {
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 10;
+  box-shadow: 6px 6px 4px 1px rgba(1, 1, 1, 0.3);
+  backdrop-filter: blur(10px) hue-rotate(25deg);
+  z-index: 1;
+}
+
+.glass7 {
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 10;
+  box-shadow: 6px 6px 4px 1px rgba(1, 1, 1, 0.3);
+  backdrop-filter: blur(7px);
+  z-index: 1;
+}
+

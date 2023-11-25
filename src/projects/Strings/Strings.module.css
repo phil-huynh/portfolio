@@ -164,11 +164,11 @@
 
 
 .info {
-  width: 92%;
+  width: 96%;
   flex-direction: column;
   padding: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  /* margin-top: .5rem;
+  margin-bottom: .5rem; */
 }
 
 
@@ -176,6 +176,13 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+.magicGlass {
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  animation: colorShiftGlass 90s ease infinite;
+  z-index: 1;
 }
 
 /* Title Glass Animation */
@@ -337,6 +344,28 @@
                 0 0 20px #0095ec,
                 0 0 25px #0095ec,
                 0 0 30px #0095ec;;
+  }
+}
+
+
+@keyframes colorShiftGlass {
+  0%{
+    backdrop-filter: blur(5px) hue-rotate(180deg);
+  }
+  20%{
+    backdrop-filter: blur(5px) hue-rotate(252deg);
+  }
+  40%{
+    backdrop-filter: blur(5px) hue-rotate(324deg);
+  }
+  60%{
+    backdrop-filter: blur(5px) hue-rotate(0deg);
+  }
+  80%{
+    backdrop-filter: blur(5px) hue-rotate(38deg);
+  }
+  100%{
+    backdrop-filter: blur(5px) hue-rotate(108deg);
   }
 }
 
