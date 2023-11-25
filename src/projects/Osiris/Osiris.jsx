@@ -112,21 +112,6 @@ export default function Osiris() {
                 item
                 xs={12} sm={3} md={3} lg={3} xl={3}
                 className={styles.gridSection}
-                key="failedLogin"
-                onClick={()=>(
-                  selectPhoto({
-                    image: ph.failedLogin.image,
-                    aspect: ph.failedLogin.aspect,
-                    width: "25%"
-                  })
-                )}
-              >
-                <Photo image={ph.failedLogin.image} aspect={ph.failedLogin.aspect} width="80%" extras={extras} />
-              </Grid>
-              <Grid
-                item
-                xs={12} sm={3} md={3} lg={3} xl={3}
-                className={styles.gridSection}
                 key="sucessfulLogin"
                 onClick={()=>(
                   selectPhoto({
@@ -138,71 +123,240 @@ export default function Osiris() {
               >
                 <Photo image={ph.successfulLogin.image} aspect={ph.successfulLogin.aspect} width="80%" extras={extras} />
               </Grid>
+              <Grid
+                item
+                xs={12} sm={3} md={3} lg={3} xl={3}
+                className={styles.gridSection}
+                key="failedLogin"
+                onClick={()=>(
+                  selectPhoto({
+                    image: ph.failedLogin.image,
+                    aspect: ph.failedLogin.aspect,
+                    width: "25%"
+                  })
+                )}
+              >
+                <Photo image={ph.failedLogin.image} aspect={ph.failedLogin.aspect} width="80%" extras={extras} />
+              </Grid>
             </Grid>
           </Grid>
 
+{/* ============================================ */}
+
           <Grid container sx={{width: "100%", marginTop: "2rem"}}>
-            <Grid item container xs={12} sm={12} md={12} lg={8} xl={10}  order={{ xs: 2, sm: 2, md: 2, lg: 1,xl: 1}}>
+            <Grid item container xs={12} sm={12} md={12} lg={8} xl={10} order={{ xs: 2, sm: 2, md: 2, lg: 1, xl: 1}}>
               <Grid
                 item
                 xs={12} sm={5.2} md={2.4} lg={2.4} xl={2.4}
                 className={styles.gridSection}
-              >
+                >
                 <Photo image={ph.mobileFeed.image} aspect={ph.mobileFeed.aspect} width="82%" extras={extras}/>
               </Grid>
               <Grid
                 item
                 xs={12} sm={6.8} md={3.1} lg={3.1} xl={3.1}
                 className={styles.gridSection}
-              >
+                >
                 <Photo image={ph.tabletFeed.image} aspect={ph.tabletFeed.aspect} width="95%" extras={extras}/>
               </Grid>
               <Grid
                 item
                 xs={12} sm={12} md={6.5} lg={6.5} xl={6.5}
                 className={styles.gridSection}
-              >
+                >
                 <Photo image={ph.desktopFeed.image} aspect={ph.desktopFeed.aspect} width="96%" extras={extras}/>
               </Grid>
             </Grid>
-            <Grid item xs={12} sm={12} md={12} lg={4} xl={2} order={{ md: 1, lg: 2}}>
+            <Grid item xs={12} sm={12} md={12} lg={4} xl={2} order={{ xs: 1, sm: 1, md: 1, lg: 2, xl: 2}}>
             <p style={{
-                  color: "black",
-                  fontSize: "1.7rem",
-                  fontWeight: "450"
-                }}
-                >
+              color: "black",
+              fontSize: "1.7rem",
+              fontWeight: "450"
+            }}
+            >
                   The feed will render differently for various screen sizes. The following examples show the application as rendered on a Samsung phone, an iPad, and a laptop.
               </p>
             </Grid>
           </Grid>
 
-          {/* <Grid container>
-            {photos.mobile.map((photo, i) => (
-              <Grid
-                item
-                xs={6} sm={6} md={3} lg={2} xl={2}
-                className={styles.gridSection}
-                key={`mobileImage${i}`}
-                onClick={()=>selectPhoto({image: photo.image, aspect: photo.aspect, width: "25%" })}
-              >
-                <Photo image={photo.image} width="80%" aspect={photo.aspect} extras={extras}/>
-              </Grid>
-            ))}
-          </Grid>
-          <Photo image={photos.tablet.image} width="35%" aspect={photos.tablet.aspect} extras={extras}/>
+{/* ============================================ */}
+
+
           <Grid container>
-            {photos.desktop.map((photo, i) => (
+            <Grid item xs={12} sm={12} md={12} lg={4} xl={2}>
+              <p style={{
+                  color: "black",
+                  fontSize: "1.7rem",
+                  fontWeight: "450"
+                }}
+                >
+                  Items can be searched or they can be filtered by pickup/delivery options, categories, or location on the map. Items can also be sorted by date or distance.
+              </p>
+            </Grid>
+            <Grid
+              item
+              container xs={12} sm={12} md={12} lg={8} xl={10}
+              style={{
+                overflowX: "scroll"
+              }}
+            >
               <Grid
                 item
-                xs={12} sm={10} md={10} lg={6} xl={6}
+                xs={12} sm={3} md={3} lg={3} xl={3}
                 className={styles.gridSection}
-                key={`desktopImage${i}`}
+                key="searchBarFilter"
+                onClick={()=>(
+                  selectPhoto({
+                    image: ph.searchBarFilter.image,
+                    aspect: ph.searchBarFilter.aspect,
+                    width: "25%"
+                  })
+                )}
               >
-                <Photo image={photo.image} width="90%" aspect={photo.aspect} extras={extras}/>
+                <Photo image={ph.searchBarFilter.image} aspect={ph.searchBarFilter.aspect} width="80%" extras={extras} />
               </Grid>
-            ))}
-          </Grid> */}
+              <Grid
+                item
+                xs={12} sm={3} md={3} lg={3} xl={3}
+                className={styles.gridSection}
+                key="pickUpOrDeliveryFilter"
+                onClick={()=>(
+                  selectPhoto({
+                    image: ph.pickUpOrDeliveryFilter.image,
+                    aspect: ph.pickUpOrDeliveryFilter.aspect,
+                    width: "25%"
+                  })
+                )}
+              >
+                <Photo image={ph.pickUpOrDeliveryFilter.image} aspect={ph.pickUpOrDeliveryFilter.aspect} width="80%" extras={extras} />
+              </Grid>
+              <Grid
+                item
+                xs={12} sm={3} md={3} lg={3} xl={3}
+                className={styles.gridSection}
+                key="categoryFilter"
+                onClick={()=>(
+                  selectPhoto({
+                    image: ph.categoryFilter.image,
+                    aspect: ph.categoryFilter.aspect,
+                    width: "25%"
+                  })
+                )}
+              >
+                <Photo image={ph.categoryFilter.image} aspect={ph.categoryFilter.aspect} width="80%" extras={extras} />
+              </Grid>
+              <Grid
+                item
+                xs={12} sm={3} md={3} lg={3} xl={3}
+                className={styles.gridSection}
+                key="mapFilter"
+                onClick={()=>(
+                  selectPhoto({
+                    image: ph.mapFilter.image,
+                    aspect: ph.mapFilter.aspect,
+                    width: "25%"
+                  })
+                )}
+              >
+                <Photo image={ph.mapFilter.image} aspect={ph.mapFilter.aspect} width="80%" extras={extras} />
+              </Grid>
+            </Grid>
+          </Grid>
+
+
+
+
+
+          <Grid container>
+            <Grid
+              item
+              container xs={12} sm={12} md={12} lg={8} xl={10}
+              order={{ xs: 2, sm: 2, md: 2, lg: 1,xl: 1}}
+              style={{
+                overflowX: "scroll"
+              }}
+            >
+              <Grid
+                item
+                xs={12} sm={3} md={3} lg={3} xl={3}
+                className={styles.gridSection}
+                key="itemPage"
+                onClick={()=>(
+                  selectPhoto({
+                    image: ph.itemPage.image,
+                    aspect: ph.itemPage.aspect,
+                    width: "25%"
+                  })
+                )}
+              >
+                <Photo image={ph.itemPage.image} aspect={ph.itemPage.aspect} width="80%" extras={extras} />
+              </Grid>
+              <Grid
+                item
+                xs={12} sm={3} md={3} lg={3} xl={3}
+                className={styles.gridSection}
+                key="askAQuestion"
+                onClick={()=>(
+                  selectPhoto({
+                    image: ph.askAQuestion.image,
+                    aspect: ph.askAQuestion.aspect,
+                    width: "25%"
+                  })
+                )}
+              >
+                <Photo image={ph.askAQuestion.image} aspect={ph.askAQuestion.aspect} width="80%" extras={extras} />
+              </Grid>
+              <Grid
+                item
+                xs={12} sm={3} md={3} lg={3} xl={3}
+                className={styles.gridSection}
+                key="askAQuestion2"
+                onClick={()=>(
+                  selectPhoto({
+                    image: ph.askAQuestion2.image,
+                    aspect: ph.askAQuestion2.aspect,
+                    width: "25%"
+                  })
+                )}
+              >
+                <Photo image={ph.askAQuestion2.image} aspect={ph.askAQuestion2.aspect} width="80%" extras={extras} />
+              </Grid>
+              <Grid
+                item
+                xs={12} sm={3} md={3} lg={3} xl={3}
+                className={styles.gridSection}
+                key="editPost"
+                onClick={()=>(
+                  selectPhoto({
+                    image: ph.editPost.image,
+                    aspect: ph.editPost.aspect,
+                    width: "25%"
+                  })
+                )}
+              >
+                <Photo image={ph.editPost.image} aspect={ph.editPost.aspect} width="80%" extras={extras} />
+              </Grid>
+            </Grid>
+            <Grid item xs={12} sm={12} md={12} lg={4} xl={2} order={{ xs: 1, sm: 1, md: 1, lg: 2, xl: 2}}>
+              <p style={{
+                  color: "black",
+                  fontSize: "1.7rem",
+                  fontWeight: "450"
+                }}
+                >
+                  The item page displays a carousel of the item photos. The user can choose a photo or let the carousel cycle through them automatically. Users can also post a question about an item that the poster can answer or they can report any posts that cause concern. Users can also contact the poster via direct message in a live chat. The donation location is displayed on a map on each item page. A post can be edited or deleted by the user who created it.
+              </p>
+            </Grid>
+          </Grid>
+
+
+
+
+          <Photo image={ph.publicFeed.image} aspect={ph.publicFeed.aspect} width="20%" extras={extras}/>
+          <Photo image={ph.userPage.image} aspect={ph.userPage.aspect} width="20%" extras={extras}/>
+          <Photo image={ph.itemPageDesktop.image} aspect={ph.itemPageDesktop.aspect} width="60%" extras={extras}/>
+
+
         </div>
       </div>
     </div>

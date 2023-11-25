@@ -401,13 +401,12 @@ const osirisImages = {
     image: "https://media.giphy.com/media/zsPCksYyhZXivc1oMt/giphy.gif",
     aspect: ".53"
   },
-
   itemPage: {
-    image: "https://media.giphy.com/media/4TdHq5DtIF06IiQmMX/giphy.gif",
+    image: "https://media.giphy.com/media/f1q8F3J0CsHmyQqgsF/giphy.gif",
     aspect: ".53"
   },
   askAQuestion: {
-    image: "https://media.giphy.com/media/zsPCksYyhZXivc1oMt/giphy.gif",
+    image: "https://media.giphy.com/media/4TdHq5DtIF06IiQmMX/giphy.gif",
     aspect: ".53"
   },
   askAQuestion2: {
