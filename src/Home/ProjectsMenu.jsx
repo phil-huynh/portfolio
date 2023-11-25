@@ -22,7 +22,7 @@ export default function ProjectsMenu() {
       {rotateX: [270, 0]},
       {
         duration: 1.7,
-        delay: stagger(.25),
+        delay: stagger(.25, {startDelay: .1}),
         type: "spring",
         bounce: .5
       }

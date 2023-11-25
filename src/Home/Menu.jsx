@@ -15,16 +15,16 @@ export default function Menu() {
       <p>Skills</p>
     </section>
     <section
-      className={`${styles.optionGlass} ${selection === "bio" ? styles.selected : styles.menuItem}`}
-      onClick={()=>setSelection('bio')}
-    >
-      <p>Resume & Bio</p>
-    </section>
-    <section
       className={`${styles.optionGlass} ${selection === "projects" ? styles.selected : styles.menuItem}`}
       onClick={()=>setSelection('projects')}
     >
       <p>Projects</p>
+    </section>
+    <section
+      className={`${styles.optionGlass} ${selection === "bio" ? styles.selected : styles.menuItem}`}
+      onClick={()=>setSelection('bio')}
+    >
+      <p>Resume & Bio</p>
     </section>
     <section
       className={`${styles.optionGlass} ${selection === "testimonials" ? styles.selected : styles.menuItem}`}
