@@ -349,71 +349,79 @@ const eCommImages = {
 
 
 const osirisImages = {
-  mobile: [
-    {
-      image: "https://media.giphy.com/media/HPt5OekCz5XZR5GLpN/giphy.gif",
-      aspect: ".53"
-    },
-    {
-      image: "https://media.giphy.com/media/35TeChHRBB1Zc7e3ew/giphy.gif",
-      aspect: ".53"
-    },
-    {
-      image: "https://media.giphy.com/media/fIuud07btnCNoKRVmb/giphy.gif",
-      aspect: ".53"
-    },
-    {
-      image: "https://media.giphy.com/media/H47rgIuBFw7g0iIG1V/giphy.gif",
-      aspect: ".53"
-    },
-    {
-      image: "https://media.giphy.com/media/9BtupnUJlFLHMYUqKP/giphy.gif",
-      aspect: ".53"
-    },
-    {
-      image: "https://media.giphy.com/media/c8qLLR7SJTNCf4J16u/giphy.gif",
-      aspect: ".53"
-    },
-    {
-      image: "https://media.giphy.com/media/mFelNZeuET2CKmok0A/giphy.gif",
-      aspect: ".53"
-    },
-    {
-      image: "https://media.giphy.com/media/zhBSjaqLXsviVvOkCQ/giphy.gif",
-      aspect: ".53"
-    },
-    {
-      image: "https://media.giphy.com/media/80BvP34vS4esPPCqWI/giphy.gif",
-      aspect: ".53"
-    },
-    {
-      image: "https://media.giphy.com/media/2yPiSAunimoAPlP7Ta/giphy.gif",
-      aspect: ".53"
-    },
-    {
-      image: "https://media.giphy.com/media/zsPCksYyhZXivc1oMt/giphy.gif",
-      aspect: ".53"
-    },
-    {
-      image: "https://media.giphy.com/media/lNp0gwsXUP6gdUqqsm/giphy.gif",
-      aspect: ".53"
-    },
-    {
-      image: "https://media.giphy.com/media/zsPCksYyhZXivc1oMt/giphy.gif",
-      aspect: ".53"
-    },
-  ],
-  desktop: [
-    {
-      image: "https://media.giphy.com/media/0Mm6noiioGANaMbS8n/giphy.gif",
-      aspect: "1.68"
-    },
-    {
-      image: "https://media.giphy.com/media/Tu0zkb61zEYkJN4VE6/giphy.gif",
-      aspect: "1.68"
-    },
-  ],
-  tablet: {image: "https://media.giphy.com/media/5Diu7UQyjYdrgMCN6X/giphy.gif", aspect: ".78"}
+  signup:{
+    image: "https://media.giphy.com/media/HPt5OekCz5XZR5GLpN/giphy.gif",
+    aspect: ".53"
+  },
+  forgotPassword: {
+    image: "https://media.giphy.com/media/35TeChHRBB1Zc7e3ew/giphy.gif",
+    aspect: ".53"
+  },
+  failedLogin: {
+    image: "https://media.giphy.com/media/fIuud07btnCNoKRVmb/giphy.gif",
+    aspect: ".53"
+  },
+  successfulLogin: {
+    image: "https://media.giphy.com/media/H47rgIuBFw7g0iIG1V/giphy.gif",
+    aspect: ".53"
+  },
+  mobileFeed: {
+    image: "https://media.giphy.com/media/9BtupnUJlFLHMYUqKP/giphy.gif",
+    aspect: ".53"
+  },
+  tabletFeed: {
+    image: "https://media.giphy.com/media/5Diu7UQyjYdrgMCN6X/giphy.gif",
+    aspect: ".78"
+  },
+  desktopFeed: {
+    image: "https://media.giphy.com/media/0Mm6noiioGANaMbS8n/giphy.gif",
+    aspect: "1.68"
+  },
+  searchBarFilter: {
+    image: "https://media.giphy.com/media/c8qLLR7SJTNCf4J16u/giphy.gif",
+    aspect: ".53"
+  },
+  pickUpOrDeliveryFilter: {
+    image: "https://media.giphy.com/media/mFelNZeuET2CKmok0A/giphy.gif",
+    aspect: ".53"
+  },
+  categoryFilter: {
+    image: "https://media.giphy.com/media/zhBSjaqLXsviVvOkCQ/giphy.gif",
+    aspect: ".53"
+  },
+  mapFilter: {
+    image: "https://media.giphy.com/media/80BvP34vS4esPPCqWI/giphy.gif",
+    aspect: ".53"
+  },
+  publicFeed: {
+    image: "https://media.giphy.com/media/2yPiSAunimoAPlP7Ta/giphy.gif",
+    aspect: ".53"
+  },
+  userPage: {
+    image: "https://media.giphy.com/media/zsPCksYyhZXivc1oMt/giphy.gif",
+    aspect: ".53"
+  },
+
+  itemPage: {
+    image: "https://media.giphy.com/media/4TdHq5DtIF06IiQmMX/giphy.gif",
+    aspect: ".53"
+  },
+  askAQuestion: {
+    image: "https://media.giphy.com/media/zsPCksYyhZXivc1oMt/giphy.gif",
+    aspect: ".53"
+  },
+  askAQuestion2: {
+    image: "https://media.giphy.com/media/lNp0gwsXUP6gdUqqsm/giphy.gif",
+    aspect: ".53"
+  },
+  editPost: {
+    image: "https://media.giphy.com/media/zsPCksYyhZXivc1oMt/giphy.gif",
+    aspect: ".53"
+  },
+  itemPageDesktop: {
+    image: "https://media.giphy.com/media/Tu0zkb61zEYkJN4VE6/giphy.gif",
+    aspect: "1.68"
+  },
 }
 
 

@@ -35,6 +35,15 @@ export default function ContextProvider ({ children }) {
   const isXS = useMediaQuery(theme.breakpoints.up('xs'))
 
 
+  const getSize = () => {
+    if (isXL) { return "is XL" }
+    if (isLG) { return "is LG" }
+    if (isMD) { return "is MD" }
+    if (isSM) { return "is SM" }
+    if (isXS) { return "is XS" }
+  }
+
+
   const {
     stringsPhotos,
     quickstarterPhotos,
@@ -106,6 +115,7 @@ export default function ContextProvider ({ children }) {
     setFirstTime: setFirstTime,
     selectPhoto: selectPhoto,
     setResumeModal: setResumeModal,
+    getSize: getSize,
   }
   return (
     <ContextStore.Provider value={store}>
