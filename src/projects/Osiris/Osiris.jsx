@@ -61,7 +61,11 @@ export default function Osiris() {
 
 
           <Grid container>
-            <Grid item xs={12} sm={12} md={12} lg={4} xl={2}>
+            <Grid
+              item
+              xs={12} sm={12} md={12} lg={6} xl={4}
+              sx={{display: "flex", justifyContent: "center", alignItems: "center"}}
+            >
               <p style={{
                   color: "black",
                   fontSize: "1.7rem",
@@ -73,7 +77,7 @@ export default function Osiris() {
             </Grid>
             <Grid
               item
-              container xs={12} sm={12} md={12} lg={8} xl={10}
+              container xs={12} sm={12} md={12} lg={6} xl={8}
               style={{
                 overflowX: "scroll"
               }}
@@ -144,7 +148,7 @@ export default function Osiris() {
 {/* ============================================ */}
 
           <Grid container sx={{width: "100%", marginTop: "2rem"}}>
-            <Grid item container xs={12} sm={12} md={12} lg={8} xl={10} order={{ xs: 2, sm: 2, md: 2, lg: 1, xl: 1}}>
+            <Grid item container xs={12} sm={12} md={12} lg={6} xl={8} order={{ xs: 2, sm: 2, md: 2, lg: 1, xl: 1}}>
               <Grid
                 item
                 xs={12} sm={5.2} md={2.4} lg={2.4} xl={2.4}
@@ -167,7 +171,12 @@ export default function Osiris() {
                 <Photo image={ph.desktopFeed.image} aspect={ph.desktopFeed.aspect} width="96%" extras={extras}/>
               </Grid>
             </Grid>
-            <Grid item xs={12} sm={12} md={12} lg={4} xl={2} order={{ xs: 1, sm: 1, md: 1, lg: 2, xl: 2}}>
+            <Grid
+              item
+              xs={12} sm={12} md={12} lg={6} xl={4}
+              order={{ xs: 1, sm: 1, md: 1, lg: 2, xl: 2}}
+              sx={{display: "flex", justifyContent: "center", alignItems: "center"}}
+            >
             <p style={{
               color: "black",
               fontSize: "1.7rem",
@@ -183,7 +192,11 @@ export default function Osiris() {
 
 
           <Grid container>
-            <Grid item xs={12} sm={12} md={12} lg={4} xl={2}>
+            <Grid
+              item
+              xs={12} sm={12} md={12} lg={6} xl={4}
+              sx={{display: "flex", justifyContent: "center", alignItems: "center"}}
+            >
               <p style={{
                   color: "black",
                   fontSize: "1.7rem",
@@ -195,7 +208,7 @@ export default function Osiris() {
             </Grid>
             <Grid
               item
-              container xs={12} sm={12} md={12} lg={8} xl={10}
+              container xs={12} sm={12} md={12} lg={6} xl={8}
               style={{
                 overflowX: "scroll"
               }}
@@ -270,7 +283,7 @@ export default function Osiris() {
           <Grid container>
             <Grid
               item
-              container xs={12} sm={12} md={12} lg={8} xl={10}
+              container xs={12} sm={12} md={12} lg={7} xl={9}
               order={{ xs: 2, sm: 2, md: 2, lg: 1,xl: 1}}
               style={{
                 overflowX: "scroll"
@@ -337,7 +350,12 @@ export default function Osiris() {
                 <Photo image={ph.editPost.image} aspect={ph.editPost.aspect} width="80%" extras={extras} />
               </Grid>
             </Grid>
-            <Grid item xs={12} sm={12} md={12} lg={4} xl={2} order={{ xs: 1, sm: 1, md: 1, lg: 2, xl: 2}}>
+            <Grid
+              item
+              xs={12} sm={12} md={12} lg={5} xl={3}
+              order={{ xs: 1, sm: 1, md: 1, lg: 2, xl: 2}}
+              sx={{display: "flex", justifyContent: "center", alignItems: "center"}}
+            >
               <p style={{
                   color: "black",
                   fontSize: "1.7rem",

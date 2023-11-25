@@ -1,22 +1,17 @@
 import { useNavigate } from "react-router-dom"
-import { Grid } from "@mui/material"
 import { useAnimate, usePresence } from "framer-motion"
 import { useStore } from "../../Store"
 import { useEffect, useState } from "react"
-import Photo from "../../Photo"
 import styles from "./Ecom.module.css"
 import PhotoModal from "../../PhotoModal"
-import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import Questions from "./Questions"
+import Overview from "./Overview"
+import Reviews from "./Reviews"
 
 export default function Ecommerce() {
 
   const navigate = useNavigate()
-  const {locate, locate2, locate3, eCommImages, selectPhoto, photoModal, currentPhoto} = useStore()
-
-  // const [ overviewPhotos, setOverviewPhotos ] = useState([ ...eCommImages.overview ])
-  // const [ questionsPhotos, setQuestionsPhotos ] = useState([ ...eCommImages.questions ])
-  // const [ reviewsPhotos, setReviewsPhotos ] = useState([ ...eCommImages.reviews ])
+  const { eCommImages, selectPhoto, photoModal, currentPhoto } = useStore()
 
   const [numberShowing, setNumberShowing] = useState(4)
 
@@ -28,7 +23,7 @@ export default function Ecommerce() {
     }
   )
 
-  const cycleLeft = (section) => {
+  const cycleRight = (section) => {
     const prev = carousels[`${section}Photos`]
     setCarousels(
       {
@@ -38,7 +33,7 @@ export default function Ecommerce() {
     )
   }
 
-  const cycleRight = (section) => {
+  const cycleLeft = (section) => {
     const prev = carousels[`${section}Photos`]
     const lastIndex = prev.length - 1
     setCarousels(
@@ -49,6 +44,15 @@ export default function Ecommerce() {
     )
   }
 
+
+  const arrowStyle = {
+    color: "black",
+    fontSize: "7rem",
+    cursor: "pointer",
+    "&:hover":{
+      color: "red"
+    }
+  }
 
   const [page, animatePage] = useAnimate()
   const [isPresent, safeToRemove] = usePresence()
@@ -97,145 +101,33 @@ export default function Ecommerce() {
           </div>
         </div>
 
+        <Overview
+          carousels={carousels}
+          numberShowing={numberShowing}
+          cycleLeft={cycleLeft}
+          cycleRight={cycleRight}
+          extras={extras}
+          arrowStyle={arrowStyle}
+        />
 
+        <Questions
+          carousels={carousels}
+          numberShowing={numberShowing}
+          cycleLeft={cycleLeft}
+          cycleRight={cycleRight}
+          extras={extras}
+          arrowStyle={arrowStyle}
+        />
 
-        <div>
-          <h2 className={styles.sectionHeader}>OVERVIEW</h2>
-          <Grid container>
-              <Grid
-                item
-                sx={{display: "flex", alignItems: "center"}}
-                xs={.5} sm={.5} md={.5} lg={.5} xl={.5}
-              >
-              <NavigateBeforeIcon
-                xs={.5} sm={.5} md={.5} lg={.5} xl={.5}
-                sx={{color: "black", fontSize: "7rem", cursor: "pointer"}}
-                onClick={()=>cycleLeft('overview')}
-              />
-            </Grid>
-            {carousels.overviewPhotos.slice(0, numberShowing).map((photo, i) => (
-              <Grid
-              item
-              xs={12} sm={11/numberShowing} md={11/numberShowing} lg={11/numberShowing} xl={11/numberShowing}
-              key={`overviewImage${i}`}
-              className={styles.photoGridBox}
-              onClick={()=>selectPhoto({image: photo.image, aspect: photo.aspect, width: "70%" })}
-              >
-                <Photo image={photo.image} width="90%" aspect={photo.aspect} extras={extras}/>
-              </Grid>
-            ))}
-            <Grid
-              item
-              sx={{display: "flex", alignItems: "center", justifyContent: "center"}}
-              xs={.5} sm={.5} md={.5} lg={.5} xl={.5}
-            >
-              <NavigateNextIcon
-                sx={{color: "black", fontSize: "7rem", cursor: "pointer"}}
-                onClick={()=>cycleRight('overview')}
-              />
-            </Grid>
-          </Grid>
-        </div>
-
-
-        <div>
-          <h2 className={styles.sectionHeader}>Questions</h2>
-          <Grid container>
-              <Grid
-                item
-                sx={{display: "flex", alignItems: "center"}}
-                xs={.5} sm={.5} md={.5} lg={.5} xl={.5}
-              >
-              <NavigateBeforeIcon
-                xs={.5} sm={.5} md={.5} lg={.5} xl={.5}
-                sx={{color: "black", fontSize: "7rem", cursor: "pointer"}}
-                onClick={()=>cycleLeft('questions')}
-              />
-            </Grid>
-            {carousels.questionsPhotos.slice(0, numberShowing).map((photo, i) => (
-              <Grid
-              item
-              xs={12} sm={11/numberShowing} md={11/numberShowing} lg={11/numberShowing} xl={11/numberShowing}
-              key={`questionsImage${i}`}
-              className={styles.photoGridBox}
-              onClick={()=>selectPhoto({image: photo.image, aspect: photo.aspect, width: "70%" })}
-              >
-                <Photo image={photo.image} width="90%" aspect={photo.aspect} extras={extras}/>
-              </Grid>
-            ))}
-            <Grid
-              item
-              sx={{display: "flex", alignItems: "center", justifyContent: "center"}}
-              xs={.5} sm={.5} md={.5} lg={.5} xl={.5}
-            >
-              <NavigateNextIcon
-                sx={{color: "black", fontSize: "7rem", cursor: "pointer"}}
-                onClick={()=>cycleRight('questions')}
-              />
-            </Grid>
-          </Grid>
-        </div>
-
-
-
-        <div>
-          <h2 className={styles.sectionHeader}>Reviews</h2>
-          <Grid container>
-              <Grid
-                item
-                sx={{display: "flex", alignItems: "center"}}
-                xs={.5} sm={.5} md={.5} lg={.5} xl={.5}
-              >
-              {/* <NavigateBeforeIcon
-                sx={{color: "black", fontSize: "7rem", cursor: "pointer"}}
-                onClick={()=>cycleLeft('questions')}
-              /> */}
-            </Grid>
-            {carousels.reviewsPhotos.slice(0, numberShowing).map((photo, i) => (
-              <Grid
-              item
-              xs={12} sm={11/numberShowing} md={11/numberShowing} lg={11/numberShowing} xl={11/numberShowing}
-              key={`reviewsImage${i}`}
-              className={styles.photoGridBox}
-              onClick={()=>selectPhoto({image: photo.image, aspect: photo.aspect, width: "70%" })}
-              >
-                <Photo image={photo.image} width="90%" aspect={photo.aspect} extras={extras}/>
-              </Grid>
-            ))}
-            <Grid
-              item
-              sx={{display: "flex", alignItems: "center", justifyContent: "center"}}
-              xs={.5} sm={.5} md={.5} lg={.5} xl={.5}
-            >
-              {/* <NavigateNextIcon
-                sx={{color: "black", fontSize: "7rem", cursor: "pointer"}}
-                onClick={()=>cycleRight('questions')}
-              /> */}
-            </Grid>
-          </Grid>
-        </div>
-
-
-
-        {/* {Object.keys(eCommImages).map(section =>(
-          <div key={section}>
-            <h2 className={styles.sectionHeader}>{section.toUpperCase()}</h2>
-            <Grid container>
-              {eCommImages[section].map((photo, i) => (
-                <Grid
-                  item
-                  xs={12} sm={12} md={6} lg={3} xl={3}
-                  key={`ecomImage${i}`}
-                  className={styles.photoGridBox}
-                  onClick={()=>selectPhoto({image: photo.image, aspect: photo.aspect, width: "70%" })}
-                >
-                  <Photo image={photo.image} width="90%" aspect={photo.aspect} extras={extras}/>
-                </Grid>
-              ))}
-            </Grid>
-          </div>
-        ))} */}
-     </section>
+        <Reviews
+          carousels={carousels}
+          numberShowing={numberShowing}
+          cycleLeft={cycleLeft}
+          cycleRight={cycleRight}
+          extras={extras}
+          arrowStyle={arrowStyle}
+        />
+      </section>
     </div>
   )
 }
