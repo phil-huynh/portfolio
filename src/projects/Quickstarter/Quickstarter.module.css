@@ -21,6 +21,12 @@
   z-index: 1;
 }
 
+.top {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .header,
 .title,
 .tools {
@@ -53,7 +59,7 @@
 }
 
 .toolBox {
-  width: 80%;
+  width: 60%;
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding-top: .3rem;

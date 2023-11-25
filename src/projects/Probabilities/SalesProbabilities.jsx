@@ -3,6 +3,7 @@ import { useStore } from "../../Store"
 import { Grid } from "@mui/material"
 import Photo from "../../Photo.jsx"
 import styles from "./Probabilities.module.css"
+import SalesTools from "./Tools"
 
 export default function SalesProbabilities() {
 
@@ -24,6 +25,7 @@ export default function SalesProbabilities() {
           <div className={`glass ${styles.homeLink}`} onClick={()=>navigate('/')}>
             <h2>Home</h2>
           </div>
+          <SalesTools/>
         </div>
         <div className={styles.infoContainer}>
           <Photo

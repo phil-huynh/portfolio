@@ -38,14 +38,16 @@ export default function Quickstarter() {
       ref={page}
     >
       <div className={styles.colorfilter}></div>
-        <div className={`${styles.glass} ${styles.homeLink}`} onClick={()=>navigate('/')}>
-          <h2 >Home</h2>
-        </div>
         <div className="contents">
-          <div className={`glass ${styles.title}`}>
-            <h1>Quickstarter</h1>
+          <div className={styles.top}>
+            <div className={`glass ${styles.title}`}>
+              <h1 style={{"color": "white"}}>Quickstarter</h1>
+            </div>
+            <div className={`glass ${styles.homeLink}`} onClick={()=>navigate('/')}>
+              <h2>Home</h2>
+            </div>
+            <QuickstarterTools/>
           </div>
-          <QuickstarterTools/>
           <Photo
             image={photos.startProject.image}
             aspect={photos.startProject.aspect}

@@ -7,6 +7,7 @@ import PhotoModal from "../../PhotoModal"
 import Questions from "./Questions"
 import Overview from "./Overview"
 import Reviews from "./Reviews"
+import EcomTools from "./Tools"
 
 export default function Ecommerce() {
 
@@ -99,6 +100,7 @@ export default function Ecommerce() {
           <div className={`glass ${styles.navItem}`} onClick={()=>navigate('/')}>
             <h2>Home</h2>
           </div>
+          <EcomTools/>
         </div>
 
         <Overview

@@ -5,6 +5,7 @@ import { useEffect } from "react"
 import Photo from "../../Photo"
 import styles from "./Osiris.module.css"
 import PhotoModal from "../../PhotoModal"
+import OsirisTools from "./Tools"
 
 export default function Osiris() {
 
@@ -55,6 +56,7 @@ export default function Osiris() {
           <div className={`glass ${styles.homelink}`} onClick={()=>navigate('/')}>
             <h2>Home</h2>
           </div>
+          <OsirisTools />
         </div>
         <div className={styles.infoContainer}>
 
