@@ -44,6 +44,7 @@ import Route53Icon from '../tech_icons/Route53Icon'
 import CloudFormationIcon from '../tech_icons/CloudFormationIcon'
 import LambdaIcon from '../tech_icons/LambdaIcon'
 import RabbitMQIcon from '../tech_icons/RabbitMQIcon'
+import ChartsJSIcon from '../tech_icons/ChartsJSIcon'
 
 import { useAnimate, usePresence, stagger} from "framer-motion"
 
@@ -118,6 +119,7 @@ export default function TechIcons() {
           <BulmaIcon width={"2.5rem"}/>
           <MaterialUIIcon width={"2.5rem"}/>
           <FramerMotionIcon width={"2rem"}/>
+          <ChartsJSIcon width={"2.5rem"}/>
           <ViteIcon width={"2rem"}/>
           <FigmaIcon width={"2.2rem"}/>
         </div>
