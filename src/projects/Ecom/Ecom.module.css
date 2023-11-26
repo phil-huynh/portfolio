@@ -1,28 +1,47 @@
+.cardOverlay,
 .wrapper {
   position: absolute;
   top:0;
   left:0;
-  width: 0;
-  height: 0;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
   background-size: cover;
   background-position: center;
   background-color: white;
 }
 
+.arrowGrid,
+.header,
+.navItem,
+.photoGridBox,
+.tools,
 .top {
   display: flex;
   align-items: center;
-  flex-direction: column;
-  width: 100%;
 }
 
+.top {
+  flex-direction: column;
+}
+
+.arrowGrid,
+.header,
+.navItem,
+.photoGridBox {
+  justify-content: center;
+}
+
+.cardOverlay,
+.top {
+  width: 100%;
+}
 
 .header,
 .navItem,
 .photoGridBox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
 }
 
@@ -34,8 +53,8 @@
   margin-top: 1rem;
 }
 
-.photoGridBox,
-.navItem {
+.navItem,
+.photoGridBox {
   cursor: pointer;
 }
 
@@ -46,12 +65,7 @@
 }
 
 .cardOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
   height: 100%;
-  /* transform: translateY(-2.2rem); */
 }
 
 .cardNumber {
@@ -63,14 +77,6 @@
   border-radius: 100%;
 }
 
-
-.arrowGrid {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
 .toolBox {
   width: 60%;
   margin-top: 1rem;
@@ -79,13 +85,10 @@
   border-left: 2px rgb(123, 123, 123) solid;
 }
 
-
 .tools {
-  display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center;
+  flex-wrap: wrap;
   gap: .5rem;
   padding-bottom: 1rem;
   padding-inline: .5rem;

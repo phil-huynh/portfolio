@@ -1,89 +1,208 @@
+.bioContainer,
+.contents,
+.homeGridSection,
+.menuCardBackGround,
+.projectMenuCard,
+.skillsContainer,
+.viewResumeButton,
+.resumeDownloadButton,
+.recommendationsContainer,
+.wrapper {
+  position: relative;
+}
+
+.menuCardOverlay,
+.overlay,
+.projectNameContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.contents,
+.projectMenuContainer,
+.projectGridContainer,
+.projectGridSection,
+.projectMenuCard,
+.projectNameContainer,
+.skillsContainer,
+.wrapper {
+  -webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.buttonContainer,
+.homeGridSection,
+.infoGridSection,
+.introContainer,
+.label,
+.linksContainer,
+.menuItem,
+.name,
+.overlay,
+.projectGridSection,
+.projectNameContainer,
+.recommendationsContainer,
+.selected,
+.skillsContainer,
+.skillsGroupSpread,
+.skillsIconGroup,
+.tools {
+  display: flex;
+}
+
+.buttonContainer,
+.introContainer,
+.recommendationsContainer{
+  flex-direction: column;
+  align-items: center;
+}
+
+.selected,
+.skillsContainer {
+  flex-direction: column;
+}
+
+.menuItem,
+.overlay,
+.projectGridSection {
+  align-items: center;
+  justify-content: center;
+}
+
+.skillsIconGroup {
+  align-items: center;
+}
+
+.homeGridSection,
+.projectNameContainer {
+  justify-content: center;
+}
+
+.buttonContainer,
+.infoGridSection {
+  justify-content: flex-start;
+}
+
+.skillsContainer,
+.skillsGroupSpread {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.recommendationsContainer,
+.tools {
+  justify-content: space-around;
+}
+
+.linksContainer,
+.skillsIconGroup,
+.skillsGroupSpread,
+.tools {
+  flex-wrap: wrap;
+}
+
+.buttonContainer,
+.menuCardOverlay,
+.projectNameContainer,
+.skillsContainer {
+  height: 100%;
+  width: 100%;
+}
+
+.homeGridContainer,
+.infoBox {
+  height: 100%;
+}
+
+hr,
+.topCard,
+.infoGridContainer,
+.menuItem,
+.menuCardBackGround,
+.projectMenuContainer,
+.selected,
+.toolBox {
+  width: 100%;
+}
+
+.headShot,
+.menuCardBackGround,
+.overlay,
+.wrapper {
+  overflow: hidden;
+}
+
+.menuItem,
+.projectMenuCard,
+.viewResumeButton,
+.resumeDownloadButton,
+.selected {
+  cursor: pointer;
+}
+
+hr,
+.email,
+.optionGlass,
+.wrapper {
+  color: white;
+}
+
+.menuItem,
+.overlay,
+.selected,
+.skillsContainer,
+.toolBox,
+.topCard {
+  opacity: 0;
+}
+
+.bulletPoint,
+.email,
+.skillGroupHeader {
+  text-align: left;
+}
+
 .wrapper {
   animation: scroll 500s linear infinite;
   background: var(--bg-home);
   background-attachment: fixed;
-  color: #eee;
   height: 100vh;
   width: 100vw;
   perspective: 1000px;
   perspective-origin: 50% 50%;
-  -webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-  overflow: hidden;
-  position: relative;
-  color: white;
 }
-
 
 .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: var(--bg-home-gradient);
-	background-size: 400% 400%;
-  opacity: 0;
-	animation: gradient 15s ease infinite;
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: var(--bg-home-gradient);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
 }
 
-
 .contents {
-	transform-style: preserve-3d;
-  position: relative;
   overflow-y: scroll;
   height: 100vh;
   z-index: 10;
 }
 
-.homeGridContainer {
-  height: 100%;
-}
-
-
 .homeGridSection {
-  display: flex;
-  justify-content: center;
   padding: 1.5rem;
-  position: relative;
 }
-
 
 .introContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 95%;
   z-index: 2;
 }
 
-.topCard
-.infoGridContainer {
-  width: 100%;
-}
-
-.topCard {
-  opacity: 0;
-}
-
-.infoGridSection {
-  display: flex;
-  justify-content: flex-start;
-}
-
 .infoBox {
-  height: 100%;
   margin: 2rem;
 }
 
 .headShot {
   width: 95%;
   aspect-ratio: 1.17;
-  overflow: hidden;
   background-image: url(../assets/info/headshot.png);
   background-size: cover;
   background-position: center;
@@ -93,7 +212,6 @@
 
 .label,
 .name {
-  display: flex;
   align-items: flex-start;
   align-content: flex-end;
   margin: 0;
@@ -103,93 +221,46 @@
   font-size: 2.3rem;
 }
 
-.email {
-  color: white;
-  text-align: left;
-}
-
 .linksContainer {
-  display: flex;
-  flex-wrap: wrap;
   gap: 2rem;
 }
 
 .toolBox {
-  width: 100%;
   margin-top: 1.5rem;
   padding-inline: .6rem;
   font-size: 1rem;
-  opacity: 0;
 }
 
 .tools {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
   gap: 1.3rem;
   padding-bottom: 1rem;
 }
 
-
-.buttonContainer {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-
 .optionGlass {
-  border-radius: 20px;
+  border-radius: 15px;
   border: none;
   background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
   box-shadow: 15px 15px 15px #1E1E1E;
-  color: white;
   z-index: 1;
 }
 
 .menuItem,
 .selected {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
   height: 5rem;
   font-size: 1.5rem;
   font-weight: 450;
   margin-top: 2rem;
-  cursor: pointer;
-  opacity: 0;
 }
 
 .selected {
-  box-shadow: 0 0 .2rem #fff,
-            0 0 .2rem #fff,
-            0 0 0.5rem white,
-            0 0 0.2rem white,
-            0 0 1.7rem white,
-            15px 15px 15px #1E1E1E,
-            inset 0 0 2rem white;
+  box-shadow: var(--selected-box-shadow)
 }
-
 
 .skillsContainer {
-  width: 100%;
-  height: 100%;
   overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
   z-index: 10;
-  opacity: 0;
-  transform-style: preserve-3d;
 }
-
 
 .skillGroupCard {
   width: 88%;
@@ -200,113 +271,63 @@
   padding-inline: 1.2rem;
 }
 
-
 .skillGroupHeader {
-  text-align: left;
   text-decoration: underline;
   margin-bottom: .3rem;
 }
 
 .skillsIconGroup,
 .skillsGroupSpread {
-  display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   gap: 1rem;
-  align-items: center;
 }
-
-.skillsGroupSpread {
-  justify-content: space-between;
-}
-
 
 .projectMenuContainer {
-	transform-style: preserve-3d;
-  width: 100%;
   z-index: 11;
-}
-
-
-.projectGridContainer {
-	transform-style: preserve-3d;
 }
 
 .projectGridSection {
   min-height: 20rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-	transform-style: preserve-3d;
   -webkit-transition: 1s ease-in-out;
 	transition: 1s ease-in-out;
 }
 
 .projectMenuCard {
   width: 90%;
-  position: relative;
   margin-top: .72rem;
   margin-bottom: .72rem;
-  cursor: pointer;
   border-radius: 15px;
   box-shadow: 15px 15px 15px #1E1E1E;
-	transform-style: preserve-3d;
 }
 
-
-/* .projectGridSection:hover {
-  -webkit-transform: rotateX(-180deg);
-	transform: rotateX(-180deg);
-} */
-
 .menuCardBackGround {
-  position: relative;
-  width: 100%;
   aspect-ratio: 1.6;
   background-position: center;
   background-size: cover;
-  overflow: hidden;
   border-radius: 15px;
 }
 
 .menuCardOverlay {
   background-color: black;
-  position: absolute;
   border-radius: 15px;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   opacity: .3;
 }
 
 .projectNameContainer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
   background-position: center;
-  justify-content: center;
   align-items: flex-end;
   z-index: 14;
   font-size: 3rem;
-	transform-style: preserve-3d;
   transform: translatez(50px) scale(1);
 }
-
-
 
 .bioContainer {
   width: 90%;
   min-height: 93%;
-  position: relative;
   padding: 1.5rem;
   z-index: 12;
   font-size: 1.1rem;
 }
-
 
 .viewResumeButton,
 .resumeDownloadButton {
@@ -315,9 +336,7 @@
   font-weight: 540;
   margin-inline: 1rem;
   border-radius: 5px;
-  cursor: pointer;
   box-shadow: 5px 5px 5px #000000;
-  position: relative;
 }
 
 .resumeDownloadButton {
@@ -335,9 +354,7 @@
   box-shadow: 1px 1px 1px #000000;
 }
 
-
 .bulletPoint {
-  text-align: left;
   margin-top: .75rem;
   margin-bottom: .75rem;
 }
@@ -345,19 +362,9 @@
 .recommendationsContainer {
   width: 90%;
   min-height: 93%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  position: relative;
   padding: 1rem;
   font-size: 1.1rem;
   z-index: 12;
-}
-
-hr {
-  color: white;
-  width: 100%;
 }
 
 blockquote {
@@ -382,7 +389,6 @@ blockquote {
     animation: scroll 800s linear infinite;
   }
 }
-
 
 @keyframes gradient {
 	0% {

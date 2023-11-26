@@ -9,41 +9,55 @@
   width: 100vw;
 }
 
+.gridSection,
+.header,
+.headerItem,
+.homelink,
+.infoContainer,
+.tools {
+  display: flex;
+}
+
+.gridSection,
+.header,
+.headerItem,
+.homelink,
+.tools {
+  align-items: center;
+}
 
 .header {
-  display: flex;
-  align-items: center;
   flex-direction: column;
+}
+
+.gridSection,
+.headerItem,
+.homelink {
+  justify-content: center;
+}
+
+.infoContainer,
+.tools {
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.gridSection,
+.homelink {
+  cursor: pointer;
 }
 
 .headerItem,
 .homelink {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 5rem;
   width: 50%;
   color: white;
   margin-top: 1rem;
 }
 
-.homelink {
-  cursor: pointer;
-}
-
 .infoContainer {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
   margin-top: 1.5rem;
   padding: 1.5rem;
-}
-
-.gridSection {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
 }
 
 .toolBox {
@@ -54,13 +68,8 @@
   border-left: 2px rgb(123, 123, 123) solid;
 }
 
-
 .tools {
-  display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
   gap: .5rem;
   padding-bottom: 1rem;
   padding-inline: .5rem;

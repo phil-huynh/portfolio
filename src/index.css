@@ -6,6 +6,98 @@
   --bg-strings: url("https://i.redd.it/hhix886tzsez.gif");
   --bg-quickstarter: url("https://64.media.tumblr.com/9d6d76c6f82b63ed23cb5972b18119c4/tumblr_poqvbmnJWq1rpooub_400.gifv");
 
+  --white-glow-border: 0 0 .2rem #fff,
+                      0 0 .2rem #fff,
+                      0 0 0.5rem white,
+                      0 0 0.2rem white,
+                      0 0 0.7rem white,
+                      inset 0 0 2rem white;
+
+  --blue-glow-border: 0 0 .2rem #fff,
+                      0 0 .2rem #fff,
+                      0 0 0.5rem #0095ec,
+                      0 0 0.2rem #0095ec,
+                      0 0 0.7rem #0095ec,
+                      inset 0 0 2rem #0095ec;
+
+  --red-glow-border: 0 0 .2rem #fff,
+                     0 0 .2rem #fff,
+                     0 0 0.5rem red,
+                     0 0 0.2rem red,
+                     0 0 0.7rem red,
+                     inset 0 0 2rem red;
+
+
+  --green-glow-border: 0 0 .2rem #fff,
+                      0 0 .2rem #fff,
+                      0 0 0.5rem #49ff18,
+                      0 0 0.2rem #49ff18,
+                      0 0 1.7rem #49ff18,
+                      inset 0 0 2rem #49ff18;
+
+
+
+  --yellow-glow-border: 0 0 .2rem #fff,
+                        0 0 .2rem #fff,
+                        0 0 0.5rem yellow,
+                        0 0 0.2rem yellow,
+                        0 0 0.7rem yellow,
+                        inset 0 0 2rem yellow;
+
+
+  --blue-glow-text: 0 0 2px #0095ec,
+                    0 0 5px #0095ec,
+                    0 0 10px #0095ec,
+                    0 0 15px #0095ec,
+                    0 0 20px #0095ec,
+                    0 0 25px #0095ec,
+                    0 0 30px #0095ec;
+
+
+  --red-glow-text: 0 0 2px red,
+                    0 0 5px red,
+                    0 0 10px red,
+                    0 0 15px red,
+                    0 0 20px red,
+                    0 0 25px red,
+                    0 0 30px red;
+
+
+  --yellow-glow-text: 0 0 2px yellow,
+                      0 0 5px yellow,
+                      0 0 10px yellow,
+                      0 0 15px yellow;
+
+  --yellow-bright-glow-text: 0 0 2px yellow,
+                        0 0 5px yellow,
+                        0 0 10px yellow,
+                        0 0 15px yellow,
+                        0 0 20px yellow,
+                        0 0 25px yellow,
+                        0 0 30px yellow;
+
+
+  --green-glow-text: 0 0 2px #49ff18,
+                      0 0 5px #49ff18,
+                      0 0 10px #49ff18,
+                      0 0 15px #49ff18;
+
+  --green-bright-glow-text: 0 0 2px #49ff18,
+                            0 0 5px #49ff18,
+                            0 0 10px #49ff18,
+                            0 0 15px #49ff18,
+                            0 0 20px #49ff18,
+                            0 0 25px #49ff18,
+                            0 0 30px #49ff18;
+
+
+  --selected-box-shadow: 0 0 .2rem #fff,
+                          0 0 .2rem #fff,
+                          0 0 0.5rem white,
+                          0 0 0.2rem white,
+                          0 0 1.7rem white,
+                          15px 15px 15px #1E1E1E,
+                          inset 0 0 2rem white;
 
   font-family: 'Roboto';
 
@@ -92,7 +184,7 @@ a {
 }
 
 
-.glass2 {
+/* .glass2 {
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 .2rem #fff,
@@ -103,7 +195,7 @@ a {
               inset 0 0 1.3rem #0095ec;
   backdrop-filter: blur(10px);
   z-index: 1;
-}
+} */
 
 
 .glass3 {

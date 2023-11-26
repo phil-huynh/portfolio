@@ -10,10 +10,30 @@
   color: black
 }
 
+.homeLink,
+.infoContainer,
+.salesGridSection,
+.title,
+.tools,
 .top {
   display: flex;
-  align-items: center;
+}
+
+.infoContainer,
+.top {
   flex-direction: column;
+  align-items: center;
+}
+
+.homeLink,
+.salesGridSection,
+.title {
+  justify-content: center;
+  align-items: center;
+}
+
+.tools {
+  align-items: center;
 }
 
 .homeLink {
@@ -21,32 +41,24 @@
 }
 
 .homeLink,
+.title,
+.toolBox {
+  color: white;
+}
+
+.homeLink,
 .title {
   height: 5rem;
   width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
   margin-top: 1rem;
 }
 
 .infoContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 3rem;
   margin-top: 1.5rem;
 }
 
-.salesGridSection {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .toolBox {
-  color: white;
   width: 60%;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -54,13 +66,10 @@
   border-left: 2px rgb(123, 123, 123) solid;
 }
 
-
 .tools {
-  display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center;
+  flex-wrap: wrap;
   gap: .5rem;
   padding-bottom: 1rem;
   padding-inline: .5rem;

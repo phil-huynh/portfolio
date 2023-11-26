@@ -9,43 +9,82 @@
   width: 100vw;
 }
 
+.gitLink,
+.group,
+.info,
+.introStyle,
+.messageContainer,
+.navBar,
+.navGrid,
+.navItem,
+.photoGrid,
+.photoSection,
+.textGrid,
+.titleLayout,
+.tools {
+  display: flex;
+}
+
+.info,
+.introStyle {
+  flex-direction: column;
+}
+
+.navBar,
+.tools {
+  flex-direction: row;
+}
+
+.gitLink,
+.group,
+.info,
+.introStyle,
+.messageContainer,
+.navGrid,
+.navItem,
+.photoGrid,
+.textGrid,
+.titleLayout {
+  justify-content: center;
+  align-items: center;
+}
+
+.photoSection,
+.tools {
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.linkButton,
+.navItem,
+.photoGrid {
+  cursor: pointer;
+}
 
 .introStyle {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 2rem;
   color: white;
 }
 
-
 .titleGlass {
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.2);
-  box-shadow: 10;
   padding-inline: 1rem;
   animation: stringsglass 5s ease infinite;
   z-index: 1;
 }
 
-
 .titleLayout {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 90%;
   margin-bottom: 2rem;
   margin-top: 6rem;
 }
 
-
 .title {
   font-family: 'Comic Neue', cursive;
   font-size: 7rem;
 }
-
 
 .toolBox {
   width: 90%;
@@ -54,100 +93,59 @@
   border-left: 2px rgb(123, 123, 123) solid;
 }
 
-
 .tools {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
   align-items: center;
   gap: .5rem;
   padding-bottom: 1rem;
   padding-inline: .5rem;
 }
 
-
 .linkButton {
   width: 80%;
   height: 10rem;
   color: white;
-  cursor: pointer;
   padding-inline: 1rem;
   margin-inline: 1.5;
   margin-top: 1rem
 }
 .linkButton:hover {
-  box-shadow: 0 0 .2rem #fff,
-              0 0 .2rem #fff,
-              0 0 0.5rem white,
-              0 0 0.2rem white,
-              0 0 1.7rem white,
-              inset 0 0 2rem white;
+  box-shadow: var(--white-glow-border)
 }
 .linkButton:active {
-  box-shadow: 0 0 .2rem #fff,
-              0 0 .2rem #fff,
-              0 0 0.5rem #49ff18,
-              0 0 0.2rem #49ff18,
-              0 0 1.7rem #49ff18,
-              inset 0 0 2rem #49ff18;
+  box-shadow: var(--green-glow-border)
 }
-
 
 .appLink {
   font-size: 2rem;
   margin-bottom: 0;
 }
 
-
-.gitLink,
-.group,
-.info,
-.messageContainer,
-.navGrid {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
 .gitLinkText {
   font-size: 2rem;
   margin-right: 1rem;
 }
 
-
 .navBar {
   position: sticky;
   top: 1rem;
-  display: flex;
-  flex-direction: row;
   z-index: 11;
 }
-
 
 .navItem {
   width: 70%;
   z-index: 11;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   animation: neonNav 60s ease infinite;
   margin-top: 1rem;
 }
-
 
 .navLabel {
   margin-top: .4rem;
   margin-bottom: .4rem;
 }
 
-
 .messageContainer {
   width: 100%;
 }
-
 
 .messageCard {
   width: 90%;
@@ -156,26 +154,16 @@
   margin-top: 1.5rem;
 }
 
-
 .group {
   width: 75%;
   padding: 2rem;
 }
 
-
 .info {
   width: 96%;
-  flex-direction: column;
   padding: 1rem;
   /* margin-top: .5rem;
   margin-bottom: .5rem; */
-}
-
-
-.photoSection {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
 }
 
 .magicGlass {
@@ -189,161 +177,53 @@
 @keyframes stringsglass {
 	0% {
 		backdrop-filter: blur(7px) hue-rotate(0deg);
-    box-shadow: 0 0 .2rem #fff,
-              0 0 .2rem #fff,
-              0 0 0.5rem #0095ec,
-              0 0 0.2rem #0095ec,
-              0 0 0.7rem #0095ec,
-              inset 0 0 2rem #0095ec;
-    text-shadow: 0 0 2px #0095ec,
-              0 0 5px #0095ec,
-              0 0 10px #0095ec,
-              0 0 15px #0095ec,
-              0 0 20px #0095ec,
-              0 0 25px #0095ec,
-              0 0 30px #0095ec;;
+    box-shadow: var(--blue-glow-border);
+    text-shadow: var(--blue-glow-text);
 	}
 	25% { backdrop-filter: blur(7px) hue-rotate(90deg); }
   30% {
-    box-shadow: 0 0 .2rem #fff,
-                0 0 .2rem #fff,
-                0 0 0.5rem red,
-                0 0 0.2rem red,
-                0 0 0.7rem red,
-    inset 0 0 2rem red;
-    text-shadow: 0 0 2px red,
-                0 0 5px red,
-                0 0 10px red,
-                0 0 15px red,
-                0 0 20px red,
-                0 0 25px red,
-                0 0 30px red;;
+    box-shadow: var(--red-glow-border);
+    text-shadow: var(--red-glow-text);
   }
 	50% { backdrop-filter: blur(7px) hue-rotate(180deg); }
   55% {
-    box-shadow: 0 0 .2rem #fff,
-                0 0 .2rem #fff,
-                0 0 0.5rem yellow,
-                0 0 0.2rem yellow,
-                0 0 0.7rem yellow,
-    inset 0 0 2rem yellow;
-    text-shadow: 0 0 2px yellow,
-                0 0 5px yellow,
-                0 0 10px yellow,
-                0 0 15px yellow;
+    box-shadow: var(--yellow-glow-border);
+    text-shadow: var(--yellow-glow-text)
   }
   75%{
     backdrop-filter: blur(7px) hue-rotate(270deg);
-    box-shadow: 0 0 .2rem #fff,
-              0 0 .2rem #fff,
-              0 0 0.5rem #49ff18,
-              0 0 0.2rem #49ff18,
-              0 0 1.7rem #49ff18,
-              inset 0 0 2rem #49ff18;
-    text-shadow: 0 0 2px #49ff18,
-              0 0 5px #49ff18,
-              0 0 10px #49ff18,
-              0 0 15px #49ff18;
-              /* 0 0 20px #49ff18,
-              0 0 25px #49ff18,
-              0 0 30px #49ff18; */
+    box-shadow: var(--green-glow-border);
+    text-shadow: var(--green-glow-text)
   }
   100%{
     backdrop-filter: blur(5px) hue-rotate(360deg);
-    box-shadow: 0 0 .2rem #fff,
-              0 0 .2rem #fff,
-              0 0 0.5rem #0095ec,
-              0 0 0.2rem #0095ec,
-              0 0 0.7rem #0095ec,
-              inset 0 0 2rem #0095ec;
-    text-shadow: 0 0 2px #0095ec,
-              0 0 5px #0095ec,
-              0 0 10px #0095ec,
-              0 0 15px #0095ec,
-              0 0 20px #0095ec,
-              0 0 25px #0095ec,
-              0 0 30px #0095ec;;
+    box-shadow: var(--blue-glow-border);
+    text-shadow: var(--blue-glow-text)
   }
 }
-
 
 
 /* Nav Item Animation */
 @keyframes neonNav {
 	0% {
-		box-shadow: 0 0 .2rem #fff,
-              0 0 .2rem #fff,
-              0 0 0.5rem #0095ec,
-              0 0 0.2rem #0095ec,
-              0 0 0.7rem #0095ec,
-              inset 0 0 1.7rem #0095ec;
-    text-shadow: 0 0 2px #0095ec,
-                0 0 5px #0095ec,
-                0 0 10px #0095ec,
-                0 0 15px #0095ec,
-                0 0 20px #0095ec,
-                0 0 25px #0095ec,
-                0 0 30px #0095ec;
+		box-shadow: var(--blue-glow-border);
+    text-shadow: var(--blue-glow-text)
 	}
 	25% {
-		box-shadow: 0 0 .2rem #fff,
-              0 0 .2rem #fff,
-              0 0 0.5rem #49ff18,
-              0 0 0.2rem #49ff18,
-              0 0 0.7rem #49ff18,
-              inset 0 0 1.5rem #49ff18;
-    text-shadow: 0 0 2px #49ff18,
-                0 0 5px #49ff18,
-                0 0 10px #49ff18,
-                0 0 15px #49ff18,
-                0 0 20px #49ff18,
-                0 0 25px #49ff18,
-                0 0 30px #49ff18;
+		box-shadow: var(--green-glow-border);
+    text-shadow: var(--green-bright-glow-text)
 	}
 	50% {
-		box-shadow: 0 0 .2rem #fff,
-              0 0 .2rem #fff,
-              0 0 0.5rem yellow,
-              0 0 0.2rem yellow,
-              0 0 0.7rem yellow,
-              inset 0 0 1.5rem yellow;
-    text-shadow: 0 0 2px yellow,
-                0 0 5px yellow,
-                0 0 10px yellow,
-                0 0 15px yellow,
-                0 0 20px yellow,
-                0 0 25px yellow,
-                0 0 30px yellow;;
+		box-shadow: var(--yellow-glow-border);
+    text-shadow: var(--yellow-bright-glow-text)
 	}
   75%{
-    box-shadow: 0 0 .2rem #fff,
-              0 0 .2rem #fff,
-              0 0 0.5rem red,
-              0 0 0.2rem red,
-              0 0 0.7rem red,
-              inset 0 0 1.5rem red;
-    text-shadow: 0 0 2px red,
-                0 0 5px red,
-                0 0 10px red,
-                0 0 15px red,
-                0 0 20px red,
-                0 0 25px red,
-                0 0 30px red;;
+    box-shadow: var(--red-glow-border);
+    text-shadow: var(--red-glow-text)
   }
   100%{
-    box-shadow: 0 0 .2rem #fff,
-              0 0 .2rem #fff,
-              0 0 0.5rem #0095ec,
-              0 0 0.2rem #0095ec,
-              0 0 0.7rem #0095ec,
-              inset 0 0 1.7rem #0095ec;
-    text-shadow: 0 0 2px #0095ec,
-                0 0 5px #0095ec,
-                0 0 10px #0095ec,
-                0 0 15px #0095ec,
-                0 0 20px #0095ec,
-                0 0 25px #0095ec,
-                0 0 30px #0095ec;;
+    box-shadow: var(--blue-glow-border);
+    text-shadow: var(--blue-glow-text)
   }
 }
 
@@ -371,12 +251,3 @@
 
 
 
-
-/* .navItem:hover {
-  box-shadow: 0 0 .2rem #fff,
-              0 0 .2rem #fff,
-              0 0 0.5rem white,
-              0 0 0.2rem white,
-              0 0 1.7rem white,
-              inset 0 0 2rem white;
-} */
