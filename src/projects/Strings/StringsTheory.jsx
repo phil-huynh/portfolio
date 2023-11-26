@@ -3,6 +3,7 @@ import AppLink from "./AppLink.jsx"
 import GitLink from './GitLink'
 
 import Photo from "../../Photo"
+import PhotoModal from "../../PhotoModal.jsx"
 import styles from "./Strings.module.css"
 
 import { useNavigate } from "react-router-dom"
@@ -14,13 +15,13 @@ import { useEffect } from "react"
 
 export default function StringsTheory() {
 
-  const { stringsPhotos: photos } = useStore()
+  const { stringsPhotos: ph, selectPhoto, photoModal, currentPhoto } = useStore()
   const [isPresent, safeToRemove] = usePresence()
   const [page, animate] = useAnimate()
 
   const images = [
 
-    photos.alterations,
+    ph.alterations,
 
   ]
 
@@ -61,6 +62,14 @@ export default function StringsTheory() {
       key="strings"
     >
       <div className="contents" >
+        {photoModal ?
+          <PhotoModal
+            image={currentPhoto.image}
+            aspect={currentPhoto.aspect}
+            width={currentPhoto.width}
+          />
+          :null
+        }
         <div className={styles.introStyle}>
           <div className={`${styles.titleGlass} ${styles.titleLayout}`}>
             <h1 className={styles.title}>Strings Theory</h1>
@@ -101,7 +110,7 @@ export default function StringsTheory() {
           /> */}
           <div className={styles.introStyle}></div>
 
-        <div className={styles.photoSection}>
+        <div className={styles.phection}>
           <div className={`glass6 ${styles.info}`}>
             <Grid container>
               <Grid
@@ -120,42 +129,97 @@ export default function StringsTheory() {
                 xs={12} sm={12} md={6} lg={5} xl={5}
               >
 
-                <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{display: "flex", justifyContent: "center", alignContent: "center"}}>
+                <Grid
+                  item
+                  xs={12} sm={12} md={12} lg={12} xl={12}
+                  sx={{display: "flex", justifyContent: "center", alignContent: "center", cursor: "pointer"}}
+                  onClick={()=>
+                    selectPhoto({
+                      image: ph.standardNeck.image,
+                      aspect: ph.standardNeck.aspect,
+                      width: "90%"
+                    })
+                  }
+                  >
                   <Photo
-                    image={photos.standardNeck.image}
-                    aspect={photos.standardNeck.aspect}
+                    image={ph.standardNeck.image}
+                    aspect={ph.standardNeck.aspect}
                     width="90%"
                     extras={extras}
                   />
                 </Grid>
-                <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{display: "flex", justifyContent: "center", alignContent: "center"}}>
+                <Grid
+                  item
+                  xs={12} sm={12} md={12} lg={12} xl={12}
+                  sx={{display: "flex", justifyContent: "center", alignContent: "center", cursor: "pointer"}}
+                  onClick={()=>
+                    selectPhoto({
+                      image: ph.fiveStringNeck.image,
+                      aspect: ph.fiveStringNeck.aspect,
+                      width: "90%"
+                    })
+                  }
+                >
                   <Photo
-                    image={photos.fiveStringNeck.image}
-                    aspect={photos.fiveStringNeck.aspect}
+                    image={ph.fiveStringNeck.image}
+                    aspect={ph.fiveStringNeck.aspect}
                     width="90%"
                     extras={extras}
                   />
                 </Grid>
-                <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{display: "flex", justifyContent: "center", alignContent: "center"}}>
+                <Grid
+                  item
+                  xs={12} sm={12} md={12} lg={12} xl={12}
+                  sx={{display: "flex", justifyContent: "center", alignContent: "center", cursor: "pointer"}}
+                  onClick={()=>
+                    selectPhoto({
+                      image: ph.ukeNeck.image,
+                      aspect: ph.ukeNeck.aspect,
+                      width: "90%"
+                    })
+                  }
+                >
                   <Photo
-                    image={photos.ukeNeck.image}
-                    aspect={photos.ukeNeck.aspect}
+                    image={ph.ukeNeck.image}
+                    aspect={ph.ukeNeck.aspect}
                     width="90%"
                     extras={extras}
                   />
                 </Grid>
-                <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{display: "flex", justifyContent: "center", alignContent: "center"}}>
+                <Grid
+                  item
+                  xs={12} sm={12} md={12} lg={12} xl={12}
+                  sx={{display: "flex", justifyContent: "center", alignContent: "center", cursor: "pointer"}}
+                  onClick={()=>
+                    selectPhoto({
+                      image: ph.violinNeck.image,
+                      aspect: ph.violinNeck.aspect,
+                      width: "90%"
+                    })
+                  }
+                >
                   <Photo
-                    image={photos.violinNeck.image}
-                    aspect={photos.violinNeck.aspect}
+                    image={ph.violinNeck.image}
+                    aspect={ph.violinNeck.aspect}
                     width="90%"
                     extras={extras}
                   />
                 </Grid>
-                <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{display: "flex", justifyContent: "center", alignContent: "center"}}>
+                <Grid
+                  item
+                  xs={12} sm={12} md={12} lg={12} xl={12}
+                  sx={{display: "flex", justifyContent: "center", alignContent: "center", cursor: "pointer"}}
+                  onClick={()=>
+                    selectPhoto({
+                      image: ph.leftyNeck.image,
+                      aspect: ph.leftyNeck.aspect,
+                      width: "90%"
+                    })
+                  }
+                >
                   <Photo
-                    image={photos.leftyNeck.image}
-                    aspect={photos.leftyNeck.aspect}
+                    image={ph.leftyNeck.image}
+                    aspect={ph.leftyNeck.aspect}
                     width="90%"
                     extras={extras}
                   />
@@ -178,26 +242,59 @@ export default function StringsTheory() {
                 xs={12} sm={12} md={6} lg={7} xl={7}
                 order={{ xs: 2, sm: 2, md: 1, lg: 1, xl: 1}}
               >
-                <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{display: "flex", justifyContent: "center", alignContent: "center"}}>
+                <Grid
+                  item
+                  xs={12} sm={12} md={12} lg={12} xl={12}
+                  sx={{display: "flex", justifyContent: "center", alignContent: "center", cursor: "pointer"}}
+                  onClick={()=>
+                    selectPhoto({
+                      image: ph.noteNames.image,
+                      aspect: ph.noteNames.aspect,
+                      width: "90%"
+                    })
+                  }
+                >
                   <Photo
-                    image={photos.noteNames.image}
-                    aspect={photos.noteNames.aspect}
+                    image={ph.noteNames.image}
+                    aspect={ph.noteNames.aspect}
                     width="90%"
                     extras={extras}
                   />
                 </Grid>
-                <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{display: "flex", justifyContent: "center", alignContent: "center"}}>
+                <Grid
+                  item
+                  xs={12} sm={12} md={12} lg={12} xl={12}
+                  sx={{display: "flex", justifyContent: "center", alignContent: "center", cursor: "pointer"}}
+                  onClick={()=>
+                    selectPhoto({
+                      image: ph.scaleDegrees.image,
+                      aspect: ph.scaleDegrees.aspect,
+                      width: "90%"
+                    })
+                  }
+                >
                   <Photo
-                    image={photos.scaleDegrees.image}
-                    aspect={photos.scaleDegrees.aspect}
+                    image={ph.scaleDegrees.image}
+                    aspect={ph.scaleDegrees.aspect}
                     width="90%"
                     extras={extras}
                   />
                 </Grid>
-                <Grid item xs={12} sm={12} md={12} lg={12} xl={12} sx={{display: "flex", justifyContent: "center", alignContent: "center"}}>
+                <Grid
+                  item
+                  xs={12} sm={12} md={12} lg={12} xl={12}
+                  sx={{display: "flex", justifyContent: "center", alignContent: "center", cursor: "pointer"}}
+                  onClick={()=>
+                    selectPhoto({
+                      image: ph.solfege.image,
+                      aspect: ph.solfege.aspect,
+                      width: "90%"
+                    })
+                  }
+                >
                   <Photo
-                    image={photos.solfege.image}
-                    aspect={photos.solfege.aspect}
+                    image={ph.solfege.image}
+                    aspect={ph.solfege.aspect}
                     width="90%"
                     extras={extras}
                   />
@@ -234,26 +331,59 @@ export default function StringsTheory() {
                 xs={12} sm={12} md={12} lg={12} xl={12}
               >
 
-                <Grid item xs={12} sm={12} md={12} lg={4} xl={4} sx={{display: "flex", justifyContent: "center", alignContent: "center"}}>
+                <Grid
+                  item
+                  xs={12} sm={12} md={12} lg={4} xl={4}
+                  sx={{display: "flex", justifyContent: "center", alignContent: "center", cursor: "pointer"}}
+                  onClick={()=>
+                    selectPhoto({
+                      image: ph.selectedNoteNoChord.image,
+                      aspect: ph.selectedNoteNoChord.aspect,
+                      width: "90%"
+                    })
+                  }
+                >
                   <Photo
-                    image={photos.selectedNoteNoChord.image}
-                    aspect={photos.selectedNoteNoChord.aspect}
+                    image={ph.selectedNoteNoChord.image}
+                    aspect={ph.selectedNoteNoChord.aspect}
                     width="90%"
                     extras={extras}
                   />
                 </Grid>
-                <Grid item xs={12} sm={12} md={12} lg={4} xl={4} sx={{display: "flex", justifyContent: "center", alignContent: "center"}}>
+                <Grid
+                  item
+                  xs={12} sm={12} md={12} lg={4} xl={4}
+                  sx={{display: "flex", justifyContent: "center", alignContent: "center", cursor: "pointer"}}
+                  onClick={()=>
+                    selectPhoto({
+                      image: ph.selectedNoteWithChord.image,
+                      aspect: ph.selectedNoteWithChord.aspect,
+                      width: "90%"
+                    })
+                  }
+                >
                   <Photo
-                    image={photos.selectedNoteWithChord.image}
-                    aspect={photos.selectedNoteWithChord.aspect}
+                    image={ph.selectedNoteWithChord.image}
+                    aspect={ph.selectedNoteWithChord.aspect}
                     width="90%"
                     extras={extras}
                   />
                 </Grid>
-                <Grid item xs={12} sm={12} md={12} lg={4} xl={4} sx={{display: "flex", justifyContent: "center", alignContent: "center"}}>
+                <Grid
+                  item
+                  xs={12} sm={12} md={12} lg={4} xl={4}
+                  sx={{display: "flex", justifyContent: "center", alignContent: "center", cursor: "pointer"}}
+                  onClick={()=>
+                    selectPhoto({
+                      image: ph.selectedNoteTwoChords.image,
+                      aspect: ph.selectedNoteTwoChords.aspect,
+                      width: "90%"
+                    })
+                  }
+                >
                   <Photo
-                    image={photos.selectedNoteTwoChords.image}
-                    aspect={photos.selectedNoteTwoChords.aspect}
+                    image={ph.selectedNoteTwoChords.image}
+                    aspect={ph.selectedNoteTwoChords.aspect}
                     width="90%"
                     extras={extras}
                   />
@@ -281,26 +411,59 @@ export default function StringsTheory() {
                 container
                 xs={12} sm={12} md={6} lg={12} xl={12}
               >
-                <Grid item xs={12} sm={12} md={12} lg={4} xl={4} sx={{display: "flex", justifyContent: "center", alignContent: "center"}}>
+                <Grid
+                  item
+                  xs={12} sm={12} md={12} lg={4} xl={4}
+                  sx={{display: "flex", justifyContent: "center", alignContent: "center", cursor: "pointer"}}
+                  onClick={()=>
+                    selectPhoto({
+                      image: ph.oneChordInMapScales.image,
+                      aspect: ph.oneChordInMapScales.aspect,
+                      width: "80%"
+                    })
+                  }
+                >
                 <Photo
-                  image={photos.oneChordInMapScales.image}
-                  aspect={photos.oneChordInMapScales.aspect}
+                  image={ph.oneChordInMapScales.image}
+                  aspect={ph.oneChordInMapScales.aspect}
                   width="90%"
                   extras={extras}
                 />
                 </Grid>
-                <Grid item xs={12} sm={12} md={12} lg={4} xl={4} sx={{display: "flex", justifyContent: "center", alignContent: "center"}}>
+                <Grid
+                  item
+                  xs={12} sm={12} md={12} lg={4} xl={4}
+                  sx={{display: "flex", justifyContent: "center", alignContent: "center", cursor: "pointer"}}
+                  onClick={()=>
+                    selectPhoto({
+                      image: ph.sectionNeck.image,
+                      aspect: ph.sectionNeck.aspect,
+                      width: "80%"
+                    })
+                  }
+                >
                 <Photo
-                  image={photos.sectionNeck.image}
-                  aspect={photos.sectionNeck.aspect}
+                  image={ph.sectionNeck.image}
+                  aspect={ph.sectionNeck.aspect}
                   width="90%"
                   extras={extras}
                 />
                 </Grid>
-                <Grid item xs={12} sm={12} md={12} lg={4} xl={4} sx={{display: "flex", justifyContent: "center", alignContent: "center"}}>
+                <Grid
+                  item
+                  xs={12} sm={12} md={12} lg={4} xl={4}
+                  sx={{display: "flex", justifyContent: "center", alignContent: "center", cursor: "pointer"}}
+                  onClick={()=>
+                    selectPhoto({
+                      image: ph.capo.image,
+                      aspect: ph.capo.aspect,
+                      width: "80%"
+                    })
+                  }
+                >
                 <Photo
-                  image={photos.capo.image}
-                  aspect={photos.capo.aspect}
+                  image={ph.capo.image}
+                  aspect={ph.capo.aspect}
                   width="90%"
                   extras={extras}
                 />
@@ -327,42 +490,97 @@ export default function StringsTheory() {
                 container
                 xs={12} sm={12} md={6} lg={12} xl={12}
               >
-                <Grid item xs={12} sm={12} md={12} lg={3} xl={2.4} sx={{display: "flex", justifyContent: "center", alignContent: "center"}}>
+                <Grid
+                  item
+                  xs={12} sm={12} md={12} lg={3} xl={2.4}
+                  sx={{display: "flex", justifyContent: "center", alignContent: "center", cursor: "pointer"}}
+                  onClick={()=>
+                    selectPhoto({
+                      image: ph.twoChordsMapScales.image,
+                      aspect: ph.twoChordsMapScales.aspect,
+                      width: "80%"
+                    })
+                  }
+                >
                   <Photo
-                    image={photos.twoChordsMapScales.image}
-                    aspect={photos.twoChordsMapScales.aspect}
+                    image={ph.twoChordsMapScales.image}
+                    aspect={ph.twoChordsMapScales.aspect}
                     width="90%"
                     extras={extras}
                   />
                 </Grid>
-                <Grid item xs={12} sm={12} md={12} lg={3} xl={2.4} sx={{display: "flex", justifyContent: "center", alignContent: "center"}}>
+                <Grid
+                  item
+                  xs={12} sm={12} md={12} lg={3} xl={2.4}
+                  sx={{display: "flex", justifyContent: "center", alignContent: "center", cursor: "pointer"}}
+                  onClick={()=>
+                    selectPhoto({
+                      image: ph.focusChord1MapScales.image,
+                      aspect: ph.focusChord1MapScales.aspect,
+                      width: "80%"
+                    })
+                  }
+                >
                   <Photo
-                    image={photos.focusChord1MapScales.image}
-                    aspect={photos.focusChord1MapScales.aspect}
+                    image={ph.focusChord1MapScales.image}
+                    aspect={ph.focusChord1MapScales.aspect}
                     width="90%"
                     extras={extras}
                   />
                 </Grid>
-                <Grid item xs={12} sm={12} md={12} lg={3} xl={2.4} sx={{display: "flex", justifyContent: "center", alignContent: "center"}}>
+                <Grid
+                  item
+                  xs={12} sm={12} md={12} lg={3} xl={2.4}
+                  sx={{display: "flex", justifyContent: "center", alignContent: "center", cursor: "pointer"}}
+                  onClick={()=>
+                    selectPhoto({
+                      image: ph.focusChord2MapScales.image,
+                      aspect: ph.focusChord2MapScales.aspect,
+                      width: "80%"
+                    })
+                  }
+                >
                   <Photo
-                    image={photos.focusChord2MapScales.image}
-                    aspect={photos.focusChord2MapScales.aspect}
+                    image={ph.focusChord2MapScales.image}
+                    aspect={ph.focusChord2MapScales.aspect}
                     width="90%"
                     extras={extras}
                   />
                 </Grid>
-                <Grid item xs={12} sm={12} md={12} lg={3} xl={2.4} sx={{display: "flex", justifyContent: "center", alignContent: "center"}}>
+                <Grid
+                  item
+                  xs={12} sm={12} md={12} lg={3} xl={2.4}
+                  sx={{display: "flex", justifyContent: "center", alignContent: "center", cursor: "pointer"}}
+                  onClick={()=>
+                    selectPhoto({
+                      image: ph.chord1DegsMapScales.image,
+                      aspect: ph.chord1DegsMapScales.aspect,
+                      width: "80%"
+                    })
+                  }
+                >
                   <Photo
-                    image={photos.chord1DegsMapScales.image}
-                    aspect={photos.chord1DegsMapScales.aspect}
+                    image={ph.chord1DegsMapScales.image}
+                    aspect={ph.chord1DegsMapScales.aspect}
                     width="90%"
                     extras={extras}
                   />
                 </Grid>
-                <Grid item xs={12} sm={12} md={12} lg={3} xl={2.4} sx={{display: "flex", justifyContent: "center", alignContent: "center"}}>
+                <Grid
+                  item
+                  xs={12} sm={12} md={12} lg={3} xl={2.4}
+                  sx={{display: "flex", justifyContent: "center", alignContent: "center", cursor: "pointer"}}
+                  onClick={()=>
+                    selectPhoto({
+                      image: ph.chord2DegsMapScales.image,
+                      aspect: ph.chord2DegsMapScales.aspect,
+                      width: "80%"
+                    })
+                  }
+                >
                   <Photo
-                    image={photos.chord2DegsMapScales.image}
-                    aspect={photos.chord2DegsMapScales.aspect}
+                    image={ph.chord2DegsMapScales.image}
+                    aspect={ph.chord2DegsMapScales.aspect}
                     width="90%"
                     extras={extras}
                   />
@@ -390,34 +608,78 @@ export default function StringsTheory() {
                 xs={12} sm={12} md={6} lg={12} xl={12}
               >
 
-                <Grid item xs={12} sm={12} md={12} lg={3} xl={3} sx={{display: "flex", justifyContent: "center", alignContent: "center"}}>
+                <Grid
+                  item
+                  xs={12} sm={12} md={12} lg={3} xl={3}
+                  sx={{display: "flex", justifyContent: "center", alignContent: "center", cursor: "pointer"}}
+                  onClick={()=>
+                    selectPhoto({
+                      image: ph.chordDash.image,
+                      aspect: ph.chordDash.aspect,
+                      width: "80%"
+                    })
+                  }
+                >
                   <Photo
-                    image={photos.chordDash.image}
-                    aspect={photos.chordDash.aspect}
+                    image={ph.chordDash.image}
+                    aspect={ph.chordDash.aspect}
                     width="90%"
                     extras={extras}
                   />
                 </Grid>
-                <Grid item xs={12} sm={12} md={12} lg={3} xl={3} sx={{display: "flex", justifyContent: "center", alignContent: "center"}}>
+                <Grid
+                  item
+                  xs={12} sm={12} md={12} lg={3} xl={3}
+                  sx={{display: "flex", justifyContent: "center", alignContent: "center", cursor: "pointer"}}
+                  onClick={()=>
+                    selectPhoto({
+                      image: ph.twoNamesMapChords.image,
+                      aspect: ph.twoNamesMapChords.aspect,
+                      width: "80%"
+                    })
+                  }
+                >
                   <Photo
-                    image={photos.twoNamesMapChords.image}
-                    aspect={photos.twoNamesMapChords.aspect}
+                    image={ph.twoNamesMapChords.image}
+                    aspect={ph.twoNamesMapChords.aspect}
                     width="90%"
                     extras={extras}
                   />
                 </Grid>
-                <Grid item xs={12} sm={12} md={12} lg={3} xl={3} sx={{display: "flex", justifyContent: "center", alignContent: "center"}}>
+                <Grid
+                  item
+                  xs={12} sm={12} md={12} lg={3} xl={3}
+                  sx={{display: "flex", justifyContent: "center", alignContent: "center", cursor: "pointer"}}
+                  onClick={()=>
+                    selectPhoto({
+                      image: ph.focus1MapChords.image,
+                      aspect: ph.focus1MapChords.aspect,
+                      width: "80%"
+                    })
+                  }
+                >
                   <Photo
-                    image={photos.focus1MapChords.image}
-                    aspect={photos.focus1MapChords.aspect}
+                    image={ph.focus1MapChords.image}
+                    aspect={ph.focus1MapChords.aspect}
                     width="90%"
                     extras={extras}
                   />
                 </Grid>
-                <Grid item xs={12} sm={12} md={12} lg={3} xl={3} sx={{display: "flex", justifyContent: "center", alignContent: "center"}}>
+                <Grid
+                  item
+                  xs={12} sm={12} md={12} lg={3} xl={3}
+                  sx={{display: "flex", justifyContent: "center", alignContent: "center", cursor: "pointer"}}
+                  onClick={()=>
+                    selectPhoto({
+                      image: ph.focus2DegsMapChords.image,
+                      aspect: ph.focus2DegsMapChords.aspect,
+                      width: "80%"
+                    })
+                  }
+                >
                   <Photo
-                    image={photos.focus2DegsMapChords.image}
-                    aspect={photos.focus2DegsMapChords.aspect}
+                    image={ph.focus2DegsMapChords.image}
+                    aspect={ph.focus2DegsMapChords.aspect}
                     width="90%"
                     extras={extras}
                   />
@@ -429,41 +691,41 @@ export default function StringsTheory() {
 {/*
             <div className={styles.group}>
               <Photo
-                image={photos.mapScalesPage.image}
-                aspect={photos.mapScalesPage.aspect}
+                image={ph.mapScalesPage.image}
+                aspect={ph.mapScalesPage.aspect}
                 width="90%"
               />
             </div>
             <div className={styles.group}>
               <Photo
-                image={photos.viewMenu.image}
-                aspect={photos.viewMenu.aspect}
+                image={ph.viewMenu.image}
+                aspect={ph.viewMenu.aspect}
                 width="30%"
               />
               <Photo
-                image={photos.tuningMenu.image}
-                aspect={photos.tuningMenu.aspect}
+                image={ph.tuningMenu.image}
+                aspect={ph.tuningMenu.aspect}
                 width="30%"
               />
               <Photo
-                image={photos.tonicMenu.image}
-                aspect={photos.tonicMenu.aspect}
+                image={ph.tonicMenu.image}
+                aspect={ph.tonicMenu.aspect}
                 width="10%"
               />
               <Photo
-                image={photos.scalesMenu.image}
-                aspect={photos.scalesMenu.aspect}
+                image={ph.scalesMenu.image}
+                aspect={ph.scalesMenu.aspect}
                 width="30%"
               />
             </div>
             <Photo
-              image={photos.topDash.image}
-              aspect={photos.topDash.aspect}
+              image={ph.topDash.image}
+              aspect={ph.topDash.aspect}
               width="90%"
             />
             <Photo
-              image={photos.scalesDash.image}
-              aspect={photos.scaleDegrees.aspect}
+              image={ph.scalesDash.image}
+              aspect={ph.scaleDegrees.aspect}
               width="90%"
             /> */}
 

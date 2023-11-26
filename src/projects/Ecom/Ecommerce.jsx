@@ -66,8 +66,20 @@ export default function Ecommerce() {
   }
 
   const enterAnimation = async () => {
-    await animatePage(page.current, { height: 0, width: 0})
-    await animatePage(page.current, { height: "100vh", width: "100vw"}, {duration: 1.2})
+    await animatePage(
+      page.current,
+      {
+        height: 0,
+        width: 0
+    }
+  )
+    await animatePage(
+      page.current,
+      {
+        height: "100vh",
+        width: "100vw"}, {duration: 1.2
+      }
+    )
   }
 
   const exitAnimation = async () => {
@@ -95,7 +107,7 @@ export default function Ecommerce() {
         }
         <div className={styles.top}>
           <div className={`glass ${styles.header}`}>
-            <h1>Hello World: Ecommerce</h1>
+            <h1>Ecommerce</h1>
           </div>
           <div className={`glass ${styles.navItem}`} onClick={()=>navigate('/')}>
             <h2>Home</h2>
