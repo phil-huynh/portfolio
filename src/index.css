@@ -176,73 +176,7 @@ a {
   background-color: rgba(0, 0, 0, 0.4);
   box-shadow: 15px 15px 15px #1E1E1E;
   backdrop-filter: blur(10px);
-  /* border-top: 2px rgb(123, 123, 123) solid;
-  border-left: 2px rgb(123, 123, 123) solid; */
-  /* border-bottom: 1px rgb(123, 123, 123) solid;
-  border-right: 1px rgb(123, 123, 123) solid; */
-  /* z-index: 1; */
 }
 
 
-/* .glass2 {
-  border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 .2rem #fff,
-              0 0 .2rem #fff,
-              0 0 0.5rem #0095ec,
-              0 0 0.2rem #0095ec,
-              0 0 0.7rem #0095ec,
-              inset 0 0 1.3rem #0095ec;
-  backdrop-filter: blur(10px);
-  z-index: 1;
-} */
-
-
-.glass3 {
-  border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0.2);
-  box-shadow: 10;
-  box-shadow: 6px 6px 4px 1px rgba(1, 1, 1, 0.3);
-  backdrop-filter: blur(4px) hue-rotate(110deg);
-  z-index: 1;
-}
-
-
-.glass4 {
-  border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0.2);
-  box-shadow: 10;
-  box-shadow: 6px 6px 4px 1px rgba(1, 1, 1, 0.3);
-  backdrop-filter: blur(4px) hue-rotate(195deg);
-  z-index: 1;
-}
-
-
-.glass5 {
-  border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0.2);
-  box-shadow: 10;
-  box-shadow: 6px 6px 4px 1px rgba(1, 1, 1, 0.3);
-  backdrop-filter: blur(4px) hue-rotate(230deg);
-  z-index: 1;
-}
-
-
-.glass6 {
-  border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0.2);
-  box-shadow: 10;
-  box-shadow: 6px 6px 4px 1px rgba(1, 1, 1, 0.3);
-  backdrop-filter: blur(10px) hue-rotate(25deg);
-  z-index: 1;
-}
-
-.glass7 {
-  border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0.2);
-  box-shadow: 10;
-  box-shadow: 6px 6px 4px 1px rgba(1, 1, 1, 0.3);
-  backdrop-filter: blur(7px);
-  z-index: 1;
-}
 

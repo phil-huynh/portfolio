@@ -166,12 +166,40 @@
   margin-bottom: .5rem; */
 }
 
+
+.greenGlass,
+.purpleGlass,
+.redGlass,
+.yellowGlass {
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 6px 6px 4px 1px rgba(1, 1, 1, 0.3);
+  z-index: 1;
+}
+
+.redGlass {
+  backdrop-filter: blur(4px) hue-rotate(110deg);
+}
+
+.yellowGlass {
+  backdrop-filter: blur(4px) hue-rotate(195deg);
+}
+
+.greenGlass {
+  backdrop-filter: blur(4px) hue-rotate(230deg);
+}
+
+.purpleGlass {
+  backdrop-filter: blur(10px) hue-rotate(25deg);
+}
+
 .magicGlass {
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.2);
   animation: colorShiftGlass 90s ease infinite;
   z-index: 1;
 }
+
 
 /* Title Glass Animation */
 @keyframes stringsglass {

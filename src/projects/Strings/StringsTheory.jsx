@@ -103,7 +103,7 @@ export default function StringsTheory() {
           <div className={styles.introStyle}></div>
 
         <div className={styles.photoSection}>
-          <div className={`glass6 ${styles.info}`}>
+          <div className={`${styles.purpleGlass} ${styles.info}`}>
             <Grid container>
               <Grid item className={styles.textGrid} xs={12} sm={12} md={6} lg={7} xl={7} >
                 <p style={{fontSize: "1.5rem"}}>
@@ -142,11 +142,6 @@ export default function StringsTheory() {
           </div>
 
 
-
-
-
-
-
           <div className={`${styles.magicGlass} ${styles.info}`}>
             <Grid container>
               <Grid item container xs={12} sm={12} md={6} lg={7} xl={7} order={{ xs: 2, sm: 2, md: 1, lg: 1, xl: 1}}>
@@ -179,7 +174,7 @@ export default function StringsTheory() {
           </div>
 
 
-          <div className={`glass3 ${styles.info}`}>
+          <div className={`${styles.redGlass} ${styles.info}`}>
             <Grid container>
               <Grid item className={styles.textGrid} xs={12} sm={12} md={12} lg={12} xl={12} >
                 <p style={{fontSize: "1.5rem"}}>
@@ -208,7 +203,7 @@ export default function StringsTheory() {
 
 
 
-          <div className={`glass4 ${styles.info}`}>
+          <div className={`${styles.yellowGlass} ${styles.info}`}>
             <Grid container>
               <Grid item className={styles.textGrid} xs={12} sm={12} md={6} lg={12} xl={12} >
                 <p style={{fontSize: "1.5rem"}}>
@@ -240,7 +235,7 @@ export default function StringsTheory() {
 
 
 
-          <div className={`glass5 ${styles.info}`}>
+          <div className={`${styles.greenGlass} ${styles.info}`}>
             <Grid container>
               <Grid item className={styles.textGrid} xs={12} sm={12} md={6} lg={12} xl={12} >
                 <p style={{fontSize: "1.5rem"}}>
