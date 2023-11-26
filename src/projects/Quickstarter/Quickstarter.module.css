@@ -15,11 +15,15 @@
   opacity: 0;
 }
 
+
+.top {
+  flex-direction: column;
+}
+
 .header,
 .homeLink
 .title,
-.tools
-.top {
+.tools {
   display: flex;
   align-items: center;
 }
@@ -29,9 +33,6 @@
   z-index: 1;
 }
 
-.top {
-  flex-direction: column;
-}
 
 .header,
 .homeLink,
@@ -53,7 +54,7 @@
 
 .homeLink {
   position: fixed;
-  z-index: 21;
+  z-index: 15;
   width: 50%;
   height: 5rem;
   cursor: pointer;

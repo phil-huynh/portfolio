@@ -40,11 +40,11 @@ export default function Quickstarter() {
       <div className={styles.colorfilter}></div>
         <div className="contents">
           <div className={styles.top}>
-            <div className={`glass ${styles.title}`}>
-              <h1 style={{"color": "white"}}>Quickstarter</h1>
-            </div>
             <div className={`glass ${styles.homeLink}`} onClick={()=>navigate('/')}>
               <h2>Home</h2>
+            </div>
+            <div className={`glass ${styles.title}`}>
+              <h1 style={{"color": "white"}}>Quickstarter</h1>
             </div>
             <QuickstarterTools/>
           </div>

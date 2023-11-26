@@ -6,6 +6,7 @@ import Photo from "../../Photo"
 import styles from "./Osiris.module.css"
 import PhotoModal from "../../PhotoModal"
 import OsirisTools from "./Tools"
+import GitLink from "./GitLink"
 
 export default function Osiris() {
 
@@ -57,6 +58,7 @@ export default function Osiris() {
             <h2>Home</h2>
           </div>
           <OsirisTools />
+          <GitLink />
         </div>
         <div className={styles.infoContainer}>
 

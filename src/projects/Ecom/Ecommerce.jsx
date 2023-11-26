@@ -8,6 +8,7 @@ import Questions from "./Questions"
 import Overview from "./Overview"
 import Reviews from "./Reviews"
 import EcomTools from "./Tools"
+import GitLink from "./GitLink"
 
 export default function Ecommerce() {
 
@@ -113,6 +114,8 @@ export default function Ecommerce() {
             <h2>Home</h2>
           </div>
           <EcomTools/>
+          <GitLink side={"front"}/>
+          <GitLink side={"back"}/>
         </div>
 
         <Overview
