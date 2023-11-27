@@ -94,7 +94,7 @@ export default function TechIcons() {
       className={styles.skillsContainer}
       ref={scope}
     >
-      <section className={`glass ${styles.skillGroupCard}`} >
+      <section className={styles.skillGroupCard} >
         <h3 className={styles.skillGroupHeader}>LANGUAGES</h3>
         <div className={styles.skillsGroupSpread}>
           <JavascriptIcon width={"2rem"}/>
@@ -104,7 +104,7 @@ export default function TechIcons() {
           <BashIcon width={"3rem"}/>
         </div>
       </section>
-      <section className={`glass ${styles.skillGroupCard}`} >
+      <section className={styles.skillGroupCard} >
         <h3 className={styles.skillGroupHeader}>FRONT END DEVELOPMENT</h3>
         <div className={styles.skillsIconGroup}>
           <HTMLLogo width={"2.5rem"}/>
@@ -125,7 +125,7 @@ export default function TechIcons() {
         </div>
       </section>
 
-      <section className={`glass ${styles.skillGroupCard}`} >
+      <section className={styles.skillGroupCard} >
         <h3 className={styles.skillGroupHeader}>BACK END DEVELOPMENT</h3>
         <div className={styles.skillsGroupSpread}>
           <NodeIcon width={"5.5rem"}/>
@@ -137,7 +137,7 @@ export default function TechIcons() {
           <RabbitMQIcon width={"6rem"}/>
         </div>
       </section>
-      <section className={`glass ${styles.skillGroupCard}`} >
+      <section className={styles.skillGroupCard} >
         <h3 className={styles.skillGroupHeader}>DATABASES AND CACHING</h3>
         <div className={styles.skillsGroupSpread}>
           <PostgresIcon width={"3rem"}/>
@@ -147,7 +147,7 @@ export default function TechIcons() {
           <RedisIcon width={"2.5rem"}/>
         </div>
       </section>
-      <section className={`glass ${styles.skillGroupCard}`} >
+      <section className={styles.skillGroupCard} >
         <h3 className={styles.skillGroupHeader}>BUILD TOOLS AND DEPLOYMENT</h3>
         <div className={styles.skillsGroupSpread}>
           <LinuxIcon width={"3rem"}/>
@@ -158,7 +158,7 @@ export default function TechIcons() {
 
         </div>
       </section>
-      <section className={`glass ${styles.skillGroupCard}`} >
+      <section className={styles.skillGroupCard} >
         <h3 className={styles.skillGroupHeader}>CLOUD SERVICES</h3>
         <div className={styles.skillsGroupSpread}>
           <AWSLogo width={"6rem"}/>
@@ -169,7 +169,7 @@ export default function TechIcons() {
           <Route53Icon width={"2.2rem"}/>
         </div>
       </section>
-      <section className={`glass ${styles.skillGroupCard}`} >
+      <section className={styles.skillGroupCard} >
         <h3 className={styles.skillGroupHeader}>TESTING</h3>
         <div className={styles.skillsGroupSpread}>
           <JasmineIcon width={"3rem"}/>

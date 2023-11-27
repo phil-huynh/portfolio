@@ -277,6 +277,12 @@ hr,
   padding-top: .2rem;
   padding-bottom: .8rem;
   padding-inline: 1.2rem;
+  border-radius: 20px;
+  border-top: 1px solid rgba(139, 139, 139, 0.30);
+  border-left: 1px solid rgba(139, 139, 139, 0.30);
+  background-color: rgba(65, 65, 65, 0.1);
+  box-shadow: 5px 5px 5px #1E1E1E;
+  /* backdrop-filter: blur(15px) invert(80%); */
 }
 
 .skillGroupHeader {

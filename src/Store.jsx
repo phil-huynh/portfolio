@@ -12,7 +12,7 @@ const ContextStore = createContext(null);
 export default function ContextProvider ({ children }) {
 
   const [firstTime, setFirstTime] = useState(true)
-  const [selection, setSelection] = useState('skills')
+  const [selection, setSelection] = useState('projects')
   const [photoModal, setPhotoModal] = useState(false)
   const [currentPhoto, setCurrentPhoto] = useState({image: "", aspect: "", width: ""})
   const [resumeModal, setResumeModal] = useState(false)

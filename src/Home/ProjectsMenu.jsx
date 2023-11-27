@@ -10,22 +10,45 @@ export default function ProjectsMenu() {
   const navigate = useNavigate()
   const [scope, animate] = useAnimate()
   const [isPresent, safeToRemove] = usePresence()
-  const { projectsList: projects } = useStore()
+  const { projectsList: projects, firstTime } = useStore()
 
   const changePage = (path) => {
     navigate(path)
   }
 
+  // const rotateIn = async () => {
+  //   await animate(
+  //     'section',
+  //     {rotateX: [270, 0]},
+  //     {
+  //       duration: 1.7,
+  //       delay: stagger(.25, {startDelay: .1}),
+  //       type: "spring",
+  //       bounce: .5
+  //     }
+  //   )
+  // }
+
+  const skillsTransition = firstTime ?
+    {
+      duration: 1.7,
+      delay: stagger(.25, {startDelay: 2.2}),
+      type: "spring",
+      bounce: .5
+    }
+    :
+    {
+      duration: 1.7,
+      delay: stagger(.25, {startDelay: .1}),
+      type: "spring",
+      bounce: .5
+    }
+
   const rotateIn = async () => {
     await animate(
       'section',
       {rotateX: [270, 0]},
-      {
-        duration: 1.7,
-        delay: stagger(.25, {startDelay: .1}),
-        type: "spring",
-        bounce: .5
-      }
+      skillsTransition
     )
   }
 
