@@ -207,6 +207,7 @@ hr,
   background-image: url(../assets/info/headshot.png);
   background-size: cover;
   background-position: center;
+  border: 1px solid rgba(139, 139, 139, 0.20);
   border-radius: 25px;
   margin: 3rem 2rem;
 }
@@ -240,9 +241,11 @@ hr,
 .optionGlass {
   border-radius: 15px;
   border: none;
-  background-color: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(10px);
-  box-shadow: 10px 10px 10px #1E1E1E;
+  background-color: rgba(65, 65, 65, 0.1);
+  backdrop-filter: blur(15px);
+  box-shadow: 5px 5px 5px #1E1E1E;
+  border-top: 1px solid rgba(139, 139, 139, 0.40);
+  border-left: 1px solid rgba(139, 139, 139, 0.40);
   z-index: 1;
 }
 

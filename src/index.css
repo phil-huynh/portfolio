@@ -173,9 +173,11 @@ a {
 
 .glass {
   border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0.4);
-  box-shadow: 10px 10px 10px #1E1E1E;
-  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(139, 139, 139, 0.30);
+  border-left: 1px solid rgba(139, 139, 139, 0.30);
+  background-color: rgba(65, 65, 65, 0.1);
+  box-shadow: 5px 5px 5px #1E1E1E;
+  backdrop-filter: blur(15px);
 }
 
 
