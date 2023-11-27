@@ -174,7 +174,7 @@ a {
 .glass {
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.4);
-  box-shadow: 15px 15px 15px #1E1E1E;
+  box-shadow: 10px 10px 10px #1E1E1E;
   backdrop-filter: blur(10px);
 }
 
