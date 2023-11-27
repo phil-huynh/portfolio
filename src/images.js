@@ -33,13 +33,21 @@ import violinNeck from "./assets/strings_theory/violinNeck.png"
 
 
 // Quickstarter Photos
+import consNameError from "./assets/quickstarter/consNameError.png"
+import consNotAppError from "./assets/quickstarter/consNotAppError.png"
 import dupPortError from "./assets/quickstarter/dupPortError.png"
 import enterMicros from "./assets/quickstarter/enterMicros.png"
 import enterQueues from "./assets/quickstarter/enterQueues.png"
+import invalidAppError from "./assets/quickstarter/invalidAppError.png"
+import invalidMicroError from "./assets/quickstarter/invalidMicroError.png"
 import jsonTemplate from "./assets/quickstarter/jsonTemplate.png"
+import missingProdMicroError from "./assets/quickstarter/missingProdMicroError.png"
+import nameInputError from "./assets/quickstarter/nameInputError.png"
 import portAndPollerPrompt from "./assets/quickstarter/portAndPollerPrompt.png"
 import portNumberError from "./assets/quickstarter/portNumberError.png"
+import prodEqualsConsError from "./assets/quickstarter/prodEqualsConsError.png"
 import startProject from "./assets/quickstarter/startProject.png"
+import success from "./assets/quickstarter/success.png"
 import viteSetup from "./assets/quickstarter/viteSetup.png"
 import volumeAndPort from "./assets/quickstarter/volumeAndPort.png"
 import yamlTemplate from "./assets/quickstarter/yamlTemplate.png"
@@ -197,6 +205,14 @@ const stringsPhotos = {
 
 
 const quickstarterPhotos = {
+  consNameError: {
+    image: consNameError,
+    aspect: ".98"
+  },
+  consNotAppError: {
+    image: consNotAppError,
+    aspect: "1.12"
+  },
   dupPortError: {
     image: dupPortError,
     aspect: "2.35"
@@ -209,9 +225,25 @@ const quickstarterPhotos = {
     image: enterQueues,
     aspect: "1.56"
   },
+  invalidAppError: {
+    image: invalidAppError,
+    aspect: "1.12"
+  },
+  invalidMicroError: {
+    image: invalidMicroError,
+    aspect: "1.22"
+  },
   jsonTemplate: {
     image: jsonTemplate,
     aspect: "1.12"
+  },
+  missingProdMicroError: {
+    image: missingProdMicroError,
+    aspect: "1.14"
+  },
+  nameInputError: {
+    image: nameInputError,
+    aspect: "2.07"
   },
   portAndPollerPrompt: {
     image: portAndPollerPrompt,
@@ -221,9 +253,17 @@ const quickstarterPhotos = {
     image: portNumberError,
     aspect: "2.13"
   },
+  prodEqualsConsError: {
+    image: prodEqualsConsError,
+    aspect: "1.2"
+  },
   startProject: {
     image: startProject,
     aspect: "10"
+  },
+  success: {
+    image: success,
+    aspect: "3.36"
   },
   viteSetup: {
     image: viteSetup,
