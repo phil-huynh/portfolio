@@ -20,9 +20,7 @@ export default function StringsTheory() {
   const [page, animate] = useAnimate()
 
   const images = [
-
     ph.alterations,
-
   ]
 
   const navigate = useNavigate()

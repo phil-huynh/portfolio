@@ -36,11 +36,13 @@ import violinNeck from "./assets/strings_theory/violinNeck.png"
 import dupPortError from "./assets/quickstarter/dupPortError.png"
 import enterMicros from "./assets/quickstarter/enterMicros.png"
 import enterQueues from "./assets/quickstarter/enterQueues.png"
+import jsonTemplate from "./assets/quickstarter/jsonTemplate.png"
 import portAndPollerPrompt from "./assets/quickstarter/portAndPollerPrompt.png"
 import portNumberError from "./assets/quickstarter/portNumberError.png"
 import startProject from "./assets/quickstarter/startProject.png"
 import viteSetup from "./assets/quickstarter/viteSetup.png"
 import volumeAndPort from "./assets/quickstarter/volumeAndPort.png"
+import yamlTemplate from "./assets/quickstarter/yamlTemplate.png"
 
 // Sales Probabilities Photos
 import salesCard from "./assets/sales/salesCard.png"
@@ -207,6 +209,10 @@ const quickstarterPhotos = {
     image: enterQueues,
     aspect: "1.56"
   },
+  jsonTemplate: {
+    image: jsonTemplate,
+    aspect: "1.12"
+  },
   portAndPollerPrompt: {
     image: portAndPollerPrompt,
     aspect: "1.33"
@@ -226,6 +232,10 @@ const quickstarterPhotos = {
   volumeAndPort: {
     image: volumeAndPort,
     aspect: "4.78"
+  },
+  yamlTemplate: {
+    image: yamlTemplate,
+    aspect: "1.05"
   },
 }
 

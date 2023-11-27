@@ -39,10 +39,10 @@ export default function Quickstarter() {
     >
       <div className={styles.colorfilter}></div>
         <div className="contents">
+          <div className={`glass ${styles.homeLink}`} onClick={()=>navigate('/')}>
+            <h2>Home</h2>
+          </div>
           <div className={styles.top}>
-            <div className={`glass ${styles.homeLink}`} onClick={()=>navigate('/')}>
-              <h2>Home</h2>
-            </div>
             <div className={`glass ${styles.title}`}>
               <h1 style={{"color": "white"}}>Quickstarter</h1>
             </div>
@@ -52,6 +52,18 @@ export default function Quickstarter() {
             image={photos.startProject.image}
             aspect={photos.startProject.aspect}
             width="20%"
+            extras={imgBorder}
+          />
+          <Photo
+            image={photos.yamlTemplate.image}
+            aspect={photos.yamlTemplate.aspect}
+            width="40%"
+            extras={imgBorder}
+          />
+          <Photo
+            image={photos.jsonTemplate.image}
+            aspect={photos.jsonTemplate.aspect}
+            width="40%"
             extras={imgBorder}
           />
           <Photo

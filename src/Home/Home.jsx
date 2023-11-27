@@ -11,8 +11,7 @@ import ResumeModal from "../ResumeModal";
 
 function Home() {
 
-  const { firstTime, setFirstTime, isXL, isLG, isMD, isSM, isXS, selection, resumeModal } = useStore()
-
+  const { firstTime, setFirstTime, isXL, isLG, isMD, isSM, isXS, selection, resumeModal, getSize } = useStore()
 
   const [isPresent, safeToRemove] = usePresence()
   const [page, animatePage] = useAnimate()
@@ -57,6 +56,10 @@ function Home() {
     )
     safeToRemove()
   }
+
+  useEffect(() => {
+    console.log(getSize())
+  }, [isXL, isLG, isMD, isSM, isXS])
 
 
   useEffect(() => {

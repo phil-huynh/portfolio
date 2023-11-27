@@ -1,5 +1,5 @@
-.colorfilter,
-.wrapper {
+.wrapper,
+.colorfilter {
   position: absolute;
   top:0;
   left:0;
@@ -21,8 +21,7 @@
 }
 
 .header,
-.homeLink
-.title,
+.homeLink,
 .tools {
   display: flex;
   align-items: center;
@@ -35,8 +34,12 @@
 
 
 .header,
-.homeLink,
+.homeLink {
+  justify-content: center;
+}
 .title {
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
@@ -61,7 +64,7 @@
 }
 
 .toolBox {
-  width: 60%;
+  width: 40%;
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding-top: .3rem;

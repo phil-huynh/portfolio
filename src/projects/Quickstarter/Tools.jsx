@@ -9,13 +9,13 @@ import styles from "./Quickstarter.module.css"
 
 const QuickstarterTools = () => (
   <div className={`glass ${styles.toolBox}`}>
-    <h2>Quickstarter uses</h2>
+    <h2 style={{marginBottom: ".3rem"}} >Quickstarter uses</h2>
     <div className={styles.tools}>
       <BashIcon width={"3rem"}/>
       <PythonIcon width={"3rem"}/>
       <DockerIcon width={"2.8rem"}/>
       <RabbitMQIcon width={"4rem"}/>
-      <ViteIcon />
+      <ViteIcon width={"2rem"}/>
       <DjangoIcon width={"4rem"}/>
     </div>
   </div>

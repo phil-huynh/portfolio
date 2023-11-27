@@ -257,6 +257,10 @@ hr,
   box-shadow: var(--selected-box-shadow)
 }
 
+.sectionsBox {
+  overflow-x: hidden;
+}
+
 .skillsContainer {
   overflow-y: auto;
   z-index: 10;
