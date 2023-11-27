@@ -80,7 +80,7 @@ export default function IntroAndContact() {
         </Grid>
       </section>
 
-      <HomeTools/>
+      {/* <HomeTools/> */}
 
       <Menu/>
     </div>
