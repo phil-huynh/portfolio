@@ -210,7 +210,7 @@ hr,
   background-position: center;
   border: 1px solid rgba(139, 139, 139, 0.20);
   border-radius: 25px;
-  margin: 3rem 2rem;
+  margin: 2rem 1.5rem;
 }
 
 .label,
@@ -255,7 +255,7 @@ hr,
   height: 5rem;
   font-size: 1.5rem;
   font-weight: 450;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 
@@ -267,7 +267,7 @@ hr,
   top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 2.5rem;
+  font-size: 4rem;
   font-family: roboto;
   letter-spacing: 0.1em;
 }
@@ -282,7 +282,7 @@ hr,
 
 .selectedMenuItemLabel {
   transition: 0.5s;
-  font-size: 2.9rem;
+  font-size: 4rem;
   /* text-decoration: underline; */
   box-shadow: var(--selected-box-shadow);
   padding:.75rem;
@@ -455,7 +455,7 @@ hr,
 .resumeDownloadButton {
   color: white;
   background: transparent;
-  height: 2.3rem;
+  min-height: 2.3rem;
   font-size: 1rem;
   font-weight: 540;
   border-radius: 10px;
@@ -463,7 +463,7 @@ hr,
 }
 
 .resumeDownloadButton {
-  margin-inline: 1rem;
+  margin-inline: .5rem;
   width: 5rem;
 }
 

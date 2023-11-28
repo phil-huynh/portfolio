@@ -20,18 +20,7 @@ export default function Menu() {
         Projects
       </p>
     </section>
-    <section
-      className={`${styles.menuItem}`}
-      onClick={()=>setSelection('skills')}
-    >
-            <p
-        className={selection === "skills" ?
-        styles.selectedMenuItemLabel : styles.menuItemLabel}
-        onClick={()=>setSelection('skills')}
-      >
-        Skills
-      </p>
-    </section>
+
     {/* <section
       className={`${styles.menuItem}`}
       onClick={()=>setSelection('bio')}
@@ -53,6 +42,18 @@ export default function Menu() {
         onClick={()=>setSelection('testimonials')}
       >
         Testimonials
+      </p>
+    </section>
+    <section
+      className={`${styles.menuItem}`}
+      onClick={()=>setSelection('skills')}
+    >
+            <p
+        className={selection === "skills" ?
+        styles.selectedMenuItemLabel : styles.menuItemLabel}
+        onClick={()=>setSelection('skills')}
+      >
+        Skills
       </p>
     </section>
   </div>
