@@ -9,28 +9,51 @@ export default function Menu() {
   return (
     <div className={styles.buttonContainer}>
     <section
-      className={`${styles.optionGlass} ${selection === "skills" ? styles.selected : styles.menuItem}`}
-      onClick={()=>setSelection('skills')}
-    >
-      <p>Skills</p>
-    </section>
-    <section
-      className={`${styles.optionGlass} ${selection === "projects" ? styles.selected : styles.menuItem}`}
+      className={`${styles.menuItem}`}
       onClick={()=>setSelection('projects')}
     >
-      <p>Projects</p>
+            <p
+        className={selection === "projects" ?
+        styles.selectedMenuItemLabel : styles.menuItemLabel}
+        onClick={()=>setSelection('projects')}
+      >
+        Projects
+      </p>
     </section>
     <section
-      className={`${styles.optionGlass} ${selection === "bio" ? styles.selected : styles.menuItem}`}
+      className={`${styles.menuItem}`}
+      onClick={()=>setSelection('skills')}
+    >
+            <p
+        className={selection === "skills" ?
+        styles.selectedMenuItemLabel : styles.menuItemLabel}
+        onClick={()=>setSelection('skills')}
+      >
+        Skills
+      </p>
+    </section>
+    {/* <section
+      className={`${styles.menuItem}`}
       onClick={()=>setSelection('bio')}
     >
-      <p>Resume & Bio</p>
-    </section>
+      <p
+        className={selection === "bio" ?
+        styles.selectedMenuItemLabel : styles.menuItemLabel}
+        onClick={()=>setSelection('bio')}
+      >
+        Resume & Bio
+      </p>
+    </section> */}
     <section
-      className={`${styles.optionGlass} ${selection === "testimonials" ? styles.selected : styles.menuItem}`}
+      className={`${styles.menuItem}`}
       onClick={()=>setSelection('testimonials')}
     >
-      <p>Testimonials</p>
+      <p className={selection === "testimonials" ?
+        styles.selectedMenuItemLabel : styles.menuItemLabel}
+        onClick={()=>setSelection('testimonials')}
+      >
+        Testimonials
+      </p>
     </section>
   </div>
   )

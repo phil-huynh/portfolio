@@ -57,7 +57,7 @@ export default function Osiris() {
           <div className={`glass ${styles.homelink}`} onClick={()=>navigate('/')}>
             <h2>Home</h2>
           </div>
-          <OsirisTools />
+          {/* <OsirisTools /> */}
           <GitLink />
         </div>
         <div className={styles.infoContainer}>

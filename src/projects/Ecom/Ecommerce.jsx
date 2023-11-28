@@ -113,7 +113,7 @@ export default function Ecommerce() {
           <div className={`glass ${styles.navItem}`} onClick={()=>navigate('/')}>
             <h2>Home</h2>
           </div>
-          <EcomTools/>
+          {/* <EcomTools/> */}
           <GitLink side={"front"}/>
           <GitLink side={"back"}/>
         </div>

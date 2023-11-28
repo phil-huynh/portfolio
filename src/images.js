@@ -46,6 +46,7 @@ import nameInputError from "./assets/quickstarter/nameInputError.png"
 import portAndPollerPrompt from "./assets/quickstarter/portAndPollerPrompt.png"
 import portNumberError from "./assets/quickstarter/portNumberError.png"
 import prodEqualsConsError from "./assets/quickstarter/prodEqualsConsError.png"
+import quickstarterCard from "./assets/quickstarter/quickstarterCard.png"
 import startProject from "./assets/quickstarter/startProject.png"
 import success from "./assets/quickstarter/success.png"
 import viteSetup from "./assets/quickstarter/viteSetup.png"
@@ -256,6 +257,10 @@ const quickstarterPhotos = {
   prodEqualsConsError: {
     image: prodEqualsConsError,
     aspect: "1.2"
+  },
+  quickstarterCard: {
+    image: quickstarterCard,
+    aspect: "1.79"
   },
   startProject: {
     image: startProject,

@@ -32,14 +32,14 @@ export default function ProjectsMenu() {
   const skillsTransition = firstTime ?
     {
       duration: 1.7,
-      delay: stagger(.25, {startDelay: 2.2}),
+      delay: stagger(.2, {startDelay: 2.2}),
       type: "spring",
       bounce: .5
     }
     :
     {
       duration: 1.7,
-      delay: stagger(.25, {startDelay: .1}),
+      delay: stagger(.2, {startDelay: .1}),
       type: "spring",
       bounce: .5
     }
@@ -98,6 +98,16 @@ export default function ProjectsMenu() {
                 >
                   {project.name}
                 </p>
+              </div>
+              <div className={styles.back}>
+                <p className={styles.backText}>
+                  {project.message}
+                </p>
+                <div className={styles.backButtonContainer}>
+                  <button className={styles.cardBackButton}>
+                    See more
+                  </button>
+                </div>
               </div>
             </section>
           </Grid>

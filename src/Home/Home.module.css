@@ -2,6 +2,7 @@
 .contents,
 .homeGridSection,
 .menuCardBackGround,
+.menuItem,
 .projectMenuCard,
 .skillsContainer,
 .viewResumeButton,
@@ -19,6 +20,7 @@
   left: 0;
 }
 
+.back
 .contents,
 .projectMenuContainer,
 .projectGridContainer,
@@ -257,6 +259,45 @@ hr,
   margin-top: 2rem;
 }
 
+
+.selectedMenuItemLabel,
+.menuItemLabel {
+  color: rgb(224, 223, 223);
+  white-space: nowrap;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  font-family: roboto;
+  letter-spacing: 0.1em;
+}
+
+.menuItemLabel {
+  transition: 0.5s;
+  text-shadow: 1px 1px 0 grey, 1px 2px 0 grey, 1px 3px 0 grey, 1px 4px 0 grey,
+    1px 5px 0 grey, 1px 6px 0 grey, 1px 7px 0 grey, 1px 8px 0 grey,
+    5px 13px 15px black;
+}
+
+
+.selectedMenuItemLabel {
+  transition: 0.5s;
+  font-size: 2.9rem;
+  /* text-decoration: underline; */
+  box-shadow: var(--selected-box-shadow);
+  padding:.75rem;
+  padding-inline: 2rem;
+  border-radius: 20px;
+  transform: scale(1.1)translate(-50%, -50%);
+  text-shadow: 1px -1px 0 grey, 1px -2px 0 grey, 1px -3px 0 grey,
+    1px -4px 0 grey, 1px -5px 0 grey, 1px -6px 0 grey, 1px -7px 0 grey,
+    1px -8px 0 grey, 5px -13px 15px black, 5px -13px 25px #808080;
+}
+
+
+
+
 .selected {
   box-shadow: var(--selected-box-shadow)
 }
@@ -306,13 +347,75 @@ hr,
 	transition: 1s ease-in-out;
 }
 
+.projectGridSection:hover {
+  transform: rotateX(180deg);
+}
+
 .projectMenuCard {
   width: 90%;
   margin-top: .72rem;
   margin-bottom: .72rem;
   border-radius: 15px;
   box-shadow: 15px 15px 15px #1E1E1E;
+
 }
+
+.front {
+  position: absolute;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+  border: 1px solid blue;
+}
+
+
+.back {
+  position: absolute;
+	width: 100%;
+	height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 15px;
+  display: grid;
+  grid-template-rows: 3fr 2fr;
+  justify-content: center;
+	transform-style: preserve-3d;
+	backface-visibility: hidden;
+	background-color: #101010;
+	transform: rotateX(180deg);
+	/* transform: rotateZ(180deg); */
+}
+
+.backText {
+  /* align-items: flex-end; */
+  /* z-index: 14; */
+  font-size: 1.2rem;
+  padding: .5rem;
+  transform: translatez(50px) scale(1);
+}
+
+.backButtonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translatez(50px) scale(1);
+}
+
+.cardBackButton {
+  /* align-items: flex-end; */
+  /* z-index: 14; */
+  /* width: 40%; */
+  font-size: 1.2rem;
+  /* height: 2rem; */
+  border: none;
+  color: white;
+  background: transparent;
+  transform: translatez(50px) scale(1);
+  text-shadow: var(--green-glow-text);
+  box-shadow: var(--green-light-glow-border);
+}
+
 
 .menuCardBackGround {
   aspect-ratio: 1.6;
@@ -328,7 +431,7 @@ hr,
 }
 
 .projectNameContainer {
-  background-position: center;
+  /* background-position: center; */
   align-items: flex-end;
   z-index: 14;
   font-size: 3rem;
@@ -345,28 +448,36 @@ hr,
 
 .viewResumeButton,
 .resumeDownloadButton {
+  color: white;
+  background: transparent;
   height: 2.3rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 540;
-  margin-inline: 1rem;
-  border-radius: 5px;
-  box-shadow: 5px 5px 5px #000000;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #292929;
 }
 
 .resumeDownloadButton {
+  margin-inline: 1rem;
   width: 5rem;
 }
 
 .viewResumeButton {
+  margin-top: 1rem;
   padding-inline: 1rem;
 }
 
-.viewResumeButton:active,
+.viewResumeButton:hover,
+.resumeDownloadButton:hover {
+  box-shadow: var(--white-light-glow-border);
+}
+
+/* .viewResumeButton:active,
 .resumeDownloadButton:active {
   left: 1px;
   top: 1px;
   box-shadow: 1px 1px 1px #000000;
-}
+} */
 
 .bulletPoint {
   margin-top: .75rem;

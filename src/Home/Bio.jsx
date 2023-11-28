@@ -30,12 +30,12 @@ export default function Bio() {
       <button className={styles.viewResumeButton} onClick={()=>setResumeModal(true)}>View resume on this site</button>
       <h4 style={{margin: ".5rem"}}>or</h4>
       <h3 style={{marginTop: "0"}}>Download my resume</h3>
-        <a href={resumeDOCX} download="Phil_Huynh_Resume">
-          <button className={styles.resumeDownloadButton}> .docx </button>
-        </a>
-        <a href={resumePDF} download="Phil_Huynh_Resume">
-          <button className={styles.resumeDownloadButton}>  .pdf </button>
-        </a>
+      <a href={resumeDOCX} download="Phil_Huynh_Resume">
+        <button className={styles.resumeDownloadButton}> .docx </button>
+      </a>
+      <a href={resumePDF} download="Phil_Huynh_Resume">
+        <button className={styles.resumeDownloadButton}>  .pdf </button>
+      </a>
       <ul style={{textAlign: "left"}}>
         <li className={styles.bulletPoint}>
           Worked with an Agile team developing, maintaining, and updating the core Galvanize systems including the Student Information Systems and Interactive Course Software used daily by 1500+ students and staff.

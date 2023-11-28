@@ -59,31 +59,36 @@ export default function ContextProvider ({ children }) {
       name: "Strings Theory",
       image: stringsPhotos.twoChordsMapScales.image,
       aspect: "1.69",
-      path: "strings-theory"
+      path: "strings-theory",
+      message: "Strings Theory is a tool for music educators and students that helps users to see complex relationships between diffent scales and chords."
     },
     {
       name: "Quickstarter",
-      image: quickstarterPhotos.enterQueues.image,
-      aspect: "1.56",
-      path: "quickstarter"
+      image: quickstarterPhotos.quickstarterCard.image,
+      aspect: quickstarterPhotos.quickstarterCard.aspect,
+      path: "quickstarter",
+      message: "Quickstarter is an automation tool for developers that allows for quick creation of large microservices app with Django."
     },
     {
       name: "Sales Probabilities",
       image: salesPhotos.salesCard.image,
       aspect: "1.57",
-      path: "sales-probabilities"
+      path: "sales-probabilities",
+      message: "This is Sales Probabilities"
     },
     {
       name: "Osiris",
       image: osirisCardImage,
       aspect: "1.63",
-      path: "osiris"
+      path: "osiris",
+      message: "This is Osiris"
     },
     {
       name: "ecomm",
       image: ecomCardImage,
       aspect: "1.68",
-      path: "ecommerce"
+      path: "ecommerce",
+      message: "This is Ecom"
     },
   ]
 

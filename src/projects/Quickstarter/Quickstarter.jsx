@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-import { motion, useAnimate, usePresence } from "framer-motion"
+import { useAnimate, usePresence } from "framer-motion"
 import { useStore } from "../../Store"
 import { useEffect } from "react"
 import Photo from "../../Photo"
@@ -10,7 +10,7 @@ import { Grid } from "@mui/material"
 export default function Quickstarter() {
 
   const navigate = useNavigate()
-  const { quickstarterPhotos: photos} = useStore()
+  const { quickstarterPhotos: photos, photoModal, currentPhoto } = useStore()
   const [page, animate] = useAnimate()
   const [isPresent, safeToRemove] = usePresence()
 
@@ -40,6 +40,7 @@ export default function Quickstarter() {
     >
       <div className={styles.colorfilter}></div>
       <div className="contents">
+      {photoModal ? <PhotoModal image={currentPhoto.image} aspect={currentPhoto.aspect} width={currentPhoto.width} /> :null }
         <div className={`glass ${styles.homeLink}`} onClick={()=>navigate('/')}>
           <h2>Home</h2>
         </div>
@@ -47,7 +48,7 @@ export default function Quickstarter() {
           <div className={`glass ${styles.title}`}>
             <h1 style={{"color": "white"}}>Quickstarter</h1>
           </div>
-          <QuickstarterTools/>
+          {/* <QuickstarterTools/> */}
         </div>
         <div>
           <Photo

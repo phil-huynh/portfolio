@@ -64,7 +64,7 @@ export default function StringsTheory() {
           <div className={`${styles.titleGlass} ${styles.titleLayout}`}>
             <h1 className={styles.title}>Strings Theory</h1>
           </div>
-          <StringsTheoryTools/>
+          {/* <StringsTheoryTools/> */}
           <Grid container>
             <Grid item xs={12} sm={12} md={6}>
               <AppLink/>

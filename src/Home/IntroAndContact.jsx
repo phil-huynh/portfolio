@@ -8,9 +8,11 @@ import { useEffect } from "react";
 import styles from "./Home.module.css"
 import HomeTools from "./Tools.jsx"
 import Menu from "./Menu";
+import resumePDF from "../assets/resume.pdf"
+import resumeDOCX from "../assets/resume.docx"
 
 export default function IntroAndContact() {
-  const { firstTime, setSelection, setFirstTime, selection } = useStore()
+  const { firstTime, setSelection, setFirstTime, selection, setResumeModal } = useStore()
 
   const [scope, animate] = useAnimate()
   const [isPresent, safeToRemove] = usePresence()
@@ -68,13 +70,15 @@ export default function IntroAndContact() {
                 </a>
                 <GitLabIcon width={"2.5rem"}/>
               </div>
-              <hr/>
-              <p>
-              It all rolls into one
-              And nothing comes for free
-              There's nothing you can hold
-              For very long
-              </p>
+              <button className={styles.viewResumeButton} onClick={()=>setResumeModal(true)}>View my resume here</button>
+              <h4 style={{margin: ".5rem"}}>or</h4>
+              <h3 style={{marginTop: "0"}}>Download </h3>
+              <a href={resumePDF} download="Phil_Huynh_Resume">
+                <button className={styles.resumeDownloadButton}>  .pdf </button>
+              </a>
+              <a href={resumeDOCX} download="Phil_Huynh_Resume">
+                <button className={styles.resumeDownloadButton}> .docx </button>
+              </a>
             </div>
           </Grid>
         </Grid>

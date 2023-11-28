@@ -27,6 +27,13 @@
                      0 0 0.7rem red,
                      inset 0 0 2rem red;
 
+  --red-light-glow-border: 0 0 .2rem #fff,
+                     0 0 .2rem #fff,
+                     0 0 0.5rem red,
+                     0 0 0.2rem red,
+                     0 0 0.7rem red,
+                     inset 0 0 .5rem red;
+
 
   --green-glow-border: 0 0 .2rem #fff,
                       0 0 .2rem #fff,
@@ -34,6 +41,20 @@
                       0 0 0.2rem #49ff18,
                       0 0 1.7rem #49ff18,
                       inset 0 0 2rem #49ff18;
+
+  --green-light-glow-border: 0 0 .2rem #fff,
+                      0 0 .2rem #fff,
+                      0 0 0.5rem #49ff18,
+                      0 0 0.2rem #49ff18,
+                      0 0 1.5rem #49ff18,
+                      inset 0 0 .7rem #49ff18;
+
+  --white-light-glow-border: 0 0 .2rem #fff,
+                      0 0 .2rem #fff,
+                      0 0 0.5rem white,
+                      0 0 0.2rem white,
+                      0 0 1.2rem white,
+                      inset 0 0 .75rem white;
 
 
 
@@ -90,14 +111,19 @@
                             0 0 25px #49ff18,
                             0 0 30px #49ff18;
 
+  --white-bright-glow-text: 0 0 2px white,
+                            0 0 5px white,
+                            0 0 10px white,
+                            0 0 15px white;
+
+
 
   --selected-box-shadow: 0 0 .2rem #fff,
                           0 0 .2rem #fff,
                           0 0 0.5rem white,
                           0 0 0.2rem white,
                           0 0 1.7rem white,
-                          15px 15px 15px #1E1E1E,
-                          inset 0 0 2rem white;
+                          inset 0 0 1.3rem white;
 
   font-family: 'Roboto';
 
@@ -150,6 +176,7 @@ a {
   align-items: center;
   z-index: 2;
   opacity: 0;
+  /* text-shadow: var(--blue-glow-text); */
 }
 
 .contents {
