@@ -80,8 +80,7 @@ export default function ProjectsMenu() {
             className={styles.projectGridSection}
             xs={12} sm={12} md={12} lg={6} xl={6}
           >
-            <section className={`${styles.projectMenuCard}`}
-                onClick={()=>changePage(project.path)}>
+            <section className={`${styles.projectMenuCard}`}>
               <div
                 className={styles.menuCardBackGround}
                 style={{
@@ -92,10 +91,7 @@ export default function ProjectsMenu() {
               />
               <div className={styles.menuCardOverlay}></div>
               <div className={styles.projectNameContainer}>
-                <p
-                  className={`text-shadow ${styles.projectName}`}
-                  onClick={()=>changePage(project.path)}
-                >
+                <p className={`text-shadow ${styles.projectName}`}>
                   {project.name}
                 </p>
               </div>
@@ -104,7 +100,7 @@ export default function ProjectsMenu() {
                   {project.message}
                 </p>
                 <div className={styles.backButtonContainer}>
-                  <button className={styles.cardBackButton}>
+                  <button className={styles.cardBackButton} onClick={()=>changePage(project.path)}>
                     See more
                   </button>
                 </div>
