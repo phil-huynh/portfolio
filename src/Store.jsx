@@ -67,28 +67,28 @@ export default function ContextProvider ({ children }) {
       image: quickstarterPhotos.quickstarterCard.image,
       aspect: quickstarterPhotos.quickstarterCard.aspect,
       path: "quickstarter",
-      message: "Quickstarter is an automation tool for developers that allows for quick creation of large microservices app with Django."
+      message: "Quickstarter is an automation tool for developers that allows for quick creation of large microservices applications with Django."
     },
     {
       name: "Sales Probabilities",
       image: salesPhotos.salesCard.image,
       aspect: "1.57",
       path: "sales-probabilities",
-      message: "This is Sales Probabilities"
+      message: "This is the front end for an application that tracks the viability of potential sales."
     },
     {
       name: "Osiris",
       image: osirisCardImage,
       aspect: "1.63",
       path: "osiris",
-      message: "This is Osiris"
+      message: "Osiris is a full stack application that connects charities with people who want to donate items."
     },
     {
       name: "ecomm",
       image: ecomCardImage,
       aspect: "1.68",
       path: "ecommerce",
-      message: "This is Ecom"
+      message: "Ari Design is a full stack ecommerce platform for clothing and accessories."
     },
   ]
 
