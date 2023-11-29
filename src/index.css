@@ -112,8 +112,8 @@
 
   --green-glow-text: 0 0 2px #49ff18,
                       0 0 5px #49ff18,
-                      0 0 10px #49ff18;
-                      /* 0 0 15px #49ff18; */
+                      0 0 10px #49ff18,
+                      0 0 15px #49ff18;
 
   --green-bright-glow-text: 0 0 2px #49ff18,
                             0 0 5px #49ff18,

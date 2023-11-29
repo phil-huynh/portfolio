@@ -38,14 +38,20 @@ import consNotAppError from "./assets/quickstarter/consNotAppError.png"
 import dupPortError from "./assets/quickstarter/dupPortError.png"
 import enterMicros from "./assets/quickstarter/enterMicros.png"
 import enterQueues from "./assets/quickstarter/enterQueues.png"
+import inlineQueueError from "./assets/quickstarter/inlineQueueError.png"
 import invalidAppError from "./assets/quickstarter/invalidAppError.png"
 import invalidMicroError from "./assets/quickstarter/invalidMicroError.png"
 import jsonTemplate from "./assets/quickstarter/jsonTemplate.png"
+import microserviceNameError from "./assets/quickstarter/microserviceNameError.png"
 import missingProdMicroError from "./assets/quickstarter/missingProdMicroError.png"
 import nameInputError from "./assets/quickstarter/nameInputError.png"
+import noConsumerError from "./assets/quickstarter/noConsumerError.png"
+import noProducerError from "./assets/quickstarter/noProducerError.png"
 import portAndPollerPrompt from "./assets/quickstarter/portAndPollerPrompt.png"
 import portNumberError from "./assets/quickstarter/portNumberError.png"
 import prodEqualsConsError from "./assets/quickstarter/prodEqualsConsError.png"
+import projectNameError from "./assets/quickstarter/projectNameError.png"
+import queueNoColonError from "./assets/quickstarter/queueNoColonError.png"
 import quickstarterCard from "./assets/quickstarter/quickstarterCard.png"
 import startProject from "./assets/quickstarter/startProject.png"
 import success from "./assets/quickstarter/success.png"
@@ -226,6 +232,10 @@ const quickstarterPhotos = {
     image: enterQueues,
     aspect: "1.56"
   },
+  inlineQueueError: {
+    image: inlineQueueError,
+    aspect: "1.48"
+  },
   invalidAppError: {
     image: invalidAppError,
     aspect: "1.12"
@@ -238,6 +248,10 @@ const quickstarterPhotos = {
     image: jsonTemplate,
     aspect: "1.12"
   },
+  microserviceNameError: {
+    image: microserviceNameError,
+    aspect: "2.1"
+  },
   missingProdMicroError: {
     image: missingProdMicroError,
     aspect: "1.14"
@@ -245,6 +259,14 @@ const quickstarterPhotos = {
   nameInputError: {
     image: nameInputError,
     aspect: "2.07"
+  },
+  noConsumerError: {
+    image: noConsumerError,
+    aspect: "1.13"
+  },
+  noProducerError: {
+    image: noProducerError,
+    aspect: "1.1"
   },
   portAndPollerPrompt: {
     image: portAndPollerPrompt,
@@ -257,6 +279,14 @@ const quickstarterPhotos = {
   prodEqualsConsError: {
     image: prodEqualsConsError,
     aspect: "1.2"
+  },
+  projectNameError: {
+    image: projectNameError,
+    aspect: "1.59"
+  },
+  queueNoColonError: {
+    image: queueNoColonError,
+    aspect: "1.15"
   },
   quickstarterCard: {
     image: quickstarterCard,

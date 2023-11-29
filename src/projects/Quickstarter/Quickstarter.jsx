@@ -6,11 +6,13 @@ import Photo from "../../Photo"
 import styles from "./Quickstarter.module.css"
 import QuickstarterTools from "./Tools"
 import { Grid } from "@mui/material"
+import PhotoModal from "../../PhotoModal"
+
 
 export default function Quickstarter() {
 
   const navigate = useNavigate()
-  const { quickstarterPhotos: photos, photoModal, currentPhoto } = useStore()
+  const { quickstarterPhotos: photos, photoModal, currentPhoto, selectPhoto, locate, locate2, locate3 } = useStore()
   const [page, animate] = useAnimate()
   const [isPresent, safeToRemove] = usePresence()
 
@@ -64,27 +66,50 @@ export default function Quickstarter() {
             extras={imgBorder}
           />
 
-          <Grid container style={{marginTop: "1rem", marginBottom: "1rem"}}>
+
+
+          <Grid container style={{marginTop: "1rem", marginBottom: "1rem",}}>
             <Grid
-              item xs={12} sm={12} md={6}
-              style={{display: "flex", justifyContent: "center", }}
+              item xs={12} sm={12} md={2.3}
+              style={{display: "flex", justifyContent: "center", cursor: "pointer"}}
+              onClick={()=>selectPhoto({
+                image: photos.enterMicros.image,
+                aspect: photos.enterMicros.aspect,
+                width:"28%"
+              })}
+            >
+              <Photo
+              image={photos.enterMicros.image}
+              aspect={photos.enterMicros.aspect}
+              width="90%"
+              extras={imgBorder}
+            />
+            </Grid>
+            <Grid
+              item xs={12} sm={12} md={4.7}
+              style={{display: "flex", justifyContent: "center", cursor: "pointer",}}
+              onClick={()=>selectPhoto({image: photos.yamlTemplate.image, aspect: photos.yamlTemplate.aspect, width:"55%"})}
             >
               <Photo
                 image={photos.yamlTemplate.image}
                 aspect={photos.yamlTemplate.aspect}
-                width="80%"
+                width="96%"
                 extras={imgBorder}
               />
-
             </Grid>
             <Grid
-              item xs={12} sm={12} md={6}
-              style={{display: "flex", justifyContent: "center", }}
+              item xs={12} sm={12} md={5}
+              style={{display: "flex", justifyContent: "center", cursor: "pointer",}}
+              onClick={()=>selectPhoto({
+                image: photos.jsonTemplate.image,
+                aspect: photos.jsonTemplate.aspect,
+                width:"55%"
+              })}
             >
               <Photo
                 image={photos.jsonTemplate.image}
                 aspect={photos.jsonTemplate.aspect}
-                width="85%"
+                width="96%"
                 extras={imgBorder}
               />
             </Grid>
@@ -94,8 +119,13 @@ export default function Quickstarter() {
 
           <Grid container style={{marginTop: "1rem", marginBottom: "1rem"}}>
             <Grid
-              item xs={12} sm={12} md={4}
-              style={{display: "flex", justifyContent: "center", }}
+              item xs={12} sm={12} md={3}
+              style={{display: "flex", justifyContent: "center", cursor: "pointer"}}
+              onClick={()=>selectPhoto({
+                image: photos.nameInputError.image,
+                aspect: photos.nameInputError.aspect,
+                width:"55%"
+              })}
             >
               <Photo
                 image={photos.nameInputError.image}
@@ -105,8 +135,13 @@ export default function Quickstarter() {
               />
             </Grid>
             <Grid
-              item xs={12} sm={12} md={4}
-              style={{display: "flex", justifyContent: "center", }}
+              item xs={12} sm={12} md={3}
+              style={{display: "flex", justifyContent: "center", cursor: "pointer"}}
+              onClick={()=>selectPhoto({
+                image: photos.portNumberError.image,
+                aspect: photos.portNumberError.aspect,
+                width:"55%"
+              })}
             >
               <Photo
                 image={photos.portNumberError.image}
@@ -116,12 +151,33 @@ export default function Quickstarter() {
               />
             </Grid>
             <Grid
-              item xs={12} sm={12} md={4}
-              style={{display: "flex", justifyContent: "center", }}
+              item xs={12} sm={12} md={3}
+              style={{display: "flex", justifyContent: "center", cursor: "pointer"}}
+              onClick={()=>selectPhoto({
+                image: photos.dupPortError.image,
+                aspect: photos.dupPortError.aspect,
+                width:"55%"
+              })}
             >
               <Photo
                 image={photos.dupPortError.image}
                 aspect={photos.dupPortError.aspect}
+                width="90%"
+                extras={imgBorder}
+              />
+            </Grid>
+            <Grid
+              item xs={12} sm={12} md={3}
+              style={{display: "flex", justifyContent: "center", cursor: "pointer"}}
+              onClick={()=>selectPhoto({
+                image: photos.microserviceNameError.image,
+                aspect: photos.microserviceNameError.aspect,
+                width:"55%"
+              })}
+            >
+              <Photo
+                image={photos.microserviceNameError.image}
+                aspect={photos.microserviceNameError.aspect}
                 width="90%"
                 extras={imgBorder}
               />
@@ -131,15 +187,15 @@ export default function Quickstarter() {
 
 
 
-
-
-
-
-
           <Grid container style={{marginTop: "1rem", marginBottom: "1rem"}}>
             <Grid
               item xs={12} sm={12} md={3}
-              style={{display: "flex", justifyContent: "center", }}
+              style={{display: "flex", justifyContent: "center", cursor: "pointer"}}
+              onClick={()=>selectPhoto({
+                image: photos.consNotAppError.image,
+                aspect: photos.consNotAppError.aspect,
+                width:"55%"
+              })}
             >
               <Photo
                 image={photos.consNotAppError.image}
@@ -150,7 +206,12 @@ export default function Quickstarter() {
             </Grid>
             <Grid
               item xs={12} sm={12} md={3}
-              style={{display: "flex", justifyContent: "center", }}
+              style={{display: "flex", justifyContent: "center", cursor: "pointer"}}
+              onClick={()=>selectPhoto({
+                image: photos.invalidAppError.image,
+                aspect: photos.invalidAppError.aspect,
+                width:"55%"
+              })}
             >
               <Photo
                 image={photos.invalidAppError.image}
@@ -161,7 +222,12 @@ export default function Quickstarter() {
             </Grid>
             <Grid
               item xs={12} sm={12} md={3}
-              style={{display: "flex", justifyContent: "center", }}
+              style={{display: "flex", justifyContent: "center", cursor: "pointer"}}
+              onClick={()=>selectPhoto({
+                image: photos.consNameError.image,
+                aspect: photos.consNameError.aspect,
+                width:"55%"
+              })}
             >
               <Photo
                 image={photos.consNameError.image}
@@ -172,7 +238,12 @@ export default function Quickstarter() {
             </Grid>
             <Grid
               item xs={12} sm={12} md={3}
-              style={{display: "flex", justifyContent: "center", }}
+              style={{display: "flex", justifyContent: "center", cursor: "pointer"}}
+              onClick={()=>selectPhoto({
+                image: photos.prodEqualsConsError.image,
+                aspect: photos.prodEqualsConsError.aspect,
+                width:"55%"
+              })}
             >
               <Photo
                 image={photos.prodEqualsConsError.image}
@@ -186,11 +257,70 @@ export default function Quickstarter() {
 
 
 
+          <Grid container style={{marginTop: "1rem", marginBottom: "1rem"}}>
+            <Grid
+              item xs={12} sm={12} md={4}
+              style={{display: "flex", justifyContent: "center", cursor: "pointer"}}
+              onClick={()=>selectPhoto({
+                image: photos.noProducerError.image,
+                aspect: photos.noProducerError.aspect,
+                width:"55%"
+              })}
+            >
+              <Photo
+                image={photos.noProducerError.image}
+                aspect={photos.noProducerError.aspect}
+                width="90%"
+                extras={imgBorder}
+              />
+            </Grid>
+            <Grid
+              item xs={12} sm={12} md={4}
+              style={{display: "flex", justifyContent: "center", cursor: "pointer"}}
+              onClick={()=>selectPhoto({
+                image: photos.noConsumerError.image,
+                aspect: photos.noConsumerError.aspect,
+                width:"55%"
+              })}
+            >
+              <Photo
+                image={photos.noConsumerError.image}
+                aspect={photos.noConsumerError.aspect}
+                width="90%"
+                extras={imgBorder}
+              />
+            </Grid>
+            <Grid
+              item xs={12} sm={12} md={4}
+              style={{display: "flex", justifyContent: "center", cursor: "pointer"}}
+              onClick={()=>selectPhoto({
+                image: photos.queueNoColonError.image,
+                aspect: photos.queueNoColonError.aspect,
+                width:"55%"
+              })}
+            >
+              <Photo
+                image={photos.queueNoColonError.image}
+                aspect={photos.queueNoColonError.aspect}
+                width="90%"
+                extras={imgBorder}
+              />
+            </Grid>
+          </Grid>
+
+
+
+
 
           <Grid container style={{marginTop: "1rem", marginBottom: "1rem"}}>
             <Grid
-              item xs={12} sm={12} md={6}
-              style={{display: "flex", justifyContent: "center", marginTop: "1rem"}}
+              item xs={12} sm={12} md={3}
+              style={{display: "flex", justifyContent: "center", marginTop: "1rem", cursor: "pointer"}}
+              onClick={()=>selectPhoto({
+                image: photos.invalidMicroError.image,
+                aspect: photos.invalidMicroError.aspect,
+                width:"55%"
+              })}
             >
               <Photo
                 image={photos.invalidMicroError.image}
@@ -200,13 +330,50 @@ export default function Quickstarter() {
               />
             </Grid>
             <Grid
-              item xs={12} sm={12} md={6}
-              style={{display: "flex", justifyContent: "center", marginTop: "1rem"}}
+              item xs={12} sm={12} md={3}
+              style={{display: "flex", justifyContent: "center", marginTop: "1rem", cursor: "pointer"}}
+              onClick={()=>selectPhoto({
+                image: photos.missingProdMicroError.image,
+                aspect: photos.missingProdMicroError.aspect,
+                width:"55%"
+              })}
             >
               <Photo
                 image={photos.missingProdMicroError.image}
                 aspect={photos.missingProdMicroError.aspect}
                 width="60%"
+                extras={imgBorder}
+              />
+            </Grid>
+            <Grid
+              item xs={12} sm={12} md={3}
+              style={{display: "flex", justifyContent: "center", cursor: "pointer"}}
+              onClick={()=>selectPhoto({
+                aspect: photos.projectNameError.aspect,
+                image: photos.projectNameError.image,
+                width:"55%"
+              })}
+            >
+              <Photo
+                image={photos.projectNameError.image}
+                aspect={photos.projectNameError.aspect}
+                width="90%"
+                extras={imgBorder}
+              />
+            </Grid>
+            <Grid
+              item xs={12} sm={12} md={3}
+              style={{display: "flex", justifyContent: "center", cursor: "pointer"}}
+              onClick={()=>selectPhoto({
+                image: photos.inlineQueueError.image,
+                aspect: photos.inlineQueueError.aspect,
+                width:"55%"
+              })}
+            >
+              <Photo
+                image={photos.inlineQueueError.image}
+                aspect={photos.inlineQueueError.aspect}
+                width="90%"
                 extras={imgBorder}
               />
             </Grid>
@@ -218,12 +385,7 @@ export default function Quickstarter() {
             width="40%"
             extras={imgBorder}
           />
-          <Photo
-            image={photos.enterMicros.image}
-            aspect={photos.enterMicros.aspect}
-            width="40%"
-            extras={imgBorder}
-          />
+
           <Photo
             image={photos.enterQueues.image}
             aspect={photos.enterQueues.aspect}
