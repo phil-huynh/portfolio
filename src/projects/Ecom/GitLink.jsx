@@ -7,10 +7,10 @@ export default function GitLink({ side }) {
   if (side === 'back') link = "https://github.com/orgs/Team-Ferdinand/repositories"
 
   return (
-    <div style={{width: "100%", display: "flex", justifyContent: "center"}}>
-      <a href={link} style={{width: "30%"}}>
+    <div style={{width: "30%", display: "flex", justifyContent: "center", border: "1px red solid"}}>
+      <a href={link}>
         <div className={`glass ${styles.linkButton}`}>
-            <p className={styles.gitLinkText}>{`View the ${side} end code on`}</p>
+            <p className={styles.gitLinkText}>{`View the ${side} end code`}</p>
             <GitHubIcon width={"3.5rem"}/>
         </div>
       </a>

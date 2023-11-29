@@ -8,9 +8,10 @@
 .wrapper {
   width: 100vw;
   height: 100vh;
+  background-color: azure;
   background-size: cover;
   background-position: center;
-  background-color: white;
+  background-color:deepskyblue;
 }
 
 .arrowGrid,
@@ -98,7 +99,6 @@
   width: 100%;
   height: 5rem;
   color: white;
-  margin-top: 1rem;
   padding-inline: 1rem;
   display: flex;
   justify-content: center;

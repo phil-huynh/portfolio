@@ -9,6 +9,7 @@ import Overview from "./Overview"
 import Reviews from "./Reviews"
 import EcomTools from "./Tools"
 import GitLink from "./GitLink"
+import { Grid } from "@mui/material"
 
 export default function Ecommerce() {
 
@@ -45,7 +46,6 @@ export default function Ecommerce() {
       }
     )
   }
-
 
   const arrowStyle = {
     color: "black",
@@ -114,8 +114,11 @@ export default function Ecommerce() {
             <h2>Home</h2>
           </div>
           {/* <EcomTools/> */}
-          <GitLink side={"front"}/>
-          <GitLink side={"back"}/>
+            <div style={{display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", flexWrap: "wrap", border: "yellow 1px solid", width: "100%", marginTop: "1rem"}}>
+              <GitLink side={"front"}/>
+              <GitLink side={"back"}/>
+            </div>
+
         </div>
 
         <Overview
