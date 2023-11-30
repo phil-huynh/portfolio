@@ -12,7 +12,6 @@
 .gridSection,
 .header,
 .headerItem,
-.homelink,
 .infoContainer,
 .tools {
   display: flex;
@@ -27,10 +26,11 @@
 }
 
 .header {
-  flex-direction: column;
+  height: 25%;
 }
 
 .gridSection,
+.header,
 .headerItem,
 .homelink {
   justify-content: center;
@@ -43,17 +43,22 @@
 }
 
 .gridSection,
-.homelink,
 .linkButton {
   cursor: pointer;
 }
 
-.headerItem,
-.homelink {
-  height: 5rem;
+.headerItem {
+  height: 50%;
   width: 50%;
   color: white;
   margin-top: 1rem;
+  background-color: #6E34F4;
+  border-radius: 15px;
+  box-shadow: 15px 15px 12px #1E1E1E;
+}
+
+.titleText {
+  font-size: 5rem;
 }
 
 .infoContainer {
@@ -81,19 +86,65 @@
   height: 5rem;
   color: white;
   padding-inline: 1rem;
+  background-color: #6E34F4;
+  border-radius: 15px;
+  box-shadow: 15px 15px 12px #1E1E1E;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.linkButton:hover {
+/* .linkButton:hover {
   box-shadow: var(--white-glow-border)
 }
 .linkButton:active {
   box-shadow: var(--green-glow-border)
-}
+} */
 
 .gitLinkText {
   font-size: 1.8rem;
   font-weight: 600;
   margin-right: 1rem;
+}
+
+
+.navBar,
+.navGrid,
+.navItem {
+  display: flex;
+}
+.navBar {
+  flex-direction: row;
+  position: sticky;
+  top: 1rem;
+  width: 100%;
+  z-index: 11;
+}
+
+.navBar,
+.navGrid,
+.navItem {
+  justify-content: center;
+  align-items: center;
+}
+
+.navGrid {
+  padding-top: .5rem;
+  padding-bottom: 1rem;
+}
+
+.navItem {
+  cursor: pointer;
+  width: 50%;
+  height: 90%;
+  z-index: 11;
+  border-radius: 15px;
+  background-color: #6E34F4;
+  color: white;
+  margin-top: 1rem;
+  box-shadow: 15px 15px 12px #1E1E1E;
+}
+
+.navLabel {
+  margin-top: .4rem;
+  margin-bottom: .4rem;
 }

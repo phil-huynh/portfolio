@@ -18,14 +18,13 @@
 
 .top {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: blue 1px solid;
   height: 30%;
 }
 
 .header,
-.homeLink,
 .tools {
   display: flex;
   align-items: center;
@@ -37,14 +36,14 @@
 }
 
 
-.header,
-.homeLink {
+.header {
   justify-content: center;
 }
 .title {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-inline: 1rem;
 }
 
 /* .header {
@@ -59,22 +58,13 @@
   height: 10rem;
   background-color: #0E0E0E;
   border: blue 20px ridge;
-  width: 32%;
 }
 
 .titleText {
-  font-size: 6rem;
-  color: white
+  font-size: 5rem;
+  color: yellow;
 }
 
-
-.homeLink {
-  position: fixed;
-  z-index: 15;
-  /* width: 50%; */
-  height: 5rem;
-  cursor: pointer;
-}
 
 .toolBox {
   width: 40%;
@@ -99,6 +89,72 @@
   backdrop-filter: blur(10px);
 }
 
+.navBar,
+.navGrid,
+.navItem {
+  display: flex;
+}
+.navBar {
+  flex-direction: row;
+  position: sticky;
+  top: 1rem;
+  width: 100%;
+  z-index: 11;
+}
+
+.navBar,
+.navGrid,
+.navItem {
+  justify-content: center;
+  align-items: center;
+}
+
+.navGrid {
+  padding-top: .5rem;
+  padding-bottom: 1rem;
+}
+
+.navItem {
+  cursor: pointer;
+  width: 50%;
+  height: 90%;
+  z-index: 11;
+  background-color: #0E0E0E;
+  border: 15px blue ridge;
+  color: yellow;
+  margin-top: 1rem;
+}
+
+.navLabel {
+  margin-top: .4rem;
+  margin-bottom: .4rem;
+}
+
+.linkButton {
+  width: 100%;
+  height: 5rem;
+  color: yellow;
+  border: 15px ridge blue;
+  background-color: #0E0E0E;
+  padding-inline: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.linkButton:hover {
+  /* box-shadow: var(--white-glow-border) */
+  color: rgb(10, 191, 10);
+}
+.linkButton:active {
+  /* box-shadow: var(--green-glow-border) */
+}
+
+.gitLinkText {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-right: 1rem;
+}
 
 @keyframes colorshift {
 	0% { backdrop-filter: hue-rotate(0deg); }

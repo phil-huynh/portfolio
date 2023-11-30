@@ -36,6 +36,14 @@ export default function Osiris() {
     marginBottom: "1rem",
   }
 
+
+  const navigation = [
+    {label: "Home", path: "/"},
+    {label: "Strings Theory", path: "/strings-theory"},
+    {label: "Quickstarter", path: "/quickstarter"},
+    {label: "e Commerce", path: "/ecommerce"},
+  ]
+
   useEffect(() =>{
     console.log(getSize())
   }, [isXL, isLG, isMD, isSM, isXS])
@@ -52,19 +60,24 @@ export default function Osiris() {
         :null
         }
         <div className={styles.header}>
-          <div className={`glass ${styles.headerItem}`}>
-            <h1>Hello World: Osiris</h1>
-          </div>
-          <div className={`glass ${styles.homelink}`} onClick={()=>navigate('/')}>
-            <h2>Home</h2>
+          <div className={styles.headerItem}>
+            <p className={styles.titleText}>mikeslist</p>
           </div>
           {/* <OsirisTools /> */}
-          <GitLink />
+        </div>
+        <GitLink />
+        <div className={styles.navBar}>
+          <Grid container>
+            {navigation.map(nav => (
+              <Grid item xs={6} sm={4} md={4} lg={3} key={nav.path} className={styles.navGrid}>
+                <div className={`${styles.navItem}`} onClick={()=>navigate(nav.path)}>
+                  <h2 className={styles.navLabel}>{nav.label}</h2>
+                </div>
+              </Grid>
+            ))}
+          </Grid>
         </div>
         <div className={styles.infoContainer}>
-
-
-
           <Grid container>
             <Grid
               item
@@ -396,7 +409,7 @@ export default function Osiris() {
 
 
           <div
-            style={{width: "20%", aspectRatio: ph.publicFeed.aspect, cursor: "pointer"}}
+            style={{width: "19%", aspectRatio: ph.publicFeed.aspect, cursor: "pointer"}}
             onClick={()=>(
               selectPhoto({
                 image: ph.publicFeed.image,
@@ -413,7 +426,7 @@ export default function Osiris() {
             />
           </div>
           <div
-            style={{width: "20%", aspectRatio: ph.userPage.aspect, cursor: "pointer"}}
+            style={{width: "19%", aspectRatio: ph.userPage.aspect, cursor: "pointer"}}
             onClick={()=>(
               selectPhoto({
                 image: ph.userPage.image,

@@ -7,6 +7,7 @@ import styles from "./Quickstarter.module.css"
 import QuickstarterTools from "./Tools"
 import { Grid } from "@mui/material"
 import PhotoModal from "../../PhotoModal"
+import GitLink from "./GitLink"
 
 
 export default function Quickstarter() {
@@ -29,6 +30,13 @@ export default function Quickstarter() {
     border: "6px solid #0E0E0E",
     borderRadius: "10px"
   }
+
+  const navigation = [
+    {label: "Home", path: "/"},
+    {label: "Strings Theory", path: "/strings-theory"},
+    {label: "Osiris", path: "/osiris"},
+    {label: "e Commerce", path: "/ecommerce"},
+  ]
 
   const enterAnimation = async () => {
     await animate(page.current, { opacity: [0, 1] }, { duration: 1.5 })
@@ -59,14 +67,23 @@ export default function Quickstarter() {
         />
         :null
         }
-        <div className={`glass ${styles.homeLink}`} onClick={()=>navigate('/')}>
-          <h2>Home</h2>
-        </div>
         <div className={styles.top}>
           <div className={styles.title}>
-            <h1 className={styles.titleText}>Quickstarter</h1>
+            <p className={styles.titleText}>Quickstarter</p>
           </div>
           {/* <QuickstarterTools/> */}
+        </div>
+        <GitLink />
+        <div className={styles.navBar}>
+          <Grid container>
+            {navigation.map(nav => (
+              <Grid item xs={6} sm={4} md={4} lg={3} key={nav.path} className={styles.navGrid}>
+                <div className={`${styles.navItem}`} onClick={()=>navigate(nav.path)}>
+                  <h2 className={styles.navLabel}>{nav.label}</h2>
+                </div>
+              </Grid>
+            ))}
+          </Grid>
         </div>
         <div>
           {/* <Photo
