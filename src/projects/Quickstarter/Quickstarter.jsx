@@ -51,7 +51,14 @@ export default function Quickstarter() {
     >
       <div className={styles.colorfilter}></div>
       <div className="contents">
-      {photoModal ? <PhotoModal image={currentPhoto.image} aspect={currentPhoto.aspect} width={currentPhoto.width} /> :null }
+      {photoModal ?
+        <PhotoModal
+          image={currentPhoto.image}
+          aspect={currentPhoto.aspect}
+          width={currentPhoto.width}
+        />
+        :null
+        }
         <div className={`glass ${styles.homeLink}`} onClick={()=>navigate('/')}>
           <h2>Home</h2>
         </div>
