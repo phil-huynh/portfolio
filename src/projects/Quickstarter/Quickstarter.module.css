@@ -17,7 +17,11 @@
 
 
 .top {
-  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: blue 1px solid;
+  height: 30%;
 }
 
 .header,
@@ -43,22 +47,31 @@
   justify-content: center;
 }
 
-.header,
-.title {
+/* .header {
   height: 5rem;
   width: 50%;
-}
+} */
 
 
 .title {
-  margin-top: 8rem;
+  /* margin-top: 8rem; */
   z-index: 10;
+  height: 10rem;
+  background-color: #0E0E0E;
+  border: blue 20px ridge;
+  width: 32%;
 }
+
+.titleText {
+  font-size: 6rem;
+  color: white
+}
+
 
 .homeLink {
   position: fixed;
   z-index: 15;
-  width: 50%;
+  /* width: 50%; */
   height: 5rem;
   cursor: pointer;
 }

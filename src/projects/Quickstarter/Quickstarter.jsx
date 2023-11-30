@@ -12,7 +12,16 @@ import PhotoModal from "../../PhotoModal"
 export default function Quickstarter() {
 
   const navigate = useNavigate()
-  const { quickstarterPhotos: photos, photoModal, currentPhoto, selectPhoto, locate, locate2, locate3 } = useStore()
+  const {
+    quickstarterPhotos: photos,
+    photoModal,
+    currentPhoto,
+    selectPhoto,
+    locate,
+    locate2,
+    locate3
+  } = useStore()
+
   const [page, animate] = useAnimate()
   const [isPresent, safeToRemove] = usePresence()
 
@@ -47,13 +56,13 @@ export default function Quickstarter() {
           <h2>Home</h2>
         </div>
         <div className={styles.top}>
-          <div className={`glass ${styles.title}`}>
-            <h1 style={{"color": "white"}}>Quickstarter</h1>
+          <div className={styles.title}>
+            <h1 className={styles.titleText}>Quickstarter</h1>
           </div>
           {/* <QuickstarterTools/> */}
         </div>
         <div>
-          <Photo
+          {/* <Photo
             image={photos.startProject.image}
             aspect={photos.startProject.aspect}
             width="20%"
@@ -64,7 +73,7 @@ export default function Quickstarter() {
             aspect={photos.volumeAndPort.aspect}
             width="40%"
             extras={imgBorder}
-          />
+          /> */}
 
 
 
