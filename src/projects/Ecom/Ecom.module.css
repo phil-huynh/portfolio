@@ -11,12 +11,10 @@
   background-color: azure;
   background-size: cover;
   background-position: center;
-  background-color:deepskyblue;
 }
 
 .arrowGrid,
 .header,
-.navItem,
 .photoGridBox,
 .tools,
 .top {
@@ -26,11 +24,11 @@
 
 .top {
   flex-direction: column;
+  height: 40%;
 }
 
 .arrowGrid,
 .header,
-.navItem,
 .photoGridBox {
   justify-content: center;
 }
@@ -40,23 +38,23 @@
   width: 100%;
 }
 
-.header,
-.navItem,
+.header {
+  height: 60%;
+  color: white;
+  padding-inline: 2rem;
+  background-color: #236667;
+  border: 5px solid #236667;
+  box-shadow: 15px 15px 12px #1E1E1E;
+}
+
+
+.titleText {
+  font-size: 5rem;
+}
+
+
 .photoGridBox {
   position: relative;
-}
-
-.header,
-.navItem {
-  height: 5rem;
-  width: 50%;
-  color: white;
-  margin-top: 1rem;
-}
-
-.navItem,
-.photoGridBox {
-  cursor: pointer;
 }
 
 .sectionHeader {
@@ -96,23 +94,68 @@
 }
 
 .linkButton {
-  width: 100%;
+  width: 90%;
   height: 5rem;
   color: white;
+  background-color: #236667;
+  border: 5px solid #236667;
+  box-shadow: 15px 15px 12px #1E1E1E;
   padding-inline: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.linkButton:hover {
+/* .linkButton:hover {
   box-shadow: var(--white-glow-border)
 }
 .linkButton:active {
   box-shadow: var(--green-glow-border)
-}
+} */
 
 .gitLinkText {
   font-size: 1.8rem;
   font-weight: 600;
   margin-right: 1rem;
+}
+
+.navBar,
+.navGrid,
+.navItem {
+  display: flex;
+}
+.navBar {
+  flex-direction: row;
+  position: sticky;
+  top: 1rem;
+  width: 100%;
+  z-index: 11;
+}
+
+.navBar,
+.navGrid,
+.navItem {
+  justify-content: center;
+  align-items: center;
+}
+
+.navGrid {
+  padding-top: .5rem;
+  padding-bottom: 1rem;
+}
+
+.navItem {
+  cursor: pointer;
+  width: 50%;
+  height: 90%;
+  z-index: 11;
+  color: #236667;
+  background-color: white;
+  border: 5px solid #236667;
+  margin-top: 1rem;
+  box-shadow: 15px 15px 12px #1E1E1E;
+}
+
+.navLabel {
+  margin-top: .4rem;
+  margin-bottom: .4rem;
 }

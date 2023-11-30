@@ -41,7 +41,7 @@ export default function Osiris() {
     {label: "Home", path: "/"},
     {label: "Strings Theory", path: "/strings-theory"},
     {label: "Quickstarter", path: "/quickstarter"},
-    {label: "e Commerce", path: "/ecommerce"},
+    {label: "Ari Design", path: "/ecommerce"},
   ]
 
   useEffect(() =>{

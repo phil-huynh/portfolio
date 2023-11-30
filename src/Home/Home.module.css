@@ -415,6 +415,9 @@ hr,
   cursor: pointer;
   border: none;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: transparent;
   transform: translatez(50px) scale(1);
   text-shadow: var(--green-glow-text);
@@ -423,7 +426,10 @@ hr,
 
 .cardBackButton:hover {
   box-shadow: var(--green-glow-border);
+}
 
+.cardBackButtonText {
+  transform: translatez(50px) scale(1);
 }
 
 

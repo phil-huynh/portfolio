@@ -104,7 +104,12 @@ export default function ProjectsMenu() {
                     className={styles.cardBackButton}
                     onClick={()=>changePage(project.path)}
                   >
-                    See more
+                    <p
+                      className={styles.cardBackButtonText}
+                      onClick={()=>changePage(project.path)}
+                    >
+                      See more
+                    </p>
                   </button>
                 </div>
               </div>

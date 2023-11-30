@@ -56,6 +56,13 @@ export default function Ecommerce() {
     }
   }
 
+  const navigation = [
+    {label: "Home", path: "/"},
+    {label: "Strings Theory", path: "/strings-theory"},
+    {label: "Quickstarter", path: "/quickstarter"},
+    {label: "mikeslist", path: "/osiris"},
+  ]
+
   const [page, animatePage] = useAnimate()
   const [isPresent, safeToRemove] = usePresence()
 
@@ -107,19 +114,27 @@ export default function Ecommerce() {
           :null
         }
         <div className={styles.top}>
-          <div className={`glass ${styles.header}`}>
-            <h1>Ecommerce</h1>
-          </div>
-          <div className={`glass ${styles.navItem}`} onClick={()=>navigate('/')}>
-            <h2>Home</h2>
+          <div className={styles.header}>
+            <p className={styles.titleText}>Ari Design</p>
           </div>
           {/* <EcomTools/> */}
-            <div style={{display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", flexWrap: "wrap", border: "yellow 1px solid", width: "100%", marginTop: "1rem"}}>
-              <GitLink side={"front"}/>
-              <GitLink side={"back"}/>
-            </div>
-
+          <div style={{display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", flexWrap: "wrap", width: "100%", marginTop: "1rem"}}>
+            <GitLink side={"front"}/>
+            <GitLink side={"back"}/>
+          </div>
         </div>
+        <div className={styles.navBar}>
+          <Grid container>
+            {navigation.map(nav => (
+              <Grid item xs={6} sm={4} md={4} lg={3} key={nav.path} className={styles.navGrid}>
+                <div className={`${styles.navItem}`} onClick={()=>navigate(nav.path)}>
+                  <h2 className={styles.navLabel}>{nav.label}</h2>
+                </div>
+              </Grid>
+            ))}
+          </Grid>
+        </div>
+
 
         <Overview
           carousels={carousels}

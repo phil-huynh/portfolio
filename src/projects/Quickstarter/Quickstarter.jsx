@@ -34,8 +34,8 @@ export default function Quickstarter() {
   const navigation = [
     {label: "Home", path: "/"},
     {label: "Strings Theory", path: "/strings-theory"},
-    {label: "Osiris", path: "/osiris"},
-    {label: "e Commerce", path: "/ecommerce"},
+    {label: "mikeslist", path: "/osiris"},
+    {label: "Ari Design", path: "/ecommerce"},
   ]
 
   const enterAnimation = async () => {
