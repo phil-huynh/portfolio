@@ -4,6 +4,7 @@ import { Grid } from "@mui/material"
 import Photo from "../../Photo.jsx"
 import styles from "./Probabilities.module.css"
 import SalesTools from "./Tools"
+import GitLink from "./GitLink"
 
 export default function SalesProbabilities() {
 
@@ -15,17 +16,33 @@ export default function SalesProbabilities() {
     boxShadow: "20px 20px 20px #1E1E1E"
   }
 
+  const navigation = [
+    {label: "Home", path: "/"},
+    {label: "Strings Theory", path: "/strings-theory"},
+    {label: "Quickstarter", path: "/quickstarter"},
+    {label: "Ari Design", path: "/ecommerce"},
+  ]
+
   return (
     <div className={styles.wrapper}>
       <div className="contents">
         <div className={styles.top}>
           <div className={`glass ${styles.title}`}>
-          <h1 style={{"color": "white"}}>Sales Probabilities</h1>
+            <h1 style={{"color": "white"}}>Sales Probabilities</h1>
           </div>
-          <div className={`glass ${styles.homeLink}`} onClick={()=>navigate('/')}>
-            <h2>Home</h2>
-          </div>
-          <SalesTools/>
+          {/* <SalesTools/> */}
+          <GitLink/>
+        </div>
+        <div className={styles.navBar}>
+          <Grid container>
+            {navigation.map(nav => (
+              <Grid item xs={6} sm={4} md={4} lg={3} key={nav.path} className={styles.navGrid}>
+                <div className={`glass ${styles.navItem}`} onClick={()=>navigate(nav.path)}>
+                  <h2 className={styles.navLabel}>{nav.label}</h2>
+                </div>
+              </Grid>
+            ))}
+          </Grid>
         </div>
         <div className={styles.infoContainer}>
           <Photo

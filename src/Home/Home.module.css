@@ -357,8 +357,8 @@ hr,
 
 .projectMenuCard {
   width: 90%;
-  margin-top: .72rem;
-  margin-bottom: .72rem;
+  /* margin-top: .72rem;
+  margin-bottom: .72rem; */
   border-radius: 15px;
   box-shadow: 15px 15px 15px #1E1E1E;
 
@@ -403,6 +403,7 @@ hr,
   display: flex;
   justify-content: center;
   align-items: center;
+  transform-style: preserve-3d;
   transform: translatez(50px) scale(1);
 }
 
@@ -419,7 +420,8 @@ hr,
   justify-content: center;
   align-items: center;
   background: transparent;
-  transform: translatez(50px) scale(1);
+  transform-style: preserve-3d;
+  /* transform: translatez(50px) scale(1); */
   text-shadow: var(--green-glow-text);
   box-shadow: var(--green-light-glow-border);
 }
