@@ -83,6 +83,7 @@ function Home() {
         :null
       }
       <div className={styles.contents}>
+
         {resumeModal ?
           <ResumeModal />
           : null

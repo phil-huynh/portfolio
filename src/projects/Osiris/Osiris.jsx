@@ -7,6 +7,7 @@ import styles from "./Osiris.module.css"
 import PhotoModal from "../../PhotoModal"
 import OsirisTools from "./Tools"
 import GitLink from "./GitLink"
+import { AspectRatio } from "@mui/icons-material"
 
 export default function Osiris() {
 
@@ -157,6 +158,13 @@ export default function Osiris() {
                 item
                 xs={12} sm={5.2} md={2.4} lg={2.4} xl={2.4}
                 className={styles.gridSection}
+                onClick={()=>(
+                  selectPhoto({
+                    image: ph.mobileFeed.image,
+                    aspect: ph.mobileFeed.aspect,
+                    width: "25%"
+                  })
+                )}
                 >
                 <Photo image={ph.mobileFeed.image} aspect={ph.mobileFeed.aspect} width="82%" extras={extras}/>
               </Grid>
@@ -164,6 +172,13 @@ export default function Osiris() {
                 item
                 xs={12} sm={6.8} md={3.1} lg={3.1} xl={3.1}
                 className={styles.gridSection}
+                onClick={()=>(
+                  selectPhoto({
+                    image: ph.tabletFeed.image,
+                    aspect: ph.tabletFeed.aspect,
+                    width: "40%"
+                  })
+                )}
                 >
                 <Photo image={ph.tabletFeed.image} aspect={ph.tabletFeed.aspect} width="95%" extras={extras}/>
               </Grid>
@@ -171,6 +186,13 @@ export default function Osiris() {
                 item
                 xs={12} sm={12} md={6.5} lg={6.5} xl={6.5}
                 className={styles.gridSection}
+                onClick={()=>(
+                  selectPhoto({
+                    image: ph.desktopFeed.image,
+                    aspect: ph.desktopFeed.aspect,
+                    width: "80%"
+                  })
+                )}
                 >
                 <Photo image={ph.desktopFeed.image} aspect={ph.desktopFeed.aspect} width="96%" extras={extras}/>
               </Grid>
@@ -373,12 +395,57 @@ export default function Osiris() {
 
 
 
-
-          <Photo image={ph.publicFeed.image} aspect={ph.publicFeed.aspect} width="20%" extras={extras}/>
-          <Photo image={ph.userPage.image} aspect={ph.userPage.aspect} width="20%" extras={extras}/>
-          <Photo image={ph.itemPageDesktop.image} aspect={ph.itemPageDesktop.aspect} width="60%" extras={extras}/>
-
-
+          <div
+            style={{width: "20%", aspectRatio: ph.publicFeed.aspect, cursor: "pointer"}}
+            onClick={()=>(
+              selectPhoto({
+                image: ph.publicFeed.image,
+                aspect: ph.publicFeed.aspect,
+                width: "25%"
+              })
+            )}
+          >
+            <Photo
+              image={ph.publicFeed.image}
+              aspect={ph.publicFeed.aspect}
+              width="100%"
+              extras={extras}
+            />
+          </div>
+          <div
+            style={{width: "20%", aspectRatio: ph.userPage.aspect, cursor: "pointer"}}
+            onClick={()=>(
+              selectPhoto({
+                image: ph.userPage.image,
+                aspect: ph.userPage.aspect,
+                width: "25%"
+              })
+            )}
+          >
+            <Photo
+              image={ph.userPage.image}
+              aspect={ph.userPage.aspect}
+              width="100%"
+              extras={extras}
+            />
+          </div>
+          <div
+            style={{width: "60%", aspectRatio: ph.userPage.aspect, cursor: "pointer"}}
+            onClick={()=>(
+              selectPhoto({
+                image: ph.itemPageDesktop.image,
+                aspect: ph.itemPageDesktop.aspect,
+                width: "80%"
+              })
+            )}
+          >
+            <Photo
+              image={ph.itemPageDesktop.image}
+              aspect={ph.itemPageDesktop.aspect}
+              width="100%"
+              extras={extras}
+            />
+          </div>
         </div>
       </div>
     </div>
