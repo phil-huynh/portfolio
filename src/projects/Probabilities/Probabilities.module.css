@@ -86,7 +86,7 @@
   position: sticky;
   top: 1rem;
   width: 100%;
-  z-index: 11;
+  z-index: 1;
 }
 
 .navBar,
@@ -105,7 +105,7 @@
   cursor: pointer;
   width: 50%;
   height: 90%;
-  z-index: 11;
+  z-index: 1;
   border-radius: 15px;
   color: white;
   margin-top: 1rem;

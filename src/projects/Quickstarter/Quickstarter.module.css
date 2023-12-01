@@ -54,7 +54,7 @@
 
 .title {
   /* margin-top: 8rem; */
-  z-index: 10;
+  z-index: 1;
   height: 10rem;
   background-color: #0E0E0E;
   border: blue 20px ridge;
@@ -99,7 +99,7 @@
   position: sticky;
   top: 1rem;
   width: 100%;
-  z-index: 11;
+  z-index: 1;
 }
 
 .navBar,
@@ -118,7 +118,7 @@
   cursor: pointer;
   width: 50%;
   height: 90%;
-  z-index: 11;
+  z-index: 1;
   background-color: #0E0E0E;
   border: 15px blue ridge;
   color: yellow;
@@ -130,14 +130,20 @@
   margin-bottom: .4rem;
 }
 
+.linkContainer {
+  width:100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
 .linkButton {
-  width: 100%;
+  min-width: 50%;
   height: 5rem;
   color: yellow;
   border: 15px ridge blue;
   background-color: #0E0E0E;
   padding-inline: 1rem;
-  margin-bottom: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -153,7 +159,7 @@
 .gitLinkText {
   font-size: 1.8rem;
   font-weight: 600;
-  margin-right: 1rem;
+  /* margin-right: 1rem; */
 }
 
 @keyframes colorshift {

@@ -128,12 +128,12 @@
 .navBar {
   position: sticky;
   top: 1rem;
-  z-index: 11;
+  z-index: 1;
 }
 
 .navItem {
   width: 70%;
-  z-index: 11;
+  z-index: 1;
   animation: neonNav 60s ease infinite;
   margin-top: 1rem;
 }

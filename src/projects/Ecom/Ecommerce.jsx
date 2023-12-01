@@ -118,10 +118,22 @@ export default function Ecommerce() {
             <p className={styles.titleText}>Ari Design</p>
           </div>
           {/* <EcomTools/> */}
-          <div style={{display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", flexWrap: "wrap", width: "100%", marginTop: "1rem"}}>
-            <GitLink side={"front"}/>
-            <GitLink side={"back"}/>
-          </div>
+          <Grid container style={{marginTop: "2rem", marginBottom: "2rem"}}>
+            <Grid item xs={0} sm ={0} md={.5} lg={1} />
+            <Grid
+              item xs={12} sm ={12} md={5.5} lg ={5} className={styles.gitGridSection}
+
+              >
+              <GitLink side={"front"}/>
+            </Grid>
+            <Grid item xs={12} sm ={12} md={5.5} lg={5} className={styles.gitGridSection}
+
+            >
+              <GitLink side={"back"}/>
+            </Grid>
+            <Grid item xs={0} sm ={0} md={.5} lg={1}/>
+
+          </Grid>
         </div>
         <div className={styles.navBar}>
           <Grid container>

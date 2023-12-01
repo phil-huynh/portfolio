@@ -200,7 +200,7 @@ a {
   position: relative;
   overflow-y: scroll;
   height: 100vh;
-  z-index: 10;
+  z-index: 1;
 }
 
 

@@ -64,14 +64,14 @@ export default function Osiris() {
             <p className={styles.titleText}>mikeslist</p>
           </div>
           {/* <OsirisTools /> */}
-        </div>
         <GitLink />
+        </div>
         <div className={styles.navBar}>
-          <Grid container>
+          <Grid container style={{marginTop: "1rem"}}>
             {navigation.map(nav => (
               <Grid item xs={6} sm={4} md={4} lg={3} key={nav.path} className={styles.navGrid}>
                 <div className={`${styles.navItem}`} onClick={()=>navigate(nav.path)}>
-                  <h2 className={styles.navLabel}>{nav.label}</h2>
+                  <h3 className={styles.navLabel}>{nav.label}</h3>
                 </div>
               </Grid>
             ))}

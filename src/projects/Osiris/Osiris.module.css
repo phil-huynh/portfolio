@@ -17,6 +17,10 @@
   display: flex;
 }
 
+.header {
+  flex-direction: column;
+}
+
 .gridSection,
 .header,
 .headerItem,
@@ -27,10 +31,10 @@
 
 .header {
   height: 25%;
+  justify-content: space-between;
 }
 
 .gridSection,
-.header,
 .headerItem,
 .homelink {
   justify-content: center;
@@ -49,7 +53,7 @@
 
 .headerItem {
   height: 50%;
-  width: 50%;
+  min-width: 50%;
   color: white;
   margin-top: 1rem;
   background-color: #6E34F4;
@@ -59,6 +63,7 @@
 
 .titleText {
   font-size: 5rem;
+  padding-inline: 2rem;
 }
 
 .infoContainer {
@@ -81,10 +86,15 @@
   padding-inline: .5rem;
 }
 
+.gitLink {
+  width:
+}
+
 .linkButton {
   width: 100%;
   height: 5rem;
   color: white;
+  margin-left: -1rem;
   padding-inline: 1rem;
   background-color: #6E34F4;
   border-radius: 15px;
@@ -101,9 +111,9 @@
 } */
 
 .gitLinkText {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  margin-right: 1rem;
+  /* margin-right: 1rem; */
 }
 
 
@@ -117,7 +127,7 @@
   position: sticky;
   top: 1rem;
   width: 100%;
-  z-index: 11;
+  z-index: 1;
 }
 
 .navBar,
@@ -128,19 +138,17 @@
 }
 
 .navGrid {
-  padding-top: .5rem;
-  padding-bottom: 1rem;
+  height: 4rem;
 }
 
 .navItem {
   cursor: pointer;
-  width: 50%;
-  height: 90%;
-  z-index: 11;
+  width: 70%;
+  height: 80%;
+  z-index: 1;
   border-radius: 15px;
   background-color: #6E34F4;
   color: white;
-  margin-top: 1rem;
   box-shadow: 15px 15px 12px #1E1E1E;
 }
 

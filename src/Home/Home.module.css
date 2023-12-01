@@ -186,7 +186,7 @@ hr,
 .contents {
   overflow-y: scroll;
   height: 100vh;
-  z-index: 10;
+  z-index: 1;
 }
 
 .homeGridSection {
@@ -195,7 +195,7 @@ hr,
 
 .introContainer {
   width: 95%;
-  z-index: 2;
+  z-index: 1;
 }
 
 .infoBox {
@@ -272,8 +272,9 @@ hr,
   letter-spacing: 0.1em;
 }
 
+
 .menuItemLabel {
-  transition: 0.5s;
+  transition: 0.3s;
   /* text-shadow: 1px -1px 0 grey, 1px -2px 0 grey, 1px -3px 0 grey,
     1px -4px 0 grey, 1px -5px 0 grey, 1px -6px 0 grey, 1px -7px 0 grey,
     1px -8px 0 grey, 5px -13px 15px black, 5px -13px 25px #808080; */
@@ -284,7 +285,7 @@ hr,
 
 
 .selectedMenuItemLabel {
-  transition: 0.5s;
+  transition: 0.3s;
   font-size: 4rem;
   /* text-decoration: underline; */
   border-radius: 10px;
@@ -300,8 +301,6 @@ hr,
 }
 
 
-
-
 .selected {
   box-shadow: var(--selected-box-shadow)
 }
@@ -312,7 +311,7 @@ hr,
 
 .skillsContainer {
   overflow-y: auto;
-  z-index: 10;
+  z-index: 1;
 }
 
 .skillGroupCard {
@@ -342,7 +341,7 @@ hr,
 }
 
 .projectMenuContainer {
-  z-index: 11;
+  z-index: 1;
 }
 
 .projectGridSection {
@@ -430,10 +429,6 @@ hr,
   box-shadow: var(--green-glow-border);
 }
 
-.cardBackButtonText {
-  transform: translatez(50px) scale(1);
-}
-
 
 .menuCardBackGround {
   aspect-ratio: 1.6;
@@ -460,7 +455,7 @@ hr,
   width: 90%;
   min-height: 93%;
   padding: 1.5rem;
-  z-index: 12;
+  z-index: 1;
   font-size: 1.1rem;
 }
 
@@ -507,7 +502,7 @@ hr,
   min-height: 93%;
   padding: 1rem;
   font-size: 1.1rem;
-  z-index: 12;
+  z-index: 1;
 }
 
 blockquote {
