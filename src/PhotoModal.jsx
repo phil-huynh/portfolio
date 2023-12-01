@@ -4,7 +4,7 @@ import Photo from "./Photo";
 import { useStore } from "./Store";
 import CloseIcon from '@mui/icons-material/Close';
 
-export default function PhotoModal({ image, aspect, width }) {
+export default function PhotoModal({ image, aspect, width, boxShadow=true }) {
 
   const { photoModal, setPhotoModal, setCurrentPhoto } = useStore()
   const close = () => {
@@ -18,7 +18,7 @@ export default function PhotoModal({ image, aspect, width }) {
     left: "50%",
     transform: "translate(-50%, -50%)",
     p: 4.5,
-    boxShadow: "20px 20px 15px #1E1E1E",
+    boxShadow: boxShadow ? "20px 20px 15px #1E1E1E" : "none",
     width: width,
     aspectRatio: aspect,
   };

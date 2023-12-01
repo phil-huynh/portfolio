@@ -1,4 +1,4 @@
-import { useAnimate, usePresence } from "framer-motion"
+import { useAnimate, usePresence, stagger } from "framer-motion"
 import { useEffect } from "react"
 import styles from "./Home.module.css"
 
@@ -8,7 +8,16 @@ export default function Testimonials() {
   const [isPresent, safeToRemove] = usePresence()
 
   const rotateIn = async () => {
-    await animate(scope.current, {rotateX: [90, 0]}, {duration: .7})
+    await animate(
+      "blockquote",
+      {rotateX: [90, 0]},
+      {
+        duration: .9,
+        delay: stagger(.3),
+        type: "spring",
+        bounce: .2
+      }
+    )
   }
 
   const rotateOut = async () => {
@@ -21,8 +30,8 @@ export default function Testimonials() {
   }, [isPresent])
 
   return (
-    <div ref={scope} className={`glass ${styles.recommendationsContainer}`}>
-      <blockquote>
+    <div ref={scope} className={styles.recommendationsContainer}>
+      <blockquote className={styles.recommendation}>
         <p className={styles.quoteSection}>
           "Phil would be a solid addition to any software development team.
         </p>
@@ -31,8 +40,8 @@ export default function Testimonials() {
         </p>
 
       </blockquote>
-      <hr/>
-      <blockquote>
+
+      <blockquote className={styles.recommendation}>
         <p className={styles.quoteSection}>
           "Phil is absolutely amazing at 2 things. Coding and Communicating. From helping me understand concepts to debugging any issues I created in my projects Phil was always there to lend a helping ear or hand.
         </p>
@@ -48,8 +57,8 @@ export default function Testimonials() {
           Phil is truly the goat of Galvanize."
         </p>
       </blockquote>
-      <hr/>
-      <blockquote>
+
+      <blockquote className={styles.recommendation}>
         <p className={styles.quoteSection}>
           "I had the privilege of learning from Phil as a student on the software development team at Galvanize, which was a fantastic experience for my career in software development. He possesses a profound understanding of software engineering concepts and an innate ability to convey complex ideas in a clear and accessible manner. His teaching style is not only engaging but also tailored to meet the needs of each student, ensuring that everyone, regardless of their prior experience, can grasp the material.
         </p>

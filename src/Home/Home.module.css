@@ -77,7 +77,8 @@
 }
 
 .homeGridSection,
-.projectNameContainer {
+.projectNameContainer,
+.recommendationsContainer {
   justify-content: center;
 }
 
@@ -86,13 +87,14 @@
   justify-content: flex-start;
 }
 
+.recommendationsContainer,
 .skillsContainer,
 .skillsGroupSpread {
   align-items: center;
   justify-content: space-between;
 }
 
-.recommendationsContainer,
+
 .tools {
   justify-content: space-around;
 }
@@ -198,6 +200,15 @@ hr,
   z-index: 1;
 }
 
+.topCard {
+  background-color: rgba(65, 65, 65, 0.1);
+  border-radius: 20px;
+  border-top: 1px solid rgba(139, 139, 139, 0.30);
+  border-left: 1px solid rgba(139, 139, 139, 0.30);
+  box-shadow: 5px 5px 5px black;
+  backdrop-filter: blur(10px);
+}
+
 .infoBox {
   margin: 2rem;
 }
@@ -279,7 +290,7 @@ hr,
     1px -4px 0 grey, 1px -5px 0 grey, 1px -6px 0 grey, 1px -7px 0 grey,
     1px -8px 0 grey, 5px -13px 15px black, 5px -13px 25px #808080; */
   text-shadow: 1px 1px 0 grey, 1px 2px 0 grey, 1px 3px 0 grey, 1px 4px 0 grey,
-    1px 5px 0 grey, 1px 6px 0 grey, 1px 7px 0 grey, 1px 8px 0 grey,
+    1px 5px 0 grey, 1px 6px 0 grey, 1px 7px 0 grey,
     5px 13px 15px black;
 }
 
@@ -292,7 +303,7 @@ hr,
   /* box-shadow: var(--selected-box-shadow); */
   padding:.75rem;
   padding-inline: 2rem;
-  transform: translate(-50%, calc(-50% + 8px));
+  transform: translate(-50%, calc(-50% + 7px));
   text-shadow: var(--blue-light-glow-text);
   /* transform: scale(1.1)translate(-50%, -50%); */
   /* text-shadow: 1px -1px 0 grey, 1px -2px 0 grey, 1px -3px 0 grey,
@@ -317,7 +328,7 @@ hr,
 .skillGroupCard {
   width: 88%;
   margin-inline: 1rem;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1rem;
   padding-top: .2rem;
   padding-bottom: .8rem;
   padding-inline: 1.2rem;
@@ -325,7 +336,7 @@ hr,
   border-top: 1px solid rgba(139, 139, 139, 0.30);
   border-left: 1px solid rgba(139, 139, 139, 0.30);
   background-color: rgba(65, 65, 65, 0.1);
-  box-shadow: 5px 5px 5px #1E1E1E;
+  box-shadow: 5px 5px 5px black;
   /* backdrop-filter: blur(15px) invert(80%); */
 }
 
@@ -345,7 +356,7 @@ hr,
 }
 
 .projectGridSection {
-  min-height: 20rem;
+  min-height: 19rem;
   -webkit-transition: 1s ease-in-out;
 	transition: 1s ease-in-out;
 }
@@ -359,7 +370,7 @@ hr,
   /* margin-top: .72rem;
   margin-bottom: .72rem; */
   border-radius: 15px;
-  box-shadow: 15px 15px 15px #1E1E1E;
+  box-shadow: 15px 15px 15px black;
 
 }
 
@@ -457,6 +468,9 @@ hr,
   padding: 1.5rem;
   z-index: 1;
   font-size: 1.1rem;
+  border-top: 1px solid rgba(139, 139, 139, 0.30);
+  border-left: 1px solid rgba(139, 139, 139, 0.30);
+  background-color: rgba(65, 65, 65, 0.1);
 }
 
 .viewResumeButton,
@@ -467,7 +481,9 @@ hr,
   font-size: 1rem;
   font-weight: 540;
   border-radius: 10px;
-  box-shadow: 5px 5px 5px #292929;
+  box-shadow: 3px 3px 3px black;
+  border-top: 1px solid rgba(139, 139, 139, 0.30);
+  border-left: 1px solid rgba(139, 139, 139, 0.30);
 }
 
 .resumeDownloadButton {
@@ -497,12 +513,25 @@ hr,
   margin-bottom: .75rem;
 }
 
+
 .recommendationsContainer {
   width: 90%;
-  min-height: 93%;
-  padding: 1rem;
-  font-size: 1.1rem;
+  height: 93%;
   z-index: 1;
+
+}
+
+.recommendation {
+  width: 100%;
+  /* min-height: 93%; */
+  padding: 1.5rem;
+  font-size: 1rem;
+  z-index: 1;
+  border-radius: 15px;
+  border-top: 1px solid rgba(139, 139, 139, 0.30);
+  border-left: 1px solid rgba(139, 139, 139, 0.30);
+  background-color: rgba(65, 65, 65, 0.1);
+  box-shadow: 5px 5px 5px black;
 }
 
 blockquote {

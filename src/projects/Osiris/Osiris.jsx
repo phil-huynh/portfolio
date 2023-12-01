@@ -34,6 +34,8 @@ export default function Osiris() {
     boxShadow: "15px 15px 12px #1E1E1E",
     marginTop: "1rem",
     marginBottom: "1rem",
+    borderTop: "1px solid rgba(139, 139, 139, 0.30)",
+    borderLeft: "1px solid rgba(139, 139, 139, 0.30)"
   }
 
 
@@ -42,6 +44,7 @@ export default function Osiris() {
     {label: "Strings Theory", path: "/strings-theory"},
     {label: "Quickstarter", path: "/quickstarter"},
     {label: "Ari Design", path: "/ecommerce"},
+    {label: "Probabilities", path: "/sales-probabilities"},
   ]
 
   useEffect(() =>{
@@ -69,7 +72,7 @@ export default function Osiris() {
         <div className={styles.navBar}>
           <Grid container style={{marginTop: "1rem"}}>
             {navigation.map(nav => (
-              <Grid item xs={6} sm={4} md={4} lg={3} key={nav.path} className={styles.navGrid}>
+              <Grid item xs={6} sm={4} md={4} lg={2.4} key={nav.path} className={styles.navGrid}>
                 <div className={`${styles.navItem}`} onClick={()=>navigate(nav.path)}>
                   <h3 className={styles.navLabel}>{nav.label}</h3>
                 </div>
@@ -406,59 +409,50 @@ export default function Osiris() {
             </Grid>
           </Grid>
 
-
-
-          <div
-            style={{width: "19%", aspectRatio: ph.publicFeed.aspect, cursor: "pointer"}}
-            onClick={()=>(
-              selectPhoto({
-                image: ph.publicFeed.image,
-                aspect: ph.publicFeed.aspect,
-                width: "25%"
-              })
-            )}
-          >
-            <Photo
-              image={ph.publicFeed.image}
-              aspect={ph.publicFeed.aspect}
-              width="100%"
-              extras={extras}
-            />
-          </div>
-          <div
-            style={{width: "19%", aspectRatio: ph.userPage.aspect, cursor: "pointer"}}
-            onClick={()=>(
-              selectPhoto({
-                image: ph.userPage.image,
-                aspect: ph.userPage.aspect,
-                width: "25%"
-              })
-            )}
-          >
-            <Photo
-              image={ph.userPage.image}
-              aspect={ph.userPage.aspect}
-              width="100%"
-              extras={extras}
-            />
-          </div>
-          <div
-            style={{width: "60%", aspectRatio: ph.userPage.aspect, cursor: "pointer"}}
-            onClick={()=>(
-              selectPhoto({
-                image: ph.itemPageDesktop.image,
-                aspect: ph.itemPageDesktop.aspect,
-                width: "80%"
-              })
-            )}
-          >
-            <Photo
-              image={ph.itemPageDesktop.image}
-              aspect={ph.itemPageDesktop.aspect}
-              width="100%"
-              extras={extras}
-            />
-          </div>
+          <Grid item container sx={{width: "100%", marginTop: "2rem"}}>
+            <Grid
+              item
+              xs={12} sm={5.2} md={2.5} lg={2.5} xl={2.5}
+              className={styles.gridSection}
+              onClick={()=>(
+                selectPhoto({
+                  image: ph.publicFeed.image,
+                  aspect: ph.publicFeed.aspect,
+                  width: "25%"
+                })
+              )}
+              >
+              <Photo image={ph.publicFeed.image} aspect={ph.publicFeed.aspect} width="85%" extras={extras}/>
+            </Grid>
+            <Grid
+              item
+              xs={12} sm={6.8} md={2.5} lg={2.5} xl={2.5}
+              className={styles.gridSection}
+              onClick={()=>(
+                selectPhoto({
+                  image: ph.userPage.image,
+                  aspect: ph.userPage.aspect,
+                  width: "25%"
+                })
+              )}
+              >
+              <Photo image={ph.userPage.image} aspect={ph.userPage.aspect} width="85%" extras={extras}/>
+            </Grid>
+            <Grid
+              item
+              xs={12} sm={12} md={7} lg={7} xl={7}
+              className={styles.gridSection}
+              onClick={()=>(
+                selectPhoto({
+                  image: ph.itemPageDesktop.image,
+                  aspect: ph.itemPageDesktop.aspect,
+                  width: "80%"
+                })
+              )}
+              >
+              <Photo image={ph.itemPageDesktop.image} aspect={ph.itemPageDesktop.aspect} width="96%" extras={extras}/>
+            </Grid>
+          </Grid>
         </div>
       </div>
     </div>

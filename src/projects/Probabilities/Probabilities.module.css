@@ -20,6 +20,7 @@
 }
 
 .infoContainer,
+.title,
 .top {
   flex-direction: column;
   align-items: center;
@@ -46,11 +47,14 @@
   color: white;
 }
 
-.homeLink,
+
 .title {
-  height: 5rem;
-  width: 50%;
-  margin-top: 1rem;
+  /* height: 5rem; */
+  width: 80%;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .infoContainer {
@@ -103,7 +107,7 @@
 
 .navItem {
   cursor: pointer;
-  width: 50%;
+  min-width: 60%;
   height: 90%;
   z-index: 1;
   border-radius: 15px;
@@ -139,4 +143,8 @@
   font-size: 1.8rem;
   font-weight: 600;
   margin-right: 1rem;
+}
+
+.salesGridSection {
+  cursor: pointer;
 }

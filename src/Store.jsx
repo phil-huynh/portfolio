@@ -16,6 +16,7 @@ export default function ContextProvider ({ children }) {
   const [photoModal, setPhotoModal] = useState(false)
   const [currentPhoto, setCurrentPhoto] = useState({image: "", aspect: "", width: ""})
   const [resumeModal, setResumeModal] = useState(false)
+  const [enterMicrosModal, setEnterMicrosModal] = useState(false)
 
 
   const selectPhoto = (photo) => {
@@ -114,12 +115,14 @@ export default function ContextProvider ({ children }) {
     currentPhoto: currentPhoto,
     resumeImage: resumeImage,
     resumeModal: resumeModal,
+    enterMicrosModal: enterMicrosModal,
     setCurrentPhoto: setCurrentPhoto,
     setPhotoModal: setPhotoModal,
     setSelection: setSelection,
     setFirstTime: setFirstTime,
     selectPhoto: selectPhoto,
     setResumeModal: setResumeModal,
+    setEnterMicrosModal: setEnterMicrosModal,
     getSize: getSize,
   }
   return (

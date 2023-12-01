@@ -26,7 +26,7 @@ export default function Bio() {
   }, [isPresent])
 
   return (
-    <div ref={scope} className={`glass ${styles.bioContainer}`}>
+    <div ref={scope} className={styles.bioContainer}>
       <button className={styles.viewResumeButton} onClick={()=>setResumeModal(true)}>View resume on this site</button>
       <h4 style={{margin: ".5rem"}}>or</h4>
       <h3 style={{marginTop: "0"}}>Download my resume</h3>

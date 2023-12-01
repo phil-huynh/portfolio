@@ -7,6 +7,7 @@ import styles from "./Quickstarter.module.css"
 import QuickstarterTools from "./Tools"
 import { Grid } from "@mui/material"
 import PhotoModal from "../../PhotoModal"
+import EnterMicrosModal from "./EnterMicrosModal"
 import GitLink from "./GitLink"
 
 
@@ -18,6 +19,8 @@ export default function Quickstarter() {
     photoModal,
     currentPhoto,
     selectPhoto,
+    enterMicrosModal,
+    setEnterMicrosModal,
     locate,
     locate2,
     locate3
@@ -34,8 +37,9 @@ export default function Quickstarter() {
   const navigation = [
     {label: "Home", path: "/"},
     {label: "Strings Theory", path: "/strings-theory"},
-    {label: "mikeslist", path: "/osiris"},
     {label: "Ari Design", path: "/ecommerce"},
+    {label: "mikeslist", path: "/osiris"},
+    {label: "Probabilities", path: "/sales-probabilities"},
   ]
 
   const enterAnimation = async () => {
@@ -64,6 +68,13 @@ export default function Quickstarter() {
           image={currentPhoto.image}
           aspect={currentPhoto.aspect}
           width={currentPhoto.width}
+          boxShadow={false}
+        />
+        :null
+        }
+      {enterMicrosModal ?
+        <EnterMicrosModal
+          photo={photos.enterMicros}
         />
         :null
         }
@@ -77,9 +88,9 @@ export default function Quickstarter() {
         <div className={styles.navBar}>
           <Grid container>
             {navigation.map(nav => (
-              <Grid item xs={6} sm={4} md={4} lg={3} key={nav.path} className={styles.navGrid}>
+              <Grid item xs={6} sm={4} md={4} lg={2.4} key={nav.path} className={styles.navGrid}>
                 <div className={`${styles.navItem}`} onClick={()=>navigate(nav.path)}>
-                  <h2 className={styles.navLabel}>{nav.label}</h2>
+                  <h3 className={styles.navLabel}>{nav.label}</h3>
                 </div>
               </Grid>
             ))}
@@ -105,11 +116,7 @@ export default function Quickstarter() {
             <Grid
               item xs={12} sm={12} md={2.3}
               style={{display: "flex", justifyContent: "center", cursor: "pointer"}}
-              onClick={()=>selectPhoto({
-                image: photos.enterMicros.image,
-                aspect: photos.enterMicros.aspect,
-                width:"28%"
-              })}
+              onClick={()=>setEnterMicrosModal(true)}
             >
               <Photo
               image={photos.enterMicros.image}

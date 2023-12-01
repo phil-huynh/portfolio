@@ -28,23 +28,13 @@ export default function Ecommerce() {
 
   const cycleRight = (section) => {
     const prev = carousels[`${section}Photos`]
-    setCarousels(
-      {
-        ...carousels,
-        [`${section}Photos`]: [...prev.slice(1), prev[0]]
-      }
-    )
+    setCarousels({ ...carousels, [`${section}Photos`]: [...prev.slice(1), prev[0]]})
   }
 
   const cycleLeft = (section) => {
     const prev = carousels[`${section}Photos`]
     const lastIndex = prev.length - 1
-    setCarousels(
-      {
-        ...carousels,
-        [`${section}Photos`]: [ prev[lastIndex], ...prev.slice(0, lastIndex)]
-      }
-    )
+    setCarousels({ ...carousels, [`${section}Photos`]: [ prev[lastIndex], ...prev.slice(0, lastIndex)]})
   }
 
   const arrowStyle = {
@@ -61,6 +51,7 @@ export default function Ecommerce() {
     {label: "Strings Theory", path: "/strings-theory"},
     {label: "Quickstarter", path: "/quickstarter"},
     {label: "mikeslist", path: "/osiris"},
+    {label: "Probabilities", path: "/sales-probabilies"},
   ]
 
   const [page, animatePage] = useAnimate()
@@ -138,7 +129,7 @@ export default function Ecommerce() {
         <div className={styles.navBar}>
           <Grid container>
             {navigation.map(nav => (
-              <Grid item xs={6} sm={4} md={4} lg={3} key={nav.path} className={styles.navGrid}>
+              <Grid item xs={6} sm={4} md={4} lg={2.4} key={nav.path} className={styles.navGrid}>
                 <div className={`${styles.navItem}`} onClick={()=>navigate(nav.path)}>
                   <h2 className={styles.navLabel}>{nav.label}</h2>
                 </div>

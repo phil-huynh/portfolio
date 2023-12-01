@@ -28,8 +28,9 @@ export default function StringsTheory() {
   const navigation = [
     {label: "Home", path: "/"},
     {label: "Quickstarter", path: "/quickstarter"},
-    {label: "mikeslist", path: "/osiris"},
     {label: "Ari Design", path: "/ecommerce"},
+    {label: "mikeslist", path: "/osiris"},
+    {label: "Probabilities", path: "/sales-probabilities"},
   ]
 
   const enterAnimation = async () => {
@@ -59,7 +60,15 @@ export default function StringsTheory() {
       key="strings"
     >
       <div className="contents" >
-        {photoModal ? <PhotoModal image={currentPhoto.image} aspect={currentPhoto.aspect} width={currentPhoto.width} /> :null }
+        {photoModal ?
+          <PhotoModal
+            image={currentPhoto.image}
+            aspect={currentPhoto.aspect}
+            width={currentPhoto.width}
+            boxShadow={false}
+          />
+          :null
+        }
         <div className={styles.introStyle}>
           <div className={`${styles.titleGlass} ${styles.titleLayout}`}>
             <h1 className={styles.title}>Strings Theory</h1>
@@ -77,7 +86,7 @@ export default function StringsTheory() {
         <div className={styles.navBar}>
           <Grid container>
             {navigation.map(nav => (
-              <Grid item xs={6} sm={4} md={4} lg={3} key={nav.path} className={styles.navGrid}>
+              <Grid item xs={6} sm={4} md={4} lg={2.4} key={nav.path} className={styles.navGrid}>
                 <div className={`glass ${styles.navItem}`} onClick={()=>navigate(nav.path)}>
                   <h2 className={styles.navLabel}>{nav.label}</h2>
                 </div>

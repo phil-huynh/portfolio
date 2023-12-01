@@ -51,7 +51,7 @@ export default function IntroAndContact() {
       className={styles.introContainer}
       ref={scope}
     >
-      <section className={`glass ${styles.topCard}`}>
+      <section className={styles.topCard}>
         <Grid container className={styles.infoGridContainer}>
           <Grid item xs={12} sm={6} md={12} lg={6} xl={6} className={styles.infoGridSection}>
               <div className={styles.headShot}/>

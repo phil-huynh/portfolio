@@ -64,11 +64,18 @@ import salesCard from "./assets/sales/salesCard.png"
 import tableDarkFull from "./assets/sales/tableDarkFull.png"
 import tableLightFull from "./assets/sales/tableLightFull.png"
 import chartsDarkFull from "./assets/sales/chartsDarkFull.png"
+import chartsDarkFull2 from "./assets/sales/chartsDarkFull2.png"
 import chartsLightFull from "./assets/sales/chartsLightFull.png"
 import fullMobileLight from "./assets/sales/fullMobileLight.png"
 import fullMobileDark from "./assets/sales/fullMobileDark.png"
+import mobileBottomDark from "./assets/sales/mobileBottomDark.png"
+import mobileBottomLight from "./assets/sales/mobileBottomLight.png"
+import mobileTopDark from "./assets/sales/mobileTopDark.png"
+import mobileTopLight from "./assets/sales/mobileTopLight.png"
 import noHistory from "./assets/sales/noHistory.png"
+import noHistoryDesktop from "./assets/sales/noHistoryDesktop.png"
 import noDecreasingFactors from "./assets/sales/noDecreasingFactors.png"
+import noDecreasingDesktop from "./assets/sales/noDecreasingDesktop.png"
 
 import resumePhoto from "./assets/info/resume_image.png"
 
@@ -328,6 +335,10 @@ const salesPhotos = {
     image: chartsDarkFull,
     aspect: "1.9"
   },
+  chartsDarkFull2: {
+    image: chartsDarkFull2,
+    aspect: "1.78"
+  },
   chartsLightFull: {
     image: chartsLightFull,
     aspect: "1.9"
@@ -340,13 +351,37 @@ const salesPhotos = {
     image: fullMobileDark,
     aspect: ".28"
   },
+  mobileBottomDark: {
+    image: mobileBottomDark,
+    aspect: ".73"
+  },
+  mobileBottomLight: {
+    image: mobileBottomLight,
+    aspect: ".76"
+  },
+  mobileTopDark: {
+    image: mobileTopDark,
+    aspect: ".76"
+  },
+  mobileTopLight: {
+    image: mobileTopLight,
+    aspect: ".76"
+  },
   noHistory: {
     image: noHistory,
     aspect: ".7"
   },
+  noHistoryDesktop: {
+    image: noHistoryDesktop,
+    aspect: "1.78"
+  },
   noDecreasingFactors: {
     image: noDecreasingFactors,
     aspect: ".7"
+  },
+  noDecreasingDesktop: {
+    image: noDecreasingDesktop,
+    aspect: "1.8"
   },
   salesCard: {
     image: salesCard,

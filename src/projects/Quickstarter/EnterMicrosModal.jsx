@@ -1,20 +1,20 @@
 import { Modal } from "@mui/material";
 import Backdrop from "@mui/material/Backdrop";
-import Photo from "./Photo";
-import { useStore } from "./Store";
+import Photo from "../../Photo";
+import { useStore } from "../../Store";
 import CloseIcon from '@mui/icons-material/Close';
 
 
 
-export default function ResumeModal() {
+export default function EnterMicrosModal({photo}) {
 
-  const { resumeModal, setResumeModal, resumeImage, isXL, isLG, isMD, isSM, isXS, } = useStore()
+  const { enterMicrosModal, setEnterMicrosModal, isXL, isLG, isMD, isSM, isXS, } = useStore()
 
 
   const size = (() => {
-    if (isXL) { return { width: "65%", height: "90vh", iconSize: "2.4rem"} }
-    if (isLG) { return { width: "80%", height: "90vh", iconSize: "2.1rem"} }
-    if (isMD) { return { width: "90%", height: "90hv", iconSize: "1.8rem"} }
+    if (isXL) { return { width: "50%", height: "90vh", iconSize: "2rem"} }
+    if (isLG) { return { width: "60%", height: "90vh", iconSize: "1.8rem"} }
+    if (isMD) { return { width: "70%", height: "90hv", iconSize: "1.6rem"} }
     if (isSM) { return { width: "95%", height: "80vh", iconSize: "1.5rem"} }
     if (isXS) { return { width: "98%", height: "70vh", iconSize: "1.2rem"} }
   })()
@@ -25,7 +25,6 @@ export default function ResumeModal() {
     left: "50%",
     transform: "translate(-50%, -50%)",
     p: 4.5,
-    boxShadow: "20px 20px 15px #1E1E1E",
     overflowY: "scroll",
     overflowX: "hidden",
     width: size.width,
@@ -58,8 +57,8 @@ export default function ResumeModal() {
     <Modal
         aria-labelledby="resume"
         aria-describedby="resume"
-        open={resumeModal}
-        onClose={() => setResumeModal(false)}
+        open={enterMicrosModal}
+        onClose={() => setEnterMicrosModal(false)}
         closeAfterTransition
         BackdropComponent={Backdrop}
         BackdropProps={{
@@ -67,8 +66,8 @@ export default function ResumeModal() {
         }}
       >
         <div style={modalStyle}>
-          <div style={overlayStyle}><CloseIcon sx={iconStyle} onClick={()=>setResumeModal(false)}/></div>
-          <Photo image={resumeImage.image} aspect={resumeImage.aspect} width="100%"/>
+          <div style={overlayStyle}><CloseIcon sx={iconStyle} onClick={()=>setEnterMicrosModal(false)}/></div>
+          <Photo image={photo.image} aspect={photo.aspect} width="100%"/>
         </div>
       </Modal>
 
