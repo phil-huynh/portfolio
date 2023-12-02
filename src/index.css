@@ -226,3 +226,28 @@ a {
 
 
 
+@media (min-width: 1536px) {
+  .greeting {
+    font-size: 12rem;
+  }
+}
+@media (max-width: 1535px) {
+  .greeting {
+    font-size: 10rem;
+  }
+}
+@media (max-width: 1199px) {
+  .greeting {
+    font-size: 8rem;
+  }
+}
+@media (max-width: 899px) {
+  .greeting {
+    font-size: 6rem;
+  }
+}
+@media (max-width: 599px) {
+  .greeting {
+    font-size: 5rem;
+  }
+}

@@ -278,7 +278,7 @@ hr,
   top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 4rem;
+  /* font-size: 4rem; */
   font-family: roboto;
   letter-spacing: 0.1em;
 }
@@ -297,7 +297,6 @@ hr,
 
 .selectedMenuItemLabel {
   transition: 0.3s;
-  font-size: 4rem;
   /* text-decoration: underline; */
   border-radius: 10px;
   /* box-shadow: var(--selected-box-shadow); */
@@ -587,3 +586,33 @@ blockquote {
 
 
 
+@media (min-width: 1536px) {
+  .menuItemLabel,
+  .selectedMenuItemLabel {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 1535px) {
+  .menuItemLabel,
+  .selectedMenuItemLabel {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 1199px) {
+  .menuItemLabel,
+  .selectedMenuItemLabel {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 899px) {
+  .menuItemLabel,
+  .selectedMenuItemLabel {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 599px) {
+  .menuItemLabel,
+  .selectedMenuItemLabel {
+    font-size: 3rem;
+  }
+}

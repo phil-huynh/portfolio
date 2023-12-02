@@ -31,12 +31,12 @@ function Home() {
   const pageEnterAnimation = async () => {
     if (firstTime) {
       // animateOverlay(overlayRef.current, {opacity: [.15]}, {duration: 2})
-      await animateGreeting(greetingRef.current, {fontSize: getGreetingSize()}, {duration: .05})
+      // await animateGreeting(greetingRef.current, {fontSize: getGreetingSize()}, {duration: .05})
       await animateGreeting(greetingRef.current, {opacity: 1}, {duration: .05, delay: .5})
       await animateGreeting(
         greetingRef.current,
         {
-          fontSize: [getGreetingSize(), 0],
+          fontSize: 0,
           opacity: [1,0]
         },
         { duration: 1, delay: 1}
