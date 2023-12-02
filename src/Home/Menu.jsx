@@ -8,49 +8,25 @@ export default function Menu() {
 
   return (
     <div className={styles.buttonContainer}>
-    <section
-      className={`${styles.menuItem}`}
-      onClick={()=>setSelection('projects')}
-    >
-            <p
-        className={selection === "projects" ?
-        styles.selectedMenuItemLabel : styles.menuItemLabel}
+    <section className={`${styles.menuItem}`} onClick={()=>setSelection('projects')}>
+      <p
+        className={selection === "projects" ? styles.selectedMenuItemLabel : styles.menuItemLabel }
         onClick={()=>setSelection('projects')}
       >
         Projects
       </p>
     </section>
-
-    {/* <section
-      className={`${styles.menuItem}`}
-      onClick={()=>setSelection('bio')}
-    >
+    <section className={`${styles.menuItem}`} onClick={()=>setSelection('testimonials')}>
       <p
-        className={selection === "bio" ?
-        styles.selectedMenuItemLabel : styles.menuItemLabel}
-        onClick={()=>setSelection('bio')}
-      >
-        Resume & Bio
-      </p>
-    </section> */}
-    <section
-      className={`${styles.menuItem}`}
-      onClick={()=>setSelection('testimonials')}
-    >
-      <p className={selection === "testimonials" ?
-        styles.selectedMenuItemLabel : styles.menuItemLabel}
+        className={selection === "testimonials" ? styles.selectedMenuItemLabel : styles.menuItemLabel }
         onClick={()=>setSelection('testimonials')}
       >
         Testimonials
       </p>
     </section>
-    <section
-      className={`${styles.menuItem}`}
-      onClick={()=>setSelection('skills')}
-    >
-            <p
-        className={selection === "skills" ?
-        styles.selectedMenuItemLabel : styles.menuItemLabel}
+    <section className={`${styles.menuItem}`} onClick={()=>setSelection('skills')}>
+      <p
+        className={selection === "skills" ? styles.selectedMenuItemLabel : styles.menuItemLabel }
         onClick={()=>setSelection('skills')}
       >
         Skills

@@ -6,41 +6,24 @@ import { useAnimate, usePresence, stagger } from "framer-motion"
 import { useStore }  from "../Store"
 import { useEffect } from "react";
 import styles from "./Home.module.css"
-import HomeTools from "./Tools.jsx"
 import Menu from "./Menu";
 import resumePDF from "../assets/resume.pdf"
 import resumeDOCX from "../assets/resume.docx"
 
 export default function IntroAndContact() {
-  const { firstTime, setSelection, setFirstTime, selection, setResumeModal } = useStore()
+  const { firstTime, setResumeModal } = useStore()
 
   const [scope, animate] = useAnimate()
   const [isPresent, safeToRemove] = usePresence()
 
   const transition = firstTime ?
-    {
-      duration: 1.1,
-      delay: stagger(.2, {startDelay: 2}),
-      type: "spring",
-      bounce: ".1"
-    }
+    { duration: 1.1, delay: stagger(.2, {startDelay: 2}), type: "spring", bounce: ".1" }
     :
-    {
-      duration: 1.1,
-      delay: stagger(.2),
-      type: "spring",
-      bounce: ".1"
-    }
+    { duration: 1.1, delay: stagger(.2), type: "spring", bounce: ".1" }
 
 
-  const slideInAnimation = async () => {
-    await animate('section', {x: [2000, 0], opacity: [0, 1]}, transition)
-
-  }
-
-  const slideOutAnimation = async () => {
-    safeToRemove()
-  }
+  const slideInAnimation = async () => await animate('section', {x: [2000, 0], opacity: [0, 1]}, transition)
+  const slideOutAnimation = async () => safeToRemove()
 
   useEffect(() => {
     isPresent ? slideInAnimation() : slideOutAnimation()
@@ -83,9 +66,6 @@ export default function IntroAndContact() {
           </Grid>
         </Grid>
       </section>
-
-      {/* <HomeTools/> */}
-
       <Menu/>
     </div>
   )

@@ -16,19 +16,6 @@ export default function ProjectsMenu() {
     navigate(path)
   }
 
-  // const rotateIn = async () => {
-  //   await animate(
-  //     'section',
-  //     {rotateX: [270, 0]},
-  //     {
-  //       duration: 1.7,
-  //       delay: stagger(.25, {startDelay: .1}),
-  //       type: "spring",
-  //       bounce: .5
-  //     }
-  //   )
-  // }
-
   const skillsTransition = firstTime ?
     {
       duration: 1.7,
@@ -74,15 +61,12 @@ export default function ProjectsMenu() {
     <div className={styles.projectMenuContainer} ref={scope}>
       <Grid container className={styles.projectGridContainer}>
         {projects.map(project => (
-          <Grid
-            item
-            key={project.name}
+          <Grid item xs={12} sm={12} md={12} lg={6} xl={6}
             className={styles.projectGridSection}
-            xs={12} sm={12} md={12} lg={6} xl={6}
+            key={project.name}
           >
             <section className={`${styles.projectMenuCard}`}>
-              <div
-                className={styles.menuCardBackGround}
+              <div className={styles.menuCardBackGround}
                 style={{
                   backgroundImage: `url(${project.image})`,
                   backgroundPosition: "center",
@@ -91,25 +75,13 @@ export default function ProjectsMenu() {
               />
               <div className={styles.menuCardOverlay}></div>
               <div className={styles.projectNameContainer}>
-                <p className={`text-shadow ${styles.projectName}`}>
-                  {project.name}
-                </p>
+                <p className={`text-shadow ${styles.projectName}`}>{project.name}</p>
               </div>
               <div className={styles.back}>
-                <p className={styles.backText}>
-                  {project.message}
-                </p>
+                <p className={styles.backText}>{project.message}</p>
                 <div className={styles.backButtonContainer}>
-                  <button
-                    className={styles.cardBackButton}
-                    onClick={()=>changePage(project.path)}
-                  >
-                    <p
-                      className={styles.cardBackButtonText}
-                      onClick={()=>changePage(project.path)}
-                    >
-                      See more
-                    </p>
+                  <button className={styles.cardBackButton} onClick={()=>changePage(project.path)}>
+                    <p className={styles.cardBackButtonText} onClick={()=>changePage(project.path)}>See more</p>
                   </button>
                 </div>
               </div>

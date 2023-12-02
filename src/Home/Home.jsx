@@ -9,98 +9,49 @@ import ResumeModal from "../ResumeModal";
 
 
 
-function Home() {
+export default function Home() {
 
-  const { firstTime, setFirstTime, isXL, isLG, isMD, isSM, isXS, selection, resumeModal, getSize } = useStore()
+  const { firstTime, setFirstTime, resumeModal } = useStore()
 
-  const [isPresent, safeToRemove] = usePresence()
   const [page, animatePage] = useAnimate()
+  const [isPresent, safeToRemove] = usePresence()
   const [greetingRef, animateGreeting] = useAnimate()
   const [overlayRef, animateOverlay] = useAnimate()
 
 
-
-  const getGreetingSize = () => {
-    if (isXL) { return "10rem" }
-    if (isLG) { return "8rem" }
-    if (isMD) { return "6rem" }
-    if (isSM) { return "4rem" }
-    if (isXS) { return "3rem" }
-  }
-
   const pageEnterAnimation = async () => {
     if (firstTime) {
       animateOverlay(overlayRef.current, {opacity: [.15]}, {duration: 2})
-      // await animateGreeting(greetingRef.current, {fontSize: getGreetingSize()}, {duration: .05})
       await animateGreeting(greetingRef.current, {opacity: 1}, {duration: .05, delay: .5})
-      await animateGreeting(
-        greetingRef.current,
-        {
-          fontSize: 0,
-          opacity: [1,0]
-        },
-        { duration: 1, delay: 1}
-      )
+      await animateGreeting(greetingRef.current, { fontSize: 0, opacity: [1,0] }, { duration: 1, delay: 1} )
       setFirstTime(false)
-    } else {
+    }
+    else {
       await animatePage(page.current, {opacity: [0, 1]}, {duration: 1})
       animateOverlay(overlayRef.current, {opacity: [.15]}, {duration: 2})
     }
   }
 
   const pageExitAnimation = async () => {
-    await animatePage(
-      page.current,
-      { opacity: [1, 0] },
-      { duration: .8 }
-    )
+    await animatePage( page.current, { opacity: [1, 0] }, { duration: .8 } )
     safeToRemove()
   }
-
-  useEffect(() => {
-    console.log(getSize())
-  }, [isXL, isLG, isMD, isSM, isXS])
-
 
   useEffect(() => {
     isPresent ? pageEnterAnimation() : pageExitAnimation()
   }, [isPresent])
 
   return (
-    <div
-      className={styles.wrapper}
-      key={'home'}
-      ref={page}
-    >
-      <div
-        className={styles.overlay}
-        ref={overlayRef}
-      />
-      { firstTime ?
-        <div className="greeting" ref={greetingRef}>
-          <p>Greetings!</p>
-        </div>
-        :null
-      }
+    <div className={styles.wrapper} key={'home'} ref={page}>
+      <div className={styles.overlay} ref={overlayRef}/>
+      { firstTime && <div className="greeting" ref={greetingRef}> <p>Greetings!</p> </div> }
       <div className={styles.contents}>
-
-        {resumeModal ?
-          <ResumeModal />
-          : null
-        }
+        { resumeModal && <ResumeModal /> }
         <Grid container className={styles.homeGridContainer}>
-          <Grid
-            item
-            xs={12} sm={12} md={6} lg={5.5} xl={5}
-            className={styles.homeGridSection}
-          >
+          <Grid item xs={12} sm={12} md={6} lg={5.5} xl={5} className={styles.homeGridSection}>
             <IntroAndContact/>
           </Grid>
-          <Grid
-            item
-            xs={12} sm={12} md={6} lg={6.5} xl={7}
-            className={styles.homeGridSection}
-          >
+          <Grid item xs={12} sm={12} md={6} lg={6.5} xl={7} className={styles.homeGridSection}>
             <Options/>
           </Grid>
         </Grid>
@@ -109,5 +60,4 @@ function Home() {
   )
 }
 
-export default Home
 
