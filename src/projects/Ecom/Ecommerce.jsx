@@ -51,7 +51,7 @@ export default function Ecommerce() {
     {label: "Strings Theory", path: "/strings-theory"},
     {label: "Quickstarter", path: "/quickstarter"},
     {label: "mikeslist", path: "/osiris"},
-    {label: "Probabilities", path: "/sales-probabilies"},
+    {label: "Probabilities", path: "/sales-probabilities"},
   ]
 
   const [page, animatePage] = useAnimate()
