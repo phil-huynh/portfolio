@@ -464,7 +464,7 @@ hr,
 
 .viewResumeButton {
   margin-top: 1rem;
-  padding-inline: 1rem;
+  padding: .3rem 1rem;
 }
 
 .viewResumeButton:hover,
