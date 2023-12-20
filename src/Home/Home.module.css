@@ -167,8 +167,6 @@ hr,
 }
 
 .wrapper {
-  /* animation: scroll 500s linear infinite; */
-  /* background: var(--bg-home); */
   background-attachment: fixed;
   background-color: #1E1E1E;
   height: 100vh;
@@ -280,7 +278,6 @@ hr,
   top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* font-size: 4rem; */
   font-family: roboto;
   letter-spacing: 0.1em;
 }
@@ -356,7 +353,9 @@ hr,
 }
 
 .projectMenuCard {
-  width: 90%;
+  width: 93%;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
   border-radius: 15px;
   box-shadow: 15px 15px 15px black;
 
@@ -380,8 +379,8 @@ hr,
 }
 
 .backText {
-  font-size: 1.2rem;
-  padding: .5rem;
+  font-size: 1rem;
+  padding: .75rem;
   transform: translatez(50px) scale(1);
 }
 

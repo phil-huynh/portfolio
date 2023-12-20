@@ -104,17 +104,10 @@
   justify-content: center;
   align-items: center;
 }
-/* .linkButton:hover {
-  box-shadow: var(--white-glow-border)
-}
-.linkButton:active {
-  box-shadow: var(--green-glow-border)
-} */
 
 .gitLinkText {
   font-size: 1.5rem;
   font-weight: 600;
-  /* margin-right: 1rem; */
 }
 
 

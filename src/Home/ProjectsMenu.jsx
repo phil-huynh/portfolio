@@ -89,7 +89,6 @@ export default function ProjectsMenu() {
           </Grid>
         ))}
       </Grid>
-
     </div>
   )
 }

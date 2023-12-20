@@ -49,7 +49,6 @@
 
 
 .title {
-  /* height: 5rem; */
   width: 80%;
   margin-top: 5rem;
   margin-bottom: 3rem;
@@ -132,12 +131,6 @@
   justify-content: center;
   align-items: center;
 }
-/* .linkButton:hover {
-  box-shadow: var(--white-glow-border)
-}
-.linkButton:active {
-  box-shadow: var(--green-glow-border)
-} */
 
 .gitLinkText {
   font-size: 1.8rem;
