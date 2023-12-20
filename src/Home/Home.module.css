@@ -370,7 +370,7 @@ hr,
   left: 0;
   border-radius: 15px;
   display: grid;
-  grid-template-rows: 3fr 2fr;
+  grid-template-rows: 1fr 2fr;
   justify-content: center;
 	transform-style: preserve-3d;
 	backface-visibility: hidden;
