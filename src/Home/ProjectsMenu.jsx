@@ -81,8 +81,7 @@ export default function ProjectsMenu() {
                 <p className={styles.backText}>{project.message}</p>
                 <div className={styles.backButtonContainer}>
                   <button className={styles.cardBackButton} onClick={()=>changePage(project.path)}>
-                    See more
-                    {/* <p className={styles.cardBackButtonText} onClick={()=>changePage(project.path)}>See more</p> */}
+                    <p className={styles.cardBackButtonText} onClick={()=>changePage(project.path)}>See more</p>
                   </button>
                 </div>
               </div>
