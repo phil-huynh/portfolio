@@ -390,7 +390,7 @@ hr,
   justify-content: center;
   align-items: center;
   transform-style: preserve-3d;
-  transform: translatez(30px) scale(1);
+  transform: translatez(15px) scale(1);
 }
 
 .cardBackButton {
