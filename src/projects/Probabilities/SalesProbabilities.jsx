@@ -1,9 +1,10 @@
 import { useNavigate } from "react-router-dom"
 import { useStore } from "../../Store"
 import { Grid } from "@mui/material"
+import { useEffect } from "react"
 import Photo from "../../Photo.jsx"
 import styles from "./Probabilities.module.css"
-import SalesTools from "./Tools"
+import { useAnimate, usePresence } from "framer-motion"
 import GitLink from "./GitLink"
 import PhotoModal from "../../PhotoModal"
 
@@ -11,6 +12,9 @@ export default function SalesProbabilities() {
 
   const navigate = useNavigate()
   const { salesPhotos: photos, photoModal, currentPhoto, selectPhoto } = useStore()
+
+  const [page, animate] = useAnimate()
+  const [isPresent, safeToRemove] = usePresence()
 
   const borderStyle = {
     border: "1px gray solid",
@@ -25,8 +29,21 @@ export default function SalesProbabilities() {
     {label: "mikeslist", path: "/osiris"},
   ]
 
+  const enterAnimation = async () => {
+    await animate(page.current, { opacity: [0, 1] }, { duration: 1.5 })
+  }
+
+  const exitAnimation = async () => {
+    await animate(page.current, {opacity: [1, 0] }, { duration: 1.5 })
+    safeToRemove()
+  }
+
+  useEffect(() => {
+    isPresent ? enterAnimation() : exitAnimation()
+  }, [isPresent])
+
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} key="probabilities" ref={page}>
       <div className="contents">
           {photoModal ?
             <PhotoModal

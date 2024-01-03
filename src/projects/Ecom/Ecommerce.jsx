@@ -62,6 +62,7 @@ export default function Ecommerce() {
     boxShadow: "15px 15px 12px #1E1E1E",
     marginTop: "1rem",
     marginBottom: "1rem",
+    cursor: "pointer",
   }
 
   const enterAnimation = async () => {
@@ -70,7 +71,7 @@ export default function Ecommerce() {
       {
         height: 0,
         width: 0
-    }
+      }
   )
     await animatePage(
       page.current,

@@ -2,12 +2,12 @@ import { useNavigate } from "react-router-dom"
 import { Grid } from "@mui/material"
 import { useStore } from "../../Store"
 import { useEffect } from "react"
+import { useAnimate, usePresence } from "framer-motion"
 import Photo from "../../Photo"
 import styles from "./Osiris.module.css"
 import PhotoModal from "../../PhotoModal"
-import OsirisTools from "./Tools"
 import GitLink from "./GitLink"
-import { AspectRatio } from "@mui/icons-material"
+
 
 export default function Osiris() {
 
@@ -18,9 +18,6 @@ export default function Osiris() {
     currentPhoto,
     photoModal,
     selectPhoto,
-    locate,
-    locate2,
-    locate3,
     getSize,
     isXL,
     isLG,
@@ -29,6 +26,9 @@ export default function Osiris() {
     isXS
   } = useStore()
 
+
+  const [page, animate] = useAnimate()
+  const [isPresent, safeToRemove] = usePresence()
 
   const extras = {
     boxShadow: "15px 15px 12px #1E1E1E",
@@ -47,12 +47,25 @@ export default function Osiris() {
     {label: "Probabilities", path: "/sales-probabilities"},
   ]
 
+  const enterAnimation = async () => {
+    await animate(page.current, { opacity: [0, 1] }, { duration: 1.5 })
+  }
+
+  const exitAnimation = async () => {
+    await animate(page.current, {opacity: [1, 0] }, { duration: 1.5 })
+    safeToRemove()
+  }
+
   useEffect(() =>{
     console.log(getSize())
   }, [isXL, isLG, isMD, isSM, isXS])
 
+  useEffect(() => {
+    isPresent ? enterAnimation() : exitAnimation()
+  }, [isPresent])
+
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} key="osiris" ref={page}>
       <div className="contents">
       {photoModal ?
         <PhotoModal

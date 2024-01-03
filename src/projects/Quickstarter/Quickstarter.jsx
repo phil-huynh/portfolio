@@ -21,9 +21,6 @@ export default function Quickstarter() {
     selectPhoto,
     enterMicrosModal,
     setEnterMicrosModal,
-    locate,
-    locate2,
-    locate3
   } = useStore()
 
   const [page, animate] = useAnimate()
